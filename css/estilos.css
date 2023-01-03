@@ -51,6 +51,12 @@ table{
     border-left: none;
     border-left: 1px solid white;
 }
+.sticky_mes{
+    position: sticky;
+    left: 70px;
+    background-color: black;
+    z-index: -1;
+}
 table .sticky{
     position: sticky;
     left: 0;
