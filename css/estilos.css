@@ -5,34 +5,48 @@ body{
 h1,h2,h3,h4{
     color: white;
 }     
-/* tr:nth-child(even) {background-color: #f2f2f2;} */
 .gallery{
     margin-top: 10px;
     display: grid;
     gap: 1rem;
     grid-auto-rows: 22rem;
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-    /*grid-template-columns: repeat(auto-fill, minmax(min(100%,25rem)), 1fr);*/      
 }
 .featured{
     grid-column: span 2;
-    border: 1px solid yellow;
+    border: 1px solid grey;
     color: white;
+    border-radius: 10px;
+}
+.featured:hover{
+    box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.8);
+}
+
+.eventos{
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: 21.7rem;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+}
+.eventos_grid{
+    grid-column: span 1;
+    color: white;
+    border: 1px solid red;
+    margin: 10px 10px;
 }
 .turnos{
-    margin-top: 5px;
     display: grid;
     gap: 1rem;
     grid-auto-rows: 1.5rem 1.5rem 18rem;
-    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
 }
 .turnos_grid{
     text-align: center;
     grid-column: span 2;
     color: white;
-    margin-left: 10px;
+    margin-left: 8px;
     margin-top: 5px;
-    max-width: 97%;
+    max-width: 98%;
     overflow-x: scroll;
 }
 .contenedor-tabla{
