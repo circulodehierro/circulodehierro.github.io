@@ -31,9 +31,51 @@ h1,h2,h3,h4{
 .eventos_grid{
     grid-column: span 1;
     color: white;
-    border: 1px solid red;
+    border: 1px solid white;
     margin: 10px 10px;
+    border-radius: 10px;
+    position: relative;
+    display: inline-block;
 }
+/**/
+.eventos_grid > h1,p,.logo,.texto1,.texto2,.texto3{
+    position: absolute;
+    white-space: nowrap;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.eventos_grid > .logo{
+    top: 63%;
+    object-fit: cover;
+    width: 110px;
+    height: 125px;
+    border: 1px solid white;
+}
+.eventos_grid > h1{
+    top: 10%;
+}
+.eventos_grid > p{
+    top: 80px;
+}
+.eventos_grid > .texto1{
+    top: 120px;
+}
+.eventos_grid > .texto2{
+    top: 150px;
+}
+.eventos_grid > .texto3{
+    top: 290px;
+    font-size: 13px;
+}
+
+.imagen{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 20%;
+}
+
+/**/
 .turnos{
     display: grid;
     gap: 1rem;
