@@ -208,8 +208,15 @@ table tbody tr td:nth-child(1){
     text-align: left;
 }
 @media (max-width: 695px){
+    .general{
+        display: grid;
+        grid-template-columns: auto 36%;
+    }
     .general_grid h1{
         font-size: 20px;
+    }
+    .gastos_grid h1{
+        font-size: 1.8rem;
     }
     .gastos_grid h2{
         position: absolute;
@@ -218,6 +225,9 @@ table tbody tr td:nth-child(1){
         transform: translate(-50%, -50%);
         top: 40%;
         font-size: 1.4rem;
+    }
+    .gastos_grid ul{
+        left: -16px;
     }
     .gastos_grid li{
         font-size: 12px;
