@@ -22,6 +22,28 @@ h1,h2,h3,h4{
     box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.8);
 }
 
+.general{
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: 21.7rem;
+    /*grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));*/
+    grid-template-columns: auto 30%;
+}
+.general_grid{
+    grid-column: span 1;
+    color: white;
+    border: 1px solid white;
+    margin: 10px 10px;
+    border-radius: 10px;
+    position: relative;
+    display: inline-block;
+}
+.general_grid > h1,p{
+    position: absolute;
+    white-space: nowrap;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 .eventos{
     display: grid;
     gap: 1rem;
@@ -37,7 +59,6 @@ h1,h2,h3,h4{
     position: relative;
     display: inline-block;
 }
-/**/
 .eventos_grid > h1,p,.logo,.texto1,.texto2,.texto3{
     position: absolute;
     white-space: nowrap;
@@ -67,14 +88,12 @@ h1,h2,h3,h4{
     top: 290px;
     font-size: 13px;
 }
-
 .imagen{
     object-fit: cover;
     width: 100%;
     height: 100%;
     opacity: 20%;
 }
-
 /**/
 .turnos{
     display: grid;
@@ -90,6 +109,42 @@ h1,h2,h3,h4{
     margin-top: 5px;
     max-width: 98%;
     overflow-x: scroll;
+}
+.gastos{
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: 21.7rem;
+    grid-template-columns: 70% auto;
+}
+.gastos_grid{
+    grid-column: span 1;
+    color: white;
+    border: 1px solid white;
+    margin: 10px 10px;
+    border-radius: 10px;
+    position: relative;
+    display: inline-block;
+}
+.gastos_grid h1{
+    position: absolute;
+    white-space: nowrap;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.gastos_grid ul{
+    position: absolute;
+    left: 10px;
+    top: 10%;
+    word-break:break-all;
+    margin-right: 10px;
+}
+.gastos_grid h2{
+    position: absolute;
+    white-space: nowrap;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 40%;
+    font-size: 2.2rem;
 }
 .contenedor-tabla{
     height: 400px;
@@ -151,4 +206,20 @@ td{
 }
 table tbody tr td:nth-child(1){
     text-align: left;
+}
+@media (max-width: 695px){
+    .general_grid h1{
+        font-size: 20px;
+    }
+    .gastos_grid h2{
+        position: absolute;
+        white-space: nowrap;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 40%;
+        font-size: 1.4rem;
+    }
+    .gastos_grid li{
+        font-size: 12px;
+    }
 }
