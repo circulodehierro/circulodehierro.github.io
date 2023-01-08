@@ -24,7 +24,7 @@ h1,h2,h3,h4{
 
 .general{
     display: grid;
-    gap: 1rem;
+    gap: 0.1rem;
     grid-auto-rows: 21.7rem;
     /*grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));*/
     grid-template-columns: auto 30%;
@@ -46,7 +46,7 @@ h1,h2,h3,h4{
 }
 .eventos{
     display: grid;
-    gap: 1rem;
+    gap: 0.1rem;
     grid-auto-rows: 21.7rem;
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
 }
@@ -112,7 +112,7 @@ h1,h2,h3,h4{
 }
 .gastos{
     display: grid;
-    gap: 1rem;
+    gap: 0.1rem;
     grid-auto-rows: 21.7rem;
     grid-template-columns: 70% auto;
 }
