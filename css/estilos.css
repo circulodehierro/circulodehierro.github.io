@@ -36,7 +36,37 @@ h1,h2,h3,h4{
     margin: 10px 5px;
     border-radius: 10px;
     position: relative;
-    display: inline-block;
+}
+.general_grid .actualizado{
+    position: absolute;
+    top: 15%;
+    font-size: .8em;
+    white-space: nowrap;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.general_grid .total{
+    position: absolute;
+    top: 35%;
+    font-size: 4em;
+    white-space: nowrap;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.general_grid .cumples{
+    height: 84%;
+    width: auto;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 45px;
+    overflow-y: scroll;
+}
+.general_grid .cumples div{
+    height: auto;
+    margin-left: 5px;
+}
+.general_grid .cumples div div{
+    margin-top: -15px;
 }
 .general_grid > h1,p{
     position: absolute;
