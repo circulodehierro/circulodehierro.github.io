@@ -262,4 +262,14 @@ table tbody tr td:nth-child(1){
     .gastos_grid li{
         font-size: 12px;
     }
+    .general_grid .actualizado{
+        font-size: 10px;
+    }
+    .general_grid .total{
+        font-size: 3.2em;
+    }
+    .general_grid .cumples div div{
+        margin-left: 0px;
+        font-size: 12px;
+    }
 }
