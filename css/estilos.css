@@ -53,6 +53,22 @@ h1,h2,h3,h4{
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.general_grid .proxima{
+    position: absolute;
+    top: 70%;
+    white-space: nowrap;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+}
+.general_grid .reunion{
+    position: absolute;
+    top: 80%;
+    white-space: nowrap;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2em;
+}
 .general_grid .cumples{
     height: 84%;
     width: auto;
