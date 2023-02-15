@@ -6,144 +6,168 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
     <link rel="icon" type="image/png" href="images/logo2.svg"/>
+    <script src="js/efectos.js"></script>
     <title>Circulo de Hierro - Cuotas</title>
 </head>
 <body>
     <header>
-
+    
     </header>
     <div style="width: 100%; height: 300px;margin-top: 10px;text-align: center;">
-        <img src="images/logo2.svg" width="260px" height="260px" alt="Circulo de Hierro">
+        <img src="images/logo2.svg" width="260px" height="260px" alt="Circulo de Hierro" onclick="logo();return false;">
     </div>
     <div class="gallery">
         <!--GENERAL-->
-        <div class="featured  general">
-            <div class="general_grid">
-                <h1>Total en Caja</h1>
-                <div class="actualizado">Monto Actualizado al 15 de Febrero de 2023</div>
-                <div class="total">
-                    <span>$495.445</span>
-                </div>
-                <div class="proxima">Proxima reunión</div>
-                <div class="reunion">Miercoles 15 de Febrero</div>
-                <div class="lugar">Casa de Pablo 20:00 hrs</div>
-            </div>
-            <div class="general_grid">
-                <h1>Cumpleaños</h1>
-                <div class="cumples">
-                    <div>
-                        <h4>Abril 29</h4>
-                        <div>Tesorero K-Chete</div>
-                    </div>
-                    <div>
-                        <h4>Junio 01</h4>
-                        <div>Presidente Tio Palo</div>
-                    </div>
-                    <div>
-                        <h4>Julio 21</h4>
-                        <div>Club Circulo de Hierro</div>
-                    </div>
-                    <div>
-                        <h4>Fecha no sé</h4>
-                        <div>R.R.P.P Alex</div>
-                    </div>
-                    <div>
-                        <h4>Fecha no sé</h4>
-                        <div>Capitán de Ruta? JJ</div>
-                    </div>
-                    <div>
-                        <h4>Fecha no sé</h4>
-                        <div>Prospect Braka</div>
-                    </div>
-
-                    <div>
-                        <h4>Fecha no sé</h4>
-                        <div>Prospect Chadu</div>
-                    </div>
-                    <div>
-                        <h4>Fecha no sé</h4>
-                        <div>Prospect Carlos</div>
-                    </div>
-                </div>
-            </div>
+        <div class="featured scale-up-center" onclick="general();return false;">
+            <img src="images/general.png" alt="">
+            <div class="title">Resumen General</div>
+            <div class="content"></div>
         </div>
         <!--EVENTOS-->
-        <div class="featured eventos" style="overflow-x: scroll;">
-            <div class="eventos_grid">
-                <img src="images/salto_el_laja.jpeg" alt="ruta" class="imagen">
-                <h1>Ruta Salto del Laja</h1>
-                <p>17, 18 y 19 de Febrero</p>
-                <span class="texto1">Partida Copec Los Lirios 12:00 hrs</span>
-                <!--<span class="texto2">Partida Copec Los Lirios 13:00 hrs</span>
-                <img src="images/mandinga_logo.jpeg" alt="logo" class="logo">
-                <span class="texto3">Partida Copec Los Lirios 13:00 hrs</span>-->
-            </div>
-            <div class="eventos_grid">
-                <img src="images/aniversario.jpeg" alt="aniversario" class="imagen">
-                <h1>Aniversario</h1>
-                <p>18 y 19 de Febrero</p>
-                <span class="texto1">Participación por confirmar</span>
-                <!--<span class="texto2">Partida Copec Los Lirios 13:00 hrs</span>-->
-                <img src="images/mandinga_logo.jpeg" alt="logo" class="logo">
-                <span class="texto3">Valor Entrada: $20.000 derecho a cover.</span>
-            </div>
-            <div class="eventos_grid">
-                <img src="images/encuentro.jpeg" alt="encuentro" class="imagen">
-                <h1>Encuentro</h1>
-                <p>Jueves 02 de Febrero</p>
-                <span class="texto1">Lugar de encuentro Parke Comunal</span>
-                <span class="texto2">Partida 18:30 hrs</span>
-                <!--<img src="images/mandinga_logo.jpeg" alt="logo" class="logo">
-                <span class="texto3">Partida Copec Los Lirios 13:00 hrs</span>-->
-            </div>
-            <div class="eventos_grid">
-                <img src="images/evento.jpeg" alt="evento" class="imagen">
-                <h1>Evento</h1>
-                <p>Martes 24 de Febrero</p>
-                <span class="texto1">Lugar de evento Plaza los Heroes</span>
-                <span class="texto2">Partida 10:00 hrs</span>
-                <!--<img src="images/mandinga_logo.jpeg" alt="logo" class="logo">
-                <span class="texto3">Partida Copec Los Lirios 13:00 hrs</span>-->
-            </div>
-            <div class="eventos_grid">
-                <img src="images/evento.jpeg" alt="evento" class="imagen">
-                <h1>Evento</h1>
-                <p>Martes 24 de Febrero</p>
-                <span class="texto1">Lugar de evento Plaza los Heroes</span>
-                <span class="texto2">Partida 10:00 hrs</span>
-                <!--<img src="images/mandinga_logo.jpeg" alt="logo" class="logo">
-                <span class="texto3">Partida Copec Los Lirios 13:00 hrs</span>-->
-            </div>
-            <div class="eventos_grid">
-                <img src="images/evento.jpeg" alt="evento" class="imagen">
-                <h1>Evento</h1>
-                <p>Martes 24 de Febrero</p>
-                <span class="texto1">Lugar de evento Plaza los Heroes</span>
-                <span class="texto2">Partida 10:00 hrs</span>
-                <!--<img src="images/mandinga_logo.jpeg" alt="logo" class="logo">
-                <span class="texto3">Partida Copec Los Lirios 13:00 hrs</span>-->
-            </div>
+        <div class="featured scale-up-center" onclick="eventos();return false;">
+            <img src="images/evento.png" alt="">
+            <div class="title">Eventos</div>
         </div>
         <!--TURNOS-->
-        <div class="featured turnos">
-            <div class="turnos_grid">
-                Turnos 2023
+        <div class="featured scale-up-center" onclick="turnos();return false;">
+            <img src="images/turno.png" alt="">
+            <div class="title">Turnos</div>
+        </div>
+        <!--GASTOS-->
+        <div class="featured scale-up-center" onclick="gastos();return false;">
+            <img src="images/cuota.png" alt="">
+            <div class="title">Cuotas</div>
+        </div>
+    </div>
+    <div class="contenido-general" id="general" style="display: none;">
+        <div class="grid-general">
+            <div class="cabecera-general">Total en Caja</div>
+            <div class="cabecera-actualizado">Monto actualizado al 13 de Enero</div>
+            <div class="cabecera-monto">$20.000</div>
+        </div>
+        <div class="grid-general">
+            <div class="cabecera-general">Detalle de Gastos</div>
+            <div class="caja-detalle-gastos">
+                <ul>
+                    <li>(2023-01-13) $120.000 Compras ruta a la playa.</li>
+                    <li>(2023-02-20) $ 15.000 Recuerdo aniversario Mandinga.</li>
+                    <li>(2023-02-24) $ 35.000 Gasto.</li>
+                    <li>(2023-02-24) $ 35.000 Gasto.</li>
+                    <li>(2023-02-24) $ 35.000 Gasto.</li>
+                    <li>(2023-02-24) $ 35.000 Gasto.</li>
+                    <li>(2023-02-24) $ 35.000 Gasto.</li>
+                    <li>(2023-02-24) $ 35.000 Gasto.</li>
+                    <li>(2023-02-24) $ 35.000 Gasto asd asfd afsd asf asf af asf asf asf asf.</li>
+                    <li>(2023-02-24) $ 35.000 Gasto.</li>
+                    <li>(2023-02-24) $ 35.000 Gasto.</li>
+                    <li>(2023-02-24) $ 35.000 Gasto.</li>
+                    <li>(2023-02-24) $ 35.000 Gasto.</li>
+                    <li>(2023-02-24) $ 35.000 Gasto.</li>
+                    <li>(2023-02-24) $ 35.000 Gasto.</li>
+                    <li>(2023-02-24) $ 35.000 Gasto.</li>
+                    <li>(2023-02-24) $ 35.000 Gasto.</li>
+                </ul>
             </div>
-            <div class="turnos_grid">
-                Turno ( T )&nbsp;&nbsp;
-                Descanso ( D )&nbsp;&nbsp;
-                Vacación ( V )
-            </div>
-            <div class="turnos_grid">
-                <table style="white-space: nowrap;">
+            <div class="total-gastos">Total Gastos $135.000</div>
+        </div>
+        <div class="grid-general">Tres</div>
+        <div class="grid-general">Cuatro</div>
+    </div>
+    <div class="contenido-eventos" id="eventos" style="display: none;">
+        <div class="eventos_grid">
+            <img src="images/salto_el_laja.jpeg" alt="ruta" class="imagen">
+            <h1>Ruta Salto el Laja</h1>
+            <p>17, 18 y 19 de Febrero</p>
+            <span class="texto1">Partida Copec Los Lirios 12:00 hrs</span>
+            <!--<span class="texto2">Partida Copec Los Lirios 13:00 hrs</span>
+            <img src="images/mandinga_logo.jpeg" alt="logo" class="logo">
+            <span class="texto3">Partida Copec Los Lirios 13:00 hrs</span>-->
+        </div>
+        <div class="eventos_grid">
+            <img src="images/aniversario.jpeg" alt="aniversario" class="imagen">
+            <h1>Aniversario</h1>
+            <p>18 y 19 de Febrero</p>
+            <span class="texto1">Participación por Confirmar</span>
+            <!--<span class="texto2">Partida Copec Los Lirios 13:00 hrs</span>-->
+            <img src="images/mandinga_logo.jpeg" alt="logo" class="logo">
+            <span class="texto3">Valor Entrada: $20.000 derecho a cover.</span>
+        </div>
+        <div class="eventos_grid">
+            <img src="images/encuentro.jpeg" alt="encuentro" class="imagen">
+            <h1>Encuentro</h1>
+            <p>Jueves 02 de Febrero</p>
+            <span class="texto1">Lugar de encuentro Parke Comunal</span>
+            <span class="texto2">Partida 18:30 hrs</span>
+            <!--<img src="images/mandinga_logo.jpeg" alt="logo" class="logo">
+            <span class="texto3">Partida Copec Los Lirios 13:00 hrs</span>-->
+        </div>
+        <div class="eventos_grid">
+            <img src="images/evento.jpeg" alt="evento" class="imagen">
+            <h1>Evento</h1>
+            <p>Martes 24 de Febrero</p>
+            <span class="texto1">Lugar de evento Plaza los Heroes</span>
+            <span class="texto2">Partida 10:00 hrs</span>
+            <!--<img src="images/mandinga_logo.jpeg" alt="logo" class="logo">
+            <span class="texto3">Partida Copec Los Lirios 13:00 hrs</span>-->
+        </div>
+        <div class="eventos_grid">
+            <img src="images/evento.jpeg" alt="evento" class="imagen">
+            <h1>Evento</h1>
+            <p>Martes 24 de Febrero</p>
+            <span class="texto1">Lugar de evento Plaza los Heroes</span>
+            <span class="texto2">Partida 10:00 hrs</span>
+            <!--<img src="images/mandinga_logo.jpeg" alt="logo" class="logo">
+            <span class="texto3">Partida Copec Los Lirios 13:00 hrs</span>-->
+        </div>
+        <div class="eventos_grid">
+            <img src="images/evento.jpeg" alt="evento" class="imagen">
+            <h1>Evento</h1>
+            <p>Martes 24 de Febrero</p>
+            <span class="texto1">Lugar de evento Plaza los Heroes</span>
+            <span class="texto2">Partida 10:00 hrs</span>
+            <!--<img src="images/mandinga_logo.jpeg" alt="logo" class="logo">
+            <span class="texto3">Partida Copec Los Lirios 13:00 hrs</span>-->
+        </div>
+    </div>
+    <div class="contenido-turnos" id="turnos" style="display: none;">
+        <div class="grid-turnos-anos" onclick="ano_2023();return false;" id="2023">2023</div>
+        <div class="grid-turnos-anos" onclick="ano_2024();return false;" id="2024">2024</div>
+        <div class="grid-turnos-meses" id="meses_2023" style="display: none;">
+            <div class="mes" onclick="mes_2023(1);return false;" id="click_enero_2023">Enero</div>
+            <div class="mes" onclick="mes_2023(2);return false;" id="click_febrero_2023">Febrero</div>
+            <div class="mes" onclick="mes_2023(3);return false;" id="click_marzo_2023">Marzo</div>
+            <div class="mes" onclick="mes_2023(4);return false;" id="click_abril_2023">Abril</div>
+            <div class="mes" onclick="mes_2023(5);return false;" id="click_mayo_2023">Mayo</div>
+            <div class="mes" onclick="mes_2023(6);return false;" id="click_junio_2023">Junio</div>
+            <div class="mes" onclick="mes_2023(7);return false;" id="click_julio_2023">Julio</div>
+            <div class="mes" onclick="mes_2023(8);return false;" id="click_agosto_2023">Agosto</div>
+            <div class="mes" onclick="mes_2023(9);return false;" id="click_septiembre_2023">Septiembre</div>
+            <div class="mes" onclick="mes_2023(10);return false;" id="click_octubre_2023">Octubre</div>
+            <div class="mes" onclick="mes_2023(11);return false;" id="click_noviembre_2023">Noviembre</div>
+            <div class="mes" onclick="mes_2023(12);return false;" id="click_diciembre_2023">Diciembre</div>
+        </div>
+        <div class="grid-turnos-meses" id="meses_2024" style="display: none;">
+            <div class="mes" onclick="mes_2024(1);return false;">Enero</div>
+            <div class="mes">Febrero</div>
+            <div class="mes">Marzo</div>
+            <div class="mes">Abril</div>
+            <div class="mes">Mayo</div>
+            <div class="mes">Junio</div>
+            <div class="mes">Julio</div>
+            <div class="mes">Agosto</div>
+            <div class="mes">Septiembre</div>
+            <div class="mes">Octubre</div>
+            <div class="mes">Noviembre</div>
+            <div class="mes">Diciembre</div>
+        </div>
+        <div class="enero_2023" id="enero_2023" style="display: none;">
+            <table style="white-space: nowrap;">
                 <thead>
                     <tr>
-                        <th rowspan="2" class="sticky" style="background-color: black;">Nombre</th>
-                        <th colspan="31" class="sticky_mes">Enero</th>
-                        <th colspan="28" class="sticky_mes">Febrero</th>
-                        <th colspan="31" class="sticky_mes">Marzo</th>
+                        <th class="sticky" style="padding: 5px 0;" colspan="32">Simbologia: Turno (T) - Descanso (D) - Vacación (V) - <span style="color: #7de352;">Descanso o Vacacion Coincidente (D) o (V)</span></th>
                     </tr>
                     <tr>
+                        <th class="sticky" style="padding: 3px 5px;">NOMBRE</th>
                         <th>Dom 1</th>
                         <th>Lun 2</th>
                         <th>Mar 3</th>
@@ -159,7 +183,7 @@
                         <th>Vie 13</th>
                         <th>Sab 14</th>
                         <th>Dom 15</th>
-                        <th>Lun 16</th>
+                        <th>Lum 16</th>
                         <th>Mar 17</th>
                         <th>Mie 18</th>
                         <th>Jue 19</th>
@@ -175,69 +199,9 @@
                         <th>Dom 29</th>
                         <th>Lun 30</th>
                         <th>Mar 31</th>
-                        <th>Mie 1</th>
-                        <th>Jue 2</th>
-                        <th>Vie 3</th>
-                        <th>Sab 4</th>
-                        <th>Dom 5</th>
-                        <th>Lun 6</th>
-                        <th>Mar 7</th>
-                        <th>Mie 8</th>
-                        <th>Jue 9</th>
-                        <th>Vie 10</th>
-                        <th>Sab 11</th>
-                        <th>Dom 12</th>
-                        <th>Lun 13</th>
-                        <th>Mar 14</th>
-                        <th>Mie 15</th>
-                        <th>Jue 16</th>
-                        <th>Vie 17</th>
-                        <th>Sab 18</th>
-                        <th>Dom 19</th>
-                        <th>Lun 20</th>
-                        <th>Mar 21</th>
-                        <th>Mie 22</th>
-                        <th>Jue 23</th>
-                        <th>Vie 24</th>
-                        <th>Sab 25</th>
-                        <th>Dom 26</th>
-                        <th>Lun 27</th>
-                        <th>Mar 28</th>
-                        <th>Mie 1</th>
-                        <th>Jue 2</th>
-                        <th>Vie 3</th>
-                        <th>Sab 4</th>
-                        <th>Dom 5</th>
-                        <th>Lun 6</th>
-                        <th>Mar 7</th>
-                        <th>Mie 8</th>
-                        <th>Jue 9</th>
-                        <th>Vie 10</th>
-                        <th>Sab 11</th>
-                        <th>Dom 12</th>
-                        <th>Lun 13</th>
-                        <th>Mar 14</th>
-                        <th>Mie 15</th>
-                        <th>Jue 16</th>
-                        <th>Vie 17</th>
-                        <th>Sab 18</th>
-                        <th>Dom 19</th>
-                        <th>Lun 20</th>
-                        <th>Mar 21</th>
-                        <th>Mie 22</th>
-                        <th>Jue 23</th>
-                        <th>Vie 24</th>
-                        <th>Sab 25</th>
-                        <th>Dom 26</th>
-                        <th>Lun 27</th>
-                        <th>Mar 28</th>
-                        <th>Mie 29</th>
-                        <th>Jue 30</th>
-                        <th>Vie 31</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <!--ALEX-->
                     <tr>
                         <td class="sticky">Alex</td>
                         <!--01--><td style="color: #7de352; font-weight: bold;">D</td>
@@ -271,69 +235,7 @@
                         <!--29--><td style="color: #7de352; font-weight: bold;">D</td>
                         <!--30--><td style="color: #7de352; font-weight: bold;">D</td>
                         <!--31--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--FEBRERO-->
-                        <!--01--><td>T</td>
-                        <!--02--><td>T</td>
-                        <!--03--><td>T</td>
-                        <!--04--><td>T</td>
-                        <!--05--><td>T</td>
-                        <!--06--><td>T</td>
-                        <!--07--><td>T</td>
-                        <!--08--><td>T</td>
-                        <!--09--><td>T</td>
-                        <!--10--><td>T</td>
-                        <!--11--><td>T</td>
-                        <!--12--><td>T</td>
-                        <!--13--><td>T</td>
-                        <!--14--><td>T</td>
-                        <!--15--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--16--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--17--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--18--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--19--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--20--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--21--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--22--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--23--><td>D</td>
-                        <!--24--><td>D</td>
-                        <!--25--><td>D</td>
-                        <!--26--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--27--><td>D</td>
-                        <!--28--><td>D</td>
-                        <!--MARZO-->
-                        <!--01--><td>T</td>
-                        <!--02--><td>T</td>
-                        <!--03--><td>T</td>
-                        <!--04--><td>T</td>
-                        <!--05--><td>T</td>
-                        <!--06--><td>T</td>
-                        <!--07--><td>T</td>
-                        <!--08--><td>T</td>
-                        <!--09--><td>T</td>
-                        <!--10--><td>T</td>
-                        <!--11--><td>T</td>
-                        <!--12--><td>T</td>
-                        <!--13--><td>T</td>
-                        <!--14--><td>T</td>
-                        <!--15--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--16--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--17--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--18--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--19--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--20--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--21--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--22--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--23--><td>D</td>
-                        <!--24--><td>D</td>
-                        <!--25--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--26--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--27--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--28--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--29--><td>T</td>
-                        <!--30--><td>T</td>
-                        <!--31--><td>T</td>
                     </tr>
-                    <!--BRAKA-->
                     <tr>
                         <td class="sticky">Braka</td>
                         <!--01--><td style="color: #7de352; font-weight: bold;">D</td>
@@ -367,69 +269,7 @@
                         <!--29--><td>T</td>
                         <!--30--><td>T</td>
                         <!--31--><td>T</td>
-                        <!--FEBRERO-->
-                        <!--01--><td>T</td>
-                        <!--02--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--03--><td>T</td>
-                        <!--04--><td>T</td>
-                        <!--05--><td>T</td>
-                        <!--06--><td>T</td>
-                        <!--07--><td>T</td>
-                        <!--08--><td>T</td>
-                        <!--09--><td>D</td>
-                        <!--10--><td>D</td>
-                        <!--11--><td>T</td>
-                        <!--12--><td>T</td>
-                        <!--13--><td>T</td>
-                        <!--14--><td>T</td>
-                        <!--15--><td>T</td>
-                        <!--16--><td>T</td>
-                        <!--17--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--18--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--19--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--20--><td>T</td>
-                        <!--21--><td>T</td>
-                        <!--22--><td>T</td>
-                        <!--23--><td>T</td>
-                        <!--24--><td>T</td>
-                        <!--25--><td>T</td>
-                        <!--26--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--27--><td>T</td>
-                        <!--28--><td>T</td>
-                        <!--MARZO-->
-                        <!--01--><td>T</td>
-                        <!--02--><td>T</td>
-                        <!--03--><td>T</td>
-                        <!--04--><td>T</td>
-                        <!--05--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--06--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--07--><td>T</td>
-                        <!--08--><td>T</td>
-                        <!--09--><td>T</td>
-                        <!--10--><td>T</td>
-                        <!--11--><td>T</td>
-                        <!--12--><td>T</td>
-                        <!--13--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--14--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--15--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--16--><td>T</td>
-                        <!--17--><td>T</td>
-                        <!--18--><td>T</td>
-                        <!--19--><td>T</td>
-                        <!--20--><td>T</td>
-                        <!--21--><td>T</td>
-                        <!--22--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--23--><td>T</td>
-                        <!--24--><td>T</td>
-                        <!--25--><td>T</td>
-                        <!--26--><td>T</td>
-                        <!--27--><td>T</td>
-                        <!--28--><td>T</td>
-                        <!--29--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--30--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--31--><td>T</td>
                     </tr>
-                    <!--CHADU-->
                     <tr>
                         <td class="sticky">Chadu</td>
                         <!--01--><td>T</td>
@@ -463,69 +303,7 @@
                         <!--29--><td style="color: #7de352; font-weight: bold;">D</td>
                         <!--30--><td style="color: #7de352; font-weight: bold;">D</td>
                         <!--31--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--FEBRERO-->
-                        <!--01--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--02--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--03--><td>T</td>
-                        <!--04--><td>T</td>
-                        <!--05--><td>T</td>
-                        <!--06--><td>T</td>
-                        <!--07--><td>T</td>
-                        <!--08--><td>T</td>
-                        <!--09--><td>T</td>
-                        <!--10--><td>T</td>
-                        <!--11--><td>T</td>
-                        <!--12--><td>T</td>
-                        <!--13--><td>D</td>
-                        <!--14--><td>D</td>
-                        <!--15--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--16--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--17--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--18--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--19--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--20--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--21--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--22--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--23--><td>T</td>
-                        <!--24--><td>T</td>
-                        <!--25--><td>T</td>
-                        <!--26--><td>T</td>
-                        <!--27--><td>T</td>
-                        <!--28--><td>T</td>
-                        <!--MARZO-->
-                        <!--01--><td>T</td>
-                        <!--02--><td>T</td>
-                        <!--03--><td>T</td>
-                        <!--04--><td>T</td>
-                        <!--05--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--06--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--07--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--08--><td>D</td>
-                        <!--09--><td>D</td>
-                        <!--10--><td>D</td>
-                        <!--11--><td>D</td>
-                        <!--12--><td>D</td>
-                        <!--13--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--14--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--15--><td>T</td>
-                        <!--16--><td>T</td>
-                        <!--17--><td>T</td>
-                        <!--18--><td>T</td>
-                        <!--19--><td>T</td>
-                        <!--20--><td>T</td>
-                        <!--21--><td>T</td>
-                        <!--22--><td>T</td>
-                        <!--23--><td>T</td>
-                        <!--24--><td>T</td>
-                        <!--25--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--26--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--27--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--28--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--29--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--30--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--31--><td style="color: #7de352; font-weight: bold;">D</td>
                     </tr>
-                    <!--CARLOS-->
                     <tr>
                         <td class="sticky">Carlos</td>
                         <!--01--><td>T</td>
@@ -559,7 +337,144 @@
                         <!--29--><td>T</td>
                         <!--30--><td>T</td>
                         <!--31--><td>T</td>
-                        <!--FEBRERO-->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="febrero_2023" id="febrero_2023" style="display: none;">
+            <table style="white-space: nowrap;">
+                <thead>
+                    <tr>
+                        <th class="sticky" style="padding: 5px 0;" colspan="32">Simbologia: Turno (T) - Descanso (D) - Vacación (V) - <span style="color: #7de352;">Descanso o Vacacion Coincidente (D) o (V)</span></th>
+                    </tr>
+                    <tr>
+                        <th class="sticky" style="padding: 3px 5px;">NOMBRE</th>
+                        <th>Mie 1</th>
+                        <th>Jue 2</th>
+                        <th>Vie 3</th>
+                        <th>Sab 4</th>
+                        <th>Dom 5</th>
+                        <th>Lun 6</th>
+                        <th>Mar 7</th>
+                        <th>Mie 8</th>
+                        <th>Jue 9</th>
+                        <th>Vie 10</th>
+                        <th>Sab 11</th>
+                        <th>Dom 12</th>
+                        <th>Lum 13</th>
+                        <th>Mar 14</th>
+                        <th>Mie 15</th>
+                        <th>Jue 16</th>
+                        <th>Vie 17</th>
+                        <th>Sab 18</th>
+                        <th>Dom 19</th>
+                        <th>Lun 20</th>
+                        <th>Mar 21</th>
+                        <th>Mie 22</th>
+                        <th>Jue 23</th>
+                        <th>Vie 24</th>
+                        <th>Sab 25</th>
+                        <th>Dom 26</th>
+                        <th>Lun 27</th>
+                        <th>Mar 28</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="sticky">Alex</td>
+                        <!--01--><td>T</td>
+                        <!--02--><td>T</td>
+                        <!--03--><td>T</td>
+                        <!--04--><td>T</td>
+                        <!--05--><td>T</td>
+                        <!--06--><td>T</td>
+                        <!--07--><td>T</td>
+                        <!--08--><td>T</td>
+                        <!--09--><td>T</td>
+                        <!--10--><td>T</td>
+                        <!--11--><td>T</td>
+                        <!--12--><td>T</td>
+                        <!--13--><td>T</td>
+                        <!--14--><td>T</td>
+                        <!--15--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--16--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--17--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--18--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--19--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--20--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--21--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--22--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--23--><td>D</td>
+                        <!--24--><td>D</td>
+                        <!--25--><td>D</td>
+                        <!--26--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--27--><td>D</td>
+                        <!--28--><td>D</td>
+                    </tr>
+                    <tr>
+                        <td class="sticky">Braka</td>
+                        <!--01--><td>T</td>
+                        <!--02--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--03--><td>T</td>
+                        <!--04--><td>T</td>
+                        <!--05--><td>T</td>
+                        <!--06--><td>T</td>
+                        <!--07--><td>T</td>
+                        <!--08--><td>T</td>
+                        <!--09--><td>D</td>
+                        <!--10--><td>D</td>
+                        <!--11--><td>T</td>
+                        <!--12--><td>T</td>
+                        <!--13--><td>T</td>
+                        <!--14--><td>T</td>
+                        <!--15--><td>T</td>
+                        <!--16--><td>T</td>
+                        <!--17--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--18--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--19--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--20--><td>T</td>
+                        <!--21--><td>T</td>
+                        <!--22--><td>T</td>
+                        <!--23--><td>T</td>
+                        <!--24--><td>T</td>
+                        <!--25--><td>T</td>
+                        <!--26--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--27--><td>T</td>
+                        <!--28--><td>T</td>
+                    </tr>
+                    <tr>
+                        <td class="sticky">Chadu</td>
+                        <!--01--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--02--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--03--><td>T</td>
+                        <!--04--><td>T</td>
+                        <!--05--><td>T</td>
+                        <!--06--><td>T</td>
+                        <!--07--><td>T</td>
+                        <!--08--><td>T</td>
+                        <!--09--><td>T</td>
+                        <!--10--><td>T</td>
+                        <!--11--><td>T</td>
+                        <!--12--><td>T</td>
+                        <!--13--><td>D</td>
+                        <!--14--><td>D</td>
+                        <!--15--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--16--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--17--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--18--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--19--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--20--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--21--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--22--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--23--><td>T</td>
+                        <!--24--><td>T</td>
+                        <!--25--><td>T</td>
+                        <!--26--><td>T</td>
+                        <!--27--><td>T</td>
+                        <!--28--><td>T</td>
+                    </tr>
+                    <tr>
+                        <td class="sticky">Carlos</td>
                         <!--01--><td style="color: #7de352; font-weight: bold;">D</td>
                         <!--02--><td style="color: #7de352; font-weight: bold;">D</td>
                         <!--03--><td>D</td>
@@ -588,7 +503,156 @@
                         <!--26--><td>T</td>
                         <!--27--><td>T</td>
                         <!--28--><td>T</td>
-                        <!--MARZO-->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="marzo_2023" id="marzo_2023" style="display: none;">
+            <table style="white-space: nowrap;">
+                <thead>
+                    <tr>
+                        <th class="sticky" style="padding: 5px 0;" colspan="32">Simbologia: Turno (T) - Descanso (D) - Vacación (V) - <span style="color: #7de352;">Descanso o Vacacion Coincidente (D) o (V)</span></th>
+                    </tr>
+                    <tr>
+                        <th class="sticky" style="padding: 3px 5px;">NOMBRE</th>
+                        <th>Mie 1</th>
+                        <th>Jue 2</th>
+                        <th>Vie 3</th>
+                        <th>Sab 4</th>
+                        <th>Dom 5</th>
+                        <th>Lun 6</th>
+                        <th>Mar 7</th>
+                        <th>Mie 8</th>
+                        <th>Jue 9</th>
+                        <th>Vie 10</th>
+                        <th>Sab 11</th>
+                        <th>Dom 12</th>
+                        <th>Lum 13</th>
+                        <th>Mar 14</th>
+                        <th>Mie 15</th>
+                        <th>Jue 16</th>
+                        <th>Vie 17</th>
+                        <th>Sab 18</th>
+                        <th>Dom 19</th>
+                        <th>Lun 20</th>
+                        <th>Mar 21</th>
+                        <th>Mie 22</th>
+                        <th>Jue 23</th>
+                        <th>Vie 24</th>
+                        <th>Sab 25</th>
+                        <th>Dom 26</th>
+                        <th>Lun 27</th>
+                        <th>Mar 28</th>
+                        <th>Mie 29</th>
+                        <th>Jue 30</th>
+                        <th>Vie 31</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="sticky">Alex</td>
+                        <!--01--><td>T</td>
+                        <!--02--><td>T</td>
+                        <!--03--><td>T</td>
+                        <!--04--><td>T</td>
+                        <!--05--><td>T</td>
+                        <!--06--><td>T</td>
+                        <!--07--><td>T</td>
+                        <!--08--><td>T</td>
+                        <!--09--><td>T</td>
+                        <!--10--><td>T</td>
+                        <!--11--><td>T</td>
+                        <!--12--><td>T</td>
+                        <!--13--><td>T</td>
+                        <!--14--><td>T</td>
+                        <!--15--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--16--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--17--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--18--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--19--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--20--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--21--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--22--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--23--><td>D</td>
+                        <!--24--><td>D</td>
+                        <!--25--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--26--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--27--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--28--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--29--><td>T</td>
+                        <!--30--><td>T</td>
+                        <!--31--><td>T</td>
+                    </tr>
+                    <tr>
+                        <td class="sticky">Braka</td>
+                        <!--01--><td>T</td>
+                        <!--02--><td>T</td>
+                        <!--03--><td>T</td>
+                        <!--04--><td>T</td>
+                        <!--05--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--06--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--07--><td>T</td>
+                        <!--08--><td>T</td>
+                        <!--09--><td>T</td>
+                        <!--10--><td>T</td>
+                        <!--11--><td>T</td>
+                        <!--12--><td>T</td>
+                        <!--13--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--14--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--15--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--16--><td>T</td>
+                        <!--17--><td>T</td>
+                        <!--18--><td>T</td>
+                        <!--19--><td>T</td>
+                        <!--20--><td>T</td>
+                        <!--21--><td>T</td>
+                        <!--22--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--23--><td>T</td>
+                        <!--24--><td>T</td>
+                        <!--25--><td>T</td>
+                        <!--26--><td>T</td>
+                        <!--27--><td>T</td>
+                        <!--28--><td>T</td>
+                        <!--29--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--30--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--31--><td>T</td>
+                    </tr>
+                    <tr>
+                        <td class="sticky">Chadu</td>
+                        <!--01--><td>T</td>
+                        <!--02--><td>T</td>
+                        <!--03--><td>T</td>
+                        <!--04--><td>T</td>
+                        <!--05--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--06--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--07--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--08--><td>D</td>
+                        <!--09--><td>D</td>
+                        <!--10--><td>D</td>
+                        <!--11--><td>D</td>
+                        <!--12--><td>D</td>
+                        <!--13--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--14--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--15--><td>T</td>
+                        <!--16--><td>T</td>
+                        <!--17--><td>T</td>
+                        <!--18--><td>T</td>
+                        <!--19--><td>T</td>
+                        <!--20--><td>T</td>
+                        <!--21--><td>T</td>
+                        <!--22--><td>T</td>
+                        <!--23--><td>T</td>
+                        <!--24--><td>T</td>
+                        <!--25--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--26--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--27--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--28--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--29--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--30--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--31--><td style="color: #7de352; font-weight: bold;">D</td>
+                    </tr>
+                    <tr>
+                        <td class="sticky">Carlos</td>
                         <!--01--><td>D</td>
                         <!--02--><td>D</td>
                         <!--03--><td>D</td>
@@ -623,381 +687,2132 @@
                     </tr>
                 </tbody>
             </table>
-            </div>
         </div>
-        <!--GASTOS-->
-        <div class="featured gastos">
-            <div class="gastos_grid">
-                <h1>Movimientos</h1>
-                <ul>
-                    <li>(2023-01-07) + $20.000 Pago 4 Cuotas Nov-Feb Carlos.</li>
-                    <li>(2023-02-15) + $484.445 Entrega de Dinero al Club de Nicollette.</li>
-                    <li>(2023-02-15) - $34.000 Pagos.</li>
-                    <li>(2023-02-15) + $25.000 Pago 5 Cuotas Oct-Feb Robinson.</li>
-                </ul>
-            </div>
-            <div class="gastos_grid">
-                <h1>Total</h1>
-                <h2>$495.445</h2>
-            </div>
+        <div class="abril_2023" id="abril_2023" style="display: none;">
+            <table style="white-space: nowrap;">
+                <thead>
+                    <tr>
+                        <th class="sticky" style="padding: 5px 0;" colspan="32">Simbologia: Turno (T) - Descanso (D) - Vacación (V) - <span style="color: #7de352;">Descanso o Vacacion Coincidente (D) o (V)</span></th>
+                    </tr>
+                    <tr>
+                        <th class="sticky" style="padding: 3px 5px;">NOMBRE</th>
+                        <th>Sab 1</th>
+                        <th>Dom 2</th>
+                        <th>Lun 3</th>
+                        <th>Mar 4</th>
+                        <th>Mie 5</th>
+                        <th>Jue 6</th>
+                        <th>Vie 7</th>
+                        <th>Sab 8</th>
+                        <th>Dom 9</th>
+                        <th>Lum 10</th>
+                        <th>Mar 11</th>
+                        <th>Mie 12</th>
+                        <th>Jue 13</th>
+                        <th>Vie 14</th>
+                        <th>Sab 15</th>
+                        <th>Dom 16</th>
+                        <th>Lun 17</th>
+                        <th>Mar 18</th>
+                        <th>Mie 19</th>
+                        <th>Jue 20</th>
+                        <th>Vie 21</th>
+                        <th>Sab 22</th>
+                        <th>Dom 23</th>
+                        <th>Lun 24</th>
+                        <th>Mar 25</th>
+                        <th>Mie 26</th>
+                        <th>Jue 27</th>
+                        <th>Vie 28</th>
+                        <th>Sab 29</th>
+                        <th>Dom 30</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="sticky">Alex</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="sticky">Braka</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="sticky">Chadu</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="sticky">Carlos</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
+        <div class="mayo_2023" id="mayo_2023" style="display: none;">
+            <table style="white-space: nowrap;">
+                <thead>
+                    <tr>
+                        <th class="sticky" style="padding: 5px 0;" colspan="32">Simbologia: Turno (T) - Descanso (D) - Vacación (V) - <span style="color: #7de352;">Descanso o Vacacion Coincidente (D) o (V)</span></th>
+                    </tr>
+                    <tr>
+                        <th class="sticky" style="padding: 3px 5px;">NOMBRE</th>
+                        <th>Lun 1</th>
+                        <th>Mar 2</th>
+                        <th>Mie 3</th>
+                        <th>Jue 4</th>
+                        <th>Vie 5</th>
+                        <th>Sab 6</th>
+                        <th>Dom 7</th>
+                        <th>Lun 8</th>
+                        <th>Mar 9</th>
+                        <th>Mie 10</th>
+                        <th>Jue 11</th>
+                        <th>Vie 12</th>
+                        <th>Sab 13</th>
+                        <th>Dom 14</th>
+                        <th>Lum 15</th>
+                        <th>Mar 16</th>
+                        <th>Mie 17</th>
+                        <th>Jue 18</th>
+                        <th>Vie 19</th>
+                        <th>Sab 20</th>
+                        <th>Dom 21</th>
+                        <th>Lun 22</th>
+                        <th>Mar 23</th>
+                        <th>Mie 24</th>
+                        <th>Jue 25</th>
+                        <th>Vie 26</th>
+                        <th>Sab 27</th>
+                        <th>Dom 28</th>
+                        <th>Lun 29</th>
+                        <th>Mar 30</th>
+                        <th>Mie 31</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="sticky">Alex</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="sticky">Braka</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="sticky">Chadu</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="sticky">Carlos</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="junio_2023" id="junio_2023" style="display: none;">
+            <table style="white-space: nowrap;">
+                <thead>
+                    <tr>
+                        <th class="sticky" style="padding: 5px 0;" colspan="32">Simbologia: Turno (T) - Descanso (D) - Vacación (V) - <span style="color: #7de352;">Descanso o Vacacion Coincidente (D) o (V)</span></th>
+                    </tr>
+                    <tr>
+                        <th class="sticky" style="padding: 3px 5px;">NOMBRE</th>
+                        <th>Jue 1</th>
+                        <th>Vie 2</th>
+                        <th>Sab 3</th>
+                        <th>Dom 4</th>
+                        <th>Lum 5</th>
+                        <th>Mar 6</th>
+                        <th>Mie 7</th>
+                        <th>Jue 8</th>
+                        <th>Vie 9</th>
+                        <th>Sab 10</th>
+                        <th>Dom 11</th>
+                        <th>Lun 12</th>
+                        <th>Mar 13</th>
+                        <th>Mie 14</th>
+                        <th>Jue 15</th>
+                        <th>Vie 16</th>
+                        <th>Sab 17</th>
+                        <th>Dom 18</th>
+                        <th>Lun 19</th>
+                        <th>Mar 20</th>
+                        <th>Mie 21</th>
+                        <th>Jue 22</th>
+                        <th>Vie 23</th>
+                        <th>Sab 24</th>
+                        <th>Dom 25</th>
+                        <th>Lun 26</th>
+                        <th>Mar 27</th>
+                        <th>Mie 28</th>
+                        <th>Jue 29</th>
+                        <th>Vie 30</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="sticky">Alex</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="sticky">Braka</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="sticky">Chadu</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="sticky">Carlos</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="julio_2023" id="julio_2023" style="display: none;">
+            <table style="white-space: nowrap;">
+                <thead>
+                    <tr>
+                        <th class="sticky" style="padding: 5px 0;" colspan="32">Simbologia: Turno (T) - Descanso (D) - Vacación (V) - <span style="color: #7de352;">Descanso o Vacacion Coincidente (D) o (V)</span></th>
+                    </tr>
+                    <tr>
+                        <th class="sticky" style="padding: 3px 5px;">NOMBRE</th>
+                        <th>Sab 1</th>
+                        <th>Dom 2</th>
+                        <th>Lun 3</th>
+                        <th>Mar 4</th>
+                        <th>Mie 5</th>
+                        <th>Jue 6</th>
+                        <th>Vie 7</th>
+                        <th>Sab 8</th>
+                        <th>Dom 9</th>
+                        <th>Lum 10</th>
+                        <th>Mar 11</th>
+                        <th>Mie 12</th>
+                        <th>Jue 13</th>
+                        <th>Vie 14</th>
+                        <th>Sab 15</th>
+                        <th>Dom 16</th>
+                        <th>Lun 17</th>
+                        <th>Mar 18</th>
+                        <th>Mie 19</th>
+                        <th>Jue 20</th>
+                        <th>Vie 21</th>
+                        <th>Sab 22</th>
+                        <th>Dom 23</th>
+                        <th>Lun 24</th>
+                        <th>Mar 25</th>
+                        <th>Mie 26</th>
+                        <th>Jue 27</th>
+                        <th>Vie 28</th>
+                        <th>Sab 29</th>
+                        <th>Dom 30</th>
+                        <th>Lun 31</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="sticky">Alex</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="sticky">Braka</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="sticky">Chadu</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="sticky">Carlos</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="agosto_2023" id="agosto_2023" style="display: none;">
+            <table style="white-space: nowrap;">
+                <thead>
+                    <tr>
+                        <th class="sticky" style="padding: 5px 0;" colspan="32">Simbologia: Turno (T) - Descanso (D) - Vacación (V) - <span style="color: #7de352;">Descanso o Vacacion Coincidente (D) o (V)</span></th>
+                    </tr>
+                    <tr>
+                        <th class="sticky" style="padding: 3px 5px;">NOMBRE</th>
+                        <th>Mar 1</th>
+                        <th>Mie 2</th>
+                        <th>Jue 3</th>
+                        <th>Vie 4</th>
+                        <th>Sab 5</th>
+                        <th>Dom 6</th>
+                        <th>Lum 7</th>
+                        <th>Mar 8</th>
+                        <th>Mie 9</th>
+                        <th>Jue 10</th>
+                        <th>Vie 11</th>
+                        <th>Sab 12</th>
+                        <th>Dom 13</th>
+                        <th>Lun 14</th>
+                        <th>Mar 15</th>
+                        <th>Mie 16</th>
+                        <th>Jue 17</th>
+                        <th>Vie 18</th>
+                        <th>Sab 19</th>
+                        <th>Dom 20</th>
+                        <th>Lun 21</th>
+                        <th>Mar 22</th>
+                        <th>Mie 23</th>
+                        <th>Jue 24</th>
+                        <th>Vie 25</th>
+                        <th>Sab 26</th>
+                        <th>Dom 27</th>
+                        <th>Lun 28</th>
+                        <th>Mar 29</th>
+                        <th>Mie 30</th>
+                        <th>Jue 31</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="sticky">Alex</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="sticky">Braka</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="sticky">Chadu</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="sticky">Carlos</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="septiembre_2023" id="septiembre_2023" style="display: none;">
+            <table style="white-space: nowrap;">
+                <thead>
+                    <tr>
+                        <th class="sticky" style="padding: 5px 0;" colspan="32">Simbologia: Turno (T) - Descanso (D) - Vacación (V) - <span style="color: #7de352;">Descanso o Vacacion Coincidente (D) o (V)</span></th>
+                    </tr>
+                    <tr>
+                        <th class="sticky" style="padding: 3px 5px;">NOMBRE</th>
+                        <th>Vie 1</th>
+                        <th>Sab 2</th>
+                        <th>Dom 3</th>
+                        <th>Lum 4</th>
+                        <th>Mar 5</th>
+                        <th>Mie 6</th>
+                        <th>Jue 7</th>
+                        <th>Vie 8</th>
+                        <th>Sab 9</th>
+                        <th>Dom 10</th>
+                        <th>Lun 11</th>
+                        <th>Mar 12</th>
+                        <th>Mie 13</th>
+                        <th>Jue 14</th>
+                        <th>Vie 15</th>
+                        <th>Sab 16</th>
+                        <th>Dom 17</th>
+                        <th>Lun 18</th>
+                        <th>Mar 19</th>
+                        <th>Mie 20</th>
+                        <th>Jue 21</th>
+                        <th>Vie 22</th>
+                        <th>Sab 23</th>
+                        <th>Dom 24</th>
+                        <th>Lun 25</th>
+                        <th>Mar 26</th>
+                        <th>Mie 27</th>
+                        <th>Jue 28</th>
+                        <th>Vie 29</th>
+                        <th>Sab 30</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="sticky">Alex</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="sticky">Braka</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="sticky">Chadu</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="sticky">Carlos</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="octubre_2023" id="octubre_2023" style="display: none;">
+            <table style="white-space: nowrap;">
+                <thead>
+                    <tr>
+                        <th class="sticky" style="padding: 5px 0;" colspan="32">Simbologia: Turno (T) - Descanso (D) - Vacación (V) - <span style="color: #7de352;">Descanso o Vacacion Coincidente (D) o (V)</span></th>
+                    </tr>
+                    <tr>
+                        <th class="sticky" style="padding: 3px 5px;">NOMBRE</th>
+                        <th>Dom 1</th>
+                        <th>Lum 2</th>
+                        <th>Mar 3</th>
+                        <th>Mie 4</th>
+                        <th>Jue 5</th>
+                        <th>Vie 6</th>
+                        <th>Sab 7</th>
+                        <th>Dom 8</th>
+                        <th>Lun 9</th>
+                        <th>Mar 10</th>
+                        <th>Mie 11</th>
+                        <th>Jue 12</th>
+                        <th>Vie 13</th>
+                        <th>Sab 14</th>
+                        <th>Dom 15</th>
+                        <th>Lun 16</th>
+                        <th>Mar 17</th>
+                        <th>Mie 18</th>
+                        <th>Jue 19</th>
+                        <th>Vie 20</th>
+                        <th>Sab 21</th>
+                        <th>Dom 22</th>
+                        <th>Lun 23</th>
+                        <th>Mar 24</th>
+                        <th>Mie 25</th>
+                        <th>Jue 26</th>
+                        <th>Vie 27</th>
+                        <th>Sab 28</th>
+                        <th>Dom 29</th>
+                        <th>Lun 30</th>
+                        <th>Mar 31</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="sticky">Alex</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="sticky">Braka</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="sticky">Chadu</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="sticky">Carlos</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="noviembre_2023" id="noviembre_2023" style="display: none;">
+            <table style="white-space: nowrap;">
+                <thead>
+                    <tr>
+                        <th class="sticky" style="padding: 5px 0;" colspan="32">Simbologia: Turno (T) - Descanso (D) - Vacación (V) - <span style="color: #7de352;">Descanso o Vacacion Coincidente (D) o (V)</span></th>
+                    </tr>
+                    <tr>
+                        <th class="sticky" style="padding: 3px 5px;">NOMBRE</th>
+                        <th>Mie 1</th>
+                        <th>Jue 2</th>
+                        <th>Vie 3</th>
+                        <th>Sab 4</th>
+                        <th>Dom 5</th>
+                        <th>Lun 6</th>
+                        <th>Mar 7</th>
+                        <th>Mie 8</th>
+                        <th>Jue 9</th>
+                        <th>Vie 10</th>
+                        <th>Sab 11</th>
+                        <th>Dom 12</th>
+                        <th>Lun 13</th>
+                        <th>Mar 14</th>
+                        <th>Mie 15</th>
+                        <th>Jue 16</th>
+                        <th>Vie 17</th>
+                        <th>Sab 18</th>
+                        <th>Dom 19</th>
+                        <th>Lun 20</th>
+                        <th>Mar 21</th>
+                        <th>Mie 22</th>
+                        <th>Jue 23</th>
+                        <th>Vie 24</th>
+                        <th>Sab 25</th>
+                        <th>Dom 26</th>
+                        <th>Lun 27</th>
+                        <th>Mar 28</th>
+                        <th>Mie 29</th>
+                        <th>Jue 30</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="sticky">Alex</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="sticky">Braka</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="sticky">Chadu</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="sticky">Carlos</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="diciembre_2023" id="diciembre_2023" style="display: none;">
+            <table style="white-space: nowrap;">
+                <thead>
+                    <tr>
+                        <th class="sticky" style="padding: 5px 0;" colspan="32">Simbologia: Turno (T) - Descanso (D) - Vacación (V) - <span style="color: #7de352;">Descanso o Vacacion Coincidente (D) o (V)</span></th>
+                    </tr>
+                    <tr>
+                        <th class="sticky" style="padding: 3px 5px;">NOMBRE</th>
+                        <th>Vie 1</th>
+                        <th>Sab 2</th>
+                        <th>Dom 3</th>
+                        <th>Lun 4</th>
+                        <th>Mar 5</th>
+                        <th>Mie 6</th>
+                        <th>Jue 7</th>
+                        <th>Vie 8</th>
+                        <th>Sab 9</th>
+                        <th>Dom 10</th>
+                        <th>Lun 11</th>
+                        <th>Mar 12</th>
+                        <th>Mie 13</th>
+                        <th>Jue 14</th>
+                        <th>Vie 15</th>
+                        <th>Sab 16</th>
+                        <th>Dom 17</th>
+                        <th>Lun 18</th>
+                        <th>Mar 19</th>
+                        <th>Mie 20</th>
+                        <th>Jue 21</th>
+                        <th>Vie 22</th>
+                        <th>Sab 23</th>
+                        <th>Dom 24</th>
+                        <th>Lun 25</th>
+                        <th>Mar 26</th>
+                        <th>Mie 27</th>
+                        <th>Jue 28</th>
+                        <th>Vie 29</th>
+                        <th>Sab 30</th>
+                        <th>Dom 31</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="sticky">Alex</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="sticky">Braka</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="sticky">Chadu</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="sticky">Carlos</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="enero_2024" id="enero_2024" style="display: none;color: white;font-size: 1.8em;">Sin datos aún, no sea ansioso.</div>
     </div>
-    <!--TABLA CUOTAS-->
-    <div class="contenedor-tabla">
-        <table>
+    <div class="contenido-gastos" id="gastos" style="display: none;">
+        <div class="grid-gastos-anos" onclick="ano_2021_gastos();return false;" id="2021_gastos">2021</div>
+        <div class="grid-gastos-anos" onclick="ano_2022_gastos();return false;" id="2022_gastos">2022</div>
+        <div class="grid-gastos-anos" onclick="ano_2023_gastos();return false;" id="2023_gastos">2023</div>
+        <div class="grid-gastos-anos" onclick="ano_2024_gastos();return false;" id="2024_gastos">2024</div>
+    </div>
+    <div class="t_2021" id="t_2021" style="display: none;">
+        <table style="white-space: nowrap;width: 100%;">
             <thead>
                 <tr>
-                    <th colspan="37" style="text-align: center;letter-spacing: 10px;">Tabla General de Cuotas desde 2018 a la Fecha</th>
-                </tr>
-                <tr>
-                    <th rowspan="2" style="padding-top: 40px;" class="sticky">Nombre</th>
-                    <!--<th colspan="12" style="text-align: center;letter-spacing: 30px;">2021</th>-->
-                    <th colspan="12" style="text-align: center;letter-spacing: 30px;">2022</th>
-                    <th colspan="12" style="text-align: center;letter-spacing: 30px;">2023</th>
-                </tr>
-                <tr>
-                    <!--2021-->
-                    <!--<th style="text-align: center;">Enero</th>
-                    <th style="text-align: center;">Febrero</th>
-                    <th style="text-align: center;">Marzo</th>
-                    <th style="text-align: center;">Abril</th>
-                    <th style="text-align: center;">Mayo</th>
-                    <th style="text-align: center;">Junio</th>
-                    <th style="text-align: center;">Julio</th>
-                    <th style="text-align: center;">Agosto</th>
-                    <th style="text-align: center;">Septiembre</th>
-                    <th style="text-align: center;">Octubre</th>
-                    <th style="text-align: center;">Noviembre</th>
-                    <th style="text-align: center;">Diciembre</th>-->
-                    <!--2022-->
-                    <th style="text-align: center;">Enero</th>
-                    <th style="text-align: center;">Febrero</th>
-                    <th style="text-align: center;">Marzo</th>
-                    <th style="text-align: center;">Abril</th>
-                    <th style="text-align: center;">Mayo</th>
-                    <th style="text-align: center;">Junio</th>
-                    <th style="text-align: center;">Julio</th>
-                    <th style="text-align: center;">Agosto</th>
-                    <th style="text-align: center;">Septiembre</th>
-                    <th style="text-align: center;">Octubre</th>
-                    <th style="text-align: center;">Noviembre</th>
-                    <th style="text-align: center;">Diciembre</th>
-                    <!--2023-->
-                    <th style="text-align: center;">Enero</th>
-                    <th style="text-align: center;">Febrero</th>
-                    <th style="text-align: center;">Marzo</th>
-                    <th style="text-align: center;">Abril</th>
-                    <th style="text-align: center;">Mayo</th>
-                    <th style="text-align: center;">Junio</th>
-                    <th style="text-align: center;">Julio</th>
-                    <th style="text-align: center;">Agosto</th>
-                    <th style="text-align: center;">Septiembre</th>
-                    <th style="text-align: center;">Octubre</th>
-                    <th style="text-align: center;">Noviembre</th>
-                    <th style="text-align: center;">Diciembre</th>
+                    <th class="sticky" style="padding: 3px 5px;">NOMBRE</th>
+                    <th>Enero</th>
+                    <th>Febrero</th>
+                    <th>Marzo</th>
+                    <th>Abril</th>
+                    <th>Mayo</th>
+                    <th>Junio</th>
+                    <th>Julio</th>
+                    <th>Agosto</th>
+                    <th>Septiembre</th>
+                    <th>Octubre</th>
+                    <th>Noviembre</th>
+                    <th>Diciembre</th>
                 </tr>
             </thead>
             <tbody>
-                <!--PABLO-->
                 <tr>
-                    <td class="sticky">Pablo Fuentes</td>
-                    <!--2021-->
-                    <!--<td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>-->
-                    <!--2022-->
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td class="diciembre">-</td>
-                    <!--2023-->
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td class="diciembre">-</td>
+                    <td class="sticky">Pablo</td>
+                    <!--Enero--><td>-</td>
+                    <!--Febrero--><td>-</td>
+                    <!--Marzo--><td>-</td>
+                    <!--Abril--><td>-</td>
+                    <!--Mayo--><td>-</td>
+                    <!--Junio--><td>-</td>
+                    <!--Julio--><td>-</td>
+                    <!--Agosto--><td>-</td>
+                    <!--Septiembre--><td>-</td>
+                    <!--Octubre--><td>-</td>
+                    <!--Noviembre--><td>-</td>
+                    <!--Diciembre--><td>-</td>
                 </tr>
-                <!--JJ-->
                 <tr>
-                    <td class="sticky">Juan Jose Reyes</td>
-                    <!--2021-->
-                    <!--<td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>-->
-                    <!--2022-->
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td class="diciembre">$5.000</td>
-                    <!--2023-->
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td class="diciembre">-</td>
+                    <td class="sticky">Jota J</td>
+                    <!--Enero--><td>-</td>
+                    <!--Febrero--><td>-</td>
+                    <!--Marzo--><td>-</td>
+                    <!--Abril--><td>-</td>
+                    <!--Mayo--><td>-</td>
+                    <!--Junio--><td>-</td>
+                    <!--Julio--><td>-</td>
+                    <!--Agosto--><td>-</td>
+                    <!--Septiembre--><td>-</td>
+                    <!--Octubre--><td>-</td>
+                    <!--Noviembre--><td>-</td>
+                    <!--Diciembre--><td>-</td>
                 </tr>
-                <!--ALEX-->
                 <tr>
-                    <td class="sticky">Alex Vejar</td>
-                    <!--2021-->
-                    <!--<td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>-->
-                    <!--2022-->
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td class="diciembre">-</td>
-                    <!--2023-->
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td class="diciembre">-</td>
+                    <td class="sticky">Alex</td>
+                    <!--Enero--><td>-</td>
+                    <!--Febrero--><td>-</td>
+                    <!--Marzo--><td>-</td>
+                    <!--Abril--><td>-</td>
+                    <!--Mayo--><td>-</td>
+                    <!--Junio--><td>-</td>
+                    <!--Julio--><td>-</td>
+                    <!--Agosto--><td>-</td>
+                    <!--Septiembre--><td>-</td>
+                    <!--Octubre--><td>-</td>
+                    <!--Noviembre--><td>-</td>
+                    <!--Diciembre--><td>-</td>
                 </tr>
-                <!--ROBINSON-->
                 <tr>
-                    <td class="sticky">Robinso Gonzalez</td>
-                    <!--2021-->
-                    <!--<td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>-->
-                    <!--2022-->
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td class="diciembre">$5.000</td>
-                    <!--2023-->
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td class="diciembre">-</td>
+                    <td class="sticky">Robinson</td>
+                    <!--Enero--><td>-</td>
+                    <!--Febrero--><td>-</td>
+                    <!--Marzo--><td>-</td>
+                    <!--Abril--><td>-</td>
+                    <!--Mayo--><td>-</td>
+                    <!--Junio--><td>-</td>
+                    <!--Julio--><td>-</td>
+                    <!--Agosto--><td>-</td>
+                    <!--Septiembre--><td>-</td>
+                    <!--Octubre--><td>-</td>
+                    <!--Noviembre--><td>-</td>
+                    <!--Diciembre--><td>-</td>
                 </tr>
-                <!--BRAKA-->
                 <tr>
-                    <td class="sticky">Braka Monte</td>
-                    <!--2021-->
-                    <!--<td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>-->
-                    <!--2022-->
-                    <td>-</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td class="diciembre">$5.000</td>
-                    <!--2023-->
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td class="diciembre">-</td>
+                    <td class="sticky">Braka</td>
+                    <!--Enero--><td>-</td>
+                    <!--Febrero--><td>-</td>
+                    <!--Marzo--><td>-</td>
+                    <!--Abril--><td>-</td>
+                    <!--Mayo--><td>-</td>
+                    <!--Junio--><td>-</td>
+                    <!--Julio--><td>-</td>
+                    <!--Agosto--><td>-</td>
+                    <!--Septiembre--><td>-</td>
+                    <!--Octubre--><td>-</td>
+                    <!--Noviembre--><td>-</td>
+                    <!--Diciembre--><td>-</td>
                 </tr>
-                <!--CHADU-->
                 <tr>
                     <td class="sticky">Chadu</td>
-                    <!--2021-->
-                    <!--<td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>-->
-                    <!--2022-->
-                    <td>-</td>
-                    <td>-</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>-</td>
-                    <td class="diciembre">-</td>
-                    <!--2023-->
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td class="diciembre">-</td>
+                    <!--Enero--><td>-</td>
+                    <!--Febrero--><td>-</td>
+                    <!--Marzo--><td>-</td>
+                    <!--Abril--><td>-</td>
+                    <!--Mayo--><td>-</td>
+                    <!--Junio--><td>-</td>
+                    <!--Julio--><td>-</td>
+                    <!--Agosto--><td>-</td>
+                    <!--Septiembre--><td>-</td>
+                    <!--Octubre--><td>-</td>
+                    <!--Noviembre--><td>-</td>
+                    <!--Diciembre--><td>-</td>
                 </tr>
-                <!--CARLOS-->
                 <tr>
-                    <td class="sticky">Carlos Vejar</td>
-                    <!--2021-->
-                    <!--<td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>-->
-                    <!--2022-->
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td class="diciembre">$5.000</td>
-                    <!--2023-->
-                    <td>$5.000</td>
-                    <td>$5.000</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td class="diciembre">-</td>
+                    <td class="sticky">Carlos</td>
+                    <!--Enero--><td>-</td>
+                    <!--Febrero--><td>-</td>
+                    <!--Marzo--><td>-</td>
+                    <!--Abril--><td>-</td>
+                    <!--Mayo--><td>-</td>
+                    <!--Junio--><td>-</td>
+                    <!--Julio--><td>-</td>
+                    <!--Agosto--><td>-</td>
+                    <!--Septiembre--><td>-</td>
+                    <!--Octubre--><td>-</td>
+                    <!--Noviembre--><td>-</td>
+                    <!--Diciembre--><td>-</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="t_2022" id="t_2022" style="display: none;">
+        <table style="white-space: nowrap;width: 100%;">
+            <thead>
+                <tr>
+                    <th class="sticky" style="padding: 3px 5px;">NOMBRE</th>
+                    <th>Enero</th>
+                    <th>Febrero</th>
+                    <th>Marzo</th>
+                    <th>Abril</th>
+                    <th>Mayo</th>
+                    <th>Junio</th>
+                    <th>Julio</th>
+                    <th>Agosto</th>
+                    <th>Septiembre</th>
+                    <th>Octubre</th>
+                    <th>Noviembre</th>
+                    <th>Diciembre</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="sticky">Pablo</td>
+                    <!--Enero--><td>-</td>
+                    <!--Febrero--><td>-</td>
+                    <!--Marzo--><td>-</td>
+                    <!--Abril--><td>-</td>
+                    <!--Mayo--><td>-</td>
+                    <!--Junio--><td>-</td>
+                    <!--Julio--><td>-</td>
+                    <!--Agosto--><td>-</td>
+                    <!--Septiembre--><td>-</td>
+                    <!--Octubre--><td>-</td>
+                    <!--Noviembre--><td>-</td>
+                    <!--Diciembre--><td>-</td>
+                </tr>
+                <tr>
+                    <td class="sticky">Jota J</td>
+                    <!--Enero--><td>-</td>
+                    <!--Febrero--><td>-</td>
+                    <!--Marzo--><td>-</td>
+                    <!--Abril--><td>-</td>
+                    <!--Mayo--><td>-</td>
+                    <!--Junio--><td>-</td>
+                    <!--Julio--><td>-</td>
+                    <!--Agosto--><td>-</td>
+                    <!--Septiembre--><td>-</td>
+                    <!--Octubre--><td>-</td>
+                    <!--Noviembre--><td>-</td>
+                    <!--Diciembre--><td>-</td>
+                </tr>
+                <tr>
+                    <td class="sticky">Alex</td>
+                    <!--Enero--><td>-</td>
+                    <!--Febrero--><td>-</td>
+                    <!--Marzo--><td>-</td>
+                    <!--Abril--><td>-</td>
+                    <!--Mayo--><td>-</td>
+                    <!--Junio--><td>-</td>
+                    <!--Julio--><td>-</td>
+                    <!--Agosto--><td>-</td>
+                    <!--Septiembre--><td>-</td>
+                    <!--Octubre--><td>-</td>
+                    <!--Noviembre--><td>-</td>
+                    <!--Diciembre--><td>-</td>
+                </tr>
+                <tr>
+                    <td class="sticky">Robinson</td>
+                    <!--Enero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
+                    <!--Febrero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
+                    <!--Marzo--><td style="color: #7de352; font-weight: bold;">$5.000</td>
+                    <!--Abril--><td style="color: #7de352; font-weight: bold;">$5.000</td>
+                    <!--Mayo--><td style="color: #7de352; font-weight: bold;">$5.000</td>
+                    <!--Junio--><td style="color: #7de352; font-weight: bold;">$5.000</td>
+                    <!--Julio--><td style="color: #7de352; font-weight: bold;">$5.000</td>
+                    <!--Agosto--><td style="color: #7de352; font-weight: bold;">$5.000</td>
+                    <!--Septiembre--><td style="color: #7de352; font-weight: bold;">$5.000</td>
+                    <!--Octubre--><td>-</td>
+                    <!--Noviembre--><td>-</td>
+                    <!--Diciembre--><td>-</td>
+                </tr>
+                <tr>
+                    <td class="sticky">Braka</td>
+                    <!--Enero--><td>-</td>
+                    <!--Febrero--><td>-</td>
+                    <!--Marzo--><td>-</td>
+                    <!--Abril--><td>-</td>
+                    <!--Mayo--><td>-</td>
+                    <!--Junio--><td>-</td>
+                    <!--Julio--><td>-</td>
+                    <!--Agosto--><td>-</td>
+                    <!--Septiembre--><td>-</td>
+                    <!--Octubre--><td>-</td>
+                    <!--Noviembre--><td>-</td>
+                    <!--Diciembre--><td>-</td>
+                </tr>
+                <tr>
+                    <td class="sticky">Chadu</td>
+                    <!--Enero--><td>-</td>
+                    <!--Febrero--><td>-</td>
+                    <!--Marzo--><td>-</td>
+                    <!--Abril--><td>-</td>
+                    <!--Mayo--><td>-</td>
+                    <!--Junio--><td>-</td>
+                    <!--Julio--><td>-</td>
+                    <!--Agosto--><td>-</td>
+                    <!--Septiembre--><td>-</td>
+                    <!--Octubre--><td>-</td>
+                    <!--Noviembre--><td>-</td>
+                    <!--Diciembre--><td>-</td>
+                </tr>
+                <tr>
+                    <td class="sticky">Carlos</td>
+                    <!--Enero--><td>-</td>
+                    <!--Febrero--><td>-</td>
+                    <!--Marzo--><td>-</td>
+                    <!--Abril--><td>-</td>
+                    <!--Mayo--><td>-</td>
+                    <!--Junio--><td>-</td>
+                    <!--Julio--><td>-</td>
+                    <!--Agosto--><td>-</td>
+                    <!--Septiembre--><td style="color: #7de352; font-weight: bold;">$5.000</td>
+                    <!--Octubre--><td style="color: #7de352; font-weight: bold;">$5.000</td>
+                    <!--Noviembre--><td style="color: #7de352; font-weight: bold;">$5.000</td>
+                    <!--Diciembre--><td style="color: #7de352; font-weight: bold;">$5.000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="t_2023" id="t_2023" style="display: none;">
+        <table style="white-space: nowrap;width: 100%;">
+            <thead>
+                <tr>
+                    <th class="sticky" style="padding: 3px 5px;">NOMBRE</th>
+                    <th>Enero</th>
+                    <th>Febrero</th>
+                    <th>Marzo</th>
+                    <th>Abril</th>
+                    <th>Mayo</th>
+                    <th>Junio</th>
+                    <th>Julio</th>
+                    <th>Agosto</th>
+                    <th>Septiembre</th>
+                    <th>Octubre</th>
+                    <th>Noviembre</th>
+                    <th>Diciembre</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="sticky">Pablo</td>
+                    <!--Enero--><td>-</td>
+                    <!--Febrero--><td>-</td>
+                    <!--Marzo--><td>-</td>
+                    <!--Abril--><td>-</td>
+                    <!--Mayo--><td>-</td>
+                    <!--Junio--><td>-</td>
+                    <!--Julio--><td>-</td>
+                    <!--Agosto--><td>-</td>
+                    <!--Septiembre--><td>-</td>
+                    <!--Octubre--><td>-</td>
+                    <!--Noviembre--><td>-</td>
+                    <!--Diciembre--><td>-</td>
+                </tr>
+                <tr>
+                    <td class="sticky">Jota J</td>
+                    <!--Enero--><td>-</td>
+                    <!--Febrero--><td>-</td>
+                    <!--Marzo--><td>-</td>
+                    <!--Abril--><td>-</td>
+                    <!--Mayo--><td>-</td>
+                    <!--Junio--><td>-</td>
+                    <!--Julio--><td>-</td>
+                    <!--Agosto--><td>-</td>
+                    <!--Septiembre--><td>-</td>
+                    <!--Octubre--><td>-</td>
+                    <!--Noviembre--><td>-</td>
+                    <!--Diciembre--><td>-</td>
+                </tr>
+                <tr>
+                    <td class="sticky">Alex</td>
+                    <!--Enero--><td>-</td>
+                    <!--Febrero--><td>-</td>
+                    <!--Marzo--><td>-</td>
+                    <!--Abril--><td>-</td>
+                    <!--Mayo--><td>-</td>
+                    <!--Junio--><td>-</td>
+                    <!--Julio--><td>-</td>
+                    <!--Agosto--><td>-</td>
+                    <!--Septiembre--><td>-</td>
+                    <!--Octubre--><td>-</td>
+                    <!--Noviembre--><td>-</td>
+                    <!--Diciembre--><td>-</td>
+                </tr>
+                <tr>
+                    <td class="sticky">Robinson</td>
+                    <!--Enero--><td>-</td>
+                    <!--Febrero--><td>-</td>
+                    <!--Marzo--><td>-</td>
+                    <!--Abril--><td>-</td>
+                    <!--Mayo--><td>-</td>
+                    <!--Junio--><td>-</td>
+                    <!--Julio--><td>-</td>
+                    <!--Agosto--><td>-</td>
+                    <!--Septiembre--><td>-</td>
+                    <!--Octubre--><td>-</td>
+                    <!--Noviembre--><td>-</td>
+                    <!--Diciembre--><td>-</td>
+                </tr>
+                <tr>
+                    <td class="sticky">Braka</td>
+                    <!--Enero--><td>-</td>
+                    <!--Febrero--><td>-</td>
+                    <!--Marzo--><td>-</td>
+                    <!--Abril--><td>-</td>
+                    <!--Mayo--><td>-</td>
+                    <!--Junio--><td>-</td>
+                    <!--Julio--><td>-</td>
+                    <!--Agosto--><td>-</td>
+                    <!--Septiembre--><td>-</td>
+                    <!--Octubre--><td>-</td>
+                    <!--Noviembre--><td>-</td>
+                    <!--Diciembre--><td>-</td>
+                </tr>
+                <tr>
+                    <td class="sticky">Chadu</td>
+                    <!--Enero--><td>-</td>
+                    <!--Febrero--><td>-</td>
+                    <!--Marzo--><td>-</td>
+                    <!--Abril--><td>-</td>
+                    <!--Mayo--><td>-</td>
+                    <!--Junio--><td>-</td>
+                    <!--Julio--><td>-</td>
+                    <!--Agosto--><td>-</td>
+                    <!--Septiembre--><td>-</td>
+                    <!--Octubre--><td>-</td>
+                    <!--Noviembre--><td>-</td>
+                    <!--Diciembre--><td>-</td>
+                </tr>
+                <tr>
+                    <td class="sticky">Carlos</td>
+                    <!--Enero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
+                    <!--Febrero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
+                    <!--Marzo--><td>-</td>
+                    <!--Abril--><td>-</td>
+                    <!--Mayo--><td>-</td>
+                    <!--Junio--><td>-</td>
+                    <!--Julio--><td>-</td>
+                    <!--Agosto--><td>-</td>
+                    <!--Septiembre--><td>-</td>
+                    <!--Octubre--><td>-</td>
+                    <!--Noviembre--><td>-</td>
+                    <!--Diciembre--><td>-</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="t_2024" id="t_2024" style="display: none;">
+        <table style="white-space: nowrap;width: 100%;">
+            <thead>
+                <tr>
+                    <th class="sticky" style="padding: 3px 5px;">NOMBRE</th>
+                    <th>Enero</th>
+                    <th>Febrero</th>
+                    <th>Marzo</th>
+                    <th>Abril</th>
+                    <th>Mayo</th>
+                    <th>Junio</th>
+                    <th>Julio</th>
+                    <th>Agosto</th>
+                    <th>Septiembre</th>
+                    <th>Octubre</th>
+                    <th>Noviembre</th>
+                    <th>Diciembre</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="sticky">Pablo</td>
+                    <!--Enero--><td>-</td>
+                    <!--Febrero--><td>-</td>
+                    <!--Marzo--><td>-</td>
+                    <!--Abril--><td>-</td>
+                    <!--Mayo--><td>-</td>
+                    <!--Junio--><td>-</td>
+                    <!--Julio--><td>-</td>
+                    <!--Agosto--><td>-</td>
+                    <!--Septiembre--><td>-</td>
+                    <!--Octubre--><td>-</td>
+                    <!--Noviembre--><td>-</td>
+                    <!--Diciembre--><td>-</td>
+                </tr>
+                <tr>
+                    <td class="sticky">Jota J</td>
+                    <!--Enero--><td>-</td>
+                    <!--Febrero--><td>-</td>
+                    <!--Marzo--><td>-</td>
+                    <!--Abril--><td>-</td>
+                    <!--Mayo--><td>-</td>
+                    <!--Junio--><td>-</td>
+                    <!--Julio--><td>-</td>
+                    <!--Agosto--><td>-</td>
+                    <!--Septiembre--><td>-</td>
+                    <!--Octubre--><td>-</td>
+                    <!--Noviembre--><td>-</td>
+                    <!--Diciembre--><td>-</td>
+                </tr>
+                <tr>
+                    <td class="sticky">Alex</td>
+                    <!--Enero--><td>-</td>
+                    <!--Febrero--><td>-</td>
+                    <!--Marzo--><td>-</td>
+                    <!--Abril--><td>-</td>
+                    <!--Mayo--><td>-</td>
+                    <!--Junio--><td>-</td>
+                    <!--Julio--><td>-</td>
+                    <!--Agosto--><td>-</td>
+                    <!--Septiembre--><td>-</td>
+                    <!--Octubre--><td>-</td>
+                    <!--Noviembre--><td>-</td>
+                    <!--Diciembre--><td>-</td>
+                </tr>
+                <tr>
+                    <td class="sticky">Robinson</td>
+                    <!--Enero--><td>-</td>
+                    <!--Febrero--><td>-</td>
+                    <!--Marzo--><td>-</td>
+                    <!--Abril--><td>-</td>
+                    <!--Mayo--><td>-</td>
+                    <!--Junio--><td>-</td>
+                    <!--Julio--><td>-</td>
+                    <!--Agosto--><td>-</td>
+                    <!--Septiembre--><td>-</td>
+                    <!--Octubre--><td>-</td>
+                    <!--Noviembre--><td>-</td>
+                    <!--Diciembre--><td>-</td>
+                </tr>
+                <tr>
+                    <td class="sticky">Braka</td>
+                    <!--Enero--><td>-</td>
+                    <!--Febrero--><td>-</td>
+                    <!--Marzo--><td>-</td>
+                    <!--Abril--><td>-</td>
+                    <!--Mayo--><td>-</td>
+                    <!--Junio--><td>-</td>
+                    <!--Julio--><td>-</td>
+                    <!--Agosto--><td>-</td>
+                    <!--Septiembre--><td>-</td>
+                    <!--Octubre--><td>-</td>
+                    <!--Noviembre--><td>-</td>
+                    <!--Diciembre--><td>-</td>
+                </tr>
+                <tr>
+                    <td class="sticky">Chadu</td>
+                    <!--Enero--><td>-</td>
+                    <!--Febrero--><td>-</td>
+                    <!--Marzo--><td>-</td>
+                    <!--Abril--><td>-</td>
+                    <!--Mayo--><td>-</td>
+                    <!--Junio--><td>-</td>
+                    <!--Julio--><td>-</td>
+                    <!--Agosto--><td>-</td>
+                    <!--Septiembre--><td>-</td>
+                    <!--Octubre--><td>-</td>
+                    <!--Noviembre--><td>-</td>
+                    <!--Diciembre--><td>-</td>
+                </tr>
+                <tr>
+                    <td class="sticky">Carlos</td>
+                    <!--Enero--><td>-</td>
+                    <!--Febrero--><td>-</td>
+                    <!--Marzo--><td>-</td>
+                    <!--Abril--><td>-</td>
+                    <!--Mayo--><td>-</td>
+                    <!--Junio--><td>-</td>
+                    <!--Julio--><td>-</td>
+                    <!--Agosto--><td>-</td>
+                    <!--Septiembre--><td>-</td>
+                    <!--Octubre--><td>-</td>
+                    <!--Noviembre--><td>-</td>
+                    <!--Diciembre--><td>-</td>
                 </tr>
             </tbody>
         </table>
