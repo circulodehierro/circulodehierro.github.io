@@ -302,5 +302,9 @@ table tbody tr td:nth-child(1){
     .general_grid .proxima{
         font-size: 1.6em;
     }
+    .general_grid .lugar{
+        top: 90%;
+        font-size: 1em;
+    }
     
 }
