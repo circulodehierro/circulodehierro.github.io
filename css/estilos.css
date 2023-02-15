@@ -253,6 +253,9 @@ td{
 table tbody tr td:nth-child(1){
     text-align: left;
 }
+.diciembre{
+    border-right: 1px solid white;
+}
 @media (max-width: 695px){
     .general{
         display: grid;
