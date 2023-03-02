@@ -1,110 +1,73 @@
 body{
-    background-color: black;    
+    background-color: rgb(37, 36, 36);    
+    background-color: black;
     margin: 0 20px 20px 20px;
 }
 h1,h2,h3,h4{
     color: white;
 }     
 .gallery{
-    margin-top: 10px;
+
+    /*display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;*/
+
     display: grid;
+    grid-auto-rows: 14rem;/*alto de las columnas*/
     gap: 1rem;
-    grid-auto-rows: 22rem;
-    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)) !important;
+    /*grid-template-columns: repeat(4, 1fr) !important;*/
 }
 .featured{
-    grid-column: span 2;
+    grid-column: span 1;
     border: 1px solid grey;
     color: white;
     border-radius: 10px;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.3);
+    transition: transform ease .5s, box-shadow ease .5s;
 }
 .featured:hover{
-    box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.8);
+    /*box-shadow: 0 0 5px 5px rgba(252, 251, 251, 0.2);
+    transition : box-shadow ease-in-out .5s;*/
+    transform: translateY(-5px);
+    box-shadow: 0px 1px 10px 1px rgba(252, 251, 251, 0.5);
 }
-
-.general{
-    display: grid;
-    gap: 0.1rem;
-    grid-auto-rows: 21.7rem;
-    /*grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));*/
-    grid-template-columns: auto 30%;
+.featured img{
+    padding-left: 19%;
+    width: 60%;
+    height: 70%;
+    margin-top: 12px;
+    filter: invert();
 }
-.general_grid{
-    grid-column: span 1;
-    color: white;
-    border: 1px solid white;
-    margin: 10px 5px;
+.featured .title{
+    text-align: center;
+}
+.scale-up-center:hover{
+    cursor: pointer;
+	animation: scale-up-center 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite alternate both;
+}
+#general, #eventos, #turnos, #gastos{
+    display: none;
+    margin-top: 15px;
     border-radius: 10px;
-    position: relative;
+    height: 45vh;
 }
-.general_grid .actualizado{
-    position: absolute;
-    top: 15%;
-    font-size: .8em;
-    white-space: nowrap;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.general_grid .total{
-    position: absolute;
-    top: 35%;
-    font-size: 4em;
-    white-space: nowrap;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.general_grid .proxima{
-    position: absolute;
-    top: 70%;
-    white-space: nowrap;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 2em;
-}
-.general_grid .reunion{
-    position: absolute;
-    top: 80%;
-    white-space: nowrap;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 1.2em;
-}
-.general_grid .lugar{
-    position: absolute;
-    top: 90%;
-    white-space: nowrap;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 1.2em;
-}
-.general_grid .cumples{
-    height: 84%;
-    width: auto;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-top: 45px;
-    overflow-y: scroll;
-}
-.general_grid .cumples div{
-    height: auto;
-    margin-left: 5px;
-}
-.general_grid .cumples div div{
-    margin-top: -15px;
-}
-.general_grid > h1,p{
-    position: absolute;
-    white-space: nowrap;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.eventos{
+/*GENERAL*/
+#general{
+    overflow-x: scroll;
     display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)) !important;
     gap: 0.1rem;
-    grid-auto-rows: 21.7rem;
-    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    grid-auto-rows: 28rem;/*alto de las columnas*/
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)) !important;
 }
-.eventos_grid{
+#general .grid-general{
     grid-column: span 1;
     color: white;
     border: 1px solid white;
@@ -113,198 +76,302 @@ h1,h2,h3,h4{
     position: relative;
     display: inline-block;
 }
-.eventos_grid > h1,p,.logo,.texto1,.texto2,.texto3{
+.cabecera-general, .cabecera-actualizado, .cabecera-monto{
+    text-align: center;
+    white-space: nowrap;
+}
+.cabecera-general{
+    margin-top: 30px;
+    font-size: 2.5em;
+}
+.cabecera-actualizado{
+    margin-top: 10px;
+    font-size: .8em;
+}
+.cabecera-monto{
+    margin-top: 30%;
+    font-size: 4em;
+}
+.dia_por_definir{
+    margin-top: 5px;
+    font-size: 1.7em;
+    white-space: nowrap;
+    text-align: center;
+}
+.lugar_por_definir{
+    margin-top: 15px;
+    font-size: 1.7em;
+    white-space: nowrap;
+    text-align: center;
+}
+.grid-general .cumples{
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
+    margin-left: 6%;
+    height: 65%;
+    width: 85%;
+    overflow: scroll;
+}
+.grid-general .cumples div{
+    height: auto;
+    margin-left: 5px;
+}
+.grid-general .cumples div div{
+    margin-top: -15px;
+}
+.caja-detalle-gastos{
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
+    margin-left: 6%;
+    height: 65%;
+    width: 85%;
+    overflow: scroll;
+}
+.total-gastos{
+    margin-top: 5px;
+    font-size: 1.7em;
+    white-space: nowrap;
+    text-align: center;
+}
+/*EVENTOS*/
+#eventos{
+    overflow-x: scroll;
+    display: grid;
+    gap: 0.1rem;
+    grid-auto-rows: 18.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+#eventos .eventos_grid{
+    grid-column: span 1;
+    color: white;
+    border: 1px solid white;
+    margin: 10px 5px;
+    border-radius: 10px;
+    position: relative;
+    display: inline-block;
+}
+#eventos .eventos_grid > h1,p,.logo,.texto1,.texto2,.texto3{
     position: absolute;
     white-space: nowrap;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.eventos_grid > .logo{
+#eventos .eventos_grid > .logo{
     top: 63%;
     object-fit: cover;
     width: 110px;
     height: 125px;
     border: 1px solid white;
 }
-.eventos_grid > h1{
-    top: 10%;
+#eventos .eventos_grid > h1{
+    top: 5%;
+    font-size: 1.5em;
 }
-.eventos_grid > p{
-    top: 80px;
+#eventos .eventos_grid > p{
+    top: 50px;
 }
-.eventos_grid > .texto1{
-    top: 120px;
+#eventos .eventos_grid > .texto1{
+    top: 90px;
 }
-.eventos_grid > .texto2{
+#eventos .eventos_grid > .texto2{
     top: 150px;
 }
-.eventos_grid > .texto3{
-    top: 290px;
+#eventos .eventos_grid > .texto3{
+    top: 250px;
     font-size: 13px;
 }
-.imagen{
+#eventos .imagen{
     object-fit: cover;
     width: 100%;
     height: 100%;
     opacity: 20%;
+    border-radius: 10px;
 }
-/**/
-.turnos{
+#eventos .imagen:hover{
+    opacity: 50%;
+}
+/*TURNOS*/
+#turnos{
     display: grid;
     gap: 1rem;
-    grid-auto-rows: 1.5rem 1.5rem 18rem;
+    grid-auto-rows: 1.7rem 1.7rem 2rem 2rem ;
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
 }
-.turnos_grid{
+.grid-turnos-anos{
     text-align: center;
-    grid-column: span 2;
+    grid-column: span 4;
     color: white;
-    margin-left: 8px;
-    margin-top: 5px;
-    max-width: 98%;
-    overflow-x: scroll;
-}
-.gastos{
-    display: grid;
-    gap: 0.1rem;
-    grid-auto-rows: 21.7rem;
-    grid-template-columns: 70% auto;
-}
-.gastos_grid{
-    grid-column: span 1;
-    color: white;
-    border: 1px solid white;
-    margin: 10px 5px;
-    border-radius: 10px;
-    position: relative;
-    display: inline-block;
-}
-.gastos_grid h1{
-    position: absolute;
-    white-space: nowrap;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.gastos_grid ul{
-    position: absolute;
-    left: 5px;
-    top: 10%;
-    word-break:break-all;
-    margin-right: 10px;
-}
-.gastos_grid h2{
-    position: absolute;
-    white-space: nowrap;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    top: 40%;
-    font-size: 2.2rem;
-}
-.contenedor-tabla{
-    height: 400px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    text-align: center;
+    margin-left: 0px;
+    margin-right: .2%;
+    margin-top: 0px;
     max-width: 100%;
     overflow-x: scroll;
-}
-table{
-    border-collapse: collapse;
-    width: 100%;
-    color: grey;
     border: 1px solid grey;
-    border-left: none;
-    border-left: 1px solid white;
+    border-radius: 5px;
+    padding-top: 2px;
 }
-.sticky_mes{
-    position: sticky;
-    left: 70px;
-    background-color: black;
-    z-index: -1;
+.grid-turnos-anos:hover{
+    cursor: pointer;
 }
-table .sticky{
-    position: sticky;
-    left: 0;
-}  
-table thead tr th{
-    border: 1px solid white;
-}  
-table thead tr th:nth-child(1n) {
-    border-left: none;
+.grid-turnos-meses{
+    grid-column: span 1;
+    color: white;
+    grid-column-start: 1; 
+    grid-column-end: 5;
+    grid-template-columns: repeat(auto-fit, minmax(6rem, 0.5fr));
+    grid-gap: 5px;
+    height: auto;
 }
-table thead tr:nth-child(3n) > th{
-    white-space: nowrap;
+.mes{
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid green;
+    grid-column: span 1;
+    padding-top: 3.5%;
 }
-table tbody tr:nth-child(2n){
-    background: #2f2f2f;
+.mes:hover{
+    cursor: pointer;
+}
+#meses_2023 > div{
+    color: greenyellow;
+}
+#meses_2024 > div{
+    color: orange;
+}
+.enero_2023, .febrero_2023, .marzo_2023, .abril_2023, .mayo_2023, .junio_2023, .julio_2023, .agosto_2023, .septiembre_2023, .octubre_2023, .noviembre_2023, .diciembre_2023, .enero_2024, .febrero_2024, .marzo_2024, .abril_2024, .mayo_2024, .junio_2024, .julio_2024, .agosto_2024, .septiembre_2024, .octubre_2024, .noviembre_2024, .diciembre_2024{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    height: 26vh;
+    overflow-x: scroll;
+    color: white;
+}
+/*CUOTAS*/
+#gastos{
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: 1.7rem 1.7rem 1.7rem 1.7rem;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    height: 10vh;
+}
+.grid-gastos-anos{
+    text-align: center;
+    grid-column: span 1;
+    color: white;
+    margin-left: 0px;
+    margin-right: .2%;
+    margin-top: 0px;
+    max-width: 100%;
+    overflow-x: scroll;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding-top: 2px;
+
+}
+.grid-gastos-anos:hover{
+    cursor: pointer;
+}
+.t_2021, .t_2022, .t_2023, .t_2024{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    height: 26vh;
+    overflow-x: scroll;
+    color: white;
 }
 
-table thead tr:nth-child(2n) .sticky{
-    background: black;
+table, th, td{
+    border: 1px solid grey;
 }
-table tbody tr .sticky{
-    background: black;
-    border-right: 1px solid white;
-}
-table tbody tr:nth-child(2n) .sticky{
-    background: #2f2f2f;
-    border-right: 1px solid white;
-}
-th, td{
-    text-align: left;
-    padding: 8px;
+th{
+    padding: 0 10px;
 }
 td{
-    white-space: nowrap;
     text-align: center;
 }
-table tbody tr td:nth-child(1){
-    text-align: left;
+.sticky{
+    position: sticky;
+    left: 0;
+    background-color: #242425;
 }
-.diciembre{
-    border-right: 1px solid white;
-}
-@media (max-width: 695px){
-    .general{
+@keyframes scale-up-center {
+    0% {
+      transform: scale(0.97);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+@media (min-width: 855px){
+    .gallery{
+        grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    }
+    .featured{
+        grid-column: span 2;
+    }
+    .featured img{
+        padding-left: 28%;
+        width: 40%;
+        height: 50%;
+        margin-top: 12px;
+        filter: invert();
+    }
+    .featured .title{
+        margin-top: 10%;
+        font-size: 1.5em;
+    }
+    #general{
+        overflow-x: scroll;
         display: grid;
-        grid-template-columns: auto 36%;
+        gap: 0.1rem;
+        grid-auto-rows: 28rem;
+        grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
     }
-    .general_grid h1{
-        font-size: 20px;
+    #general .grid-general{
+        grid-column: span 2;
     }
-    .gastos_grid h1{
-        font-size: 1.8rem;
+}
+@media (min-width: 750px){
+    .featured .title{
+        margin-top: 6%;
     }
-    .gastos_grid h2{
-        position: absolute;
-        white-space: nowrap;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        top: 40%;
-        font-size: 1.2rem;
-    }
-    .gastos_grid ul{
-        left: -16px;
-    }
-    .gastos_grid li{
-        font-size: 12px;
-    }
-    .general_grid .actualizado{
-        font-size: 10px;
-    }
-    .general_grid .total{
-        font-size: 3em;
-    }
-    .general_grid .cumples div div{
-        margin-left: 0px;
-        font-size: 12px;
-    }
-    .general_grid .proxima{
-        font-size: 1.6em;
-    }
-    .general_grid .lugar{
-        top: 90%;
-        font-size: 1em;
+    .enero_2023, .febrero_2023, .marzo_2023, .abril_2023, .mayo_2023, .junio_2023, .julio_2023, .agosto_2023, .septiembre_2023, .octubre_2023, .noviembre_2023, .diciembre_2023, .enero_2024{
+        margin-top: 20px;
     }
     
+}
+@media (max-width: 695px){
+    .gallery{
+        gap: 1rem;
+        grid-auto-rows: 10rem;
+        grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr));
+    }
+    .featured{
+        grid-column: span 2;
+    }
+    .featured img{
+        padding-left: 19%;
+        width: 60%;
+        height: 70%;
+        margin-top: 12px;
+        filter: invert();
+    }
+    #general .grid-general{
+        grid-column: span 2;
+    }
+    .enero_2023, .febrero_2023, .marzo_2023, .abril_2023, .mayo_2023, .junio_2023, .julio_2023, .agosto_2023, .septiembre_2023, .octubre_2023, .noviembre_2023, .diciembre_2023, .enero_2024{
+        margin-top: 50px;
+    }
+    #gastos{
+        display: grid;
+        gap: 1rem;
+        grid-auto-rows: 1.7rem 1.7rem 1.7rem 1.7rem ;
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    }
+    .grid-gastos-anos{
+        grid-column: span 0;
+    }
+    .t_2021, .t_2022, .t_2023, .t_2024{
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
 }
