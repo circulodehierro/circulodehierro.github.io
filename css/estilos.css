@@ -142,7 +142,7 @@ h1,h2,h3,h4{
     position: relative;
     display: inline-block;
 }
-#eventos .eventos_grid > h1,p,.logo,.texto1,.texto2,.texto3{
+#eventos .eventos_grid > h1,p,.logo,.texto1,.texto2,.texto3,.texto4{
     position: absolute;
     white-space: nowrap;
     left: 50%;
@@ -167,6 +167,10 @@ h1,h2,h3,h4{
 }
 #eventos .eventos_grid > .texto2{
     top: 150px;
+}
+#eventos .eventos_grid > .texto4{
+    top: 190px;
+    font-size: 15px;
 }
 #eventos .eventos_grid > .texto3{
     top: 250px;
