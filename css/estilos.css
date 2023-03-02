@@ -117,8 +117,8 @@ h1,h2,h3,h4{
     border-right: 1px solid grey;
     border-bottom: 1px solid grey;
     margin-left: 6%;
-    height: 65%;
-    width: 89%;
+    height: 68%;
+    width: 91%;
     overflow: scroll;
 }
 .caja-detalle-gastos ul{
@@ -397,7 +397,7 @@ td{
     }
     #general .grid-general{
         grid-column: span 2;
-        font-size: .6em;
+        font-size: .7em;
     }
     .enero_2023, .febrero_2023, .marzo_2023, .abril_2023, .mayo_2023, .junio_2023, .julio_2023, .agosto_2023, .septiembre_2023, .octubre_2023, .noviembre_2023, .diciembre_2023, .enero_2024, .febrero_2024, .marzo_2024, .abril_2024, .mayo_2024, .junio_2024, .julio_2024, .agosto_2024, .septiembre_2024, .octubre_2024, .noviembre_2024, .diciembre_2024{
         margin-top: 90px;
