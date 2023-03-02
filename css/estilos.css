@@ -339,7 +339,7 @@ td{
         display: grid;
     
         gap: 1rem;
-        grid-auto-rows: 30rem;/*alto de las columnas*/
+        grid-auto-rows: 24rem;/*alto de las columnas*/
         grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)) !important;
     }
     #general .grid-general{
