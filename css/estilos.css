@@ -62,8 +62,7 @@ h1,h2,h3,h4{
     overflow-x: scroll;
     display: grid;
 
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)) !important;
-    gap: 0.1rem;
+    gap: 1rem;
     grid-auto-rows: 28rem;/*alto de las columnas*/
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)) !important;
 }
@@ -75,6 +74,8 @@ h1,h2,h3,h4{
     border-radius: 10px;
     position: relative;
     display: inline-block;
+    height: 40vh;
+    
 }
 .cabecera-general, .cabecera-actualizado, .cabecera-monto{
     text-align: center;
@@ -354,6 +355,9 @@ td{
         height: 70%;
         margin-top: 12px;
         filter: invert();
+    }
+    #general{
+        grid-auto-rows: 24rem;/*alto de las columnas*/
     }
     #general .grid-general{
         grid-column: span 2;
