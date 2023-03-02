@@ -27,7 +27,9 @@ h1,h2,h3,h4{
     /*box-shadow: 0 0 5px 5px rgba(252, 251, 251, 0.2);
     transition : box-shadow ease-in-out .5s;*/
     transform: translateY(-5px);
-    box-shadow: 0px 1px 10px 1px rgba(252, 251, 251, 0.5);
+    /*box-shadow: 0px 1px 10px 1px rgba(252, 251, 251, 0.5);*/
+    box-shadow: 0px 0px 10px 3px rgb(246, 184, 28);
+    background-color: #41414482;
 }
 .featured img{
     padding-left: 19%;
@@ -41,7 +43,7 @@ h1,h2,h3,h4{
 }
 .scale-up-center:hover{
     cursor: pointer;
-	animation: scale-up-center 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite alternate both;
+	animation: scale-up-center 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite alternate both;
 }
 #general, #eventos, #turnos, #gastos{
     display: none;
