@@ -326,7 +326,7 @@ td{
         grid-column: span 2;
     }
 }
-@media (min-width: 750px){
+@media (min-width: 750px){/*Iphone 12 horizontal*/
     .gallery{
         gap: 1rem;
         grid-auto-rows: 14rem;
@@ -341,7 +341,7 @@ td{
     #general{
         overflow-x: scroll;
         display: grid;
-    
+        height: 120vh;
         gap: 1rem;
         grid-auto-rows: 24rem;/*alto de las columnas*/
         grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)) !important;
@@ -355,6 +355,9 @@ td{
         position: relative;
         display: inline-block;
         height: 100vh;
+    }
+    #eventos{
+        height: 120vh;
     }
     .enero_2023, .febrero_2023, .marzo_2023, .abril_2023, .mayo_2023, .junio_2023, .julio_2023, .agosto_2023, .septiembre_2023, .octubre_2023, .noviembre_2023, .diciembre_2023, .enero_2024, .febrero_2024, .marzo_2024, .abril_2024, .mayo_2024, .junio_2024, .julio_2024, .agosto_2024, .septiembre_2024, .octubre_2024, .noviembre_2024, .diciembre_2024{
         margin-top: 50px;
