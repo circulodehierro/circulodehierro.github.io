@@ -7,18 +7,10 @@ h1,h2,h3,h4{
     color: white;
 }     
 .gallery{
-
-    /*display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 10px;
-    grid-row-gap: 0px;*/
-
     display: grid;
     grid-auto-rows: 14rem;/*alto de las columnas*/
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)) !important;
-    /*grid-template-columns: repeat(4, 1fr) !important;*/
 }
 .featured{
     grid-column: span 1;
@@ -75,7 +67,6 @@ h1,h2,h3,h4{
     position: relative;
     display: inline-block;
     height: 40vh;
-    
 }
 .cabecera-general, .cabecera-actualizado, .cabecera-monto{
     text-align: center;
@@ -332,8 +323,34 @@ td{
     }
 }
 @media (min-width: 750px){
+    .gallery{
+        gap: 1rem;
+        grid-auto-rows: 14rem;
+        grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr)) !important;
+    }
+    .featured{
+        grid-column: span 2;
+    }
     .featured .title{
         margin-top: 6%;
+    }
+    #general{
+        overflow-x: scroll;
+        display: grid;
+    
+        gap: 1rem;
+        grid-auto-rows: 30rem;/*alto de las columnas*/
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)) !important;
+    }
+    #general .grid-general{
+        grid-column: span 2;
+        color: white;
+        border: 1px solid white;
+        margin: 10px 5px;
+        border-radius: 10px;
+        position: relative;
+        display: inline-block;
+        height: 40vh;
     }
     .enero_2023, .febrero_2023, .marzo_2023, .abril_2023, .mayo_2023, .junio_2023, .julio_2023, .agosto_2023, .septiembre_2023, .octubre_2023, .noviembre_2023, .diciembre_2023, .enero_2024, .febrero_2024, .marzo_2024, .abril_2024, .mayo_2024, .junio_2024, .julio_2024, .agosto_2024, .septiembre_2024, .octubre_2024, .noviembre_2024, .diciembre_2024{
         margin-top: 50px;
@@ -344,7 +361,7 @@ td{
     .gallery{
         gap: 1rem;
         grid-auto-rows: 10rem;
-        grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr)) !important;
     }
     .featured{
         grid-column: span 2;
