@@ -416,8 +416,3 @@ td{
         grid-column-end: 5;
     }
 }
-@media screen and (max-width: 780px) and (oriantation: landscape) {
-    body {
-        display: none;
-    }
-}
