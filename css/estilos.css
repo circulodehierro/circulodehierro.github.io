@@ -91,7 +91,7 @@ h1,h2,h3,h4{
 }
 .scale-up-center:hover{
     cursor: pointer;
-	/* animation: scale-up-center 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite alternate both; */
+	animation: scale-up-center 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite alternate both;
 }
 @keyframes scale-up-center {
     0% {
