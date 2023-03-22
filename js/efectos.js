@@ -15,6 +15,10 @@ function logo(){
     document.getElementById('2023_gastos').style.color = 'white';
     document.getElementById('2024_gastos').style.background = 'black';
     document.getElementById('2024_gastos').style.color = 'white';
+    document.getElementById("logo_general").style = "reset";
+    document.getElementById("logo_eventos").style = "reset";
+    document.getElementById("logo_turnos").style = "reset";
+    document.getElementById("logo_gastos").style = "reset";
 }
 function general(){
     document.getElementById("eventos").style.display = 'none';
