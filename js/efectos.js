@@ -33,6 +33,11 @@ function general(){
     document.getElementById('2024_gastos').style.background = 'black';
     document.getElementById('2024_gastos').style.color = 'white';
     document.getElementById("general").style.display = 'grid';
+
+    document.getElementById("logo_eventos").style = "reset";
+    document.getElementById("logo_turnos").style = "reset";
+    document.getElementById("logo_gastos").style = "reset";
+    document.getElementById("logo_general").style.animation = "feature 0.5s ease infinite alternate-reverse";
 }
 function eventos(){
     document.getElementById("general").style.display = 'none';
@@ -51,6 +56,11 @@ function eventos(){
     document.getElementById('2024_gastos').style.background = 'black';
     document.getElementById('2024_gastos').style.color = 'white';
     document.getElementById("eventos").style.display = 'grid';
+
+    document.getElementById("logo_general").style= "reset";
+    document.getElementById("logo_turnos").style= "reset";
+    document.getElementById("logo_gastos").style= "reset";
+    document.getElementById("logo_eventos").style.animation = "feature 0.5s ease infinite alternate-reverse";
 }
 function turnos(){
     document.getElementById("general").style.display = 'none';
@@ -69,6 +79,11 @@ function turnos(){
     document.getElementById('2024_gastos').style.background = 'black';
     document.getElementById('2024_gastos').style.color = 'white';
     document.getElementById("turnos").style.display = 'grid';
+
+    document.getElementById("logo_general").style= "reset";
+    document.getElementById("logo_eventos").style= "reset";
+    document.getElementById("logo_gastos").style= "reset";
+    document.getElementById("logo_turnos").style.animation = "feature 0.5s ease infinite alternate-reverse";
 }
 function gastos(){
     document.getElementById("general").style.display = 'none';
@@ -79,7 +94,13 @@ function gastos(){
     document.getElementById('t_2023').style.display = 'none';
     document.getElementById('t_2024').style.display = 'none';
     document.getElementById("gastos").style.display = 'grid';
+
+    document.getElementById("logo_general").style= "reset";
+    document.getElementById("logo_eventos").style= "reset";
+    document.getElementById("logo_turnos").style= "reset";
+    document.getElementById("logo_gastos").style.animation = "feature 0.5s ease infinite alternate-reverse";
 }
+
 
 function ano_2023(){
     document.getElementById("meses_2024").style.display = 'none';
@@ -828,6 +849,7 @@ function mes_2024(m){
     }
 }
 
+
 function ano_2021_gastos(){
     document.getElementById('2022_gastos').style.background = 'black';
     document.getElementById('2022_gastos').style.color = 'white';
@@ -844,7 +866,6 @@ function ano_2021_gastos(){
     document.getElementById('t_2024').style.display = 'none';
     document.getElementById('t_2021').style.display = 'block';
 }
-
 function ano_2022_gastos(){
     document.getElementById('2021_gastos').style.background = 'black';
     document.getElementById('2021_gastos').style.color = 'white';
@@ -861,7 +882,6 @@ function ano_2022_gastos(){
     document.getElementById('t_2024').style.display = 'none';
     document.getElementById('t_2022').style.display = 'block';
 }
-
 function ano_2023_gastos(){
     document.getElementById('2021_gastos').style.background = 'black';
     document.getElementById('2021_gastos').style.color = 'white';
@@ -878,7 +898,6 @@ function ano_2023_gastos(){
     document.getElementById('t_2024').style.display = 'none';
     document.getElementById('t_2023').style.display = 'block';
 }
-
 function ano_2024_gastos(){
     document.getElementById('2021_gastos').style.background = 'black';
     document.getElementById('2021_gastos').style.color = 'white';
