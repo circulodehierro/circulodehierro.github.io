@@ -16,6 +16,7 @@ h1,h2,h3,h4{
     grid-column: span 1;
     border: 1px solid grey;
     color: white;
+    background: black;
     border-radius: 10px;
     background-size:cover;
     background-position:center;
@@ -23,14 +24,61 @@ h1,h2,h3,h4{
     box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.3);
     transition: transform ease .5s, box-shadow ease .5s;
 }
-.featured:hover{
-    /*box-shadow: 0 0 5px 5px rgba(252, 251, 251, 0.2);
-    transition : box-shadow ease-in-out .5s;*/
-    transform: translateY(-5px);
-    /*box-shadow: 0px 1px 10px 1px rgba(252, 251, 251, 0.5);*/
-    box-shadow: 0px 0px 10px 3px rgb(246, 184, 28);
-    background-color: #41414482;
+.logo_circulo{
+    /* filter:drop-shadow(1px 1px 3px rgb(246, 184, 28)); */
+    /* filter:drop-shadow(2px 2px 4px orange); */
+    /* animation: shadow-pulse 10s ease-in-out infinite alternate; */
+    animation: shadow-pulse .8s ease infinite alternate-reverse;
 }
+@keyframes shadow-pulse {
+    0% {
+        filter: drop-shadow(2px 2px 4px orange);
+    }
+    20% {
+        filter: drop-shadow(2px 2px 4px rgb(251, 255, 0));  
+    }
+    40% {
+      filter: drop-shadow(2px 2px 4px rgb(21, 128, 0));
+    }
+    60% {
+        filter: drop-shadow(2px 2px 4px rgb(235, 4, 4));
+    }
+    80% {
+        filter: drop-shadow(2px 2px 4px rgb(194, 3, 194));
+    }
+    100% {
+        filter: drop-shadow(2px 2px 4px rgb(0, 255, 242));
+    }
+  }
+.featured:hover{
+    /* transform: translateY(-5px); */
+    /* box-shadow: 0px 0px 10px 3px rgb(246, 184, 28); */
+    /* background-color: #41414482; */
+    /* box-shadow: 0px 0px 3px 3px rgb(251, 253, 252); */
+    animation: feature 0.5s ease infinite alternate-reverse;
+}
+@keyframes feature {
+    0% {
+        box-shadow: 0px 0px 3px 3px rgb(251, 253, 252);
+        transform: scale(0.97);
+    }
+    20% {
+        box-shadow: 0px 0px 3px 3px rgb(251, 255, 0); 
+    }
+    40% {
+      box-shadow: 0px 0px 3px 3px rgb(21, 128, 0); 
+    }
+    60% {
+        box-shadow: 0px 0px 3px 3px rgb(235, 4, 4); 
+    }
+    80% {
+        box-shadow: 0px 0px 3px 3px rgb(194, 3, 194); 
+    }
+    100% {
+        box-shadow: 0px 0px 3px 3px rgb(0, 255, 242); 
+        transform: scale(1);
+    }
+  }
 .featured img{
     padding-left: 19%;
     width: 60%;
@@ -43,8 +91,16 @@ h1,h2,h3,h4{
 }
 .scale-up-center:hover{
     cursor: pointer;
-	animation: scale-up-center 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite alternate both;
+	/* animation: scale-up-center 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite alternate both; */
 }
+@keyframes scale-up-center {
+    0% {
+      transform: scale(0.97);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
 #general, #eventos, #turnos, #gastos{
     display: none;
     margin-top: 15px;
@@ -293,14 +349,6 @@ td{
     left: 0;
     background-color: #242425;
 }
-@keyframes scale-up-center {
-    0% {
-      transform: scale(0.97);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
 
 @media (min-width: 855px){
     .gallery{
