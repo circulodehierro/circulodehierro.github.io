@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
     <link rel="icon" type="image/png" href="images/logo2.svg"/>
     <script src="js/efectos.js"></script>
@@ -24,9 +25,10 @@
             <div class="content"></div>
         </div>
         <!--EVENTOS-->
-        <div class="featured scale-up-center" onclick="eventos();return false;" id="logo_eventos">
+        <div class="featured scale-up-center" id="logo_eventos">
             <img src="images/evento.png" alt="">
-            <div class="title">Eventos</div>
+            <div class="title_e" onclick="eventos();return false;">Eventos</div>
+            <div class="title_f" onclick="fichas();return false;">Fichas</div>
         </div>
         <!--TURNOS-->
         <div class="featured scale-up-center" onclick="turnos();return false;" id="logo_turnos">
@@ -41,9 +43,126 @@
     </div>
     <div class="contenido-general" id="general" style="display: none;">
         <div class="grid-general">
-            <div class="cabecera-general">Total en Caja</div>
+            <h1 style="text-align: center;cursor: pointer;"onclick="hide_estatutos();return false;">Estatutos Circulo de Hierro</h1>
+            <ul class="contenedor-estatuto">
+                <li style="cursor: pointer; margin-left: -20px;" onclick="showI();return false;" id="showI">I. Sobre el Club
+                    <div style="display: none;margin-top: 10px;width: 97%;" id="parrafoI1">
+                        El Club Circulo de Hierro se declara como un Moto Group y por tanto se trata de una agrupación
+                        de entusiastas de las motocicletas cuya finalidad es promover la cultura biker,
+                        el respeto hacia quienes participan del mundo motociclista y el compromiso, hermandad, confianza, respeto y la
+                        reciprocidad entre sus miembros y la familia de estos.
+                    </div>
+                    <div style="display: none;margin-top: 10px;width: 97%;" id="parrafoI2">
+                        En tal sentido el Club es eminentemente familiar, promoviendo la reunión de los miembros
+                        y sus familias en todas aquellas instancias que no estén reservadas exclusivamente para sus
+                        miembros.
+                    </div>
+                    <div style="display: none;margin-top: 10px;width: 97%;" id="parrafoI3">
+                        La fehca de fundación del Club es el
+                        20 Junio de 2018 en la ciudad de Rancagua.
+                    </div>
+                    <div style="display: none;margin-top: 10px;width: 97%;" id="parrafoI4">Por tratarse de un Moto Group nuestros
+                        distintivos son los siguientes.
+                        <ul style="list-style: none;margin-left: -20px;margin-top: 5px;">
+                            <li style="width: 90%;margin-bottom: 5px;">1) Tres parches delanteros: uno con el nombre de Rancagua, nuestra ciudad de origen, otro con nuestro nombre o Nick y un tercero con el cargo respectivo.</li>
+                            <li style="width: 90%;margin-bottom: 5px;">2) Un parche trasero de una pieza indicando únicamente el nombre del club y el logo del club.</li>
+                            <li style="width: 90%;margin-bottom: 5px;">3) A fin de demostrar nuestra neutralidad nuestro color distintivo es el blanco y el negro.</li>
+                        </ul>
+                    </div>
+                    <div style="display: none;margin-top: 10px;width: 97%;" id="parrafoI5">
+                        Dentro de este club existen dos niveles de compromiso, miembros Full Color y Prospect, sin perjuicio de los cargos directivos.
+                    </div>
+                </li>
+                <li style="cursor: pointer;margin-top: 10px; margin-left: -20px;" onclick="showII();return false;" id="showII">II. Miembros (Full Color o Full Parche).
+                    <div style="display: none;margin-top: 10px;width: 97%;" id="parrafoII1">
+                        <span style="font-weight: bold;">Concepto:</span> Los miembros son todos aquellos integrantes que una vez que hayan realizado una buena carrera como prospect logran la confianza de los miembros y son parchados como full. De la misma forma son miembros los fundadores del Club.
+                    </div>
+                    <div style="display: none;margin-top: 10px;width: 97%;" id="parrafoII2">
+                        <span style="font-weight: bold;">Derechos y obligaciones:</span> Los miembros tienen la más alta responsabilidad al interior del club, están llamados a cumplir y promover los objetivos del Club manteniendo, respetando y fortaleciendo los principios de éste. 
+                    </div>
+                    <div style="display: none;margin-top: 10px;width: 97%;" id="parrafoII3">
+                        Los miembros tienen derechos a voz y voto al interior de mesa y en las diversas reuniones. Al interior del Club todos los miembros tienen el mismo estatus manteniendo siempre el respeto entre ellos.
+                    </div>
+                    <div style="display: none;margin-top: 10px;width: 97%;" id="parrafoII4">
+                        <span style="font-weight: bold;">Perdida de la calidad:</span> Los miembros pueden perder su calidad de tal por renuncia o por decisión de la mesa. En este ultimo caso la decisión se debe fundar en el incumplimiento de las responsabilidades y principios del club o por la notoria falta de interés del mismo. En uno u otro caso los miembros que pierdan la calidad de tal deberán hacer entrega de todos los parches otorgados por el Club. Si quien pierde la calidad de miembro no entrega los parches, es responsabilidad del Club recuperarlos por cualquier medio.
+                    </div>
+                </li>
+                <li style="cursor: pointer;margin-top: 10px; margin-left: -20px;" onclick="showIII();return false;" id="showIII">III. Prospect (Postulante o Aspirante).
+                    <div style="display: none;margin-top: 10px;width: 97%;" id="parrafoIII1">
+                        <span style="font-weight: bold;">Concepto:</span> El prospect es un aspirante a miembro full color del club, lo que significa que aún no ha ganado su puesto en el Club pero cuenta con la debida confianza para ser eventualmente un miembro.
+                    </div>
+                    <div style="display: none;margin-top: 10px;width: 97%;" id="parrafoIII2">
+                        <span style="font-weight: bold;">Inicio:</span> El Postulante por medio de algún miembro del Club debe manifestar su intención de iniciar su proceso de Prospect, luego de ello y siempre que los miembros así lo decidan se realizará una reunión en donde se le entregarán, mediante una ceremonia, tres parches:1) el logo del Club (distinto al de los Full Color), 2) el indicativo de la ciudad Rancagua y 3) el indicativo del nombre del Club Circulo de Hierro.
+                    </div>
+                    <div style="display: none;margin-top: 10px;width: 97%;" id="parrafoIII3">
+                        <span style="font-weight: bold;">Tiempo:</span> En ese contexto, la duración en tal calidad no está definida y el club no está obligado a decidir el paso del Prospect a Full Color en un tiempo determinado. No obstante, el Club se plantea como fecha tentativa para revisar el comportamiento del Prospect en 6 meses.
+                    </div>
+                    <div style="display: none;margin-top: 10px;width: 97%;" id="parrafoIII4">
+                        <span style="font-weight: bold;">Objetivo:</span> Durante el periodo que dure esta etapa los objetivos son demostrar conocimientos del mundo de las motocicletas, demostrar interés y motivación en la participación de la mayor cantidad posible de actividades, ganarse la confianza de los miembros del Club y demostrar ser un aporte para este último.
+                    </div>
+                    <div style="display: none;margin-top: 10px;width: 97%;" id="parrafoIII5">
+                        Durante este periodo el Prospect contará con un padrino, quien deberá tener la calidad de miembro. EL padrino guiará y ayudará al Prospect a lograr los objetivos indicados. El padrino podrá plantear la posibilidad de subir a full color al Prospect, lo que de todas formas deberá decidirse por la mesa.
+                    </div>
+                    <div style="display: none;margin-top: 10px;width: 97%;" id="parrafoIII6">
+                        <span style="font-weight: bold;">Derechos y Obligaciones:</span> Los Prospect no tienen derecho a voto y pueden asistir solo a las reuniones que se les citen. En las reuniones que participen podrán opinar o manifestar su punto de vista. Es fundamental que los Prospect asistan, salvo justificación previa y pertinente a todas las actividades del club, salvo aquellas reuniones que sean exclusivas de los Full Color.
+                    </div>
+                    <div style="display: none;margin-top: 10px;width: 97%;" id="parrafoIII7">
+                        En este club los Prospect no será relegados a labores de limpieza o vigilancia, mas es importante que ellos demuestren motivación e iniciativa en realizar todas las labores necesarias para el funcionamiento del Club.
+                    </div>
+                    <div style="display: none;margin-top: 10px;width: 97%;" id="parrafoIII8">
+                        <span style="font-weight: bold;">Término del Proceso:</span> La decisión de parchar y convertir en miembro Full al Prospect se tomará por la unanimidad de los miembros y siempre que consideren que el postulante está preparado. Esta decisión se adoptará en reunión en la que participará exclusivamente los miembros del Club y se le informará al Prospect en una ceremonia.
+                    </div>
+                    <div style="display: none;margin-top: 10px;width: 97%;" id="parrafoIII9">
+                        Igualmente, los miembros pueden decidir, por mayoría simple, terminar el proceso de un Prospect por considerar que no cumplirá los objetivos planteados o que no cuenta con la confianza de los miembros.
+                    </div>
+                </li>
+                <li style="cursor: pointer;margin-top: 10px; margin-left: -20px;" onclick="showIV();return false;" id="showIV">IV. Cargos Directivos.
+                    <div style="display: none;margin-top: 10px;width: 97%;" id="parrafoIV1">
+                        Los cargos directivos son los encargados de realizar las funciones específicas que se le encomienda al cargo, quienes asumen un mayor grado de responsabilidad y eventualmente representan al club frente a otras agrupaciones, sin embargo, ello no genera un grado de jerarquía distinto entre los miembros del Club. Los cargos directivos son electos entre los miembros y la duración de ellos se estimará en cada caso en concreto. Los cargos directivos son los siguientes:
+                    </div>
+                    <div style="display: none;margin-top: 10px;width: 97%;" id="parrafoIV2">
+                        <span style="font-weight: bold;">Presidente:</span> El presidente tiene la tarea de presidir el club y la representación del mismo antes otros clubes y organizaciones.
+                    </div>
+                    <div style="display: none;margin-top: 10px;width: 97%;" id="parrafoIV3">
+                        <span style="font-weight: bold;">Vicepresidente:</span> Es la mano derecha del presidente y oficiará de consejero del presidente, toma el puesto del presidente en ausencia de este, y resuelve los inconvenientes internos del club.
+                    </div>
+                    <div style="display: none;margin-top: 10px;width: 97%;" id="parrafoIV4">
+                        <span style="font-weight: bold;">Relacionador Público:</span> Se encarga de la seguridad interna y externa del club y la seguridad de los miembros del mismo y sus familias y es quien pone orden al interior. Está facultado y obligado a aplicar las sanciones que la mesa (todos los miembros del Club) determinen.
+                    </div>
+                    <div style="display: none;margin-top: 10px;width: 97%;" id="parrafoIV5">
+                        <span style="font-weight: bold;">Secretario:</span> Es el que mantiene al día la agenda del club, cumpleaños, encuentros a concurrir, eventos, etc. Además, lleva el libro de actas de reuniones y hace de ministro de fe de los acuerdos.
+                    </div>
+                    <div style="display: none;margin-top: 10px;width: 97%;" id="parrafoIV6">
+                        <span style="font-weight: bold;">Tesorero:</span> Recauda las cuotas mensuales de los miembros y el dinero que se junte de fiestas o eventos que el Club organiza, maneja los libros contables y cuentas.
+                    </div>
+                    <div style="display: none;margin-top: 10px;width: 97%;" id="parrafoIV7">
+                        <span style="font-weight: bold;">Capitán de Ruta:</span> Es el nombre para el miembro que coordina el recorrido de las rutas. El Capitán es responsable de la seguridad de los miembros en ruta y el buen funcionamiento de la propia ruta. Las responsabilidades incluyen la planificación y ejecución de la misma. También debe proponer e incentivar el desarrollo de rutas sin importar su extensión.
+                    </div>
+                </li>
+                <li style="cursor: pointer;margin-top: 10px; margin-left: -20px;" onclick="showV();return false;" id="showV">V. Reuniones y Actividades.
+                    <div style="display: none;margin-top: 10px;width: 97%;" id="parrafoV1">
+                        Las reuniones se celebrarán al menos dos veces por mes en la que deberán, salvo justificación fundada, asistir todos los miembros del Club y los prospect a menos que se decida excluir a estos últimos en razón de los asuntos a discutir en la reunión.
+                    </div>
+                    <div style="display: none;margin-top: 10px;width: 97%;" id="parrafoV2">
+                        El club entiende como responsabilidades impostergables y por tanto razones válidas de justificación las siguientes: compromisos familiares, obligaciones laborales y asuntos de salud, excepcionalmente se aceptan otros motivos de justificación siempre que sean debidamente fundados.
+                    </div>
+                    <div style="display: none;margin-top: 10px;width: 97%;" id="parrafoV3">
+                        Todas las decisiones se adoptan por la mayoría de los miembros, salvo aquella que dice relación parchar como full a  un prospect, decisión que debe ser tomada por la unanimidad de la mesa.
+                    </div>
+                    <div style="display: none;margin-top: 10px;width: 97%;" id="parrafoV4">
+                        Además, el Club se propone realizar a lo menos una vez al año una ruta larga en la que todos los miembros y prospect deben participar salvo puntuales justificaciones. La realización de esta ruta, su planificación, organización y promoción está a cargo del Capitán de ruta, pero su decisión depende de la mesa.
+                    </div>
+                    <div style="display: none;margin-top: 10px;width: 97%;" id="parrafoV5">
+                        Es responsabilidad tanto de los miembros como los prospect propender a asistir y participar de las diversas actividades del mundo biker siempre que estas se alineen con los objetivos y estrategias del Club.
+                    </div>
+                </li>
+            </ul>
+            <div class="descarga_pdf" style="text-align: center; cursor: pointer;" onclick="descargar_pdf();return false;">
+                <i style="font-size:26px; color: white;" class="fa">&#xf1c1;</i>
+            </div>
+            <!-- <div class="cabecera-general">Total en Caja</div>
             <div class="cabecera-actualizado">Monto actualizado al 27 de Marzo</div>
-            <div class="cabecera-monto">$533.490</div>
+            <div class="cabecera-monto">$533.490</div> -->
         </div>
         <div class="grid-general">
             <div class="cabecera-general">Proxima Reunión</div>
@@ -102,68 +221,262 @@
                     <li>(2023-02-22) <span style="color:#7de352;">+ $100.000 Devolución prestamo Pablo (495.490).</span></li>
                     <li>(2023-04-17) <span style="color:#7de352;">+ $21.000 Pago 4 Cuotas Ene-Abr Braka (516.490).</span></li>
                     <li>(2023-04-17) <span style="color:#7de352;">+ $17.000 Pago Parches Full Braka (533.490).</span></li>
+                    <li>(2023-06-03) <span style="color:#7de352;">+ $11.000 Pago 2 Cuotas Mar-Abr Robinson (544.490).</span></li>
                 </ul>
             </div>
-            <div class="total-gastos">Total $533.490</div>
+            <div class="total-gastos">Total $544.490</div>
         </div>
         
     </div>
     <div class="contenido-eventos" id="eventos" style="display: none;">
         <div class="eventos_grid">
-            <img src="images/evento.jpeg" alt="evento" class="imagen">
-            <h1>5<span style="font-size: 8px;position: relative;top: -12px;left: 2px;">to</span> Aniversario Club</h1>
-            <p>Fecha por Confirmar</p>
-            <span class="texto1">Lugar por Confirmar</span>
-            <!--<span class="texto2">Partida 10:00 hrs</span>-->
-            <img src="images/logo2.svg" alt="logo" class="logo">
-            <!-- <span class="texto3">Partida Copec Los Lirios 13:00 hrs</span>-->
+                <img src="images/evento.jpeg" alt="evento" class="imagen">
+                <h1>5<span style="font-size: 8px;position: relative;top: -12px;left: 2px;">to</span> Aniversario Club</h1>
+                <p>Fecha por Confirmar</p>
+                <span class="texto1">Lugar por Confirmar</span>
+                <!--<span class="texto2">Partida 10:00 hrs</span>-->
+                <img src="images/logo2.svg" alt="logo" class="logo">
+                <!-- <span class="texto3">Partida Copec Los Lirios 13:00 hrs</span>-->
         </div>
         <div class="eventos_grid">
-            <img src="images/esf.jpeg" alt="evento" class="imagen">
-            <h1>Evento a Beneficio</h1>
-            <p>Domingo 16 de Abril</p>
-            <span class="texto1">Parque Abel Bouchon - San Fernando</span>
-            <!--<span class="texto2">Partida 13:00 hrs</span>-->
-            <img src="images/amc-ilegitimos_logo.jpeg" alt="logo" class="logo">
-            <span class="texto3">Partida Copec Los Lirios 13:00 hrs</span>
+                <img src="images/esf.jpeg" alt="evento" class="imagen">
+                <h1>Evento a Beneficio</h1>
+                <p>Domingo 16 de Abril</p>
+                <span class="texto1">Parque Abel Bouchon - San Fernando</span>
+                <!--<span class="texto2">Partida 13:00 hrs</span>-->
+                <img src="images/amc-ilegitimos_logo.jpeg" alt="logo" class="logo">
+                <span class="texto3">Partida Copec Los Lirios 13:00 hrs</span>
         </div>
         <div class="eventos_grid">
-            <img src="images/foto1.jpeg" alt="encuentro" class="imagen">
-            <h1>Día del Motoco Chileno</h1>
-            <p>Sab 11 y Dom 12 de Marzo</p>
-            <span class="texto1">Lugar Camping Melipilla, Piscina, Musica</span>
-            <span class="texto2">Entrada $8.000, Asado $5.000</span>
-            <span class="texto4">Traer su propio bebestible</span>
-            <!--<img src="images/mandinga_logo.jpeg" alt="logo" class="logo">-->
-            <span class="texto3">Copec Ruta 78 (Autopista de Sol) 10:30 hrs</span>
+                <img src="images/foto1.jpeg" alt="encuentro" class="imagen">
+                <h1>Día del Motoco Chileno</h1>
+                <p>Sab 11 y Dom 12 de Marzo</p>
+                <span class="texto1">Lugar Camping Melipilla, Piscina, Musica</span>
+                <span class="texto2">Entrada $8.000, Asado $5.000</span>
+                <span class="texto4">Traer su propio bebestible</span>
+                <!--<img src="images/mandinga_logo.jpeg" alt="logo" class="logo">-->
+                <span class="texto3">Copec Ruta 78 (Autopista de Sol) 10:30 hrs</span>
         </div>
         <div class="eventos_grid">
-            <img src="images/salto_el_laja.jpeg" alt="ruta" class="imagen">
-            <h1>Ruta Salto el Laja</h1>
-            <p>17, 18 y 19 de Febrero</p>
-            <span class="texto1">Partida Copec Los Lirios 12:00 hrs</span>
-            <!--<span class="texto2">Partida Copec Los Lirios 13:00 hrs</span>
-            <img src="images/mandinga_logo.jpeg" alt="logo" class="logo">
-            <span class="texto3">Partida Copec Los Lirios 13:00 hrs</span>-->
+                <img src="images/salto_el_laja.jpeg" alt="ruta" class="imagen">
+                <h1>Ruta Salto el Laja</h1>
+                <p>17, 18 y 19 de Febrero</p>
+                <span class="texto1">Partida Copec Los Lirios 12:00 hrs</span>
+                <!--<span class="texto2">Partida Copec Los Lirios 13:00 hrs</span>
+                <img src="images/mandinga_logo.jpeg" alt="logo" class="logo">
+                <span class="texto3">Partida Copec Los Lirios 13:00 hrs</span>-->
         </div>
         <div class="eventos_grid">
-            <img src="images/aniversario.jpeg" alt="aniversario" class="imagen">
-            <h1>Aniversario</h1>
-            <p>18 y 19 de Febrero</p>
-            <span class="texto1">Participación por Confirmar</span>
-            <!--<span class="texto2">Partida Copec Los Lirios 13:00 hrs</span>-->
-            <img src="images/mandinga_logo.jpeg" alt="logo" class="logo">
-            <span class="texto3">Valor Entrada: $20.000 derecho a cover.</span>
+                <img src="images/aniversario.jpeg" alt="aniversario" class="imagen">
+                <h1>Aniversario</h1>
+                <p>18 y 19 de Febrero</p>
+                <span class="texto1">Participación por Confirmar</span>
+                <!--<span class="texto2">Partida Copec Los Lirios 13:00 hrs</span>-->
+                <img src="images/mandinga_logo.jpeg" alt="logo" class="logo">
+                <span class="texto3">Valor Entrada: $20.000 derecho a cover.</span>
         </div>
         <div class="eventos_grid">
-            <img src="images/evento.jpeg" alt="evento" class="imagen">
-            <h1>Evento</h1>
-            <p>Martes 24 de Febrero</p>
-            <span class="texto1">Lugar de evento Plaza los Heroes</span>
-            <span class="texto2">Partida 10:00 hrs</span>
-            <!--<img src="images/mandinga_logo.jpeg" alt="logo" class="logo">
-            <span class="texto3">Partida Copec Los Lirios 13:00 hrs</span>-->
+                <img src="images/evento.jpeg" alt="evento" class="imagen">
+                <h1>Evento</h1>
+                <p>Martes 24 de Febrero</p>
+                <span class="texto1">Lugar de evento Plaza los Heroes</span>
+                <span class="texto2">Partida 10:00 hrs</span>
+                <!--<img src="images/mandinga_logo.jpeg" alt="logo" class="logo">
+                <span class="texto3">Partida Copec Los Lirios 13:00 hrs</span>-->
         </div>
+    </div>
+    <div class="contenido-fichas" id="fichas" style="display: none;">
+        <div class="fichas_grid" onclick="ver_ficha(1);return false;">La Tóxica<img src="images/motos/virago750.jpeg" class="logo_ficha"></div>
+        <div class="fichas_grid" onclick="ver_ficha(2);return false;">La Machuca<img src="images/motos/vstar650.jpeg" class="logo_ficha"></div>
+        <div class="fichas_grid" onclick="ver_ficha(3);return false;">La Comando<img src="images/motos/srx600.jpeg" class="logo_ficha"></div>
+        <div class="fichas_grid" onclick="ver_ficha(4);return false;">La Cafetera<img src="images/motos/virago1100.jpeg" class="logo_ficha"></div>
+        <div class="fichas_grid" onclick="ver_ficha(5);return false;">La Negra<img src="images/motos/dragstar1100.jpeg" class="logo_ficha"></div>
+        <div class="fichas_grid" onclick="ver_ficha(6);return false;">La Nueva<img src="images/motos/virago_azul.jpeg" class="logo_ficha"></div>
+    </div>
+    <div class="contenido-fichas-detalle" id="fichas_detalle" style="display: none;">
+        <div style="color:black;text-align: center;font-size: 18px;" id="nombre_moto"></div>
+        <div class="deta">
+            <div class="columna_detalle">
+                <table style="width: 100%;border-collapse: collapse;font-size: 12px;">
+                    <caption>Especificaciones Técnicas.</caption>
+                    <tbody>
+                        <tr>
+                            <th style="text-align: left;">Modelo</th>
+                            <td id="modelo"></td>
+                            <td>&nbsp;</td>
+                            <th style="text-align: left;">Año</th>
+                            <td id="ano"></td>
+                        </tr>
+                        <tr>
+                            <th style="text-align: left;">Nº Chasis</th>
+                            <td id="numero_chasis"></td>
+                            <td>&nbsp;</td>
+                            <th style="text-align: left;">Distribución</th>
+                            <td id="distribucion"></td>
+                        </tr>
+                        <tr>
+                            <th style="text-align: left;">Aceite</th>
+                            <td id="aceite"></td>
+                            <td>&nbsp;</td>
+                            <th style="text-align: left;">Liquido Freno</th>
+                            <td id="liquido_freno"></td>
+                        </tr>
+                        <tr>
+                            <th style="text-align: left;">Rueda Delantera</th>
+                            <td id="rueda_delantera"></td>
+                            <td>&nbsp;</td>
+                            <th style="text-align: left;">Rueda Trasera</th>
+                            <td id="rueda_trasera"></td>
+                        </tr>
+                        <tr>
+                            <th style="text-align: left;">Presión Rda. Del.</th>
+                            <td id="presion_rueda_delantera"></td>
+                            <td>&nbsp;</td>
+                            <th style="text-align: left;">Presión Rda. Tra.</th>
+                            <td id="presion_rueda_trasera"></td>
+                        </tr>
+                        <tr>
+                            <th style="text-align: left;">Peso</th>
+                            <td id="peso"></td>
+                            <td>&nbsp;</td>
+                            <th style="text-align: left;">Capacidad Carga</th>
+                            <td id="capacidad_carga"></td>
+                        </tr>
+                        <tr>
+                            <th style="text-align: left;">Combustible</th>
+                            <td id="combustible"></td>
+                            <td>&nbsp;</td>
+                            <th style="text-align: left;">Bujias</th>
+                            <td id="bujias"></td>
+                        </tr>
+                        <tr>
+                            <th style="text-align: left;">Filtro de Aire</th>
+                            <td id="filtro_aire"></td>
+                            <td>&nbsp;</td>
+                            <th style="text-align: left;">Capacidad Aceite</th>
+                            <td id="capacidad_aceite"></td>
+                        </tr>
+                        <tr>
+                            <th style="text-align: left;">Capacidad Estanque</th>
+                            <td id="capacidad_estanque"></td>
+                            <td>&nbsp;</td>
+                            <th style="text-align: left;">Rendimiento</th>
+                            <td id="rendimiento"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="columna_detalle">
+                <table style="width: 100%;border-collapse: collapse;font-size: 12px;">
+                    <caption>Estatus de Mantenimiento.</caption>
+                    <tbody>
+                        <tr>
+                            <th>Cambios</th>
+                            <th>Realizado a los</th>
+                            <th>Estatus</th>
+                        </tr>
+                        <tr>
+                            <td>Aceite Motor</td>
+                            <td><span id="ult_aceite_motor"></span> km</td>
+                            <td><span id="s_aceite_motor" class="semaforo"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Filtro Aire</td>
+                            <td>21000 km</td>
+                            <td><span id="s_filtro_aire" class="semaforo"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Filtro Bencina</td>
+                            <td>22500 km</td>
+                            <td><span id="s_filtro_bencina" class="semaforo"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Liquido Freno</td>
+                            <td>19300 km</td>
+                            <td><span id="s_liquido_freno" class="semaforo"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Piolas</td>
+                            <td>5000 km</td>
+                            <td><span id="s_piola" class="semaforo"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Pastillas de Freno</td>
+                            <td>5000 km</td>
+                            <td><span id="s_pastilla_freno" class="semaforo"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Cadena</td>
+                            <td>10000 km</td>
+                            <td><span id="s_cadena" class="semaforo"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Bujias</td>
+                            <td>24000 km</td>
+                            <td><span id="s_bujia" class="semaforo"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Neumatico Delantero</td>
+                            <td>12000 km</td>
+                            <td><span id="s_neumatico_delantero" class="semaforo"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Neumatico Trasero</td>
+                            <td>18000 km</td>
+                            <td><span id="s_neumatico_trasero" class="semaforo"></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div style="width: 100%;border: 1px solid black;text-align: center; margin-top: 10px;">
+                    <div>Simbologia Estatus</div>
+                    <table style="width: 100%;border-collapse: collapse;font-size: 12px; margin-bottom: 10px; border: none;">
+                        <tbody>
+                            <tr>
+                                <th style="border: none;text-align: left;">Bueno <span id="simbologia_bueno"></span></th>
+                                <th style="border: none;text-align: center;">Regular <span id="simbologia_regular"></span></th>
+                                <th style="border: none;text-align: center;">Cambiar <span id="simbologia_cambiar"></span></th>
+                            </tr>
+                            <tr>
+                                <td style="border: none;padding-top: 10px;text-align: right;padding-right: 3px;">Kilometraje Actual</td>
+                                <td style="border: none;padding-top: 10px;text-align: left;">
+                                    <input type="text" id="kilometraje" style="border: 1px solid cadetblue;border-radius: 5px;width: 95%;">
+                                </td>
+                                <td style="border: none;text-align: left;padding-top: 8px;">
+                                    <span style="border: 1px solid olivedrab;border-radius: 3px;background-color: rgb(232, 240, 241);padding: 2px 2px;cursor: pointer;" onclick="calcular();return false;">Calcular</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <!-- <table style="width: 100%;border-collapse: collapse;font-size: 12px;margin-top: 10px;">
+                    <tbody>
+                        <tr>
+                            <td colspan="2">Simbologia Estatus</td>
+                        </tr>
+                        <tr>
+                            <td>Bueno</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Regular</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Cambiar</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text"></td>
+                            <td>Calcular</td>
+                        </tr>
+                    </tbody>
+                </table> -->
+            </div>
+        </div>
+        <!-- <div>ultimo cambio de aceite a los <span id="ultimo_aceite"></span>km <span id="semaforo"></span></div>
+        <div><input type="text" id="kilometraje"></div>
+        <div onclick="calcular();return false;">Calcular</div> -->
     </div>
     <div class="contenido-turnos" id="turnos" style="display: none;">
         <div class="grid-turnos-anos" onclick="ano_2023();return false;" id="2023">2023</div>
@@ -1303,7 +1616,7 @@
                         <!--18--><td>T</td>
                         <!--19--><td>T</td>
                         <!--20--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--21--><td>D</td>
+                        <!--21--><td style="color: #7de352; font-weight: bold;">D</td>
                         <!--22--><td>T</td>
                         <!--23--><td>T</td>
                         <!--24--><td>T</td>
@@ -1327,7 +1640,7 @@
                         <!--08--><td>T</td>
                         <!--09--><td>T</td>
                         <!--10--><td>T</td>
-                        <!--11--><td style="color: #7de352; font-weight: bold;">D</td>
+                        <!--11--><td>T</td>
                         <!--12--><td style="color: #7de352; font-weight: bold;">D</td>
                         <!--13--><td style="color: #7de352; font-weight: bold;">D</td>
                         <!--14--><td style="color: #7de352; font-weight: bold;">D</td>
@@ -1337,7 +1650,7 @@
                         <!--18--><td>D</td>
                         <!--19--><td>D</td>
                         <!--20--><td style="color: #7de352; font-weight: bold;">D</td>
-                        <!--21--><td>T</td>
+                        <!--21--><td style="color: #7de352; font-weight: bold;">D</td>
                         <!--22--><td>T</td>
                         <!--23--><td>T</td>
                         <!--24--><td>T</td>
@@ -1951,6 +2264,15 @@
         <div class="grid-gastos-anos" onclick="ano_2023_gastos();return false;" id="2023_gastos">2023</div>
         <div class="grid-gastos-anos" onclick="ano_2024_gastos();return false;" id="2024_gastos">2024</div>
     </div>
+    <div id="miModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <h1 style="color: rgb(0, 0, 0);" id="nombre_deudor"></h1>
+            <h3 style="color: rgba(0, 0, 0, 0.75);" id="deuda"></h3>
+            <h3 style="color: rgba(0, 0, 0, 0.75);" id="mensaje"></h3>
+        </div>
+    </div>
+    <!-- <div class="grid-gastos-resumen" style="border:1px solid red;color: white;text-align: center;display: none;" id="resumen_cuotas">Resumen Cuotas Inpagas</div> -->
     <div class="t_2021" id="t_2021" style="display: none;">
         <table style="white-space: nowrap;width: 100%;">
             <thead>
@@ -2085,7 +2407,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td class="sticky">Pablo</td>
+                    <td class="sticky" onclick="deuda(1);return false;" style="cursor: pointer;">Pablo</td>
                     <!--Enero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
                     <!--Febrero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
                     <!--Marzo--><td style="color: #7de352; font-weight: bold;">$5.000</td>
@@ -2100,7 +2422,7 @@
                     <!--Diciembre--><td>-</td>
                 </tr>
                 <tr>
-                    <td class="sticky">Jota J</td>
+                    <td class="sticky" onclick="deuda(2);return false;" style="cursor: pointer;">Jota J</td>
                     <!--Enero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
                     <!--Febrero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
                     <!--Marzo--><td style="color: #7de352; font-weight: bold;">$5.000</td>
@@ -2115,7 +2437,7 @@
                     <!--Diciembre--><td style="color: #7de352; font-weight: bold;">$5.000</td>
                 </tr>
                 <tr>
-                    <td class="sticky">Alex</td>
+                    <td class="sticky" onclick="deuda(3);return false;" style="cursor: pointer;">Alex</td>
                     <!--Enero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
                     <!--Febrero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
                     <!--Marzo--><td style="color: #7de352; font-weight: bold;">$5.000</td>
@@ -2130,7 +2452,7 @@
                     <!--Diciembre--><td style="color: #7de352; font-weight: bold;">$5.000</td>
                 </tr>
                 <tr>
-                    <td class="sticky">Robinson</td>
+                    <td class="sticky" onclick="deuda(4);return false;" style="cursor: pointer;">Robinson</td>
                     <!--Enero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
                     <!--Febrero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
                     <!--Marzo--><td style="color: #7de352; font-weight: bold;">$5.000</td>
@@ -2145,7 +2467,7 @@
                     <!--Diciembre--><td style="color: #7de352; font-weight: bold;">$5.000</td>
                 </tr>
                 <tr>
-                    <td class="sticky">Braka</td>
+                    <td class="sticky" onclick="deuda(5);return false;" style="cursor: pointer;">Braka</td>
                     <!--Enero--><td>-</td>
                     <!--Febrero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
                     <!--Marzo--><td style="color: #7de352; font-weight: bold;">$5.000</td>
@@ -2160,7 +2482,7 @@
                     <!--Diciembre--><td style="color: #7de352; font-weight: bold;">$5.000</td>
                 </tr>
                 <tr>
-                    <td class="sticky">Chadu</td>
+                    <td class="sticky" onclick="deuda(6);return false;" style="cursor: pointer;"></td>Chadu</td>
                     <!--Enero--><td>-</td>
                     <!--Febrero--><td>-</td>
                     <!--Marzo--><td style="color: #7de352; font-weight: bold;">$5.000</td>
@@ -2198,7 +2520,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td class="sticky">Pablo</td>
+                    <td class="sticky" onclick="deuda(1);return false;" style="cursor: pointer;">Pablo</td>
                     <!--Enero--><td>-</td>
                     <!--Febrero--><td>-</td>
                     <!--Marzo--><td>-</td>
@@ -2213,7 +2535,7 @@
                     <!--Diciembre--><td>-</td>
                 </tr>
                 <tr>
-                    <td class="sticky">Jota J</td>
+                    <td class="sticky" onclick="deuda(2);return false;" style="cursor: pointer;">Jota J</td>
                     <!--Enero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
                     <!--Febrero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
                     <!--Marzo--><td style="color: #7de352; font-weight: bold;">$5.000</td>
@@ -2228,7 +2550,7 @@
                     <!--Diciembre--><td>-</td>
                 </tr>
                 <tr>
-                    <td class="sticky">Alex</td>
+                    <td class="sticky" class="sticky" onclick="deuda(3);return false;" style="cursor: pointer;">Alex</td>
                     <!--Enero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
                     <!--Febrero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
                     <!--Marzo--><td>-</td>
@@ -2243,22 +2565,7 @@
                     <!--Diciembre--><td>-</td>
                 </tr>
                 <tr>
-                    <td class="sticky">Robinson</td>
-                    <!--Enero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
-                    <!--Febrero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
-                    <!--Marzo--><td>-</td>
-                    <!--Abril--><td>-</td>
-                    <!--Mayo--><td>-</td>
-                    <!--Junio--><td>-</td>
-                    <!--Julio--><td>-</td>
-                    <!--Agosto--><td>-</td>
-                    <!--Septiembre--><td>-</td>
-                    <!--Octubre--><td>-</td>
-                    <!--Noviembre--><td>-</td>
-                    <!--Diciembre--><td>-</td>
-                </tr>
-                <tr>
-                    <td class="sticky">Braka</td>
+                    <td class="sticky" class="sticky" onclick="deuda(4);return false;" style="cursor: pointer;">Robinson</td>
                     <!--Enero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
                     <!--Febrero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
                     <!--Marzo--><td style="color: #7de352; font-weight: bold;">$5.000</td>
@@ -2273,7 +2580,22 @@
                     <!--Diciembre--><td>-</td>
                 </tr>
                 <tr>
-                    <td class="sticky">Chadu</td>
+                    <td class="sticky" class="sticky" onclick="deuda(5);return false;" style="cursor: pointer;">Braka</td>
+                    <!--Enero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
+                    <!--Febrero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
+                    <!--Marzo--><td style="color: #7de352; font-weight: bold;">$5.000</td>
+                    <!--Abril--><td style="color: #7de352; font-weight: bold;">$6.000</td>
+                    <!--Mayo--><td>-</td>
+                    <!--Junio--><td>-</td>
+                    <!--Julio--><td>-</td>
+                    <!--Agosto--><td>-</td>
+                    <!--Septiembre--><td>-</td>
+                    <!--Octubre--><td>-</td>
+                    <!--Noviembre--><td>-</td>
+                    <!--Diciembre--><td>-</td>
+                </tr>
+                <tr>
+                    <td class="sticky" class="sticky" onclick="deuda(6);return false;" style="cursor: pointer;">Chadu</td>
                     <!--Enero--><td>-</td>
                     <!--Febrero--><td>-</td>
                     <!--Marzo--><td>-</td>
@@ -2291,16 +2613,7 @@
                     <td class="sticky">Carlos</td>
                     <!--Enero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
                     <!--Febrero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
-                    <!--Marzo--><td>-</td>
-                    <!--Abril--><td>-</td>
-                    <!--Mayo--><td>-</td>
-                    <!--Junio--><td>-</td>
-                    <!--Julio--><td>-</td>
-                    <!--Agosto--><td>-</td>
-                    <!--Septiembre--><td>-</td>
-                    <!--Octubre--><td>-</td>
-                    <!--Noviembre--><td>-</td>
-                    <!--Diciembre--><td>-</td>
+                    <!--Marzo--><td colspan="10">ENTREGÓ PARCHES</td>
                 </tr>
             </tbody>
         </table>
@@ -2326,7 +2639,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td class="sticky">Pablo</td>
+                    <td class="sticky" onclick="deuda(1);return false;" style="cursor: pointer;">Pablo</td>
                     <!--Enero--><td>-</td>
                     <!--Febrero--><td>-</td>
                     <!--Marzo--><td>-</td>
@@ -2341,7 +2654,7 @@
                     <!--Diciembre--><td>-</td>
                 </tr>
                 <tr>
-                    <td class="sticky">Jota J</td>
+                    <td class="sticky" onclick="deuda(2);return false;" style="cursor: pointer;">Jota J</td>
                     <!--Enero--><td>-</td>
                     <!--Febrero--><td>-</td>
                     <!--Marzo--><td>-</td>
@@ -2356,7 +2669,7 @@
                     <!--Diciembre--><td>-</td>
                 </tr>
                 <tr>
-                    <td class="sticky">Alex</td>
+                    <td class="sticky" onclick="deuda(3);return false;" style="cursor: pointer;">Alex</td>
                     <!--Enero--><td>-</td>
                     <!--Febrero--><td>-</td>
                     <!--Marzo--><td>-</td>
@@ -2371,7 +2684,7 @@
                     <!--Diciembre--><td>-</td>
                 </tr>
                 <tr>
-                    <td class="sticky">Robinson</td>
+                    <td class="sticky" onclick="deuda(4);return false;" style="cursor: pointer;">Robinson</td>
                     <!--Enero--><td>-</td>
                     <!--Febrero--><td>-</td>
                     <!--Marzo--><td>-</td>
@@ -2386,7 +2699,7 @@
                     <!--Diciembre--><td>-</td>
                 </tr>
                 <tr>
-                    <td class="sticky">Braka</td>
+                    <td class="sticky" onclick="deuda(5);return false;" style="cursor: pointer;">Braka</td>
                     <!--Enero--><td>-</td>
                     <!--Febrero--><td>-</td>
                     <!--Marzo--><td>-</td>
@@ -2401,7 +2714,7 @@
                     <!--Diciembre--><td>-</td>
                 </tr>
                 <tr>
-                    <td class="sticky">Chadu</td>
+                    <td class="sticky" onclick="deuda(6);return false;" style="cursor: pointer;">Chadu</td>
                     <!--Enero--><td>-</td>
                     <!--Febrero--><td>-</td>
                     <!--Marzo--><td>-</td>
