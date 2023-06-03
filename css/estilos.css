@@ -138,11 +138,12 @@ h1,h2,h3,h4{
     grid-column: span 1;
     color: white;
     border: 1px solid white;
-    height: 41vh !important;
+    height: 43vh !important;
     margin: 10px 5px;
     border-radius: 10px;
     position: relative;
     display: inline-block;
+    /* border: 1px solid red !important; */
 }
 .cabecera-general, .cabecera-actualizado, .cabecera-monto{
     text-align: center;
@@ -190,7 +191,7 @@ h1,h2,h3,h4{
 .contenedor-estatuto{
     /* border: 1px solid red !important; */
     margin-left: 2%;
-    height: 76%;
+    height: 70%;
     width: 87%;
     overflow: scroll;
 }
@@ -595,7 +596,7 @@ td{
     .gallery{
         gap: 1rem;
         grid-auto-rows: 12rem;
-        grid-template-columns: repeat(auto-fit, minmax(2rem, 1fr)) !important;
+        grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr)) !important;
     }
     .featured{
         grid-column: span 2;
@@ -636,6 +637,11 @@ td{
         grid-auto-rows: 1.7rem 1.7rem 1.7rem 1.7rem ;
         grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
         margin-bottom: 4% !important;
+    }
+    .descarga_pdf{
+        max-height: 30px;
+        position: relative;
+        bottom: 2px;
     }
     .grid-gastos-anos{
         grid-column: span 0;
