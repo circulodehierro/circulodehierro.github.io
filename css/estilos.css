@@ -10,7 +10,7 @@ h1,h2,h3,h4{
     display: grid;
     grid-auto-rows: 14rem;/*alto de las columnas*/
     gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)) !important;
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr)) !important;
 }
 .featured{
     grid-column: span 1;
@@ -89,9 +89,27 @@ h1,h2,h3,h4{
 .featured .title{
     text-align: center;
 }
+.featured .title_e{
+    position: relative;
+    top: -60% !important;
+    left: 50%;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.featured .title_f{
+    position: relative;
+    top: -7%;
+    left: 20%;
+    font-size: 18px;
+    cursor: pointer;
+}
 .scale-up-center:hover{
     cursor: pointer;
 	animation: scale-up-center 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite alternate both;
+}
+#logo_eventos{
+    cursor: default;
 }
 @keyframes scale-up-center {
     0% {
@@ -104,27 +122,27 @@ h1,h2,h3,h4{
 #general, #eventos, #turnos, #gastos{
     display: none;
     margin-top: 15px;
-    border-radius: 10px;
-    height: 45vh;
+    /*height: 15vh;
+    border: 1px solid red;*/
 }
 /*GENERAL*/
 #general{
     overflow-x: scroll;
     display: grid;
-
-    gap: 1rem;
-    grid-auto-rows: 28rem;/*alto de las columnas*/
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)) !important;
+    gap: 1rem !important;
+    grid-auto-rows: 10rem !important;/*alto de las columnas*/
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr)) !important;
+    max-height: 43vh;
 }
 #general .grid-general{
     grid-column: span 1;
     color: white;
     border: 1px solid white;
+    height: 41vh !important;
     margin: 10px 5px;
     border-radius: 10px;
     position: relative;
     display: inline-block;
-    height: 44vh;
 }
 .cabecera-general, .cabecera-actualizado, .cabecera-monto{
     text-align: center;
@@ -169,6 +187,13 @@ h1,h2,h3,h4{
 .grid-general .cumples div div{
     margin-top: -15px;
 }
+.contenedor-estatuto{
+    /* border: 1px solid red !important; */
+    margin-left: 2%;
+    height: 76%;
+    width: 87%;
+    overflow: scroll;
+}
 .caja-detalle-gastos{
     border-right: 1px solid grey;
     border-bottom: 1px solid grey;
@@ -192,6 +217,8 @@ h1,h2,h3,h4{
     display: grid;
     gap: 0.1rem;
     grid-auto-rows: 18.5rem;
+    max-height: 320px;
+    border-radius: 0;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 }
 #eventos .eventos_grid{
@@ -202,6 +229,114 @@ h1,h2,h3,h4{
     border-radius: 10px;
     position: relative;
     display: inline-block;
+}
+#fichas{
+    overflow-x: scroll;
+    display: grid;
+    gap: 0.1rem;
+    grid-auto-rows: 8rem;
+    max-height: 250px;
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+    margin-top:15px; 
+}
+#fichas .fichas_grid{
+    text-align: center;
+    grid-column: span 1;
+    color: white;
+    border: 1px solid white;
+    margin: 10px 5px;
+    border-radius: 8px;
+    position: relative;
+    display: inline-block;
+    max-height: 100px;
+}
+#fichas .fichas_grid > h1,p,.logo_ficha,.texto1,.texto2,.texto3,.texto4{
+    position: absolute;
+    white-space: nowrap;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#fichas .fichas_grid > .logo_ficha{
+    top: 58%;
+    object-fit: cover;
+    width: 110px;
+    height: 70px;
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 40%;
+}
+#fichas .fichas_grid > .logo_ficha:hover{
+    opacity: 100%;
+}
+#fichas_detalle{
+    /* overflow-x: scroll; */
+    max-height: 300px;
+    height: 1000px;
+    border-radius: 8px; 
+    /* border: 1px solid red; */
+    background-color: white;
+}
+.deta{
+    overflow-x: scroll;
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: 15rem;
+    max-height: 270px;
+    height: 300px;
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+    margin-top: 0px;
+    /* border: 1px solid blue; */
+    border-radius: 8px;
+}
+.columna_detalle{
+    text-align: center;
+    grid-column: span 1;
+    color: rgb(68, 64, 64);
+    /* border: 1px solid black; */
+    margin: 10px 5px;
+    border-radius: 8px;
+    position: relative;
+    display: inline-block;
+    height: 240px;
+}
+.semaforo{
+    position: relative;
+    top: 2px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1.5px solid grey;
+}
+#simbologia_bueno{
+    position: relative;
+    top: 5px;
+    left: 10px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: green;
+}
+#simbologia_regular{
+    position: relative;
+    top: 5px;
+    left: 10px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: orange;
+}
+#simbologia_cambiar{
+    position: relative;
+    top: 5px;
+    left: 10px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
 }
 #eventos .eventos_grid > h1,p,.logo,.texto1,.texto2,.texto3,.texto4{
     position: absolute;
@@ -252,11 +387,11 @@ h1,h2,h3,h4{
     display: grid;
     gap: 1rem;
     grid-auto-rows: 1.7rem 1.7rem 2rem 2rem ;
-    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
 }
 .grid-turnos-anos{
     text-align: center;
-    grid-column: span 4;
+    grid-column: span 2;
     color: white;
     margin-left: 0px;
     margin-right: .2%;
@@ -372,16 +507,27 @@ td{
         margin-top: 10%;
         font-size: 1.5em;
     }
-    #general{
+    .featured .title_e{
+        margin-top: 10%;
+        font-size: 1.5em;
+        top: -55%;
+        left: 50%;
+    }
+    .featured .title_f{
+        top: -12% !important;
+        font-size: 24px !important;
+    }
+    /* #general{
         overflow-x: scroll;
         display: grid;
         gap: 0.1rem;
         grid-auto-rows: 28rem;
         grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+        border: 1px solid green;
     }
     #general .grid-general{
         grid-column: span 2;
-    }
+    } */
 }
 @media (min-width: 750px){/*Iphone 12 horizontal*/
     .gallery{
@@ -395,13 +541,30 @@ td{
     .featured .title{
         margin-top: 6%;
     }
+    .featured .title_e{
+        margin-top: 6%;
+        left: 50%;
+    }
+    .featured .title_f{
+        top: -7%;
+        font-size: 16px;
+    }
     #general{
+        grid-auto-rows: 26rem !important;
+        max-height: 46vh;
+    }
+    #general .grid-general{
+        grid-column: span 2;
+        font-size: .7em;
+    }
+    /* #general{
         overflow-x: scroll;
         display: grid;
         height: 120vh;
-        gap: 1rem;
-        grid-auto-rows: 24rem;/*alto de las columnas*/
+        gap: 1rem !important;
+        grid-auto-rows: 24rem;
         grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)) !important;
+        border: 1px solid red;
     }
     #general .grid-general{
         grid-column: span 2;
@@ -412,7 +575,7 @@ td{
         position: relative;
         display: inline-block;
         height: 100vh;
-    }
+    } */
     #eventos{
         height: 120vh;
     }
@@ -431,8 +594,8 @@ td{
 @media (max-width: 695px){
     .gallery{
         gap: 1rem;
-        grid-auto-rows: 10rem;
-        grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr)) !important;
+        grid-auto-rows: 12rem;
+        grid-template-columns: repeat(auto-fit, minmax(2rem, 1fr)) !important;
     }
     .featured{
         grid-column: span 2;
@@ -444,8 +607,21 @@ td{
         margin-top: 12px;
         filter: invert();
     }
+    .featured .title{
+        font-size: 12px;
+    }
+    .featured .title_e{
+        left: 50%;
+        font-size: 12px;
+    }
+    .featured .title_f{
+        top: -7%;
+        left: 20%;
+        font-size: 12px;
+    }
     #general{
-        grid-auto-rows: 24rem;/*alto de las columnas*/
+        grid-auto-rows: 26rem !important;
+        max-height: 46vh;
     }
     #general .grid-general{
         grid-column: span 2;
@@ -469,4 +645,52 @@ td{
         grid-column-end: 5;
         margin-top: 2% !important;
     }
+    #turnos{
+        grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr));
+    }
+    .grid-turnos-anos{
+        grid-column: span 2;
+    }
+    .deta{
+        /* grid-template-columns: 1fr; */
+        /* grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr)); */
+    }
+    .columna_detalle{
+        grid-column: span 2;
+    }
+}
+
+
+
+/* Estilos para la modal */
+.modal {
+    display: none; /* Oculta la modal por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, .9); /* Fondo oscuro semi-transparente */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Centra la modal verticalmente */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    height: 150px;
+    max-width: 400px;
+    border-radius: 20px;
+}
+
+/* Estilos adicionales para la modal */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
 }
