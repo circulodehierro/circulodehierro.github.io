@@ -1,7 +1,9 @@
 body{
-    background-color: rgb(37, 36, 36);    
+    /* background-color: rgb(37, 36, 36);     */
     background-color: black;
-    margin: 0 20px 20px 20px;
+    margin: 0 8px 8px 8px;
+    /* width: 80%; */
+    /* border: 1px solid red; */
 }
 h1,h2,h3,h4{
     color: white;
@@ -11,6 +13,7 @@ h1,h2,h3,h4{
     grid-auto-rows: 14rem;/*alto de las columnas*/
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr)) !important;
+    /* border: 1px solid red; */
 }
 .featured{
     grid-column: span 1;
@@ -596,7 +599,7 @@ td{
     .gallery{
         gap: 1rem;
         grid-auto-rows: 12rem;
-        grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr)) !important;
+        grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr)) !important;
     }
     .featured{
         grid-column: span 2;

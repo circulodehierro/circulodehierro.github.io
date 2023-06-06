@@ -1,0 +1,310 @@
+body{
+    background-color: black;    
+    margin: 0 20px 20px 20px;
+}
+h1,h2,h3,h4{
+    color: white;
+}     
+.gallery{
+    margin-top: 10px;
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: 22rem;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+}
+.featured{
+    grid-column: span 2;
+    border: 1px solid grey;
+    color: white;
+    border-radius: 10px;
+}
+.featured:hover{
+    box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.8);
+}
+
+.general{
+    display: grid;
+    gap: 0.1rem;
+    grid-auto-rows: 21.7rem;
+    /*grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));*/
+    grid-template-columns: auto 30%;
+}
+.general_grid{
+    grid-column: span 1;
+    color: white;
+    border: 1px solid white;
+    margin: 10px 5px;
+    border-radius: 10px;
+    position: relative;
+}
+.general_grid .actualizado{
+    position: absolute;
+    top: 15%;
+    font-size: .8em;
+    white-space: nowrap;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.general_grid .total{
+    position: absolute;
+    top: 35%;
+    font-size: 4em;
+    white-space: nowrap;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.general_grid .proxima{
+    position: absolute;
+    top: 70%;
+    white-space: nowrap;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+}
+.general_grid .reunion{
+    position: absolute;
+    top: 80%;
+    white-space: nowrap;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2em;
+}
+.general_grid .lugar{
+    position: absolute;
+    top: 90%;
+    white-space: nowrap;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2em;
+}
+.general_grid .cumples{
+    height: 84%;
+    width: auto;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 45px;
+    overflow-y: scroll;
+}
+.general_grid .cumples div{
+    height: auto;
+    margin-left: 5px;
+}
+.general_grid .cumples div div{
+    margin-top: -15px;
+}
+.general_grid > h1,p{
+    position: absolute;
+    white-space: nowrap;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.eventos{
+    display: grid;
+    gap: 0.1rem;
+    grid-auto-rows: 21.7rem;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+}
+.eventos_grid{
+    grid-column: span 1;
+    color: white;
+    border: 1px solid white;
+    margin: 10px 5px;
+    border-radius: 10px;
+    position: relative;
+    display: inline-block;
+}
+.eventos_grid > h1,p,.logo,.texto1,.texto2,.texto3{
+    position: absolute;
+    white-space: nowrap;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.eventos_grid > .logo{
+    top: 63%;
+    object-fit: cover;
+    width: 110px;
+    height: 125px;
+    border: 1px solid white;
+}
+.eventos_grid > h1{
+    top: 10%;
+}
+.eventos_grid > p{
+    top: 80px;
+}
+.eventos_grid > .texto1{
+    top: 120px;
+}
+.eventos_grid > .texto2{
+    top: 150px;
+}
+.eventos_grid > .texto3{
+    top: 290px;
+    font-size: 13px;
+}
+.imagen{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 20%;
+}
+/**/
+.turnos{
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: 1.5rem 1.5rem 18rem;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+}
+.turnos_grid{
+    text-align: center;
+    grid-column: span 2;
+    color: white;
+    margin-left: 8px;
+    margin-top: 5px;
+    max-width: 98%;
+    overflow-x: scroll;
+}
+.gastos{
+    display: grid;
+    gap: 0.1rem;
+    grid-auto-rows: 21.7rem;
+    grid-template-columns: 70% auto;
+}
+.gastos_grid{
+    grid-column: span 1;
+    color: white;
+    border: 1px solid white;
+    margin: 10px 5px;
+    border-radius: 10px;
+    position: relative;
+    display: inline-block;
+}
+.gastos_grid h1{
+    position: absolute;
+    white-space: nowrap;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.gastos_grid ul{
+    position: absolute;
+    left: 5px;
+    top: 10%;
+    word-break:break-all;
+    margin-right: 10px;
+}
+.gastos_grid h2{
+    position: absolute;
+    white-space: nowrap;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 40%;
+    font-size: 2.2rem;
+}
+.contenedor-tabla{
+    height: 400px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    max-width: 100%;
+    overflow-x: scroll;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+    color: grey;
+    border: 1px solid grey;
+    border-left: none;
+    border-left: 1px solid white;
+}
+.sticky_mes{
+    position: sticky;
+    left: 70px;
+    background-color: black;
+    z-index: -1;
+}
+table .sticky{
+    position: sticky;
+    left: 0;
+}  
+table thead tr th{
+    border: 1px solid white;
+}  
+table thead tr th:nth-child(1n) {
+    border-left: none;
+}
+table thead tr:nth-child(3n) > th{
+    white-space: nowrap;
+}
+table tbody tr:nth-child(2n){
+    background: #2f2f2f;
+}
+
+table thead tr:nth-child(2n) .sticky{
+    background: black;
+}
+table tbody tr .sticky{
+    background: black;
+    border-right: 1px solid white;
+}
+table tbody tr:nth-child(2n) .sticky{
+    background: #2f2f2f;
+    border-right: 1px solid white;
+}
+th, td{
+    text-align: left;
+    padding: 8px;
+}
+td{
+    white-space: nowrap;
+    text-align: center;
+}
+table tbody tr td:nth-child(1){
+    text-align: left;
+}
+.diciembre{
+    border-right: 1px solid white;
+}
+@media (max-width: 695px){
+    .general{
+        display: grid;
+        grid-template-columns: auto 36%;
+    }
+    .general_grid h1{
+        font-size: 20px;
+    }
+    .gastos_grid h1{
+        font-size: 1.8rem;
+    }
+    .gastos_grid h2{
+        position: absolute;
+        white-space: nowrap;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 40%;
+        font-size: 1.2rem;
+    }
+    .gastos_grid ul{
+        left: -16px;
+    }
+    .gastos_grid li{
+        font-size: 12px;
+    }
+    .general_grid .actualizado{
+        font-size: 10px;
+    }
+    .general_grid .total{
+        font-size: 3em;
+    }
+    .general_grid .cumples div div{
+        margin-left: 0px;
+        font-size: 12px;
+    }
+    .general_grid .proxima{
+        font-size: 1.6em;
+    }
+    .general_grid .lugar{
+        top: 90%;
+        font-size: 1em;
+    }
+    
+}

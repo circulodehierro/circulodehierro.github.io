@@ -231,7 +231,7 @@ function deuda(n){
     }else if(parseInt(n) === 6) {
         //document.getElementById('miModal').style.display = 'block';
         document.getElementById('nombre_deudor').innerHTML = "¡Chadu!";
-        document.getElementById('deuda').innerHTML = "Vo debí en cuotas loco $43.000 pesos + $17.000 pesos por concepto de parche.";
+        document.getElementById('deuda').innerHTML = "Vo debí en cuotas loco $13.000 pesos + $17.000 pesos por concepto de parche.";
         document.getElementById('mensaje').innerHTML = "Shiaa, no te da verguenza.. !!";
     }
 }
