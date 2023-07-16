@@ -533,7 +533,7 @@ td{
         grid-column: span 2;
     } */
 }
-@media (min-width: 750px){/*Iphone 12 horizontal*/
+@media (min-width: 750px){/*Iphone 12 horizontalx*/
     .gallery{
         gap: 1rem;
         grid-auto-rows: 14rem;
