@@ -651,7 +651,7 @@ td{
       /* tr:nth-child(even) {background-color: #f2f2f2;} */
       .gallery {
           margin-top: 10px;
-          border: 1px solid green;
+          /* border: 1px solid green; */
           display: grid;
           gap: 1rem;
           grid-template-columns: auto repeat(auto-fill, 1fr) auto;
