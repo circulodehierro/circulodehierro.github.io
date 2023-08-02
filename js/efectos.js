@@ -201,39 +201,22 @@ function gastos(){
     document.getElementById("logo_turnos").style= "reset";
     document.getElementById("logo_gastos").style.animation = "feature 0.5s ease infinite alternate-reverse";
 }
-function deuda(n){
-    console.log(n);
+function deuda(nombre,d,m1){
     document.getElementById('miModal').style.display = 'block';
-    if(parseInt(n) === 1) {
-        document.getElementById('nombre_deudor').innerHTML = "¡Tio Palo!";
-        document.getElementById('deuda').innerHTML = "Vo debí en cuotas loco $25.000 pesos.";
-        document.getElementById('mensaje').innerHTML = "Shiaa, no te da verguenza.. !!";
-    }else if(parseInt(n) === 2) {
-        //document.getElementById('miModal').style.display = 'block';
-        document.getElementById('nombre_deudor').innerHTML = "¡Jota J!";
-        document.getElementById('deuda').innerHTML = "Vo debí en cuotas loco $0 pesos.";
-        document.getElementById('mensaje').innerHTML = "Pucha el tonto lindo.. !!";
-    }else if(parseInt(n) === 3) {
-        //document.getElementById('miModal').style.display = 'block';
-        document.getElementById('nombre_deudor').innerHTML = "¡Alex!";
-        document.getElementById('deuda').innerHTML = "Vo debí en cuotas loco $35.000 pesos.";
-        document.getElementById('mensaje').innerHTML = "Shiaa, no te da verguenza.. !!";
-    }else if(parseInt(n) === 4) {
-        //document.getElementById('miModal').style.display = 'block';
-        document.getElementById('nombre_deudor').innerHTML = "!K-Chete!";
-        document.getElementById('deuda').innerHTML = "Vo debí en cuotas loco $0 pesos.";
-        document.getElementById('mensaje').innerHTML = "Pucha el tonto lindo.. !!";
-    }else if(parseInt(n) === 5) {
-        //document.getElementById('miModal').style.display = 'block';
-        document.getElementById('nombre_deudor').innerHTML = "¡Braka!";
-        document.getElementById('deuda').innerHTML = "Vo debí en cuotas loco $6.000 pesos.";
-        document.getElementById('mensaje').innerHTML = "Entrá a pagar poh.. !!";
-    }else if(parseInt(n) === 6) {
-        //document.getElementById('miModal').style.display = 'block';
-        document.getElementById('nombre_deudor').innerHTML = "¡Chadu!";
-        document.getElementById('deuda').innerHTML = "Vo debí en cuotas loco $6.000 pesos + $11.000 pesos por concepto de parche.";
-        document.getElementById('mensaje').innerHTML = "Entrá a pagar poh.. !!";
+    var color, mensaje, deuda = "";
+    if(parseInt(d) === 0){
+        color = '#7DE352';
+        deuda = 'Vo debí en cuotas loco $'+m1+' pesos.';
+        mensaje = 'Pucha el tonto lindo.. ';
+    }else{
+        color = 'red';
+        deuda = 'Vo debí en cuotas loco $'+m1+' pesos.';
+        mensaje = 'Shiaa, no te da verguenza, Entrá a pagar poh.. !!';
     }
+    document.getElementById('miModal').style.borderColor = color;
+    document.getElementById('nombre_deudor').innerHTML = nombre;
+    document.getElementById('deuda').innerHTML = deuda
+    document.getElementById('mensaje').innerHTML = mensaje;
 }
 
 function cerrarModal() {

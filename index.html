@@ -233,9 +233,10 @@
                     <li>(21-07-2023) <span style="color:#7de352;">+ $10.000 Pago 1 Cuota Jul y parte del parche full Chadu (549.490).</span></li>
                     <li>(01-08-2023) <span style="color:#7de352;">+ $12.000 Pago 2 Cuotas Jul-Ago Robinson (561.490).</span></li>
                     <li>(01-08-2023) <span style="color:#7de352;">+ $25.000 Pago 5 Cuotas Abr-May-Jun-Jul-Ago Jota (586.490).</span></li>
+                    <li>(01-08-2023) <span style="color:#7de352;">+ $25.000 Pago 5 Cuotas Abr-May-Jun-Jul-Ago Pablo (611.490).</span></li>
                 </ul>
             </div>
-            <div class="total-gastos">Total $586.490</div>
+            <div class="total-gastos">Total $611.490</div>
         </div>
     </div>
     <div class="contenido-eventos" id="eventos" style="display: none;">
@@ -2294,7 +2295,7 @@
     </div>
     <div id="miModal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="cerrarModal()">&times;</span>
+            <span class="close" onclick="cerrarModal();">&times;</span>
             <h1 style="color: rgb(0, 0, 0);" id="nombre_deudor"></h1>
             <h3 style="color: rgba(0, 0, 0, 0.75);" id="deuda"></h3>
             <h3 style="color: rgba(0, 0, 0, 0.75);" id="mensaje"></h3>
@@ -2546,22 +2547,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td class="sticky" onclick="deuda(1);return false;" style="cursor: pointer;">Pablo</td>
-                    <!--Enero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
-                    <!--Febrero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
-                    <!--Marzo--><td style="color: #7de352; font-weight: bold;">$5.000</td>
-                    <!--Abril--><td style="color: #d05d0b; font-weight: bold;">$5.000</td>
-                    <!--Mayo--><td>-</td>
-                    <!--Junio--><td>-</td>
-                    <!--Julio--><td>-</td>
-                    <!--Agosto--><td>-</td>
-                    <!--Septiembre--><td>-</td>
-                    <!--Octubre--><td>-</td>
-                    <!--Noviembre--><td>-</td>
-                    <!--Diciembre--><td>-</td>
-                </tr>
-                <tr>
-                    <td class="sticky" onclick="deuda(2);return false;" style="cursor: pointer;">Jota J</td>
+                    <td class="sticky" onclick="deuda('¡Tio Palo!',0,'0');return false;" style="cursor: pointer;">Pablo&nbsp;&nbsp;<img src="images/cara1.png"></td>
                     <!--Enero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
                     <!--Febrero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
                     <!--Marzo--><td style="color: #7de352; font-weight: bold;">$5.000</td>
@@ -2576,7 +2562,22 @@
                     <!--Diciembre--><td>-</td>
                 </tr>
                 <tr>
-                    <td class="sticky" class="sticky" onclick="deuda(3);return false;" style="cursor: pointer;">Alex</td>
+                    <td class="sticky" onclick="deuda('¡Jota J!',0,'0');return false;" style="cursor: pointer;">Jota J&nbsp;&nbsp;<img src="images/cara1.png"></td>
+                    <!--Enero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
+                    <!--Febrero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
+                    <!--Marzo--><td style="color: #7de352; font-weight: bold;">$5.000</td>
+                    <!--Abril--><td style="color: #7de352; font-weight: bold;">$6.000</td>
+                    <!--Mayo--><td style="color: #7de352; font-weight: bold;">$6.000</td>
+                    <!--Junio--><td style="color: #7de352; font-weight: bold;">$6.000</td>
+                    <!--Julio--><td style="color: #7de352; font-weight: bold;">$6.000</td>
+                    <!--Agosto--><td style="color: #7de352; font-weight: bold;">$6.000</td>
+                    <!--Septiembre--><td>-</td>
+                    <!--Octubre--><td>-</td>
+                    <!--Noviembre--><td>-</td>
+                    <!--Diciembre--><td>-</td>
+                </tr>
+                <tr>
+                    <td class="sticky" class="sticky" onclick="deuda('¡Alex!',1,'35.000');return false;" style="cursor: pointer;">Alex&nbsp;&nbsp;<img src="images/cara2.png" class="cara"></td>
                     <!--Enero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
                     <!--Febrero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
                     <!--Marzo--><td>-</td>
@@ -2591,7 +2592,7 @@
                     <!--Diciembre--><td>-</td>
                 </tr>
                 <tr>
-                    <td class="sticky" class="sticky" onclick="deuda(4);return false;" style="cursor: pointer;">Robinson</td>
+                    <td class="sticky" class="sticky" onclick="deuda('!K-Chete!',0,'0');return false;" style="cursor: pointer;">Robinson&nbsp;&nbsp;<img src="images/cara1.png"></td>
                     <!--Enero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
                     <!--Febrero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
                     <!--Marzo--><td style="color: #7de352; font-weight: bold;">$5.000</td>
@@ -2606,7 +2607,7 @@
                     <!--Diciembre--><td>-</td>
                 </tr>
                 <tr>
-                    <td class="sticky" class="sticky" onclick="deuda(5);return false;" style="cursor: pointer;">Braka</td>
+                    <td class="sticky" class="sticky" onclick="deuda('¡Braka!',1,'6.000');return false;" style="cursor: pointer;">Braka&nbsp;&nbsp;<img src="images/cara2.png" class="cara"></td>
                     <!--Enero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
                     <!--Febrero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
                     <!--Marzo--><td style="color: #7de352; font-weight: bold;">$5.000</td>
@@ -2621,7 +2622,7 @@
                     <!--Diciembre--><td>-</td>
                 </tr>
                 <tr>
-                    <td class="sticky" class="sticky" onclick="deuda(6);return false;" style="cursor: pointer;">Chadu</td>
+                    <td class="sticky" class="sticky" onclick="deuda('¡Chadu!',1,'6.000');return false;" style="cursor: pointer;">Chadu&nbsp;&nbsp;<img src="images/cara2.png" class="cara"></td>
                     <!--Enero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
                     <!--Febrero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
                     <!--Marzo--><td style="color: #7de352; font-weight: bold;">$5.000</td>

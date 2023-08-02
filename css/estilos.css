@@ -492,7 +492,37 @@ td{
     left: 0;
     background-color: #242425;
 }
-
+.modal {
+    border: 3px solid; 
+    border-radius: 8px;
+    display: none;
+    background-color: white;
+    text-align: center;
+    margin: 10px 15px 10px 15px;
+}
+.close {
+    color: red;
+    font-size: 25px;
+}
+.close:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+.cara{
+    display: inline-block;
+    animation: bounce 1s infinite;
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-6px);
+    }
+    60% {
+      transform: translateY(-2px);
+    }
+  }
 @media (min-width: 855px){
     .gallery{
         grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
@@ -659,9 +689,10 @@ td{
           /*grid-template-columns: repeat(auto-fill, minmax(min(100%,25rem)), 1fr);*/
           
       }
+      
       .featured {
           grid-column: span 2;
-          border: 1px solid yellow;
+          /* border: 1px solid yellow; */
           color: white;
       }
     }
