@@ -24,7 +24,7 @@ function logo(){
     document.getElementById("logo_gastos").style = "reset";
 }
 function general(){
-    alert("Sección deshabilitada temporalmente, no insista ¡¡");
+    alert("Sección en mantención, no insista ¡¡");
     /*document.getElementById("eventos").style.display = 'none';
     document.getElementById("fichas").style.display = 'none';
     document.getElementById("fichas_detalle").style.display = 'none';
@@ -51,6 +51,8 @@ function general(){
     document.getElementById("logo_general").style.animation = "feature 0.5s ease infinite alternate-reverse";*/
 }
 function eventos(){
+    alert("Sección en mantención, no insista ¡¡");
+    /*
     document.getElementById("general").style.display = 'none';
     document.getElementById("turnos").style.display = 'none';
     document.getElementById("tablas_meses").style.display = 'none';
@@ -76,8 +78,11 @@ function eventos(){
     document.getElementById("logo_turnos").style= "reset";
     document.getElementById("logo_gastos").style= "reset";
     document.getElementById("logo_eventos").style.animation = "feature 0.5s ease infinite alternate-reverse";
+    */
 }
 function fichas(){
+    alert("Sección en mantención, no insista ¡¡");
+    /*
     document.getElementById("general").style.display = 'none';
     document.getElementById("turnos").style.display = 'none';
     document.getElementById("tablas_meses").style.display = 'none';
@@ -102,6 +107,7 @@ function fichas(){
     document.getElementById("logo_turnos").style= "reset";
     document.getElementById("logo_gastos").style= "reset";
     document.getElementById("logo_eventos").style.animation = "feature 0.5s ease infinite alternate-reverse";
+    */
 }
 function ver_ficha(x){
     document.getElementById("fichas_detalle").style.display = 'block';
