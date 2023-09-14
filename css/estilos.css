@@ -392,7 +392,7 @@ h1,h2,h3,h4{
     display: grid;
     gap: 1rem;
     grid-auto-rows: 1.7rem 1.7rem 1.7rem 1.7rem;
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     /* grid-template-columns: 11rem 11rem; */
     margin-bottom: 1% !important;
     height: 100%;
