@@ -741,6 +741,7 @@ function mes_2023(m){
         document.getElementById("click_agosto_2023").style.background = 'grey';
         document.getElementById("agosto_2023").style.display = 'block';
     }else if (parseInt(m) === 9){
+        background_celdas();
         document.getElementById("enero_2023").style.display = 'none';
         document.getElementById("febrero_2023").style.display = 'none';
         document.getElementById("marzo_2023").style.display = 'none';
@@ -1254,4 +1255,61 @@ function ano_2024_gastos(){
     document.getElementById('t_2022').style.display = 'none';
     document.getElementById('t_2023').style.display = 'none';
     document.getElementById('t_2024').style.display = 'block';
+}
+
+function cu(){
+    var today = new Date();
+    var day = today.getDate();
+    var month = today.getMonth() + 1; // Los meses comienzan desde 0
+    var year = today.getFullYear();
+    //var formattedDate = day + "/" + month + "/" + year;
+    var formattedDate = day;
+    return formattedDate;
+}
+
+function background_celdas(){
+
+        // Obtén una referencia a la tabla
+        var tabla = document.getElementById("tablaql");
+        // Obtén una referencia a las filas del cuerpo de la tabla
+
+        var filasth = tabla.getElementsByTagName("thead")[0].rows;
+        // Itera a través de las filas
+        for (var i = 0; i < filasth.length; i++) {
+            var filath = filasth[i];
+            // Obtén una referencia a las celdas de la fila
+            var celdasth = filath.cells;
+            // Itera a través de las celdas
+            for (var j = 0; j < celdasth.length; j++) {
+                var celdath = celdasth[j];
+                var contenidoth = celdath.innerHTML;
+                // Accede a la clase de la celda
+                var claseCeldath = celdath.classList[0]; // Suponemos que solo tiene una clase
+                // Hacer algo con la clase de la celda
+                if (celdath.classList.contains(cu())) {
+                    // Aplica el fondo rojo a la celda
+                    celdath.style.backgroundColor = "#b07d46";
+                }
+            }
+        }
+
+        var filas = tabla.getElementsByTagName("tbody")[0].rows;
+        // Itera a través de las filas
+        for (var i = 0; i < filas.length; i++) {
+            var fila = filas[i];
+            // Obtén una referencia a las celdas de la fila
+            var celdas = fila.cells;
+            // Itera a través de las celdas
+            for (var j = 0; j < celdas.length; j++) {
+                var celda = celdas[j];
+                var contenido = celda.innerHTML;
+                // Accede a la clase de la celda
+                var claseCelda = celda.classList[0]; // Suponemos que solo tiene una clase
+                // Hacer algo con la clase de la celda
+                if (celda.classList.contains(cu())) {
+                    // Aplica el fondo rojo a la celda
+                    celda.style.backgroundColor = "#b07d46";
+                }
+            }
+        }
 }

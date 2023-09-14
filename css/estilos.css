@@ -396,7 +396,7 @@ h1,h2,h3,h4{
     /* grid-template-columns: 11rem 11rem; */
     margin-bottom: 1% !important;
     height: 100%;
-    margin-bottom: 4%;
+    margin-bottom: 4% !important;
     /* border: 1px solid red; */
 }
 .grid-turnos-anos{
@@ -426,8 +426,14 @@ h1,h2,h3,h4{
     /* grid-auto-rows: 1.7rem 1.7rem 1.7rem 1.7rem; */
     /* grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr)); */
     grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
-    grid-gap: 5px;
+    grid-gap: 8px;
     /* height: auto; */
+}
+#tablas_meses table{
+    margin-top: 6% !important;
+}
+#tablas_meses table td{
+    text-align: center;
 }
 .mes{
     text-align: center;
