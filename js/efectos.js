@@ -446,7 +446,7 @@ function fichas_click(){
 function ano_2023(){
     document.getElementById("meses_2024").style.display = 'none';
     document.getElementById("meses_2023").style.display = 'grid';
-    document.getElementById('2024').style.background = '#242425';
+    document.getElementById('2024').style.background = 'black';
     document.getElementById('2024').style.color = 'white';
     document.getElementById('2023').style.background = 'white';
     document.getElementById('2023').style.color = 'black';
@@ -480,7 +480,7 @@ function ano_2023(){
 function ano_2024(){
     document.getElementById("meses_2023").style.display = 'none';
     document.getElementById("meses_2024").style.display = 'grid';
-    document.getElementById('2023').style.background = '#242425';
+    document.getElementById('2023').style.background = 'black';
     document.getElementById('2023').style.color = 'white';
     document.getElementById('2024').style.background = 'white';
     document.getElementById('2024').style.color = 'black';

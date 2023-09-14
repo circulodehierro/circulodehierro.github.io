@@ -390,12 +390,15 @@ h1,h2,h3,h4{
 #turnos{
     display: grid;
     gap: 1rem;
-    grid-auto-rows: 1.7rem 1.7rem 2rem 2rem ;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    grid-auto-rows: 1.7rem 1.7rem 1.7rem 1.7rem;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    height: auto;
+    /* border: 1px solid red; */
+    margin-bottom: 1% !important;
 }
 .grid-turnos-anos{
     text-align: center;
-    grid-column: span 2;
+    grid-column: span 1;
     color: white;
     margin-left: 0px;
     margin-right: .2%;
@@ -410,11 +413,13 @@ h1,h2,h3,h4{
     cursor: pointer;
 }
 .grid-turnos-meses{
+    padding-top: 20px;
     grid-column: span 1;
     color: white;
     grid-column-start: 1; 
     grid-column-end: 5;
-    grid-template-columns: repeat(auto-fit, minmax(6rem, 0.5fr));
+    /* grid-auto-rows: 1.7rem 1.7rem 1.7rem 1.7rem; */
+    grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
     grid-gap: 5px;
     height: auto;
 }
@@ -446,9 +451,9 @@ h1,h2,h3,h4{
     display: grid;
     gap: 1rem;
     grid-auto-rows: 1.7rem 1.7rem 1.7rem 1.7rem;
-    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
     height: auto;
-    /* border: 1px solid red; */
+    /* border: 1px solid yellow; */
     margin-bottom: 1% !important;
 }
 .grid-gastos-anos{
@@ -470,7 +475,7 @@ h1,h2,h3,h4{
 }
 .t_2021, .t_2022, .t_2023, .t_2024{
     grid-column-start: 1;
-    grid-column-end: 5;
+    grid-column-end: 4;
     height: auto !important;
     overflow-x: scroll;
     color: white;
