@@ -388,40 +388,45 @@ h1,h2,h3,h4{
 }
 /*TURNOS*/
 #turnos{
+    /* padding-left: 6%; */
     display: grid;
     gap: 1rem;
     grid-auto-rows: 1.7rem 1.7rem 1.7rem 1.7rem;
     grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-    height: auto;
-    /* border: 1px solid red; */
+    /* grid-template-columns: 11rem 11rem; */
     margin-bottom: 1% !important;
+    height: 100%;
+    /* border: 1px solid red; */
 }
 .grid-turnos-anos{
     text-align: center;
-    grid-column: span 1;
+    /* grid-column: span 1; */
     color: white;
-    margin-left: 0px;
-    margin-right: .2%;
-    margin-top: 0px;
-    max-width: 100%;
-    overflow-x: scroll;
+    /* margin-left: 0px; */
+    /* margin-right: .2%; */
+    /* margin-top: 0px; */
+    /* max-width: 100%; */
+    /* overflow-x: scroll; */
     border: 1px solid grey;
     border-radius: 5px;
     padding-top: 2px;
+    /* width: 104%; */
 }
 .grid-turnos-anos:hover{
     cursor: pointer;
 }
 .grid-turnos-meses{
-    padding-top: 20px;
+    /* padding-top: 10px; */
     grid-column: span 1;
     color: white;
     grid-column-start: 1; 
-    grid-column-end: 5;
+    grid-column-end: 3;
+    /* max-width: 92%; */
     /* grid-auto-rows: 1.7rem 1.7rem 1.7rem 1.7rem; */
+    /* grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr)); */
     grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
     grid-gap: 5px;
-    height: auto;
+    /* height: auto; */
 }
 .mes{
     text-align: center;
@@ -444,7 +449,7 @@ h1,h2,h3,h4{
     grid-column-end: 5;
     height: 26vh;
     overflow-x: scroll;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 /*CUOTAS*/
 #gastos{
