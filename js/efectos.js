@@ -27,6 +27,7 @@ function general(){
     document.getElementById("fichas").style.display = 'none';
     document.getElementById("fichas_detalle").style.display = 'none';
     document.getElementById("turnos").style.display = 'none';
+    document.getElementById("tablas_meses").style.display = 'none';
     document.getElementById("gastos").style.display = 'none';
     document.getElementById('t_2021').style.display = 'none';
     document.getElementById('t_2022').style.display = 'none';
@@ -50,6 +51,7 @@ function general(){
 function eventos(){
     document.getElementById("general").style.display = 'none';
     document.getElementById("turnos").style.display = 'none';
+    document.getElementById("tablas_meses").style.display = 'none';
     document.getElementById("gastos").style.display = 'none';
     document.getElementById("fichas").style.display = 'none';
     document.getElementById("fichas_detalle").style.display = 'none';
@@ -76,6 +78,7 @@ function eventos(){
 function fichas(){
     document.getElementById("general").style.display = 'none';
     document.getElementById("turnos").style.display = 'none';
+    document.getElementById("tablas_meses").style.display = 'none';
     document.getElementById("gastos").style.display = 'none';
     document.getElementById("eventos").style.display = 'none';
     document.getElementById('t_2021').style.display = 'none';
@@ -178,6 +181,7 @@ function turnos(){
     document.getElementById('2024_gastos').style.background = 'black';
     document.getElementById('2024_gastos').style.color = 'white';
     document.getElementById("turnos").style.display = 'grid';
+    document.getElementById("tablas_meses").style.display = 'grid';
 
     document.getElementById("logo_general").style= "reset";
     document.getElementById("logo_eventos").style= "reset";
@@ -190,6 +194,7 @@ function gastos(){
     document.getElementById("fichas").style.display = 'none';
     document.getElementById("fichas_detalle").style.display = 'none';
     document.getElementById("turnos").style.display = 'none';
+    document.getElementById("tablas_meses").style.display = 'none';
     document.getElementById('t_2021').style.display = 'none';
     document.getElementById('t_2022').style.display = 'none';
     document.getElementById('t_2023').style.display = 'none';
@@ -1288,7 +1293,11 @@ function background_celdas(){
                 // Hacer algo con la clase de la celda
                 if (celdath.classList.contains(cu())) {
                     // Aplica el fondo rojo a la celda
-                    celdath.style.backgroundColor = "#b07d46";
+                    //celdath.style.backgroundColor = "#b07d46";
+                    //celdath.style.opacity = "30%";
+                    //celdath.style.border = "1px solid #b07d46";
+                    celdath.style.animation = "feature 1.5s ease infinite alternate-reverse";
+                    //celdath.classList.add('logo_circulo');
                 }
             }
         }
@@ -1308,7 +1317,12 @@ function background_celdas(){
                 // Hacer algo con la clase de la celda
                 if (celda.classList.contains(cu())) {
                     // Aplica el fondo rojo a la celda
-                    celda.style.backgroundColor = "#b07d46";
+                    //celda.style.backgroundColor = "#b07d46";
+                    //celda.style.opacity = "30%";
+                    //celda.style.border = "1px solid red";
+                    //celda.classList.add('logo_circulo');
+                    celda.style.animation = "feature 1.5s ease infinite alternate-reverse";
+                    
                 }
             }
         }

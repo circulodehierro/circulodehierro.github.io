@@ -58,7 +58,7 @@ h1,h2,h3,h4{
     /* box-shadow: 0px 0px 10px 3px rgb(246, 184, 28); */
     /* background-color: #41414482; */
     /* box-shadow: 0px 0px 3px 3px rgb(251, 253, 252); */
-    animation: feature 0.5s ease infinite alternate-reverse;
+    animation: feature .5s ease infinite alternate-reverse;
 }
 @keyframes feature {
     0% {
