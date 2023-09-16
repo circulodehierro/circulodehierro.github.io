@@ -1,4 +1,6 @@
-screen.orientation.lock('landscape');
+if (screen.orientation.lock) {
+    screen.orientation.lock('landscape');
+  }
 
 function logo(){
     document.getElementById("general").style.display = 'none';
