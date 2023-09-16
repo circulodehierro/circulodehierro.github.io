@@ -1,3 +1,5 @@
+screen.orientation.lock('landscape');
+
 function logo(){
     document.getElementById("general").style.display = 'none';
     document.getElementById("eventos").style.display = 'none';
