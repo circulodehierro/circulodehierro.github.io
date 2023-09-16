@@ -206,7 +206,20 @@
         <!--SECCION MOVIMIENTOS-->
         <div class="grid-general">
             <div class="cabecera-general">Movimientos</div>
-            <div class="caja-detalle-gastos">
+            <div style="text-align: center;">
+                <input type="text" name="clave_movimientos" placeholder="Clave" value="" style="border-radius: 5px;background-color: black;color: #7de352;"><br>
+                <span class="fa fa-eye" style="font-size: 25px;cursor: pointer;" onclick="ver_movimientos();return false;"></span>
+            </div>
+            <div id="modal_clave" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="cerrarModal();">&times;</span><br>
+                    <img src="images/rick_morty.jpeg" alt="evento" class="imagen" style="width: 40%;">
+                    <h1 style="color: rgb(0, 0, 0);" id="nombre_deudor">Clave Incorrecta Perraaa..¡¡</h1>
+                    <!--<h3 style="color: rgba(0, 0, 0, 0.75);" id="deuda">chaos</h3>
+                    <h3 style="color: rgba(0, 0, 0, 0.75);" id="mensaje">cueck</h3>-->
+                </div>
+            </div>
+            <div class="caja-detalle-gastos" id="caja-detalle-gastos" style="display: none;">
                 <ul>
                     <li>(07-01-2023) <span style="color:#7de352;">+ $20.000 Pago 4 Cuotas Nov-Feb Carlos (20.000).</span></li>
                     <li>(15-02-2023) <span style="color:#7de352;">+ $484.445 Entrega de Dinero al Club de Nicollette (504.445).</span></li>
@@ -238,9 +251,21 @@
                     <li>(05-08-2023) <span style="color:#7de352;">+ $17.000 Pago 1 Cuota Jul y ressto del parche full Chadu (628.490).</span></li>
                     <li>(07-08-2023) <span style="color:#e73535;">- $70.000 Gasto Wisky Aniversario Club (558.490).</span></li>
                     <li>(11-08-2023) <span style="color:#e73535;">- $40.230 Gasto Cuadros Aniversario Club (518.260).</span></li>
+                    <li>(12-08-2023) <span style="color:#e73535;">- $140.000 DJ y Animación Aniversario Club (378.260).</span></li>
+                    <li>(12-08-2023) <span style="color:#e73535;">- $26.280 Vasos Copete Aniversario Club (351.980).</span></li>
+                    <li>(12-08-2023) <span style="color:#e73535;">- $2.600 Talonarios Aniversario Club (349.380).</span></li>
+                    <li>(12-08-2023) <span style="color:#e73535;">- $20.000 2 Horas extras Aniversario Club (329.380).</span></li>
+                    <li>(17-08-2023) <span style="color:#e73535;">- $214.750 Pago Consumo Socomep Aniversario Club (114.630).</span></li>
+                    <li>(01-09-2023) <span style="color:#e73535;">- $10.000 Pago Navegado Cintia (104.630).</span></li>
+                    <li>(02-09-2023) <span style="color:#e73535;">- $24.000 Cerveza Junta con Apache (90.630).</span></li>
+                    <li>(02-09-2023) <span style="color:#e73535;">- $27.050 Cosas Extra Junta con Apache (63.580).</span></li>
+                    <li>(02-09-2023) <span style="color:#e73535;">- $74.576 Asado Junta con Apache (-10.996).</span></li>
+                    <li>(08-09-2023) <span style="color:#e73535;">- $1.250 Pago Saldo a Favor Jota (-12.246).</span></li>
+                    <li>(08-09-2023) <span style="color:#e73535;">- $7.000 Pago Venta Cigarros Caro (-19.246).</span></li>
+                    <li>(15-09-2023) <span style="color:#7de352;">+ $413.990 Ganancia Aniversario (394.744).</span></li>
                 </ul>
             </div>
-            <div class="total-gastos">Total $518.260</div>
+            <div class="total-gastos" id="total-gastos" style="display: none;margin-top: 10px;">Total $394.744</div>
         </div>
     </div>
     <div class="contenido-eventos" id="eventos" style="display: none;">

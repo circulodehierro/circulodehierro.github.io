@@ -24,8 +24,8 @@ function logo(){
     document.getElementById("logo_gastos").style = "reset";
 }
 function general(){
-    alert("Sección en mantención, no insista ¡¡");
-    /*document.getElementById("eventos").style.display = 'none';
+    //alert("Sección en mantención, no insista ¡¡");
+    document.getElementById("eventos").style.display = 'none';
     document.getElementById("fichas").style.display = 'none';
     document.getElementById("fichas_detalle").style.display = 'none';
     document.getElementById("turnos").style.display = 'none';
@@ -48,7 +48,8 @@ function general(){
     document.getElementById("logo_eventos").style = "reset";
     document.getElementById("logo_turnos").style = "reset";
     document.getElementById("logo_gastos").style = "reset";
-    document.getElementById("logo_general").style.animation = "feature 0.5s ease infinite alternate-reverse";*/
+    document.getElementById("logo_general").style.animation = "feature 0.5s ease infinite alternate-reverse";
+    /**/
 }
 function eventos(){
     alert("Sección en mantención, no insista ¡¡");
@@ -234,6 +235,7 @@ function deuda(nombre,d,m1){
 
 function cerrarModal() {
     document.getElementById('miModal').style.display = 'none';
+    document.getElementById('modal_clave').style.display = 'none';
 }
 
 function hide_estatutos(){
@@ -1334,4 +1336,22 @@ function background_celdas(){
                 }
             }
         }
+}
+
+function ver_movimientos(){
+    var input = document.querySelector('input[name="clave_movimientos"]');
+    var valor = input.value;
+    //alert(valor);
+    if(valor == '.'){
+        input.value = '';
+        document.getElementById("caja-detalle-gastos").style.display = 'block';
+        document.getElementById("total-gastos").style.display = 'block';
+        
+    }else{
+        input.value = '';
+        document.getElementById("caja-detalle-gastos").style.display = 'none';
+        document.getElementById("total-gastos").style.display = 'none';
+        document.getElementById('modal_clave').style.display = 'block';
+        //alert('Intentalo de nuevo awueonao ¡¡¡');
+    }
 }
