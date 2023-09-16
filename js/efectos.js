@@ -1345,6 +1345,7 @@ function ver_movimientos(){
     var valor = input.value;
     //alert(valor);
     if(valor == '.'){
+        document.getElementById('modal_clave').style.display = 'none';
         input.value = '';
         document.getElementById("caja-detalle-gastos").style.display = 'block';
         document.getElementById("total-gastos").style.display = 'block';
