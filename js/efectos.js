@@ -788,6 +788,7 @@ function mes_2023(m){
         document.getElementById("click_septiembre_2023").style.background = 'grey';
         document.getElementById("septiembre_2023").style.display = 'block';
     }else if (parseInt(m) === 10){
+        background_celdas();
         document.getElementById("enero_2023").style.display = 'none';
         document.getElementById("febrero_2023").style.display = 'none';
         document.getElementById("marzo_2023").style.display = 'none';
@@ -815,6 +816,7 @@ function mes_2023(m){
         document.getElementById("click_octubre_2023").style.background = 'grey';
         document.getElementById("octubre_2023").style.display = 'block';
     }else if (parseInt(m) === 11){
+        background_celdas();
         document.getElementById("enero_2023").style.display = 'none';
         document.getElementById("febrero_2023").style.display = 'none';
         document.getElementById("marzo_2023").style.display = 'none';
@@ -842,6 +844,7 @@ function mes_2023(m){
         document.getElementById("click_noviembre_2023").style.background = 'grey';
         document.getElementById("noviembre_2023").style.display = 'block';
     }else{
+        background_celdas();
         document.getElementById("enero_2023").style.display = 'none';
         document.getElementById("febrero_2023").style.display = 'none';
         document.getElementById("marzo_2023").style.display = 'none';
