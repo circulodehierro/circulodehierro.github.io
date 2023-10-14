@@ -219,13 +219,18 @@ function gastos(){
     document.getElementById("logo_turnos").style= "reset";
     document.getElementById("logo_gastos").style.animation = "feature 0.5s ease infinite alternate-reverse";
 }
-function deuda(nombre,d,m1){
+function deuda(nombre,d,m1,m2){
     document.getElementById('miModal').style.display = 'block';
-    var color, mensaje, deuda = "";
+    var color, mensaje, deuda = "", deuda2 = "";
     if(parseInt(d) === 0){
         color = '#7DE352';
         deuda = 'Vo debí en cuotas loco $'+m1+' pesos.';
         mensaje = 'Pucha el tonto lindo.. ';
+    }else if(parseInt(d) === 3){
+        color = 'red';
+        deuda = 'Vo debí en cuotas loco $'+m1+' pesos.';
+        deuda2 = 'y en otras deudas $'+m2+' pesos.';
+        mensaje = 'Shiaa, no te da verguenza, Entrá a pagar poh.. !!';
     }else{
         color = 'red';
         deuda = 'Vo debí en cuotas loco $'+m1+' pesos.';
@@ -234,6 +239,7 @@ function deuda(nombre,d,m1){
     document.getElementById('miModal').style.borderColor = color;
     document.getElementById('nombre_deudor').innerHTML = nombre;
     document.getElementById('deuda').innerHTML = deuda
+    document.getElementById('deuda2').innerHTML = deuda2
     document.getElementById('mensaje').innerHTML = mensaje;
 }
 

@@ -214,14 +214,15 @@
                 <div class="modal-content">
                     <span class="close" onclick="cerrarModal();" style="font-size: 30px;font-weight: bold;">&times;</span><br>
                     <img src="images/rick-and-morty-rick-sanchez.gif" alt="evento" class="imagen" style="width: 40%;">
-                    <h1 style="color: black;font-size: 16px;" id="nombre_deudor">Clave Incorrecta Perraaa..¡¡</h1>
+                    <h1 style="color: black;font-size: 16px;">Clave Incorrecta Perraaa..¡¡</h1>
                     <!--<h3 style="color: rgba(0, 0, 0, 0.75);" id="deuda">chaos</h3>
                     <h3 style="color: rgba(0, 0, 0, 0.75);" id="mensaje">cueck</h3>-->
                 </div>
             </div>
-            <div class="total-gastos" id="total-gastos" style="display: none;margin-top: 10px;">Total $354.744</div>
+            <div class="total-gastos" id="total-gastos" style="display: none;margin-top: 10px;">Total $402.744</div>
             <div class="caja-detalle-gastos" id="caja-detalle-gastos" style="display: none;">
                 <ul>
+                    <li>(13-10-2023) <span style="color:#7de352;">+ $48.000 Pago 3 Cuotas Ago-Sep-Oct y 3 Whiskys Braka (402.744).</span></li>
                     <li>(29-09-2023) <span style="color:#e73535;">- $40.000 Pago Recuerdo Metalico Apache (354.744).</span></li>
                     <li>(15-09-2023) <span style="color:#7de352;">+ $413.990 Ganancia Aniversario (394.744).</span></li>
                     <li>(08-09-2023) <span style="color:#e73535;">- $7.000 Pago Venta Cigarros Caro (-19.246).</span></li>
@@ -2333,6 +2334,7 @@
             <span class="close" onclick="cerrarModal();">&times;</span>
             <h1 style="color: rgb(0, 0, 0);" id="nombre_deudor"></h1>
             <h3 style="color: rgba(0, 0, 0, 0.75);" id="deuda"></h3>
+            <h3 style="color: rgba(0, 0, 0, 0.75);" id="deuda2"></h3>
             <h3 style="color: rgba(0, 0, 0, 0.75);" id="mensaje"></h3>
         </div>
     </div>
@@ -2582,7 +2584,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td class="sticky" onclick="deuda('¡Tio Palo!',1,'6.000');return false;" style="cursor: pointer;">Pablo&nbsp;&nbsp;<img src="images/cara2.png" class="cara"></td>
+                    <td class="sticky" onclick="deuda('¡Tio Palo!',3,'12.000','26.000');return false;" style="cursor: pointer;">Pablo&nbsp;&nbsp;<img src="images/cara2.png" class="cara"></td>
                     <!--Enero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
                     <!--Febrero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
                     <!--Marzo--><td style="color: #7de352; font-weight: bold;">$5.000</td>
@@ -2597,7 +2599,7 @@
                     <!--Diciembre--><td>-</td>
                 </tr>
                 <tr>
-                    <td class="sticky" onclick="deuda('¡Jota J!',1,'6.000');return false;" style="cursor: pointer;">Jota J&nbsp;&nbsp;<img src="images/cara2.png" class="cara"></td>
+                    <td class="sticky" onclick="deuda('¡Jota J!',1,'12.000');return false;" style="cursor: pointer;">Jota J&nbsp;&nbsp;<img src="images/cara2.png" class="cara"></td>
                     <!--Enero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
                     <!--Febrero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
                     <!--Marzo--><td style="color: #7de352; font-weight: bold;">$5.000</td>
@@ -2612,7 +2614,7 @@
                     <!--Diciembre--><td>-</td>
                 </tr>
                 <tr>
-                    <td class="sticky" class="sticky" onclick="deuda('¡Alex!',1,'41.000');return false;" style="cursor: pointer;">Alex&nbsp;&nbsp;<img src="images/cara2.png" class="cara"></td>
+                    <td class="sticky" class="sticky" onclick="deuda('¡Alex!',3,'47.000','5.000');return false;" style="cursor: pointer;">Alex&nbsp;&nbsp;<img src="images/cara2.png" class="cara"></td>
                     <!--Enero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
                     <!--Febrero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
                     <!--Marzo--><td>-</td>
@@ -2627,7 +2629,7 @@
                     <!--Diciembre--><td>-</td>
                 </tr>
                 <tr>
-                    <td class="sticky" class="sticky" onclick="deuda('!K-Chete!',1,'6.000');return false;" style="cursor: pointer;">Robinson&nbsp;&nbsp;<img src="images/cara2.png" class="cara"></td>
+                    <td class="sticky" class="sticky" onclick="deuda('!K-Chete!',1,'12.000');return false;" style="cursor: pointer;">Robinson&nbsp;&nbsp;<img src="images/cara2.png" class="cara"></td>
                     <!--Enero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
                     <!--Febrero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
                     <!--Marzo--><td style="color: #7de352; font-weight: bold;">$5.000</td>
@@ -2642,7 +2644,7 @@
                     <!--Diciembre--><td>-</td>
                 </tr>
                 <tr>
-                    <td class="sticky" class="sticky" onclick="deuda('¡Braka!',1,'12.000');return false;" style="cursor: pointer;">Braka&nbsp;&nbsp;<img src="images/cara2.png" class="cara"></td>
+                    <td class="sticky" class="sticky" onclick="deuda('¡Braka!',0,'0');return false;" style="cursor: pointer;">Braka&nbsp;&nbsp;<img src="images/cara1.png" class="cara_"></td>
                     <!--Enero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
                     <!--Febrero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
                     <!--Marzo--><td style="color: #7de352; font-weight: bold;">$5.000</td>
@@ -2650,14 +2652,14 @@
                     <!--Mayo--><td style="color: #7de352; font-weight: bold;">$6.000</td>
                     <!--Junio--><td style="color: #7de352; font-weight: bold;">$6.000</td>
                     <!--Julio--><td style="color: #7de352; font-weight: bold;">$6.000</td>
-                    <!--Agosto--><td>-</td>
-                    <!--Septiembre--><td>-</td>
-                    <!--Octubre--><td>-</td>
+                    <!--Agosto--><td style="color: #7de352; font-weight: bold;">$6.000</td>
+                    <!--Septiembre--><td style="color: #7de352; font-weight: bold;">$6.000</td>
+                    <!--Octubre--><td style="color: #7de352; font-weight: bold;">$6.000</td>
                     <!--Noviembre--><td>-</td>
                     <!--Diciembre--><td>-</td>
                 </tr>
                 <tr>
-                    <td class="sticky" class="sticky" onclick="deuda('¡Chadu!',1,'6.000');return false;" style="cursor: pointer;">Chadu&nbsp;&nbsp;<img src="images/cara2.png" class="cara"></td>
+                    <td class="sticky" class="sticky" onclick="deuda('¡Chadu!',1,'12.000');return false;" style="cursor: pointer;">Chadu&nbsp;&nbsp;<img src="images/cara2.png" class="cara"></td>
                     <!--Enero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
                     <!--Febrero--><td style="color: #7de352; font-weight: bold;">$5.000</td>
                     <!--Marzo--><td style="color: #7de352; font-weight: bold;">$5.000</td>
