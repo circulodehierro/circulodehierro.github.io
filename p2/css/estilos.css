@@ -1,0 +1,59 @@
+body{
+    /* background-color: rgb(37, 36, 36);     */
+    background-color: black;
+    margin: 0 8px 8px 8px;
+    /* width: 80%; */
+    /* border: 1px solid red; */
+}
+h1,h2,h3,h4{
+    color: white;
+} 
+.logo_circulo{
+    /* filter:drop-shadow(1px 1px 3px rgb(246, 184, 28)); */
+    /* filter:drop-shadow(2px 2px 4px orange); */
+    /* animation: shadow-pulse 10s ease-in-out infinite alternate; */
+    animation: shadow-pulse .8s ease infinite alternate-reverse;
+}
+@keyframes shadow-pulse {
+    0% {
+        filter: drop-shadow(2px 4px 6px #b17d46);
+    }
+    30% {
+        filter: drop-shadow(2px 4px 6px rgb(162, 107, 35));  
+    }
+    60% {
+        filter: drop-shadow(2px 4px 6px #b17d46);  
+    }
+    100% {
+        filter: drop-shadow(2px 4px 6px rgb(162, 107, 35));
+    }
+  }
+  /* Estilos para la modal */
+  .modal {
+    text-align: center;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 10%;
+    background-color: #0a0a0a;
+    border: 1px solid #b17d46;
+    padding: 10px;
+}
+
+/* Estilos para el input de contraseña y el botón */
+input[type="password"] {
+    width: 94%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #b17d46;
+    color: #000000;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
