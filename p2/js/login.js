@@ -15,40 +15,44 @@ function logo(){
 function login(){
     var input = document.getElementById('pass');
     var pass = input.value;
-    var log = 0;
     switch(pass){
-        case 'pa':
+        case 'pa'://Pablo
             document.getElementById('miModal').style.display = 'none';
-            var sp = pass.split('');
-            var clave = '1k0'+sp[1]+'ko'+sp[0]+'2kq';
-            window.location.href = 'pages/inicio.html?fa87sdbk='+clave;
-            
+            url(pass);
         break;
-        case 'al':
+        case 'al'://Ale
             document.getElementById('miModal').style.display = 'none';
-            console.log(pass);
+            url(pass);
         break;
-        case 'jo':
+        case 'jo'://Jota
             document.getElementById('miModal').style.display = 'none';
-            console.log(pass);
+            url(pass);
         break;
-        case 'ro':
+        case 'ro'://Robinson
             document.getElementById('miModal').style.display = 'none';
-            console.log(pass);
+            url(pass);
         break;
-        case 'br':
+        case 'br'://Braka
             document.getElementById('miModal').style.display = 'none';
-            console.log(pass);
+            url(pass);
         break;
-        case 'ch':
+        case 'ch'://Chadu
             document.getElementById('miModal').style.display = 'none';
-            console.log(pass);
+            url(pass);
+        break;
+        case 'pr'://Prospecto
+            document.getElementById('miModal').style.display = 'none';
+            url(pass);
         break;
         default:
             document.getElementById('pass').value = '';
-            console.log(pass);
-            log;
         break;
     }
     
+}
+
+function url(pass){
+    var sp = pass.split('');
+    var clave = '1k0'+sp[1]+'ko'+sp[0]+'2kq';
+    window.location.href = 'pages/inicio.html?fa87sdbk='+clave;
 }

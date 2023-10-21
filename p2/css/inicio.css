@@ -8,3 +8,60 @@ body{
 h1,h2,h3,h4{
     color: white;
 } 
+.gallery{
+    margin: 5%;
+    display: grid;
+    grid-auto-rows: 10rem;/*alto de las columnas*/
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr)) !important;
+    /* border: 1px solid red; */
+}
+.featured{
+    grid-column: span 1;
+    border: 1px solid grey;
+    color: white;
+    background: black;
+    border-radius: 10px;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.3);
+    transition: transform ease .5s, box-shadow ease .5s;
+    text-align: center;
+    cursor: pointer;
+}
+.featured:hover{
+    animation: feature .5s ease infinite alternate-reverse;
+}
+@keyframes feature {
+    0% {
+        box-shadow: 0px 0px 3px 3px rgb(251, 253, 252);
+        transform: scale(0.97);
+    }
+    20% {
+        box-shadow: 0px 0px 3px 3px rgb(251, 255, 0); 
+    }
+    40% {
+      box-shadow: 0px 0px 3px 3px rgb(21, 128, 0); 
+    }
+    60% {
+        box-shadow: 0px 0px 3px 3px rgb(235, 4, 4); 
+    }
+    80% {
+        box-shadow: 0px 0px 3px 3px rgb(194, 3, 194); 
+    }
+    100% {
+        box-shadow: 0px 0px 3px 3px rgb(0, 255, 242); 
+        transform: scale(1);
+    }
+  }
+.icono{
+    filter: invert(100%);
+    width: 45%;
+    background:white;
+    margin-top: 15%;
+}
+.div-deshabilitado {
+    pointer-events: none; /* Evitar eventos del mouse */
+    opacity: 0.5; /* Cambiar la opacidad o estilo a tu elección */
+  }
