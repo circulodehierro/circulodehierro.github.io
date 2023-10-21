@@ -1,9 +1,6 @@
 body{
-    /* background-color: rgb(37, 36, 36);     */
     background-color: black;
     margin: 0 8px 8px 8px;
-    /* width: 80%; */
-    /* border: 1px solid red; */
 }
 h1,h2,h3,h4{
     color: white;

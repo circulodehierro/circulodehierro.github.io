@@ -1,0 +1,70 @@
+body{
+    background-color: black;    
+    margin: 0 20px 20px 20px;
+}
+h1,h2,h3,h4{
+    color: white;
+}
+#eventos{
+    overflow-x: scroll;
+    display: grid;
+    gap: 0.1rem;
+    grid-auto-rows: 18.5rem;
+    max-height: 800px;
+    margin-top: 20px;
+    border-radius: 0;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+#eventos .eventos_grid{
+    grid-column: span 1;
+    color: white;
+    border: 1px solid white;
+    margin: 10px 5px;
+    border-radius: 10px;
+    position: relative;
+    display: inline-block;
+}
+#eventos .eventos_grid > h1,p,.logo,.texto1,.texto2,.texto3,.texto4{
+    position: absolute;
+    white-space: nowrap;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#eventos .eventos_grid > .logo{
+    top: 63%;
+    object-fit: cover;
+    width: 110px;
+    height: 125px;
+    border: 1px solid white;
+}
+#eventos .eventos_grid > h1{
+    top: 5%;
+    font-size: 1.5em;
+}
+#eventos .eventos_grid > p{
+    top: 50px;
+}
+#eventos .eventos_grid > .texto1{
+    top: 90px;
+}
+#eventos .eventos_grid > .texto2{
+    top: 150px;
+}
+#eventos .eventos_grid > .texto4{
+    top: 190px;
+    font-size: 15px;
+}
+#eventos .eventos_grid > .texto3{
+    top: 250px;
+    font-size: 13px;
+}
+#eventos .imagen{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 20%;
+    border-radius: 10px;
+}
+#eventos .imagen:hover{
+    opacity: 50%;
+}
