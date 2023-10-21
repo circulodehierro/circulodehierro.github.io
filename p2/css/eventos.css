@@ -6,11 +6,11 @@ h1,h2,h3,h4{
     color: white;
 }
 #eventos{
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
     display: grid;
     gap: 0.1rem;
     grid-auto-rows: 18.5rem;
-    max-height: 800px;
+    /* max-height: 800px; */
     margin-top: 20px;
     border-radius: 0;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
