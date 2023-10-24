@@ -52,22 +52,22 @@
         window.location.href = 'estatutos.html';
     }
     function movimientos(){
-        alert('En Mantención');
+        window.location.href = 'movimientos.html';
     }
     function reuniones(){
-        alert('En Mantención');
+        window.location.href = 'reuniones.html';
     }
     function eventos(){
         window.location.href = 'eventos.html';
     }
     function fichas(){
-        alert('En Mantención');
+        window.location.href = 'fichas.html';
     }
     function turnos(){
-        alert('En Mantención');
+        window.location.href = 'turnos.html';
     }
     function cuotas(){
-        alert('En Mantención');
+        window.location.href = 'cuotas.html';
     }
 
     

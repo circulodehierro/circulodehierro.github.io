@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/turnos.css">
+    <link rel="icon" type="image/png" href="../images/logo1.svg"/>
+    <script src="../js/turnos.js"></script>
+    <title>Circulo de Hierro - Turnos</title>
+</head>
+<body>
+    <div>
+        <select id="meses_del_anio">
+            <option value="0" disabled selected>SELECCIONE MES</option>
+        </select>
+    </div>
+    <div>
+    <table id="tabla_mes">
+        <thead id="thead">
+        </thead>
+        <tbody id="tabla-meses">
+            <!-- Aquí se generará la tabla dinámicamente -->
+        </tbody>
+    </table>
+    </div>
+    <div id="simbologia_turnos">
+        <table>
+            <thead></thead>
+            <tbody>
+                <tr>
+                    <td align="center" style="background-color: rgba(0, 105, 255, 0.7);border-radius: 10%;"><i class="fa fa-user" style="color: white;font-size: 20px;"></i></td>
+                    <td align="left">Descansa Ale</td>
+                </tr>
+                <tr>
+                    <td align="center" style="background-color: rgba(0, 255, 255, 0.7);border-radius: 10%;"><i class="fa fa-user" style="color: white;font-size: 20px;"></i></td>
+                    <td align="left">Descansa Braka</td>
+                </tr>
+                <tr>
+                    <td align="center" style="background-color: rgba(250, 150, 200, 0.7);border-radius: 10%;"><i class="fa fa-user" style="color: white;font-size: 20px;"></i></td>
+                    <td align="left">Descansa Chadu</td>
+                </tr>
+                <tr>
+                    <td align="left" style="background-color: rgba(255, 255, 0, 0.7);border-radius: 10%;"><i class="fa fa-user-plus uno" style="font-size: 20px;"></i></td>
+                    <td align="left">Descansa Ale y Braka</td>
+                </tr>
+                <tr>
+                    <td align="left" style="background-color: rgba(255, 255, 0, 0.7);border-radius: 10%;"><i class="fa fa-user-plus dos" style="font-size: 20px;"></i></td>
+                    <td align="left">Descansa Ale y Chadu</td>
+                </tr>
+                <tr>
+                    <td align="left" style="background-color: rgba(255, 255, 0, 0.7);border-radius: 10%;"><i class="fa fa-user-plus tres" style="font-size: 20px;"></i></td>
+                    <td align="left">Descansa Braka y Chadu</td>
+                </tr>
+                <tr>
+                    <td align="left" style="background-color: rgba(255, 255, 0, 0.7);border-radius: 10%;"><i class="fa fa-user-plus cuatro" style="font-size: 20px;"></i></td>
+                    <td align="left">Descansan Todos</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

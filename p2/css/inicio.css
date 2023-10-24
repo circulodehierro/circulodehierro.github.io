@@ -18,8 +18,8 @@ h1,h2,h3,h4{
 }
 .featured{
     grid-column: span 1;
-    border: 1px solid grey;
-    color: white;
+    border: 2px solid #b17d46;
+    color: rgb(255, 255, 255);
     background: black;
     border-radius: 10px;
     background-size:cover;
