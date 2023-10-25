@@ -215,12 +215,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 //celda.style.backgroundColor = "rgba(255, 0, 0, 0.7)"; // Fondo rojo con opacidad del 70% para los domingos en las filas
                 celda.innerHTML = '<i style="color:rgba(255, 0, 0, 0.7)">'+dia+'</i>';
             }
-            coincidencia_turnos(dia,valorSeleccionado,celda,diaInicio,turnos_ale,turnos_braka,turnos_chadu,turnos_roberto);
-
-            if (fechaActual.getDate() === dia && fechaActual.getMonth() + 1 === parseInt(valorSeleccionado) && fechaActual.getFullYear() === 2023) {
-                //celda.style.backgroundColor = "rgba(0, 255, 0, 0.7)"; // Fondo verde con opacidad del 70% para el día actual
-                celda.innerHTML = '<i style="color:rgba(0, 255, 0, 0.7)">'+dia+'</i>';
-            }
+            coincidencia_turnos(dia,valorSeleccionado,celda,diaInicio,fechaActual,turnos_ale,turnos_braka,turnos_chadu,turnos_roberto);
         }
     });
     
@@ -239,20 +234,24 @@ document.addEventListener('DOMContentLoaded', function() {
     
 });
 
-function coincidencia_turnos(dia,valorSeleccionado,celda,diaInicio,turnos_ale,turnos_braka,turnos_chadu,turnos_roberto){
+function coincidencia_turnos(dia,valorSeleccionado,celda,diaInicio,fechaActual,turnos_ale,turnos_braka,turnos_chadu,turnos_roberto){
     //ALE vs BRAKA
     for (var e = 0; e < turnos_ale.length; e++) {
         for (var f = 0; f < turnos_braka.length; f++) {
-                if (turnos_ale[e].dia === dia && turnos_ale[e].mes === parseInt(valorSeleccionado) && turnos_ale[e].ano === 2023
-                    && turnos_braka[f].dia === dia && turnos_braka[f].mes === parseInt(valorSeleccionado) && turnos_braka[f].ano === 2023) {
-                    celda.style.backgroundColor = "rgba(255, 255, 0, 0.7)"; // Fondo amarillo con opacidad del 70% para coincidencias en ambos arreglos
-                    //celda.innerHTML = '<i class="fa fa-user-plus uno" onclick="ver(1);return false;"></i>';
-                    celda.innerHTML = '<i onclick="ver(1,'+dia+','+diaInicio+','+turnos_ale[e].mes+');return false;">'+dia+'</i>';
-                    if (diaInicio === 1) {
-                        //celda.style.backgroundColor = "rgba(255, 0, 0, 0.7)"; // Fondo rojo con opacidad del 70% para los domingos en las filas
-                        celda.innerHTML = '<i style="color:rgba(255, 0, 0, 0.7)" onclick="ver(1,'+dia+','+diaInicio+','+turnos_ale[e].mes+');return false;">'+dia+'</i>';
-                    }
+            if (turnos_ale[e].dia === dia && turnos_ale[e].mes === parseInt(valorSeleccionado) && turnos_ale[e].ano === 2023
+                && turnos_braka[f].dia === dia && turnos_braka[f].mes === parseInt(valorSeleccionado) && turnos_braka[f].ano === 2023) {
+                celda.style.backgroundColor = "rgba(255, 255, 0, 0.7)"; // Fondo amarillo con opacidad del 70% para coincidencias en ambos arreglos
+                //celda.innerHTML = '<i class="fa fa-user-plus uno" onclick="ver(1);return false;"></i>';
+                celda.innerHTML = '<i onclick="ver(1,'+dia+','+diaInicio+','+turnos_ale[e].mes+');return false;">'+dia+'</i>';
+                if (diaInicio === 1) {
+                    //celda.style.backgroundColor = "rgba(255, 0, 0, 0.7)"; // Fondo rojo con opacidad del 70% para los domingos en las filas
+                    celda.innerHTML = '<i style="color:rgba(255, 0, 0, 0.7)" onclick="ver(1,'+dia+','+diaInicio+','+turnos_ale[e].mes+');return false;">'+dia+'</i>';
                 }
+                if (fechaActual.getDate() === dia && fechaActual.getMonth() + 1 === parseInt(valorSeleccionado) && fechaActual.getFullYear() === 2023) {
+                    //celda.style.backgroundColor = "rgba(0, 255, 0, 0.7)"; // Fondo verde con opacidad del 70% para el día actual
+                    celda.innerHTML = '<i style="color:rgba(0, 255, 0, 0.7)" onclick="ver(1,'+dia+','+diaInicio+','+turnos_roberto[g].mes+');return false;">'+dia+'</i>';
+                }
+            }
         }
     }
     //ALE vs CHADU
@@ -267,6 +266,10 @@ function coincidencia_turnos(dia,valorSeleccionado,celda,diaInicio,turnos_ale,tu
                     //celda.style.backgroundColor = "rgba(255, 0, 0, 0.7)"; // Fondo rojo con opacidad del 70% para los domingos en las filas
                     celda.innerHTML = '<i style="color:rgba(255, 0, 0, 0.7)" onclick="ver(2,'+dia+','+diaInicio+','+turnos_chadu[g].mes+');return false;">'+dia+'</i>';
                 }
+                if (fechaActual.getDate() === dia && fechaActual.getMonth() + 1 === parseInt(valorSeleccionado) && fechaActual.getFullYear() === 2023) {
+                    //celda.style.backgroundColor = "rgba(0, 255, 0, 0.7)"; // Fondo verde con opacidad del 70% para el día actual
+                    celda.innerHTML = '<i style="color:rgba(0, 255, 0, 0.7)" onclick="ver(2,'+dia+','+diaInicio+','+turnos_roberto[g].mes+');return false;">'+dia+'</i>';
+                }
             }
         }
     }
@@ -274,14 +277,20 @@ function coincidencia_turnos(dia,valorSeleccionado,celda,diaInicio,turnos_ale,tu
     for (var e = 0; e < turnos_ale.length; e++) {
         for (var g = 0; g < turnos_roberto.length; g++) {
             if (turnos_ale[e].dia === dia && turnos_ale[e].mes === parseInt(valorSeleccionado) && turnos_ale[e].ano === 2023
-                && turnos_roberto[g].dia === dia && turnos_roberto[g].mes === parseInt(valorSeleccionado) && turnos_roberto[g].ano === 2023) {
-                celda.style.backgroundColor = "rgba(255, 255, 0, 0.7)"; // Fondo amarillo con opacidad del 70% para coincidencias en ambos arreglos
-                //celda.innerHTML = '<i class="fa fa-user-plus dos" onclick="ver(2);return false;"></i>';
-                celda.innerHTML = '<i onclick="ver(5,'+dia+','+diaInicio+','+turnos_roberto[g].mes+');return false;">'+dia+'</i>';
-                if (diaInicio === 1) {
-                    //celda.style.backgroundColor = "rgba(255, 0, 0, 0.7)"; // Fondo rojo con opacidad del 70% para los domingos en las filas
-                    celda.innerHTML = '<i style="color:rgba(255, 0, 0, 0.7)" onclick="ver(5,'+dia+','+diaInicio+','+turnos_roberto[g].mes+');return false;">'+dia+'</i>';
-                }
+                && turnos_roberto[g].dia === dia && turnos_roberto[g].mes === parseInt(valorSeleccionado) && turnos_roberto[g].ano === 2023) 
+                {
+                    //console.log([turnos_ale[e].dia,turnos_ale[e].mes,turnos_ale[e].ano,turnos_roberto[g].dia,turnos_roberto[g].mes,turnos_roberto[g].ano]);
+                    celda.style.backgroundColor = "rgba(255, 255, 0, 0.7)"; // Fondo amarillo con opacidad del 70% para coincidencias en ambos arreglos
+                    //celda.innerHTML = '<i class="fa fa-user-plus dos" onclick="ver(2);return false;"></i>';
+                    celda.innerHTML = '<i onclick="ver(5,'+dia+','+diaInicio+','+turnos_roberto[g].mes+');return false;">'+dia+'</i>';
+                    if (diaInicio === 1) {
+                        //celda.style.backgroundColor = "rgba(255, 0, 0, 0.7)"; // Fondo rojo con opacidad del 70% para los domingos en las filas
+                        celda.innerHTML = '<i style="color:rgba(255, 0, 0, 0.7)" onclick="ver(5,'+dia+','+diaInicio+','+turnos_roberto[g].mes+');return false;">'+dia+'</i>';
+                    }
+                    if (fechaActual.getDate() === dia && fechaActual.getMonth() + 1 === parseInt(valorSeleccionado) && fechaActual.getFullYear() === 2023) {
+                        //celda.style.backgroundColor = "rgba(0, 255, 0, 0.7)"; // Fondo verde con opacidad del 70% para el día actual
+                        celda.innerHTML = '<i style="color:rgba(0, 255, 0, 0.7)" onclick="ver(5,'+dia+','+diaInicio+','+turnos_roberto[g].mes+');return false;">'+dia+'</i>';
+                    }
             }
         }
     }
@@ -296,6 +305,10 @@ function coincidencia_turnos(dia,valorSeleccionado,celda,diaInicio,turnos_ale,tu
                 if (diaInicio === 1) {
                     //celda.style.backgroundColor = "rgba(255, 0, 0, 0.7)"; // Fondo rojo con opacidad del 70% para los domingos en las filas
                     celda.innerHTML = '<i style="color:rgba(255, 0, 0, 0.7)" onclick="ver(3,'+dia+','+diaInicio+','+turnos_chadu[g].mes+');return false;">'+dia+'</i>';
+                }
+                if (fechaActual.getDate() === dia && fechaActual.getMonth() + 1 === parseInt(valorSeleccionado) && fechaActual.getFullYear() === 2023) {
+                    //celda.style.backgroundColor = "rgba(0, 255, 0, 0.7)"; // Fondo verde con opacidad del 70% para el día actual
+                    celda.innerHTML = '<i style="color:rgba(0, 255, 0, 0.7)" onclick="ver(3,'+dia+','+diaInicio+','+turnos_roberto[g].mes+');return false;">'+dia+'</i>';
                 }
             }
         }
@@ -312,6 +325,10 @@ function coincidencia_turnos(dia,valorSeleccionado,celda,diaInicio,turnos_ale,tu
                     //celda.style.backgroundColor = "rgba(255, 0, 0, 0.7)"; // Fondo rojo con opacidad del 70% para los domingos en las filas
                     celda.innerHTML = '<i style="color:rgba(255, 0, 0, 0.7)" onclick="ver(6,'+dia+','+diaInicio+','+turnos_roberto[g].mes+');return false;">'+dia+'</i>';
                 }
+                if (fechaActual.getDate() === dia && fechaActual.getMonth() + 1 === parseInt(valorSeleccionado) && fechaActual.getFullYear() === 2023) {
+                    //celda.style.backgroundColor = "rgba(0, 255, 0, 0.7)"; // Fondo verde con opacidad del 70% para el día actual
+                    celda.innerHTML = '<i style="color:rgba(0, 255, 0, 0.7)" onclick="ver(6,'+dia+','+diaInicio+','+turnos_roberto[g].mes+');return false;">'+dia+'</i>';
+                }
             }
         }
     }
@@ -326,6 +343,10 @@ function coincidencia_turnos(dia,valorSeleccionado,celda,diaInicio,turnos_ale,tu
                 if (diaInicio === 1) {
                     //celda.style.backgroundColor = "rgba(255, 0, 0, 0.7)"; // Fondo rojo con opacidad del 70% para los domingos en las filas
                     celda.innerHTML = '<i style="color:rgba(255, 0, 0, 0.7)" onclick="ver(7,'+dia+','+diaInicio+','+turnos_roberto[g].mes+');return false;">'+dia+'</i>';
+                }
+                if (fechaActual.getDate() === dia && fechaActual.getMonth() + 1 === parseInt(valorSeleccionado) && fechaActual.getFullYear() === 2023) {
+                    //celda.style.backgroundColor = "rgba(0, 255, 0, 0.7)"; // Fondo verde con opacidad del 70% para el día actual
+                    celda.innerHTML = '<i style="color:rgba(0, 255, 0, 0.7)" onclick="ver(7,'+dia+','+diaInicio+','+turnos_roberto[g].mes+');return false;">'+dia+'</i>';
                 }
             }
         }
@@ -345,6 +366,10 @@ function coincidencia_turnos(dia,valorSeleccionado,celda,diaInicio,turnos_ale,tu
                     if (diaInicio === 1) {
                         //celda.style.backgroundColor = "rgba(255, 0, 0, 0.7)"; // Fondo rojo con opacidad del 70% para los domingos en las filas
                         celda.innerHTML = '<i style="color:rgba(255, 0, 0, 0.7)" onclick="ver(8,'+dia+','+diaInicio+','+turnos_chadu[g].mes+');return false;">'+dia+'</i>';
+                    }
+                    if (fechaActual.getDate() === dia && fechaActual.getMonth() + 1 === parseInt(valorSeleccionado) && fechaActual.getFullYear() === 2023) {
+                        //celda.style.backgroundColor = "rgba(0, 255, 0, 0.7)"; // Fondo verde con opacidad del 70% para el día actual
+                        celda.innerHTML = '<i style="color:rgba(0, 255, 0, 0.7)" onclick="ver(8,'+dia+','+diaInicio+','+turnos_roberto[g].mes+');return false;">'+dia+'</i>';
                     }
                 }  
             }
@@ -366,6 +391,10 @@ function coincidencia_turnos(dia,valorSeleccionado,celda,diaInicio,turnos_ale,tu
                         //celda.style.backgroundColor = "rgba(255, 0, 0, 0.7)"; // Fondo rojo con opacidad del 70% para los domingos en las filas
                         celda.innerHTML = '<i style="color:rgba(255, 0, 0, 0.7)" onclick="ver(9,'+dia+','+diaInicio+','+turnos_roberto[h].mes+');return false;">'+dia+'</i>';
                     }
+                    if (fechaActual.getDate() === dia && fechaActual.getMonth() + 1 === parseInt(valorSeleccionado) && fechaActual.getFullYear() === 2023) {
+                        //celda.style.backgroundColor = "rgba(0, 255, 0, 0.7)"; // Fondo verde con opacidad del 70% para el día actual
+                        celda.innerHTML = '<i style="color:rgba(0, 255, 0, 0.7)" onclick="ver(9,'+dia+','+diaInicio+','+turnos_roberto[g].mes+');return false;">'+dia+'</i>';
+                    }
                 }
             }    
         }
@@ -386,6 +415,10 @@ function coincidencia_turnos(dia,valorSeleccionado,celda,diaInicio,turnos_ale,tu
                         //celda.style.backgroundColor = "rgba(255, 0, 0, 0.7)"; // Fondo rojo con opacidad del 70% para los domingos en las filas
                         celda.innerHTML = '<i style="color:rgba(255, 0, 0, 0.7)" onclick="ver(10,'+dia+','+diaInicio+','+turnos_chadu[g].mes+');return false;">'+dia+'</i>';
                     }
+                    if (fechaActual.getDate() === dia && fechaActual.getMonth() + 1 === parseInt(valorSeleccionado) && fechaActual.getFullYear() === 2023) {
+                        //celda.style.backgroundColor = "rgba(0, 255, 0, 0.7)"; // Fondo verde con opacidad del 70% para el día actual
+                        celda.innerHTML = '<i style="color:rgba(0, 255, 0, 0.7)" onclick="ver(10,'+dia+','+diaInicio+','+turnos_roberto[g].mes+');return false;">'+dia+'</i>';
+                    }
                 }
             }    
         }
@@ -405,6 +438,10 @@ function coincidencia_turnos(dia,valorSeleccionado,celda,diaInicio,turnos_ale,tu
                     if (diaInicio === 1) {
                         //celda.style.backgroundColor = "rgba(255, 0, 0, 0.7)"; // Fondo rojo con opacidad del 70% para los domingos en las filas
                         celda.innerHTML = '<i style="color:rgba(255, 0, 0, 0.7)" onclick="ver(11,'+dia+','+diaInicio+','+turnos_chadu[g].mes+');return false;">'+dia+'</i>';
+                    }
+                    if (fechaActual.getDate() === dia && fechaActual.getMonth() + 1 === parseInt(valorSeleccionado) && fechaActual.getFullYear() === 2023) {
+                        //celda.style.backgroundColor = "rgba(0, 255, 0, 0.7)"; // Fondo verde con opacidad del 70% para el día actual
+                        celda.innerHTML = '<i style="color:rgba(0, 255, 0, 0.7)" onclick="ver(11,'+dia+','+diaInicio+','+turnos_roberto[g].mes+');return false;">'+dia+'</i>';
                     }
                 }
             }    
@@ -429,6 +466,10 @@ function coincidencia_turnos(dia,valorSeleccionado,celda,diaInicio,turnos_ale,tu
                                 //celda.style.backgroundColor = "rgba(255, 0, 0, 0.7)"; // Fondo rojo con opacidad del 70% para los domingos en las filas
                                 celda.innerHTML = '<i style="color:rgba(255, 0, 0, 0.7)" onclick="ver(4,'+dia+','+diaInicio+','+turnos_chadu[g].mes+');return false;">'+dia+'</i>';
                             }
+                            if (fechaActual.getDate() === dia && fechaActual.getMonth() + 1 === parseInt(valorSeleccionado) && fechaActual.getFullYear() === 2023) {
+                                //celda.style.backgroundColor = "rgba(0, 255, 0, 0.7)"; // Fondo verde con opacidad del 70% para el día actual
+                                celda.innerHTML = '<i style="color:rgba(0, 255, 0, 0.7)" onclick="ver(4,'+dia+','+diaInicio+','+turnos_roberto[g].mes+');return false;">'+dia+'</i>';
+                            }
                         }
 
 
@@ -439,6 +480,7 @@ function coincidencia_turnos(dia,valorSeleccionado,celda,diaInicio,turnos_ale,tu
 }
 
 function ver(n,d,i,m){
+    console.log(n);
     var dia_letra = '';
     var mes_letra = '';
     var listado = '';
@@ -564,14 +606,13 @@ function ver(n,d,i,m){
     var div = document.getElementById('listado');
         div.style.display = 'block';
     var countdown = document.getElementById('countdown');
-    var duration = 10;
-
-        // Establece un temporizador para ocultar el elemento después de 10 segundos (10000 milisegundos)
+    var duration = 7;
+        // Establece un temporizador para ocultar el elemento después de 7 segundos (7000 milisegundos)
         function updateCountdown() {
             countdown.textContent = 'La ventana se cerrará en '+duration+'seg.';
             duration--;
             if (duration < 0) {
-                // Oculta el elemento "listado" después de 10 segundos
+                // Oculta el elemento "listado" después de 7 segundos
                 div.style.display = 'none';
             } else {
                 // Programa la próxima actualización del contador después de 1 segundo
@@ -579,11 +620,10 @@ function ver(n,d,i,m){
             }
         }
         updateCountdown();
-        
 
     var thead = document.getElementById("dia_ql");
         thead.innerHTML = 'Descansos del '+dia_letra+' '+d+' de '+mes_letra;
     var tbody = document.getElementById('body_descansan');
         tbody.innerHTML = listado;
-    console.log([n,d,i,dia_letra,mes_letra]);
+    //console.log([n,d,i,dia_letra,mes_letra]);
 }
