@@ -8,86 +8,6 @@ function obtenerDiasDelMes(anio, mes) {
     }
     return diasDelMes;
 }
-/*
-document.addEventListener('DOMContentLoaded', function() {
-    const nombresMeses = [
-        "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
-        "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
-    ];
-    var select = document.getElementById('meses_del_anio');
-    for (var i = 0; i < nombresMeses.length; i++) {
-        var nuevaOpcion = document.createElement('option');
-        nuevaOpcion.value = (i + 1); // Valor de la opción
-        nuevaOpcion.text = nombresMeses[i]; // Texto de la opción
-        select.appendChild(nuevaOpcion);
-    }
-    select.addEventListener('change', function() {
-        var valorSeleccionado = select.value;
-        var textoSeleccionado = select.options[select.selectedIndex].text;
-        var resultado = obtenerDiasDelMes(2023, valorSeleccionado);
-
-        // Obtén una referencia a la tabla y borra todas las filas existentes en la tabla
-        var tablaMeses = document.getElementById('tabla-meses');
-        tablaMeses.innerHTML = "";
-
-        var thead = document.getElementById("thead");
-        thead.innerHTML = "";
-       
-        //var thead = document.getElementById("thead");
-        var tr_thead = thead.insertRow();
-        var td_thead = tr_thead.insertCell(0);
-        td_thead.colSpan = 7;
-        td_thead.innerHTML = textoSeleccionado.toUpperCase();
-        //td_thead.innerHTML = nombresMeses[(valorSeleccionado - 1)].toUpperCase();
-
-        var Fila1 = tablaMeses.insertRow();
-        var lunes = Fila1.insertCell(0);
-        var martes = Fila1.insertCell(1);
-        var miercoles = Fila1.insertCell(2);
-        var jueves = Fila1.insertCell(3);
-        var viernes = Fila1.insertCell(4);
-        var sabado = Fila1.insertCell(5);
-        var domingo = Fila1.insertCell(6);
-        lunes.innerHTML = "LUN";
-        martes.innerHTML = "MAR";
-        miercoles.innerHTML = "MIE";
-        jueves.innerHTML = "JUE";
-        viernes.innerHTML = "VIE";
-        sabado.innerHTML = "SAB";
-        domingo.innerHTML = "DOM";
-        
-        // Dividir los días en semanas
-        var semanas = [];
-        var semanaActual = [];
-
-        resultado.forEach(function(dia) {
-            semanaActual.push(dia);
-
-            if (dia.getDay() === 6) { // Si es sábado (0 es domingo, 6 es sábado)
-                semanas.push(semanaActual);
-                semanaActual = [];
-            }
-        });
-
-        if (semanaActual.length > 0) {
-            semanas.push(semanaActual);
-        }
-
-        // Crear una fila por cada semana y agregar los días
-        semanas.forEach(function(semana) {
-            var fila = tablaMeses.insertRow();
-            semana.forEach(function(dia) {
-                var celda = fila.insertCell();
-                celda.textContent = dia.getDate(); // Muestra el día del mes
-            });
-        });
-    });
-    
-    return select;
-    
-});
-
-*/
 
 document.addEventListener('DOMContentLoaded', function() {
     const nombresMeses = [
@@ -105,6 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     select.addEventListener('change', function() {
+        var tabla_simbologia = document.getElementById('simbologia_turnos');
+        tabla_simbologia.style.display = 'block';
         var valorSeleccionado = select.value;
         var textoSeleccionado = select.options[select.selectedIndex].text;
 
@@ -146,26 +68,89 @@ document.addEventListener('DOMContentLoaded', function() {
             
             celda.textContent = dia;
             if (diaInicio === 0) {
-                celda.style.backgroundColor = "rgba(255, 0, 0, 0.7)"; // Fondo rojo con opacidad del 70% para los domingos en las filas
+                //celda.style.backgroundColor = "rgba(255, 0, 0, 0.7)"; // Fondo rojo con opacidad del 70% para los domingos en las filas
+                celda.innerHTML = '<i style="color:rgba(255, 0, 0, 0.7)">'+dia+'</i>';
+                //celda.innerHTML = '<div class="row" style="border:1px solid yellow;"><i class="fa fa-user" style="color:white;"></i></div>';
+                //celda.innerHTML += '<div class="row" style="border:1px solid yellow;">'+dia+'</div>';
             }
             // Verificar si la fecha actual coincide con la fecha que estamos iterando
 
             const turnos_ale = [
                 {dia:2,mes:1,ano:2023},
                 {dia:7,mes:1,ano:2023},
+                {dia:8,mes:1,ano:2023},
                 {dia:19,mes:1,ano:2023},
                 {dia:29,mes:1,ano:2023},
-                {dia:24,mes:10,ano:2023}
+                {dia:25,mes:10,ano:2023},
+                {dia:26,mes:10,ano:2023},
+                {dia:27,mes:10,ano:2023},
+                {dia:28,mes:10,ano:2023},
+                {dia:29,mes:10,ano:2023},
+                {dia:30,mes:10,ano:2023},
+                {dia:31,mes:10,ano:2023},
+                {dia:1,mes:11,ano:2023},
+                {dia:2,mes:11,ano:2023},
+                {dia:3,mes:11,ano:2023},
+                {dia:4,mes:11,ano:2023},
+                {dia:5,mes:11,ano:2023},
+                {dia:6,mes:11,ano:2023},
+                {dia:7,mes:11,ano:2023},
+                {dia:22,mes:11,ano:2023},
+                {dia:23,mes:11,ano:2023},
+                {dia:24,mes:11,ano:2023},
+                {dia:25,mes:11,ano:2023},
+                {dia:26,mes:11,ano:2023},
+                {dia:27,mes:11,ano:2023},
+                {dia:28,mes:11,ano:2023},
+                {dia:29,mes:11,ano:2023},
+                {dia:30,mes:11,ano:2023},
+                {dia:1,mes:12,ano:2023},
+                {dia:2,mes:12,ano:2023},
+                {dia:3,mes:12,ano:2023},
+                {dia:4,mes:12,ano:2023},
+                {dia:5,mes:12,ano:2023},
+                {dia:20,mes:12,ano:2023},
+                {dia:21,mes:12,ano:2023},
+                {dia:22,mes:12,ano:2023},
+                {dia:23,mes:12,ano:2023},
+                {dia:24,mes:12,ano:2023},
+                {dia:25,mes:12,ano:2023},
+                {dia:26,mes:12,ano:2023},
+                {dia:27,mes:12,ano:2023},
+                {dia:28,mes:12,ano:2023},
+                {dia:29,mes:12,ano:2023},
+                {dia:30,mes:12,ano:2023},
+                {dia:31,mes:12,ano:2023}
             ];
             const turnos_braka = [
                 {dia:6,mes:1,ano:2023},
                 {dia:7,mes:1,ano:2023},
+                {dia:8,mes:1,ano:2023},
                 {dia:10,mes:1,ano:2023},
                 {dia:16,mes:1,ano:2023},
                 {dia:19,mes:1,ano:2023},
                 {dia:26,mes:1,ano:2023},
+                {dia:4,mes:11,ano:2023},
+                {dia:5,mes:11,ano:2023},
+                {dia:11,mes:11,ano:2023},
+                {dia:12,mes:11,ano:2023},
+                {dia:18,mes:11,ano:2023},
+                {dia:19,mes:11,ano:2023},
+                {dia:25,mes:11,ano:2023},
+                {dia:26,mes:11,ano:2023},
+                {dia:2,mes:12,ano:2023},
+                {dia:3,mes:12,ano:2023},
+                {dia:9,mes:12,ano:2023},
+                {dia:10,mes:12,ano:2023},
+                {dia:16,mes:12,ano:2023},
+                {dia:17,mes:12,ano:2023},
+                {dia:23,mes:12,ano:2023},
+                {dia:24,mes:12,ano:2023},
+                {dia:30,mes:12,ano:2023},
+                {dia:31,mes:12,ano:2023}
             ];
             const turnos_chadu = [
+                {dia:8,mes:1,ano:2023},
                 {dia:19,mes:1,ano:2023},
                 {dia:26,mes:1,ano:2023},
                 {dia:29,mes:1,ano:2023},
@@ -174,20 +159,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
             for(var e = 0; e < turnos_ale.length; e++){
                 if (turnos_ale[e].dia === dia && turnos_ale[e].mes === parseInt(valorSeleccionado) && turnos_ale[e].ano === 2023) {
-                    celda.style.backgroundColor = "rgba(0, 105, 255, 0.7)"; // Fondo verde con opacidad del 70% para el día actual
-                    celda.innerHTML = '<i class="fa fa-user"></i>';
+                    celda.style.backgroundColor = "rgba(0, 105, 255, 0.7)"; // Fondo azul con opacidad del 70% para el día actual
+                    celda.innerHTML = dia;
+                    //celda.innerHTML = '<i class="fa fa-user" style="color:rgba(0, 105, 255, 0.7);">'+dia+'</i>';
+                    
+                    /*celda.innerHTML = '<table style="border:1px solid yellow;">';
+                    celda.innerHTML +=     '<tbody>';
+                    celda.innerHTML +=         '<tr><td><i class="fa fa-user" style="color:rgba(0, 105, 255, 0.7);"></i></td></tr>';
+                    celda.innerHTML +=         '<tr><td>'+dia+'</td></tr>';
+                    celda.innerHTML +=     '</tbody>';
+                    celda.innerHTML += '</table>';
+                    celda.innerHTML = '<div class="row" style="border:1px solid yellow;"><i class="fa fa-user" style="color:rgba(0, 105, 255, 0.7);"></i></div>';
+                    celda.innerHTML += '<div class="row" style="border:1px solid yellow;">'+dia+'</div>';*/
                 }
             }
             for(var e = 0; e < turnos_braka.length; e++){
                 if (turnos_braka[e].dia === dia && turnos_braka[e].mes === parseInt(valorSeleccionado) && turnos_braka[e].ano === 2023) {
-                    celda.style.backgroundColor = "rgba(0, 255, 255, 0.7)"; // Fondo verde con opacidad del 70% para el día actual
-                    celda.innerHTML = '<i class="fa fa-user"></i>';
+                    celda.style.backgroundColor = "rgba(0, 255, 255, 0.7)"; // Fondo celeste con opacidad del 70% para el día actual
+                    celda.innerHTML = dia;
                 }
             }
             for(var e = 0; e < turnos_chadu.length; e++){
                 if (turnos_chadu[e].dia === dia && turnos_chadu[e].mes === parseInt(valorSeleccionado) && turnos_chadu[e].ano === 2023) {
-                    celda.style.backgroundColor = "rgba(250, 150, 200, 0.7)"; // Fondo verde con opacidad del 70% para el día actual
-                    celda.innerHTML = '<i class="fa fa-user"></i>';
+                    celda.style.backgroundColor = "rgba(250, 150, 200, 0.7)"; // Fondo rosado con opacidad del 70% para el día actual
+                    celda.innerHTML = dia;
                 }
             }
             if (diaInicio === 6) {
@@ -197,12 +192,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 diaInicio++;
             }
             if (diaInicio === 1) {
-                celda.style.backgroundColor = "rgba(255, 0, 0, 0.7)"; // Fondo rojo con opacidad del 70% para los domingos en las filas
+                //celda.style.backgroundColor = "rgba(255, 0, 0, 0.7)"; // Fondo rojo con opacidad del 70% para los domingos en las filas
+                celda.innerHTML = '<i style="color:rgba(255, 0, 0, 0.7)">'+dia+'</i>';
             }
-            coincidencia_turnos(dia,valorSeleccionado,celda,turnos_ale,turnos_braka,turnos_chadu);
+            coincidencia_turnos(dia,valorSeleccionado,celda,diaInicio,turnos_ale,turnos_braka,turnos_chadu);
 
             if (fechaActual.getDate() === dia && fechaActual.getMonth() + 1 === parseInt(valorSeleccionado) && fechaActual.getFullYear() === 2023) {
-                celda.style.backgroundColor = "rgba(0, 255, 0, 0.7)"; // Fondo verde con opacidad del 70% para el día actual
+                //celda.style.backgroundColor = "rgba(0, 255, 0, 0.7)"; // Fondo verde con opacidad del 70% para el día actual
+                celda.innerHTML = '<i style="color:rgba(0, 255, 0, 0.7)">'+dia+'</i>';
             }
         }
     });
@@ -222,14 +219,19 @@ document.addEventListener('DOMContentLoaded', function() {
     
 });
 
-function coincidencia_turnos(dia,valorSeleccionado,celda,turnos_ale,turnos_braka,turnos_chadu){
+function coincidencia_turnos(dia,valorSeleccionado,celda,diaInicio,turnos_ale,turnos_braka,turnos_chadu){
     //ALE vs BRAKA
     for (var e = 0; e < turnos_ale.length; e++) {
         for (var f = 0; f < turnos_braka.length; f++) {
                 if (turnos_ale[e].dia === dia && turnos_ale[e].mes === parseInt(valorSeleccionado) && turnos_ale[e].ano === 2023
                     && turnos_braka[f].dia === dia && turnos_braka[f].mes === parseInt(valorSeleccionado) && turnos_braka[f].ano === 2023) {
                     celda.style.backgroundColor = "rgba(255, 255, 0, 0.7)"; // Fondo amarillo con opacidad del 70% para coincidencias en ambos arreglos
-                    celda.innerHTML = '<i class="fa fa-user-plus uno" onclick="ver(1);return false;"></i>';
+                    //celda.innerHTML = '<i class="fa fa-user-plus uno" onclick="ver(1);return false;"></i>';
+                    celda.innerHTML = '<i onclick="ver(1);return false;">'+dia+'</i>';
+                    if (diaInicio === 1) {
+                        //celda.style.backgroundColor = "rgba(255, 0, 0, 0.7)"; // Fondo rojo con opacidad del 70% para los domingos en las filas
+                        celda.innerHTML = '<i style="color:rgba(255, 0, 0, 0.7)" onclick="ver(1);return false;">'+dia+'</i>';
+                    }
                 }
         }
     }
@@ -239,7 +241,12 @@ function coincidencia_turnos(dia,valorSeleccionado,celda,turnos_ale,turnos_braka
             if (turnos_ale[e].dia === dia && turnos_ale[e].mes === parseInt(valorSeleccionado) && turnos_ale[e].ano === 2023
                 && turnos_chadu[g].dia === dia && turnos_chadu[g].mes === parseInt(valorSeleccionado) && turnos_chadu[g].ano === 2023) {
                 celda.style.backgroundColor = "rgba(255, 255, 0, 0.7)"; // Fondo amarillo con opacidad del 70% para coincidencias en ambos arreglos
-                celda.innerHTML = '<i class="fa fa-user-plus dos" onclick="ver(2);return false;"></i>';
+                //celda.innerHTML = '<i class="fa fa-user-plus dos" onclick="ver(2);return false;"></i>';
+                celda.innerHTML = '<i onclick="ver(2);return false;">'+dia+'</i>';
+                if (diaInicio === 1) {
+                    //celda.style.backgroundColor = "rgba(255, 0, 0, 0.7)"; // Fondo rojo con opacidad del 70% para los domingos en las filas
+                    celda.innerHTML = '<i style="color:rgba(255, 0, 0, 0.7)" onclick="ver(2);return false;">'+dia+'</i>';
+                }
             }
         }
     }
@@ -249,7 +256,12 @@ function coincidencia_turnos(dia,valorSeleccionado,celda,turnos_ale,turnos_braka
             if (turnos_braka[f].dia === dia && turnos_braka[f].mes === parseInt(valorSeleccionado) && turnos_braka[f].ano === 2023
                 && turnos_chadu[g].dia === dia && turnos_chadu[g].mes === parseInt(valorSeleccionado) && turnos_chadu[g].ano === 2023) {
                 celda.style.backgroundColor = "rgba(255, 255, 0, 0.7)"; // Fondo amarillo con opacidad del 70% para coincidencias en ambos arreglos
-                celda.innerHTML = '<i class="fa fa-user-plus tres" onclick="ver(3);return false;"></i>';
+                //celda.innerHTML = '<i class="fa fa-user-plus tres" onclick="ver(3);return false;"></i>';
+                celda.innerHTML = '<i onclick="ver(3);return false;">'+dia+'</i>';
+                if (diaInicio === 1) {
+                    //celda.style.backgroundColor = "rgba(255, 0, 0, 0.7)"; // Fondo rojo con opacidad del 70% para los domingos en las filas
+                    celda.innerHTML = '<i style="color:rgba(255, 0, 0, 0.7)" onclick="ver(3);return false;">'+dia+'</i>';
+                }
             }
         }
     }
@@ -261,13 +273,19 @@ function coincidencia_turnos(dia,valorSeleccionado,celda,turnos_ale,turnos_braka
                     && turnos_braka[f].dia === dia && turnos_braka[f].mes === parseInt(valorSeleccionado) && turnos_braka[f].ano === 2023
                     && turnos_chadu[g].dia === dia && turnos_chadu[g].mes === parseInt(valorSeleccionado) && turnos_chadu[g].ano === 2023) {
                     celda.style.backgroundColor = "rgba(255, 255, 0, 0.7)"; // Fondo amarillo con opacidad del 70% para coincidencias en ambos arreglos
-                    celda.innerHTML = '<i class="fa fa-user-plus cuatro" onclick="ver(4);return false;"></i>';
+                    //celda.innerHTML = '<i class="fa fa-user-plus cuatro" onclick="ver(4);return false;"></i>';
+                    celda.innerHTML = '<i onclick="ver(4);return false;">'+dia+'</i>'; 
+                    if (diaInicio === 1) {
+                        //celda.style.backgroundColor = "rgba(255, 0, 0, 0.7)"; // Fondo rojo con opacidad del 70% para los domingos en las filas
+                        celda.innerHTML = '<i style="color:rgba(255, 0, 0, 0.7)" onclick="ver(4,'+dia+');return false;">'+dia+'</i>';
+                    }
                 }
+                
             }
         }
     }
 }
 
-function ver(n){
-    alert(n);
+function ver(n,d){
+    alert([n,d]);
 }
