@@ -11,5 +11,63 @@
     <title>Circulo de Hierro - Movimientos</title>
 </head>
 <body>
+    <div>
+        TOTAL EN CAJA </br> <span id="total_caja">$ 319.744</span>
+    </div>
+    <div>
+        <button name="ver_detalle" onclick="ver_detalle();return false;">ver detalle</button>
+    </div>
+    <div>
+        <div>
+            <table id="tabla_filtros">
+                <thead>
+                    <tr>
+                        <th>Fecha Desde</th>
+                        <th>Fecha Hasta</th>
+                    </tr>
+                    <tr>
+                        <th><input type="date" name="fecha_desde" id="fecha_desde"></th>
+                        <th><input type="date" name="fecha_hasta" id="fecha_hasta"></th>
+                    </tr>
+                    
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Movimiento</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><select name="movimiento" id="movimiento">
+                            <option value="1">Todos</option>
+                            <option value="2">Entradas</option>
+                            <option value="3">Salidas</option>
+                        </select></td>
+                        <td><button id="filtro" onclick="filtrar();return false;">Filtrar</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="contenedor_detalle">
+            <table id="tabla_detalle">
+                <thead id="thead_d">
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Movimiento</th>
+                        <th align="right">Monto</th>
+                        <th>Detalle</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody_d">
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2" style="text-align: right;">Total</td>
+                        <td style="text-align: right;" id="sum_total"></td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
 </body>
 </html>

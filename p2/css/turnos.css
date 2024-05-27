@@ -58,3 +58,8 @@ body div{
 .cuatro{
     color: purple;
 }
+.libre{
+    font-size: 16px; 
+    padding-left: 10px;
+    text-align: left;
+}

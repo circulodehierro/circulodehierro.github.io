@@ -480,7 +480,7 @@ function coincidencia_turnos(dia,valorSeleccionado,celda,diaInicio,fechaActual,t
 }
 
 function ver(n,d,i,m){
-    console.log(n);
+    //console.log(n);
     var dia_letra = '';
     var mes_letra = '';
     var listado = '';
@@ -551,54 +551,54 @@ function ver(n,d,i,m){
     }
     switch(n){
         case 1://ALE vs BRAKA
-            listado = '<tr><td align="left" style="font-size: 20px; padding-left: 10px;">- Ale</td></tr>';
-            listado += '<tr><td align="left" style="font-size: 20px; padding-left: 10px;">- Braka</td></tr>';
+            listado = '<tr><td class="libre">- Ale</td></tr>';
+            listado += '<tr><td class="libre">- Braka</td></tr>';
         break;
         case 2://ALE vs CHADU
-            listado = '<tr><td align="left" style="font-size: 20px; padding-left: 10px;">- Ale</td></tr>';
-            listado += '<tr><td align="left" style="font-size: 20px; padding-left: 10px;">- Chadu</td></tr>';
+            listado = '<tr><td class="libre">- Ale</td></tr>';
+            listado += '<tr><td class="libre">- Chadu</td></tr>';
         break;
         case 3://BRAKA vs CHADU
-            listado = '<tr><td align="left" style="font-size: 20px; padding-left: 10px;">- Braka</td></tr>';
-            listado += '<tr><td align="left" style="font-size: 20px; padding-left: 10px;">- Chadu</td></tr>';
+            listado = '<tr><td class="libre">- Braka</td></tr>';
+            listado += '<tr><td class="libre">- Chadu</td></tr>';
         break;
         case 4://TODOS
-            listado = '<tr><td align="left" style="font-size: 20px; padding-left: 10px;">- Ale</td></tr>';
-            listado += '<tr><td align="left" style="font-size: 20px; padding-left: 10px;">- Braka</td></tr>';
-            listado += '<tr><td align="left" style="font-size: 20px; padding-left: 10px;">- Chadu</td></tr>';
-            listado += '<tr><td align="left" style="font-size: 20px; padding-left: 10px;">- Roberto</td></tr>';
+            listado = '<tr><td class="libre">- Ale</td></tr>';
+            listado += '<tr><td class="libre">- Braka</td></tr>';
+            listado += '<tr><td class="libre">- Chadu</td></tr>';
+            listado += '<tr><td class="libre">- Roberto</td></tr>';
         break;
         case 5://ALE vs ROBERTO
-            listado = '<tr><td align="left" style="font-size: 20px; padding-left: 10px;">- Ale</td></tr>';
-            listado += '<tr><td align="left" style="font-size: 20px; padding-left: 10px;">- Roberto</td></tr>';
+            listado = '<tr><td class="libre">- Ale</td></tr>';
+            listado += '<tr><td class="libre">- Roberto</td></tr>';
         break;
         case 6://BRAKA vs ROBERTO
-            listado = '<tr><td align="left" style="font-size: 20px; padding-left: 10px;">- Braka</td></tr>';
-            listado += '<tr><td align="left" style="font-size: 20px; padding-left: 10px;">- Roberto</td></tr>';
+            listado = '<tr><td class="libre">- Braka</td></tr>';
+            listado += '<tr><td class="libre">- Roberto</td></tr>';
         break;
         case 7://CHADU vs ROBERTO
-            listado = '<tr><td align="left" style="font-size: 20px; padding-left: 10px;">- Chadu</td></tr>';
-            listado += '<tr><td align="left" style="font-size: 20px; padding-left: 10px;">- Roberto</td></tr>';
+            listado = '<tr><td class="libre">- Chadu</td></tr>';
+            listado += '<tr><td class="libre">- Roberto</td></tr>';
         break;
         case 8://ALE vs BRAKA vs CHADU
-            listado = '<tr><td align="left" style="font-size: 20px; padding-left: 10px;">- Ale</td></tr>';
-            listado += '<tr><td align="left" style="font-size: 20px; padding-left: 10px;">- Braka</td></tr>';
-            listado += '<tr><td align="left" style="font-size: 20px; padding-left: 10px;">- Chadu</td></tr>';
+            listado = '<tr><td class="libre">- Ale</td></tr>';
+            listado += '<tr><td class="libre">- Braka</td></tr>';
+            listado += '<tr><td class="libre">- Chadu</td></tr>';
         break;
         case 9://ALE vs BRAKA vs ROBERTO
-            listado = '<tr><td align="left" style="font-size: 20px; padding-left: 10px;">- Ale</td></tr>';
-            listado += '<tr><td align="left" style="font-size: 20px; padding-left: 10px;">- Braka</td></tr>';
-            listado += '<tr><td align="left" style="font-size: 20px; padding-left: 10px;">- Roberto</td></tr>';
+            listado = '<tr><td class="libre">- Ale</td></tr>';
+            listado += '<tr><td class="libre">- Braka</td></tr>';
+            listado += '<tr><td class="libre">- Roberto</td></tr>';
         break;
         case 10://ALE vs CHADU vs ROBERTO
-            listado = '<tr><td align="left" style="font-size: 20px; padding-left: 10px;">- Ale</td></tr>';
-            listado += '<tr><td align="left" style="font-size: 20px; padding-left: 10px;">- Chadu</td></tr>';
-            listado += '<tr><td align="left" style="font-size: 20px; padding-left: 10px;">- Roberto</td></tr>';
+            listado = '<tr><td class="libre">- Ale</td></tr>';
+            listado += '<tr><td class="libre">- Chadu</td></tr>';
+            listado += '<tr><td class="libre">- Roberto</td></tr>';
         break;
         case 11://BRAKA vs CHADU vs ROBERTO
-            listado = '<tr><td align="left" style="font-size: 20px; padding-left: 10px;">- Braka</td></tr>';
-            listado += '<tr><td align="left" style="font-size: 20px; padding-left: 10px;">- Chadu</td></tr>';
-            listado += '<tr><td align="left" style="font-size: 20px; padding-left: 10px;">- Roberto</td></tr>';
+            listado = '<tr><td class="libre">- Braka</td></tr>';
+            listado += '<tr><td class="libre">- Chadu</td></tr>';
+            listado += '<tr><td class="libre">- Roberto</td></tr>';
         break;
         default:
         break;

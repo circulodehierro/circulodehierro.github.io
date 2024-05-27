@@ -1,0 +1,57 @@
+body{
+    background-color: black;
+    margin: 0 8px 8px 8px;
+    color: white;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* width: 80%; */
+    /* border: 1px solid red; */
+}
+body div{
+    margin: 10px;
+}
+#total_caja{
+    font-size: 30px;
+    font-weight: bold;
+}
+#tabla_filtros{
+    width: 100%;
+    border: 1px solid red;
+    padding-bottom: 10px;
+    font-size: 10px;
+}
+#fecha_desde, #fecha_hasta{
+    color: red;
+    width: 85%;
+}
+#movimiento{
+    width: 90%;
+}
+#contenedor_detalle{
+    max-height: 400px;
+    overflow-y: auto;
+    border-bottom: 1px solid red;
+}
+#tabla_detalle{
+    width: 100%;
+    border: 1px solid red;
+}
+#tabla_detalle thead {
+    position: sticky;
+    top: 0;
+    background-color: black;
+}
+#tbody_d{
+    font-size: 12px;
+}
+#tbody_d tr :nth-child(1){
+    text-align: left;
+    white-space: nowrap;
+}
+#tbody_d tr :nth-child(3){
+    text-align: right;
+}
+#tbody_d tr :nth-child(4){
+    text-align: left;
+    /* white-space: nowrap; */
+}
