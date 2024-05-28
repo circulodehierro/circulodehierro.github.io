@@ -14,30 +14,51 @@
     <div>
         TOTAL EN CAJA </br> <span id="total_caja">$ 319.744</span>
     </div>
-    <div>
+    <!-- <div>
         <button name="ver_detalle" onclick="ver_detalle();return false;">ver detalle</button>
-    </div>
+    </div> -->
     <div>
         <div>
             <table id="tabla_filtros">
-                <thead>
-                    <tr>
-                        <th>Fecha Desde</th>
-                        <th>Fecha Hasta</th>
-                    </tr>
-                    <tr>
-                        <th><input type="date" name="fecha_desde" id="fecha_desde"></th>
-                        <th><input type="date" name="fecha_hasta" id="fecha_hasta"></th>
-                    </tr>
-                    
-                </thead>
                 <tbody>
+                    <tr>
+                        <th>Año</td>
+                        <td>Mes</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <select name="ano" id="ano">
+                                <option value="0">Todos</option>
+                                <option value="3">2025</option>
+                                <option value="2">2024</option>
+                                <option value="1">2023</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="mes" id="mes">
+                                <option value="0">Todos</option>
+                                <option value="1">Enero</option>
+                                <option value="2">Febrero</option>
+                                <option value="3">Marzo</option>
+                                <option value="4">Abril</option>
+                                <option value="5">Mayo</option>
+                                <option value="6">Junio</option>
+                                <option value="7">Julio</option>
+                                <option value="8">Agosto</option>
+                                <option value="9">Septiembre</option>
+                                <option value="10">Octubre</option>
+                                <option value="11">Noviembre</option>
+                                <option value="12">Diciembre</option>
+                            </select>
+                        </td>
+                    </tr>
                     <tr>
                         <th>Movimiento</td>
                         <td></td>
                     </tr>
                     <tr>
-                        <td><select name="movimiento" id="movimiento">
+                        <td><select name="mov" id="mov">
                             <option value="1">Todos</option>
                             <option value="2">Entradas</option>
                             <option value="3">Salidas</option>
@@ -47,27 +68,22 @@
                 </tbody>
             </table>
         </div>
+
         <div id="contenedor_detalle">
             <table id="tabla_detalle">
                 <thead id="thead_d">
                     <tr>
                         <th>Fecha</th>
                         <th>Movimiento</th>
-                        <th align="right">Monto</th>
+                        <th>Monto</th>
                         <th>Detalle</th>
                     </tr>
                 </thead>
                 <tbody id="tbody_d">
                 </tbody>
-                <tfoot>
-                    <tr>
-                        <td colspan="2" style="text-align: right;">Total</td>
-                        <td style="text-align: right;" id="sum_total"></td>
-                        <td>&nbsp;</td>
-                    </tr>
-                </tfoot>
             </table>
         </div>
+        <div id="total">Total : <span id="sum_total"></span></div>
     </div>
 </body>
 </html>

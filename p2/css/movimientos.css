@@ -1,7 +1,7 @@
 body{
     background-color: black;
     margin: 0 8px 8px 8px;
-    color: white;
+    color: #b17d46;
     text-align: center;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     /* width: 80%; */
@@ -20,14 +20,18 @@ body div{
     padding-bottom: 10px;
     font-size: 10px;
 }
+#tabla_filtros tbody tr th{
+    width: 50%;
+}
 #fecha_desde, #fecha_hasta{
     color: red;
     width: 85%;
 }
-#movimiento{
+#ano, #mes, #mov{
     width: 90%;
 }
 #contenedor_detalle{
+    /* display: none; */
     max-height: 400px;
     overflow-y: auto;
     border-bottom: 1px solid red;
@@ -39,19 +43,33 @@ body div{
 #tabla_detalle thead {
     position: sticky;
     top: 0;
-    background-color: black;
+    background-color: white;
+
 }
 #tbody_d{
     font-size: 12px;
+    background-color: white;
 }
 #tbody_d tr :nth-child(1){
-    text-align: left;
+    text-align: center;
     white-space: nowrap;
+    width: 15%;
+}
+#tbody_d tr :nth-child(2){
+    text-align: center;
+    white-space: nowrap;
+    width: 15%;
 }
 #tbody_d tr :nth-child(3){
     text-align: right;
+    width: 15%;
 }
 #tbody_d tr :nth-child(4){
     text-align: left;
     /* white-space: nowrap; */
+}
+#total{
+    border: 1px solid green;
+    text-align: left;
+    padding-left: 25%;
 }
