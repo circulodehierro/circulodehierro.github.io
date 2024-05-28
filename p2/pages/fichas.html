@@ -11,5 +11,25 @@
     <title>Circulo de Hierro - Fichas</title>
 </head>
 <body>
+    <!--SECCION FICHAS-->
+    <div class="grid-general" id="bloques">
+        <div class="grid">
+            <div class="square" onclick="ver_ficha(1);return false;">PABLO</div>
+            <div class="square" onclick="ver_ficha(2);return false;">ALE</div>
+            <div class="square" onclick="ver_ficha(3);return false;">JOTA</div>
+            <div class="square" onclick="ver_ficha(4);return false;">BRACKA</div>
+            <div class="square" onclick="ver_ficha(5);return false;">ROBINSON</div>
+            <div class="square">CHADU</div>
+            <div class="square">RAUL</div>
+            <div class="square"></div>
+            <div class="square"></div>
+        </div>
+    </div>
+    <div class="ficha" id="ficha" style="display: none;">
+        <div id="nombre" onclick="cerrarFicha();">Nombre</div>
+        <div id="tabla">Tabla <?php echo "holax"; ?>
+        </div>
+
+    </div>
 </body>
 </html>
