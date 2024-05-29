@@ -52,4 +52,13 @@ button {
     padding: 5px 10px;
     border: none;
     cursor: pointer;
+    /* margin-left: 10%; */
+}
+#span_pass{
+    /* border: 1px solid green; */
+    color: red;
+    position: absolute;
+    top: 80px;
+    left: 30px;
+    display: none;
 }

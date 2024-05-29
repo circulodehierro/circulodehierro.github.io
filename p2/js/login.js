@@ -46,13 +46,31 @@ function login(){
         break;
         default:
             document.getElementById('pass').value = '';
+            var msj = document.getElementById('span_pass');
+            msj.style.display = 'block';
+            input.addEventListener('click', function (){
+                msj.style.display = 'none';
+            });
         break;
     }
     
 }
 
+function aleatorio(cant) {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let result = '';
+    const length = cant;
+    for (let i = 0; i < length; i++) {
+        const randomIndex = Math.floor(Math.random() * characters.length);
+        result += characters[randomIndex];
+    }
+    return result;
+}
+
 function url(pass){
     var sp = pass.split('');
-    var clave = '1k0'+sp[1]+'ko'+sp[0]+'2kq';
-    window.location.href = 'pages/inicio.html?fa87sdbk='+clave;
+    //var clave = '1k0'+sp[1]+'ko'+sp[0]+'2kq';
+    //window.location.href = 'pages/inicio.html?fa87sdbk='+clave;
+    var clave = aleatorio(3)+sp[1]+aleatorio(2)+sp[0]+aleatorio(3);
+    window.location.href = 'pages/inicio.html?'+aleatorio(8)+'='+clave;
 }
