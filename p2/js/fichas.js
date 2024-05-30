@@ -19,23 +19,25 @@ document.addEventListener('DOMContentLoaded', function() {
     ver_ficha(clave, parametros, nombreElement, tabla);
 });
 
+
 function ver_ficha(f, parametros, nombreElement, tabla) {
+    const ficha_pablo = document.getElementById('ficha_pablo');
+    const ficha_robinson = document.getElementById('ficha_robinson');
     switch (f){
         case 'pa':
-            nombreElement.innerHTML = "PABLO";
-            tabla.innerHTML = parametros;
+            ficha_pablo.style.display = 'block';
             break;
         case 'al':
-            nombreElement.innerHTML = "ALE";
+            //nombreElement.innerHTML = "ALE";
             break;
         case 'jo':
-            nombreElement.innerHTML = "JOTA";
+            //nombreElement.innerHTML = "JOTA";
             break;
         case 'br':
-            nombreElement.innerHTML = "BRACKA";
+            //nombreElement.innerHTML = "BRACKA";
             break;
         case 'ro':
-            //nombreElement.innerHTML = "ROBINSON";
+            ficha_robinson.style.display = 'block';
             break;
         default:
             break;

@@ -39,6 +39,9 @@ body{
     flex-direction: column;
     margin-top: 2%;
 }
+.ficha > img {
+    display: none;
+}
 #nombre {
     width: auto;
     height: 90%; /* 10% height of the parent */
