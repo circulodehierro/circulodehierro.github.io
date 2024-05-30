@@ -35,7 +35,7 @@ function ver_ficha(f, parametros, nombreElement, tabla) {
             nombreElement.innerHTML = "BRACKA";
             break;
         case 'ro':
-            nombreElement.innerHTML = "ROBINSON";
+            //nombreElement.innerHTML = "ROBINSON";
             break;
         default:
             break;
