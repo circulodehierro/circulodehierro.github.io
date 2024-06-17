@@ -37,9 +37,32 @@ function ver_ficha(f, parametros, nombreElement, tabla) {
             //nombreElement.innerHTML = "BRACKA";
             break;
         case 'ro':
+            enviar('Robinson');
             ficha_robinson.style.display = 'block';
             break;
+        case 'ch':
+            //nombreElement.innerHTML = "CHADU";
+            break;
+        case 'ra':
+            //nombreElement.innerHTML = "RAUL";
+            break;
+        case 'ar':
+            //nombreElement.innerHTML = "ARTURO";
+            break;            
+        case 'tr':
+            //nombreElement.innerHTML = "TRONCOSO";
+            break;    
         default:
             break;
     } 
+}
+
+function enviar(miembro) {
+
+    const phoneNumber = '+56976366886'; // Reemplaza con el número de teléfono
+    const message = 'Hola, '+miembro; // Mensaje predefinido (opcional)
+
+    const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+    //const url = `https://api.whatsapp.com/send?phone=${56944331910}&text=${encodeURIComponent(miembro)}`;
+    window.open(url, '_blank');
 }
