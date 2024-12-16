@@ -37,7 +37,7 @@ function ver_ficha(f, parametros, nombreElement, tabla) {
             //nombreElement.innerHTML = "BRACKA";
             break;
         case 'ro':
-            enviar('Robinson');
+            //enviar('Robinson');
             ficha_robinson.style.display = 'block';
             break;
         case 'ch':
@@ -60,9 +60,13 @@ function ver_ficha(f, parametros, nombreElement, tabla) {
 function enviar(miembro) {
 
     const phoneNumber = '+56976366886'; // Reemplaza con el número de teléfono
+    //const phoneNumber = '+56982189813'; // Reemplaza con el número de teléfono
     const message = 'Hola, '+miembro; // Mensaje predefinido (opcional)
 
     const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
     //const url = `https://api.whatsapp.com/send?phone=${56944331910}&text=${encodeURIComponent(miembro)}`;
-    window.open(url, '_blank');
+    //window.open(url, '_blank');
+
+    const smsLink = `sms:${phoneNumber}?body=${encodeURIComponent(message)}`;
+    window.location.href = smsLink;
 }
