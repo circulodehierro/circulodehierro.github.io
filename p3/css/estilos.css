@@ -72,19 +72,7 @@ body.dark-mode {
     height: auto;
     cursor: pointer;
   }
-  /* Estilos para la modal */
-  .modal {
-    text-align: center;
-    display: none;
-    position: fixed;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50%;
-    height: 10%;
-    border: 1px solid #b17d46;
-    padding: 10px;
-}
+  
   /* Estilos del modal */
   .modal {
     display: flex;
