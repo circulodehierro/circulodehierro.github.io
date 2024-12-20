@@ -129,3 +129,19 @@ body.dark-mode {
     }
   }
   
+  /* Asegúrate de que este código esté en tu archivo css/estilos.css */
+
+.logo_circulo {
+    animation: resplandor 1s infinite;
+}
+@keyframes resplandor {
+    0% {
+        filter: drop-shadow(0 0 6px #7f7c7f);
+    }
+    50% {
+        filter: drop-shadow(0 0 12px #7f7c7f);  
+    }
+    100% {
+        filter: drop-shadow(0 0 6px #7f7c7f);
+    }
+}
