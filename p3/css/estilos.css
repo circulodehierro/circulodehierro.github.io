@@ -1,3 +1,44 @@
+/* Modo oscuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #f4f4f4;
+  }
+  
+  /* Ajustar el header, footer y otros elementos al modo oscuro */
+  body.dark-mode header,
+  body.dark-mode footer {
+    background-color: #1e1e1e;
+    color: #f4f4f4;
+  }
+  
+  /* Estilos específicos para el modal en modo oscuro */
+  body.dark-mode .modal {
+    background-color: #1e1e1e;
+    border: 1px solid #444;
+    color: #f4f4f4;
+  }
+  
+  /* Estilos para los inputs y botones en modo oscuro */
+  body.dark-mode .modal input[type="password"] {
+    background-color: #333;
+    color: #f4f4f4;
+    border: 1px solid #555;
+  }
+  
+  body.dark-mode .modal button {
+    background-color: #444;
+    color: #f4f4f4;
+  }
+  
+  body.dark-mode .modal button:hover {
+    background-color: #555;
+  }
+  
+  /* Mensaje de error en modo oscuro */
+  body.dark-mode #span_pass {
+    color: #ff6b6b;
+  }
+  
 /* Reset básico */
 * {
     margin: 0;

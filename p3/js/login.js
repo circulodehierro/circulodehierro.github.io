@@ -1,7 +1,10 @@
 // Función para el logo
+// Función para el logo
 function logo() {
-    alert('¡Bienvenido al Círculo de Hierro!');
+    // Alternar una clase en el body para cambiar el modo
+    document.body.classList.toggle('dark-mode');
   }
+  
   
   // Función de login
   function login() {
