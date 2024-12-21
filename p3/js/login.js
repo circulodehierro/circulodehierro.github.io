@@ -19,7 +19,7 @@ window.onload = function() {
 
 let usuario = {};
 let permiso = [];
-//1 Estatutos
+//1 Documentos
 //2 Movimientos
 //3 Reuniones
 //4 Eventos
@@ -109,7 +109,7 @@ function login() {
             spanPass_bien.style.display = 'block';
             spanPass_bien.textContent = '¡Bienvenido Prospecto!';
             usuario = { nombre: "Prospecto", email: "prospecto@example.com", edad: 22};
-            permiso = [1,3];
+            permiso = [1,3,4,5];
             localStorage.setItem("usuario", JSON.stringify(usuario));
             localStorage.setItem("permiso", JSON.stringify(permiso));
             window.location.href = 'pages/inicio.html';
