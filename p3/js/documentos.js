@@ -26,6 +26,24 @@ window.onload = function() {
     //const permiso = JSON.parse(localStorage.getItem("permiso"));
     //console.log(permiso);
     //habilitar_div(permiso);
+
+    // Seleccionar el contenedor donde se mostrará el contenido
+    let paragraphDiv = document.querySelector('.paragraph');
+
+    // Seleccionar todos los elementos <li>
+    let items = document.querySelectorAll('.item-list li');
+    paragraphDiv.innerHTML = parrafos.al_iniciar;
+
+    // Agregar evento click a cada <li>
+    items.forEach(item => {
+        item.addEventListener('click', function () {
+            // Obtener el texto del <li> clickeado
+            let key = this.textContent.trim();
+
+            // Actualizar el contenido del div con el párrafo correspondiente
+            paragraphDiv.innerHTML = parrafos[key] || '<p>Contenido no encontrado.</p>';
+        });
+    });
 };
 
 // Función para alternar el modo oscuro
@@ -38,3 +56,24 @@ function toggleDarkMode() {
         localStorage.setItem('dark-mode', 'false');
     }
 }
+
+// Función para direccionar a inicio
+function volver_inicio() {
+    window.location.href = 'inicio.html';
+}
+
+let estatuto_full = `
+<p>asdasdsadas</p>
+<p>asdasdsadas</p>
+`;
+
+let parrafos = {
+    al_iniciar: '<p>Click en el Documento para leer.</p>',
+    "Estatuto Full": estatuto_full,
+    "Estatuto Prospecto": '<p>Este es el contenido del Estatuto Prospecto.</p>',
+    "Protocolo Colores": '<p>Este es el contenido del Protocolo Colores.</p>',
+    "Protocolo Receso": '<p>Este es el contenido del Protocolo Receso.</p>',
+    "Protocolo Retiro": '<p>Este es el contenido del Protocolo Retiro.</p>',
+    "Protocolo Expulsión": '<p>Este es el contenido del Protocolo Expulsión.</p>',
+    "Protocolo Prestamo": '<p>Este es el contenido del Protocolo Préstamo.</p>'
+};
