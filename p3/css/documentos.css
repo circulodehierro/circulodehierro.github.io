@@ -36,6 +36,21 @@ body.dark-mode .header  {
     color: #121212;
 }
 
+body .header ul li {
+    cursor: pointer;
+    color: #121212;
+}
+
+body .header ul li:hover  {
+    background-color: #999; /* Cambia el fondo de los divs en modo oscuro */
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2); /* Resalta con una sombra más grande */
+}
+
+body.dark-mode .header ul li:hover  {
+    background-color: #999; /* Cambia el fondo de los divs en modo oscuro */
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2); /* Resalta con una sombra más grande */
+}
+
 body.dark-mode .content  {
     background-color: #121212; /* Cambia el fondo de los divs en modo oscuro */
     color: #fff;
