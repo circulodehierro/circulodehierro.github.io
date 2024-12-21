@@ -47,7 +47,7 @@ function logo() {
             spanPass_bien.style.display = 'block';
             spanPass_bien.textContent = '¡Bienvenido Robinson!';
             //document.getElementById('miModal').style.display = 'none';
-            //url(pass);
+            url(password);
         break;
         case 'br'://Bracka
             spanPass.style.display = 'none';
@@ -100,5 +100,6 @@ function url(pass){
     //var clave = '1k0'+sp[1]+'ko'+sp[0]+'2kq';
     //window.location.href = 'pages/inicio.html?fa87sdbk='+clave;
     var clave = aleatorio(3)+sp[1]+aleatorio(2)+sp[0]+aleatorio(3);
-    window.location.href = 'pages/inicio.html?'+aleatorio(8)+'='+clave;
+    //window.location.href = 'pages/inicio.html?'+aleatorio(8)+'='+clave;
+    window.location.href = 'pages/inicio.html';
 }

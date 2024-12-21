@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/inicio.css">
+    <link rel="icon" type="image/png" href="../images/logo1.svg"/>
+    <script src="../js/inicio.js"></script>
+    <title>Circulo de Hierro - Inicio</title>
+</head>
+<body>
+    <div class="gallery">
+        <!--ESTATUTOS-->
+        <div class="featured scale-up-center" onclick="estatutos();return false;" id="estatutos">
+            <img src="../images/book.svg" alt="" class="icono">
+            <div class="title">Estatutos</div>
+            <div class="content"></div>
+        </div>
+        <!--MOVIMIENTOS-->
+        <div class="featured scale-up-center" onclick="movimientos();return false;" id="movimientos">
+            <img src="../images/movimiento.svg" alt="" class="icono">
+            <div class="title_e">Movimientos</div>
+        </div>
+        <!--REUNIONES-->
+        <div class="featured scale-up-center" id="reuniones">
+            <img src="../images/reuniones.svg" alt="" class="icono">
+            <div class="title_e" onclick="reuniones();return false;">Reuniones</div>
+        </div>
+        <!--EVENTOS-->
+        <div class="featured scale-up-center" id="eventos" onclick="eventos();return false;">
+            <img src="../images/eventos.svg" alt="" class="icono">
+            <div class="title_e">Eventos</div>
+        </div>
+        <!--FICHAS-->
+        <div class="featured scale-up-center" id="fichas" onclick="fichas();return false;">
+            <img src="../images/fichas.svg" alt="" class="icono">
+            <div class="title_f">Fichas</div>
+        </div>
+        <!--TURNOS-->
+        <div class="featured scale-up-center" onclick="turnos();return false;" id="turnos">
+            <img src="../images/turnos.svg" alt="" class="icono">
+            <div class="title">Turnos</div>
+        </div>
+        <!--GASTOS-->
+        <div class="featured scale-up-center" onclick="cuotas();return false;" id="cuotas">
+            <img src="../images/cuotas.svg" alt="" class="icono">
+            <div class="title">Cuotas</div>
+        </div>
+        <div class="featured scale-up-center" onclick="nuevoElemento();return false;" id="nuevoElemento">
+            <img src="../images/cuotas.svg" alt="" class="icono">
+            <div class="title">Nuevo</div>
+        </div>
+    </div>
+</body>
