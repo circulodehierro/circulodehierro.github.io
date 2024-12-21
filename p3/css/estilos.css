@@ -136,12 +136,29 @@ body.dark-mode {
 }
 @keyframes resplandor {
     0% {
-        filter: drop-shadow(0 0 6px #7f7c7f);
+        filter: drop-shadow(0 0 6px black);
     }
     50% {
-        filter: drop-shadow(0 0 12px #7f7c7f);  
+        filter: drop-shadow(0 0 12px black);  
     }
     100% {
-        filter: drop-shadow(0 0 6px #7f7c7f);
+        filter: drop-shadow(0 0 6px black);
     }
 }
+
+/* Resplandor para el modo oscuro */
+.dark-mode .logo_circulo {
+        animation: resplandor-dark 1s infinite;
+    }
+
+    @keyframes resplandor-dark {
+        0% {
+            filter: drop-shadow(0 0 6px white);  /* Resplandor rojo en dark mode */
+        }
+        50% {
+            filter: drop-shadow(0 0 12px white);
+        }
+        100% {
+            filter: drop-shadow(0 0 6px white);
+        }
+    }
