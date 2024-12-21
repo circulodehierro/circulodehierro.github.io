@@ -134,6 +134,7 @@ body.dark-mode .icono {
 /* Ajuste responsivo para pantallas pequeñas (móviles) */
 @media (max-width: 480px) {
     .gallery {
-        grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
+        /*grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
     }
 }
