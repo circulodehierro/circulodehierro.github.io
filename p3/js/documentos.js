@@ -63,8 +63,8 @@ function volver_inicio() {
 }
 
 let estatuto_full = `
-<p>asdasdsadas</p>
-<p>asdasdsadas</p>
+<p>Parrafo primero</p>
+<p>Parrafo segundo y todo lo que venga</p>
 `;
 
 let parrafos = {
