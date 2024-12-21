@@ -1,20 +1,77 @@
+/* Estilos generales para el modo claro (default) */
+body {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Estilos para el modo oscuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+.navbar {
+    background-color: #333;
+    color: white;
+}
+
+body.dark-mode .navbar {
+    background-color: #222; /* Cambia el fondo del navbar en modo oscuro */
+}
+
+.logout-button {
+    background-color: #e74c3c;
+}
+
+body.dark-mode .logout-button {
+    background-color: #c0392b; /* Cambia el color de "Cerrar Sesión" en modo oscuro */
+}
+
+.featured {
+    background-color: #f1f1f1;
+}
+
+body.dark-mode .featured {
+    background-color: #333; /* Cambia el fondo de los divs en modo oscuro */
+    color: #fff;
+}
+body.dark-mode .featured:hover {
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2); /* Resalta con una sombra más grande */
+}
+
+.dark-mode-toggle {
+    padding: 8px 16px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+body.dark-mode .dark-mode-toggle {
+    background-color: #777; /* Cambia el color del botón en modo oscuro */
+}
+
 /* Estilos para el Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 1px 20px;
     background-color: #333;
     color: white;
 }
 
 .navbar-logo {
-    height: 40px; /* Tamaño del logo */
+    height: 60px; /* Tamaño del logo */
 }
 
 .navbar-right {
     display: flex;
     align-items: center;
+}
+.navbar-right span {
+    margin-right: 10px;
 }
 
 .logout-button {
@@ -46,6 +103,13 @@
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Efecto de resaltar el div al pasar el cursor */
+.featured:hover {
+    transform: scale(1.05); /* Aumenta el tamaño ligeramente */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Resalta con una sombra más grande */
+    cursor: pointer;
 }
 
 /* Ajuste responsivo para pantallas medianas (tabletas) */

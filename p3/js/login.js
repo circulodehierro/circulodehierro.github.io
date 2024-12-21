@@ -2,83 +2,93 @@
 function logo() {
     // Alternar una clase en el body para cambiar el modo
     document.body.classList.toggle('dark-mode');
+    // Guardar el estado del modo en localStorage
+    if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('dark-mode', 'true');
+    } else {
+        localStorage.setItem('dark-mode', 'false');
+    }
   }
   
-  
+  window.onload = function() {
+    if (localStorage.getItem('dark-mode') === 'true') {
+        document.body.classList.add('dark-mode');
+    }
+};
+
+let usuario = {
+    nombre: "Juanito",
+    email: "juan@example.com",
+    edad: 30
+};
+    
   // Función de login
   function login() {
     const password = document.getElementById('pass').value;
     const spanPass = document.getElementById('span_pass');
     const spanPass_bien = document.getElementById('span_pass_bien');
-  
-    /*if (password === '1234') { // Reemplaza '1234' por tu contraseña real
-      alert('Contraseña correcta. ¡Bienvenido!');
-      spanPass.style.display = 'none';
-      // Redireccionar a otra página si es necesario
-      // window.location.href = 'pages/home.html';
-    } else {
-      spanPass.style.display = 'block';
-    }*/
 
     switch(password){
-        case 'pa'://Pablo
+        case 'pa': // Pablo
             spanPass.style.display = 'none';
             spanPass_bien.style.display = 'block';
             spanPass_bien.textContent = '¡Bienvenido Pablo!';
-            //document.getElementById('miModal').style.display = 'none';
-            //url(pass);
+            // Guardar el usuario en localStorage
+            usuario = { nombre: "Pablo", email: "pablo@example.com", edad: 25 };
+            localStorage.setItem("usuario", JSON.stringify(usuario));
+            window.location.href = 'pages/inicio.html';
         break;
-        case 'al'://Ale
+        case 'al': // Ale
             spanPass.style.display = 'none';
             spanPass_bien.style.display = 'block';
             spanPass_bien.textContent = '¡Bienvenido Ale!';
-            //document.getElementById('miModal').style.display = 'none';
-            //url(pass);
+            usuario = { nombre: "Ale", email: "ale@example.com", edad: 28 };
+            localStorage.setItem("usuario", JSON.stringify(usuario));
+            window.location.href = 'pages/inicio.html';
         break;
-        case 'jo'://Jota
+        case 'jo': // Jota
             spanPass.style.display = 'none';
             spanPass_bien.style.display = 'block';
             spanPass_bien.textContent = '¡Bienvenido Jota!';
-            //document.getElementById('miModal').style.display = 'none';
-            //url(pass);
+            usuario = { nombre: "Jota", email: "jota@example.com", edad: 32 };
+            localStorage.setItem("usuario", JSON.stringify(usuario));
+            window.location.href = 'pages/inicio.html';
         break;
-        case 'ro'://Robinson
+        case 'ro': // Robinson
             spanPass.style.display = 'none';
             spanPass_bien.style.display = 'block';
             spanPass_bien.textContent = '¡Bienvenido Robinson!';
-            //document.getElementById('miModal').style.display = 'none';
-            url(password);
+            usuario = { nombre: "Robinson", email: "yoyo@example.com", edad: 40 };
+            localStorage.setItem("usuario", JSON.stringify(usuario));
+            window.location.href = 'pages/inicio.html';
         break;
-        case 'br'://Bracka
+        case 'br': // Bracka
             spanPass.style.display = 'none';
             spanPass_bien.style.display = 'block';
             spanPass_bien.textContent = '¡Bienvenido Bracka!';
-            //document.getElementById('miModal').style.display = 'none';
-            //url(pass);
+            usuario = { nombre: "Bracka", email: "bracka@example.com", edad: 35 };
+            localStorage.setItem("usuario", JSON.stringify(usuario));
+            window.location.href = 'pages/inicio.html';
         break;
-        case 'ch'://Chadu
+        case 'ch': // Chadu
             spanPass.style.display = 'none';
             spanPass_bien.style.display = 'block';
             spanPass_bien.textContent = '¡Bienvenido Chadu!';
-            //document.getElementById('miModal').style.display = 'none';
-            //url(pass);
+            usuario = { nombre: "Chadu", email: "chadu@example.com", edad: 27 };
+            localStorage.setItem("usuario", JSON.stringify(usuario));
+            window.location.href = 'pages/inicio.html';
         break;
-        case 'pr'://Prospecto
+        case 'pr': // Prospecto
             spanPass.style.display = 'none';
             spanPass_bien.style.display = 'block';
             spanPass_bien.textContent = '¡Bienvenido Prospecto!';
-            //document.getElementById('miModal').style.display = 'none';
-            //url(pass);
+            usuario = { nombre: "Prospecto", email: "prospecto@example.com", edad: 22 };
+            localStorage.setItem("usuario", JSON.stringify(usuario));
+            window.location.href = 'pages/inicio.html';
         break;
         default:
             spanPass_bien.style.display = 'none';
             spanPass.style.display = 'block';
-            /*document.getElementById('pass').value = '';
-            var msj = document.getElementById('span_pass');
-            msj.style.display = 'block';
-            input.addEventListener('click', function (){
-                msj.style.display = 'none';
-            });*/
         break;
     }
 
