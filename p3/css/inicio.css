@@ -62,6 +62,18 @@ body.dark-mode .dark-mode-toggle {
     color: white;
 }
 
+.logo-container img {
+    cursor: pointer;
+}
+
+body.dark-mode .icono {
+    filter: invert(100%) brightness(200%);
+}
+.disabled {
+    opacity: 0.5; /* Reducir visibilidad */
+    pointer-events: none; /* Bloquear interacción */
+    cursor: not-allowed; /* Cambiar cursor */
+}
 .navbar-logo {
     height: 60px; /* Tamaño del logo */
 }

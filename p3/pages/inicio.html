@@ -14,11 +14,11 @@
     <!-- Navbar -->
     <nav class="navbar">
         <div class="logo-container">
-            <img src="../images/logo1.svg" alt="Logo" class="navbar-logo">
+            <img src="../images/logo1.svg" alt="Logo" class="navbar-logo" onclick="logo(); return false;">
         </div>
         <div class="navbar-right">
             <span></span>
-            <a href="../index.html" class="logout-button">Cerrar Sesión</a>
+            <a href="#" class="logout-button" onclick="cerrarSesion(); return false;">Cerrar Sesión</a>
             <!-- Botón para alternar el modo oscuro -->
             <!-- <button onclick="toggleDarkMode()" class="dark-mode-toggle">Modo Oscuro</button> -->
         </div>
@@ -26,42 +26,42 @@
 
     <div class="gallery">
         <!--ESTATUTOS-->
-        <div class="featured scale-up-center" onclick="estatutos();return false;" id="estatutos">
+        <div class="featured scale-up-center" onclick="estatutos();return false;" id="estatutos" data-value="1">
             <img src="../images/book.svg" alt="" class="icono">
             <div class="title">Estatutos</div>
             <div class="content"></div>
         </div>
         <!--MOVIMIENTOS-->
-        <div class="featured scale-up-center" onclick="movimientos();return false;" id="movimientos">
+        <div class="featured scale-up-center" onclick="movimientos();return false;" id="movimientos" data-value="2">
             <img src="../images/movimiento.svg" alt="" class="icono">
             <div class="title_e">Movimientos</div>
         </div>
         <!--REUNIONES-->
-        <div class="featured scale-up-center" id="reuniones">
+        <div class="featured scale-up-center" id="reuniones" data-value="3">
             <img src="../images/reuniones.svg" alt="" class="icono">
             <div class="title_e" onclick="reuniones();return false;">Reuniones</div>
         </div>
         <!--EVENTOS-->
-        <div class="featured scale-up-center" id="eventos" onclick="eventos();return false;">
+        <div class="featured scale-up-center" id="eventos" onclick="eventos();return false;" data-value="4">
             <img src="../images/eventos.svg" alt="" class="icono">
             <div class="title_e">Eventos</div>
         </div>
         <!--FICHAS-->
-        <div class="featured scale-up-center" id="fichas" onclick="fichas();return false;">
+        <div class="featured scale-up-center" id="fichas" onclick="fichas();return false;" data-value="5">
             <img src="../images/fichas.svg" alt="" class="icono">
             <div class="title_f">Fichas</div>
         </div>
         <!--TURNOS-->
-        <div class="featured scale-up-center" onclick="turnos();return false;" id="turnos">
+        <div class="featured scale-up-center" onclick="turnos();return false;" id="turnos" data-value="6">
             <img src="../images/turnos.svg" alt="" class="icono">
             <div class="title">Turnos</div>
         </div>
         <!--GASTOS-->
-        <div class="featured scale-up-center" onclick="cuotas();return false;" id="cuotas">
+        <div class="featured scale-up-center" onclick="cuotas();return false;" id="cuotas" data-value="7">
             <img src="../images/cuotas.svg" alt="" class="icono">
             <div class="title">Cuotas</div>
         </div>
-        <div class="featured scale-up-center" onclick="nuevoElemento();return false;" id="nuevoElemento">
+        <div class="featured scale-up-center" onclick="nuevoElemento();return false;" id="nuevoElemento" data-value="8">
             <img src="../images/cuotas.svg" alt="" class="icono">
             <div class="title">Nuevo</div>
         </div>
