@@ -44,7 +44,27 @@ window.onload = function() {
             paragraphDiv.innerHTML = parrafos[key] || '<p>Contenido no encontrado.</p>';
         });
     });
+    const permiso = JSON.parse(localStorage.getItem("permiso"));
+    //console.log(permiso);
+    habilitar_documentos(permiso);
 };
+
+function habilitar_documentos(permiso) {
+    const divs = document.querySelectorAll('.documento');
+    // Iterar sobre cada div
+    divs.forEach(div => {
+        // Obtener el valor del atributo data-value
+        const value = parseInt(div.getAttribute('data-value'));
+        // Si el valor no está en el array permiso
+        if (!permiso.includes(value)) {
+            // Ocultar el div
+            div.style.display = 'none';
+        } else {
+            // Mostrar el div si está permitido
+            div.style.display = 'block';
+        }
+    });
+}
 
 // Función para alternar el modo oscuro
 function toggleDarkMode() {
