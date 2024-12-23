@@ -22,10 +22,6 @@ window.onload = function() {
     const usuario = JSON.parse(localStorage.getItem("usuario"));
     var spanElement = document.querySelector('.navbar-right span');
     spanElement.textContent = '¡Bienvenido '+usuario.nombre+'!';
-    
-    //const permiso = JSON.parse(localStorage.getItem("permiso"));
-    //console.log(permiso);
-    //habilitar_div(permiso);
 
     // Seleccionar el contenedor donde se mostrará el contenido
     let paragraphDiv = document.querySelector('.paragraph');
