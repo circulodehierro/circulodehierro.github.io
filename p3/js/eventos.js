@@ -1,7 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('.row.header');
 
-    // Crear meses y mostrarlos en el encabezado
+    const eventos = [
+        { ano: 2024, mes: 12, dia: 25, evento: 'Navidad', lugar: 'Casa' },
+        { ano: 2025, mes: 1, dia: 1, evento: 'Año Nuevo', lugar: 'Plaza Central' },
+        { ano: 2025, mes: 1, dia: 12, evento: 'Especial', lugar: 'Casa' },
+        { ano: 2025, mes: 2, dia: 14, evento: 'San Valentín', lugar: 'Restaurante' }
+    ];
+
     function createCalendars() {
         const today = new Date();
         let currentMonth = today.getMonth();
@@ -12,17 +18,17 @@ document.addEventListener('DOMContentLoaded', () => {
             const table = document.createElement('table');
             table.classList.add('month-table');
 
-            // Crear cabecera del mes y año
+            // Cabecera del mes y año
             const thead = document.createElement('thead');
             const monthRow = document.createElement('tr');
             const monthHeader = document.createElement('th');
 
             monthHeader.textContent = `${getMonthName(currentMonth)} ${currentYear}`;
-            monthHeader.setAttribute('colspan', 7); // Abarca todas las columnas
+            monthHeader.setAttribute('colspan', 7);
             monthRow.appendChild(monthHeader);
             thead.appendChild(monthRow);
 
-            // Crear cabeceras de días
+            // Cabeceras de días
             const daysRow = document.createElement('tr');
             const days = ['Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab', 'Dom'];
 
@@ -52,9 +58,24 @@ document.addEventListener('DOMContentLoaded', () => {
                     td.textContent = dayCounter;
 
                     // Marcar día actual
-                    if (dayCounter === currentDay && i === 0) { // Solo en el mes actual
+                    if (dayCounter === currentDay && currentMonth === today.getMonth() && currentYear === today.getFullYear()) {
                         td.classList.add('today');
+                        td.style.backgroundColor = 'rgba(0, 128, 0, 0.5)'; // Verde con opacidad 50%
                     }
+
+                    // Buscar coincidencias con eventos
+                    eventos.forEach(evento => {
+                        if (
+                            evento.ano === currentYear &&
+                            evento.mes === currentMonth + 1 && // Aquí se debe restar 1 al mes
+                            evento.dia === dayCounter
+                        ) {
+                            td.style.backgroundColor = 'rgba(0, 0, 255, 0.5)'; // Azul con opacidad 50%
+                            td.title = `${evento.evento} - ${evento.lugar}`;
+                            td.style.cursor = 'pointer'; // Cambia el cursor a pointer al hacer hover
+                        }
+                    });
+                    
 
                     row.appendChild(td);
                     dayCounter++;
@@ -71,9 +92,27 @@ document.addEventListener('DOMContentLoaded', () => {
                         td.textContent = dayCounter;
 
                         // Marcar día actual
-                        if (dayCounter === currentDay && i === 0) {
+                        if (dayCounter === currentDay && currentMonth === today.getMonth() && currentYear === today.getFullYear()) {
                             td.classList.add('today');
+                            td.style.backgroundColor = 'rgba(0, 128, 0, 0.5)';
                         }
+
+                        // Buscar coincidencias con eventos
+                        eventos.forEach(evento => {
+                            if (
+                                evento.ano === currentYear &&
+                                evento.mes === currentMonth + 1 &&
+                                evento.dia === dayCounter
+                            ) {
+                                td.style.backgroundColor = 'rgba(0, 0, 255, 0.5)';
+                                td.title = `${evento.evento} - ${evento.lugar}`;
+                                // Añadir esta parte dentro del bucle donde se marcan los eventos en azul
+                                td.style.backgroundColor = 'rgba(0, 0, 255, 0.5)';
+                                td.title = `${evento.evento} - ${evento.lugar}`;
+                                td.style.cursor = 'pointer'; // Cambia el cursor a pointer al hacer hover
+
+                            }
+                        });
 
                         row.appendChild(td);
                         dayCounter++;
@@ -97,21 +136,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Obtener el nombre del mes
     function getMonthName(monthIndex) {
         const months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
             'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
         return months[monthIndex];
     }
 
-    // Verificar modo oscuro
     function checkDarkMode() {
         if (localStorage.getItem('dark-mode') === 'true') {
             document.body.classList.add('dark-mode');
         }
     }
 
-    // Inicializar
     checkDarkMode();
     createCalendars();
 });
