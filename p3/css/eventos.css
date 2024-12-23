@@ -17,13 +17,11 @@ body {
     /* padding: 10px 0; */
     /* justify-content: center; */
     background-color: #f0f0f0;
-
     /* height: auto; Quitar la altura fija */
     flex-wrap: nowrap; /* No permitir el salto de línea */
     overflow-x: auto; /* Hacer scroll horizontal si el contenido excede */
     justify-content: flex-start; /* Alinear los elementos al principio */
     padding: 10px;
-    
 }
 .month-table {
     border-collapse: collapse;
@@ -90,22 +88,26 @@ body.dark-mode .month-table td:not(:nth-child(7)) {
 /* Ajustar para pantallas pequeñas */
 @media screen and (max-width: 768px) {
     .row.header {
-        overflow-x: scroll;
-        justify-content: flex-start;
+        display: flex; 
+        flex-wrap: nowrap; /* Mantener los meses en una sola fila */
+        overflow-x: auto; /* Permitir desplazamiento horizontal */
+        justify-content: flex-start !important; /* Alinear los elementos al principio */
         padding: 10px;
     }
 
     .month-table {
-        width: auto; /* Ajustar el ancho de la tabla */
-        min-width: 200px; /* Ajustar el ancho mínimo */
+        width: 100%; /* Ajustar el ancho de la tabla para que ocupe el 100% del contenedor */
+        min-width: 250px; /* Establecer un ancho mínimo razonable */
+        margin: 0 10px; /* Separar las tablas entre sí */
     }
 
     .month-table th, .month-table td {
-        font-size: 0.8em; /* Reducir el tamaño de fuente para cabeceras y celdas */
-        padding: 4px; /* Reducir el padding */
+        font-size: 0.9em; /* Reducir el tamaño de fuente */
+        padding: 5px; /* Reducir el padding */
     }
 
     .month-header {
-        font-size: 0.9em; /* Reducir el tamaño de la cabecera */
+        font-size: 1em; /* Ajustar tamaño de la cabecera */
     }
 }
+
