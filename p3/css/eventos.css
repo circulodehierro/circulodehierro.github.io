@@ -85,6 +85,40 @@ body.dark-mode .month-table td:not(:nth-child(7)) {
     color: white;
 }
 
+.container .event-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+body.dark-mode .container .event-card {
+    border: 1px solid #222;
+    background-color: #555;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.container .event-card img {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+.container .event-card h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
+
+.container .event-card p {
+    font-size: 16px;
+    color: black;
+}
+
 /* Ajustar para pantallas pequeñas */
 @media screen and (max-width: 768px) {
     .row.header {

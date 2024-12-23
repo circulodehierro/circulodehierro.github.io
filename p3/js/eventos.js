@@ -1,11 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('.row.header');
+    const content = document.querySelector('.row.content'); // El contenedor donde se mostrarán los detalles del evento
 
     const eventos = [
-        { ano: 2024, mes: 12, dia: 25, evento: 'Navidad', lugar: 'Casa' },
-        { ano: 2025, mes: 1, dia: 1, evento: 'Año Nuevo', lugar: 'Plaza Central' },
-        { ano: 2025, mes: 1, dia: 12, evento: 'Especial', lugar: 'Casa' },
-        { ano: 2025, mes: 2, dia: 14, evento: 'San Valentín', lugar: 'Restaurante' }
+        { ano: 2024, mes: 12, dia: 25, evento: 'Navidad', lugar: 'Casa', imagen: '../images/navidad.jpg', detalle: 'Celebración de Navidad en familia.' },
+        { ano: 2025, mes: 1, dia: 1, evento: 'Año Nuevo', lugar: 'Plaza Central', imagen: '../images/ano_nuevo.jpg', detalle: 'Fiesta para recibir el Año Nuevo.' },
+        { ano: 2025, mes: 1, dia: 12, evento: 'Especial', lugar: 'Casa', imagen: '../images/especial.jpg', detalle: 'Evento especial con amigos.' },
+        { ano: 2025, mes: 1, dia: 24, evento: 'Ruta Anual C.D.H.M.', lugar: 'Serena', imagen: '../images/evento.jpeg', detalle: 'Ruta Anual Larga del Circulo de Hierro Motoclub.' },
+        { ano: 2025, mes: 1, dia: 25, evento: 'Ruta Anual C.D.H.M.', lugar: 'Serena', imagen: '../images/evento.jpeg', detalle: 'Ruta Anual Larga del Circulo de Hierro Motoclub.' },
+        { ano: 2025, mes: 1, dia: 26, evento: 'Ruta Anual C.D.H.M.', lugar: 'Serena', imagen: '../images/evento.jpeg', detalle: 'Ruta Anual Larga del Circulo de Hierro Motoclub.' },
+        { ano: 2025, mes: 2, dia: 14, evento: 'San Valentín', lugar: 'Restaurante', imagen: '../images/san_valentin.jpg', detalle: 'Cena romántica en restaurante.' }
     ];
 
     function createCalendars() {
@@ -67,15 +71,17 @@ document.addEventListener('DOMContentLoaded', () => {
                     eventos.forEach(evento => {
                         if (
                             evento.ano === currentYear &&
-                            evento.mes === currentMonth + 1 && // Aquí se debe restar 1 al mes
+                            evento.mes === currentMonth + 1 &&
                             evento.dia === dayCounter
                         ) {
                             td.style.backgroundColor = 'rgba(0, 0, 255, 0.5)'; // Azul con opacidad 50%
                             td.title = `${evento.evento} - ${evento.lugar}`;
-                            td.style.cursor = 'pointer'; // Cambia el cursor a pointer al hacer hover
+
+                            // Asignar manejador de clic para mostrar los detalles del evento
+                            td.style.cursor = 'pointer';
+                            td.addEventListener('click', () => showEventDetails(evento));
                         }
                     });
-                    
 
                     row.appendChild(td);
                     dayCounter++;
@@ -106,11 +112,8 @@ document.addEventListener('DOMContentLoaded', () => {
                             ) {
                                 td.style.backgroundColor = 'rgba(0, 0, 255, 0.5)';
                                 td.title = `${evento.evento} - ${evento.lugar}`;
-                                // Añadir esta parte dentro del bucle donde se marcan los eventos en azul
-                                td.style.backgroundColor = 'rgba(0, 0, 255, 0.5)';
-                                td.title = `${evento.evento} - ${evento.lugar}`;
                                 td.style.cursor = 'pointer'; // Cambia el cursor a pointer al hacer hover
-
+                                td.addEventListener('click', () => showEventDetails(evento)); // Añadir el manejador de clic
                             }
                         });
 
@@ -134,6 +137,35 @@ document.addEventListener('DOMContentLoaded', () => {
                 currentYear++;
             }
         }
+    }
+
+    // Función para mostrar los detalles del evento
+    function showEventDetails(evento) {
+        // Limpiar el contenido actual
+        content.innerHTML = '';
+
+        // Crear tarjeta de evento
+        const tarjeta = document.createElement('div');
+        tarjeta.classList.add('event-card');
+
+        // Título del evento
+        const titulo = document.createElement('h2');
+        titulo.textContent = evento.evento;
+        tarjeta.appendChild(titulo);
+
+        // Imagen del evento
+        const imagen = document.createElement('img');
+        imagen.src = evento.imagen;
+        imagen.alt = evento.evento;
+        tarjeta.appendChild(imagen);
+
+        // Detalles del evento
+        const detalles = document.createElement('p');
+        detalles.textContent = evento.detalle;
+        tarjeta.appendChild(detalles);
+
+        // Añadir la tarjeta al div content
+        content.appendChild(tarjeta);
     }
 
     function getMonthName(monthIndex) {
