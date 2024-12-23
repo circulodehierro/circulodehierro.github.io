@@ -1,3 +1,21 @@
+// Función para activar la pantalla completa
+function goFullScreen() {
+    let docEl = document.documentElement;
+
+    if (docEl.requestFullscreen) {
+        docEl.requestFullscreen();
+    } else if (docEl.mozRequestFullScreen) { // Firefox
+        docEl.mozRequestFullScreen();
+    } else if (docEl.webkitRequestFullscreen) { // Chrome, Safari and Opera
+        docEl.webkitRequestFullscreen();
+    } else if (docEl.msRequestFullscreen) { // IE/Edge
+        docEl.msRequestFullscreen();
+    }
+}
+
+// Intentar entrar en pantalla completa cuando se carga la página
+window.onload = goFullScreen;
+
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('.row.header');
 
