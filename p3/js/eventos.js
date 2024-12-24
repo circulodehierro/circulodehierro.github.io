@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { ano: 2025, mes: 2, dia: 14, duracion: '14, 15 y 16 de Febrero', evento: '9 Aniversario Mandinga', lugar: 'Camino las Molinas 1156, Chimbarongo', imagen: '../images/a_mandinga2025.png', detalle: 'Entrada General $20.000' },
         { ano: 2025, mes: 2, dia: 15, duracion: '14, 15 y 16 de Febrero', evento: '9 Aniversario Mandinga', lugar: 'Camino las Molinas 1156, Chimbarongo', imagen: '../images/a_mandinga2025.png', detalle: 'Entrada General $20.000' },
         { ano: 2025, mes: 2, dia: 16, duracion: '14, 15 y 16 de Febrero', evento: '9 Aniversario Mandinga', lugar: 'Camino las Molinas 1156, Chimbarongo', imagen: '../images/a_mandinga2025.png', detalle: 'Entrada General $20.000' },
+        { ano: 2025, mes: 2, dia: 22, duracion: '22 de Febrero', evento: '5 Aniversario Craneos de Alicanto', lugar: 'Vallenar', imagen: '../images/5a_craneos.png', detalle: 'Por Confirmar' },
     ];
 
     function createCalendars() {
