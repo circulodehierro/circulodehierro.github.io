@@ -11,6 +11,7 @@ function logo() {
 
 function cerrarSesion() {
     // Redirigir al index.html
+    localStorage.removeItem("usuario");
     window.location.href = '../index.html';
 } 
 
@@ -20,9 +21,13 @@ window.onload = function() {
         document.body.classList.add('dark-mode');
     }
     const usuario = JSON.parse(localStorage.getItem("usuario"));
+    const permiso = JSON.parse(localStorage.getItem("permiso"));
+    if (usuario == null || permiso == null){
+        cerrarSesion();
+    }
     var spanElement = document.querySelector('.navbar-right span');
     spanElement.textContent = '¡Bienvenido '+usuario.nombre+'!';
-    const permiso = JSON.parse(localStorage.getItem("permiso"));
+    habilitar_div(permiso);
 };
 
 // Función para alternar el modo oscuro

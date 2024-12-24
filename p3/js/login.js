@@ -40,6 +40,7 @@ function login() {
             spanPass_bien.style.display = 'block';
             spanPass_bien.textContent = '¡Bienvenido Pablo!';
             // Guardar el usuario en localStorage
+            /**/
             usuario = { 
                 nombre: "Pablo", 
                 email: "pablo@example.com", 
@@ -48,6 +49,7 @@ function login() {
             permiso = [1,2,5,6];
             localStorage.setItem("usuario", JSON.stringify(usuario));
             localStorage.setItem("permiso", JSON.stringify(permiso));
+            
             window.location.href = 'pages/inicio.html';
         break;
         case 'al': // Ale
@@ -137,7 +139,7 @@ function url(pass){
     var sp = pass.split('');
     //var clave = '1k0'+sp[1]+'ko'+sp[0]+'2kq';
     //window.location.href = 'pages/inicio.html?fa87sdbk='+clave;
-    var clave = aleatorio(3)+sp[1]+aleatorio(2)+sp[0]+aleatorio(3);
+    //var clave = aleatorio(3)+sp[1]+aleatorio(2)+sp[0]+aleatorio(3);
     //window.location.href = 'pages/inicio.html?'+aleatorio(8)+'='+clave;
     window.location.href = 'pages/inicio.html';
 }
