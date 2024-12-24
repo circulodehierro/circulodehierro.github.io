@@ -85,13 +85,31 @@ body.dark-mode .month-table td:not(:nth-child(7)) {
     color: white;
 }
 
+/* Estilos generales */
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espaciado entre las tarjetas */
+    justify-content: center;
+}
+
 .container .event-card {
+    /*
     border: 1px solid #ddd;
     padding: 20px;
     border-radius: 8px;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
+*/
+    width: 100%; /* Ocupa el 100% del contenedor en pantallas pequeñas */
+    max-width: 365px; /* Limita el ancho máximo de las tarjetas */
+    background-color: #fff; /* Color de fondo de la tarjeta */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
 }
 
 body.dark-mode .container .event-card {
@@ -143,5 +161,21 @@ body.dark-mode .container .event-card {
     .month-header {
         font-size: 1em; /* Ajustar tamaño de la cabecera */
     }
+
+    .content {
+        grid-template-columns: 1fr;
+    }
 }
 
+/* Estilos para pantallas medianas y grandes */
+@media (min-width: 600px) {
+    .event-card {
+        width: 48%; /* Ocupa el 48% del contenedor en pantallas medianas */
+    }
+}
+
+@media (min-width: 900px) {
+    .event-card {
+        width: 30%; /* Ocupa el 30% del contenedor en pantallas grandes */
+    }
+}
