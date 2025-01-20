@@ -3,9 +3,12 @@
     justify-content: start;
     align-items: center;
     overflow-x: auto; /* Habilitar scroll horizontal */
-    padding: 10px;
+    /* padding: 5px; */
+    padding-top: 20px;
+    padding-bottom: 20px;
     width: 100%;
     min-width: 300px; /* Asegura que el contenedor tenga un tamaño mínimo */
+    /* border: 1px solid blue; */
 }
 
 .icon-container {
@@ -13,6 +16,7 @@
     flex-wrap: nowrap; /* Para que los iconos no se dividan en varias filas */
     gap: 20px; /* Espacio entre los iconos */
     min-width: 100%; /* Para asegurarse de que ocupe el 100% del ancho disponible */
+    /* border: 1px solid red; */
 }
 
 .icon-item {
