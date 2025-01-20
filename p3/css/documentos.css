@@ -1,15 +1,10 @@
-.container {
-    justify-content: space-between;
-    align-items: left;
-    padding: 1px 1px;
-}
 .row.header {
     display: flex;
     justify-content: start;
     align-items: center;
     overflow-x: auto; /* Habilitar scroll horizontal */
     padding: 10px;
-    width: 98.8%;
+    width: 100%;
     min-width: 300px; /* Asegura que el contenedor tenga un tamaño mínimo */
 }
 
@@ -28,13 +23,15 @@
 }
 
 .icon-item img {
-    width: 50px; /* Tamaño de los iconos */
-    height: 50px;
+    width: 10vw; /* Responsivo: el tamaño de los iconos será un 10% del ancho de la ventana */
+    height: auto; /* Mantiene la proporción original del icono */
     margin-bottom: 5px;
+    max-width: 50px; /* Limita el tamaño máximo de los iconos */
+    min-width: 30px; /* Limita el tamaño mínimo de los iconos */
 }
 
 .icon-item span {
-    font-size: 12px;
+    font-size: 1.2vw; /* El tamaño del texto también es responsivo */
     color: #333;
     white-space: nowrap; /* Evitar que el texto se divida en varias líneas */
 }
