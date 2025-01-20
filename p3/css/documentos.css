@@ -49,3 +49,28 @@ body {
 body.dark-mode .icon-item span {
     color: #fff;
 }
+/* Contenedor principal de la sección que muestra el PDF */
+.row.content {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+}
+
+/* Contenedor del PDF */
+.paragraph {
+    width: 90%; /* Ocupa el 90% del ancho de la ventana */
+    max-width: 1200px; /* Ancho máximo para pantallas grandes */
+    height: 90vh; /* Ocupa el 90% de la altura de la ventana */
+    overflow: auto; /* Agrega barra de desplazamiento si el contenido excede el tamaño */
+    padding: 10px; /* Agrega un pequeño padding para separar el contenido */
+    background-color: #f5f5f5; /* Opcional, color de fondo */
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+}
+
+/* Estilo para los canvas (las páginas del PDF) */
+.paragraph canvas {
+    width: 100%; /* Hace que cada página del PDF ocupe todo el ancho del contenedor */
+    height: auto; /* Mantiene la relación de aspecto de cada página */
+    margin-bottom: 10px; /* Espacio entre páginas */
+}
