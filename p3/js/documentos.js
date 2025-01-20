@@ -11,10 +11,14 @@ function habilitar_div(permiso) {
         const value = parseInt(div.getAttribute('data-value')); 
         // Si el valor no está en el array permiso
         if (!permiso.includes(value)) {
-            // Añadir la clase 'disabled' al div
-            div.classList.add('disabled');
-            // Evitar el clic en el div deshabilitado
-            div.onclick = (e) => e.preventDefault(); // Opcional para evitar acciones adicionales
+            // Establecer display: none para ocultar el div
+            div.style.display = 'none';
+            // Evitar el clic en el div oculto (opcional)
+            div.onclick = (e) => e.preventDefault(); 
+        } else {
+            // Asegurarse de que el div visible tenga display: block (o el valor original de visualización)
+            div.style.display = ''; // Esto restaurará el valor de display original
         }
     });
 }
+
