@@ -35,17 +35,3 @@
     color: #333;
     white-space: nowrap; /* Evitar que el texto se divida en varias líneas */
 }
-
-/* Ajuste responsivo para pantallas medianas (tabletas) */
-@media (max-width: 768px) {
-    .row.header {
-        width: 95.5%;
-    }
-}
-
-/* Ajuste responsivo para pantallas pequeñas (móviles) */
-@media (max-width: 480px) {
-    .row.header {
-        width: 95%;
-    }
-}
