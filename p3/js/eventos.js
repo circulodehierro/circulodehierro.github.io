@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const eventos = [
         { ano: 2025, mes: 1, dia: 10, duracion: '10, 11 y 12 de Enero', evento: 'Segundo Encuentro', lugar: 'Fundo el Porvenir', imagen: '../images/segundo_encuentro.png', detalle: 'Sector Quiriquina, Camino Calle Alegre KM 3,5' },
-       
+        /*
         { ano: 2025, mes: 1, dia: 10, duracion: '14, 15 y 16 de Febrero', evento: '9 Aniversario Mandinga', lugar: 'Camino las Molinas 1156, Chimbarongo', imagen: '../images/a_mandinga2025.png', detalle: 'Entrada General $20.000' },
-         /*{ ano: 2025, mes: 1, dia: 10, duracion: '14, 15 y 16 de Febrero', evento: '9 Aniversario Mandinga', lugar: 'Camino las Molinas 1156, Chimbarongo', imagen: '../images/ruta_circulo.png', detalle: 'Entrada General $20.000' },
+        { ano: 2025, mes: 1, dia: 10, duracion: '14, 15 y 16 de Febrero', evento: '9 Aniversario Mandinga', lugar: 'Camino las Molinas 1156, Chimbarongo', imagen: '../images/ruta_circulo.png', detalle: 'Entrada General $20.000' },
         { ano: 2025, mes: 1, dia: 10, duracion: '14, 15 y 16 de Febrero', evento: '9 Aniversario Mandinga', lugar: 'Camino las Molinas 1156, Chimbarongo', imagen: '../images/piratas_isla.png', detalle: 'Entrada General $20.000' },
         */
         { ano: 2025, mes: 1, dia: 11, duracion: '10, 11 y 12 de Enero', evento: 'Segundo Encuentro', lugar: 'Fundo el Porvenir', imagen: '../images/segundo_encuentro.png', detalle: 'Sector Quiriquina, Camino Calle Alegre KM 3,5' },
@@ -277,7 +277,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Forzar el scroll horizontal al inicio
         header.scrollLeft = 0;
     }
-    
+
 
     function showEventDetails(evento) {
         content.innerHTML = '';
