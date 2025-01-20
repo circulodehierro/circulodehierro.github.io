@@ -79,7 +79,7 @@ body.dark-mode .icon-item span {
 /* Ajuste responsivo para pantallas medianas (tabletas) */
 @media (max-width: 768px) {
     .paragraph {
-        width: 80%; /* Ocupa el 90% del ancho de la ventana */
+        width: 98%; /* Ocupa el 90% del ancho de la ventana */
         border: 1px solid blue;
     }
 }
@@ -87,7 +87,7 @@ body.dark-mode .icon-item span {
 /* Ajuste responsivo para pantallas pequeñas (móviles) */
 @media (max-width: 480px) {
     .paragraph {
-        width: 70%; /* Ocupa el 90% del ancho de la ventana */
+        width: 98%; /* Ocupa el 90% del ancho de la ventana */
         border: 1px solid green;
     }
 }
