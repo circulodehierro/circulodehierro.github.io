@@ -9,6 +9,12 @@ body {
     flex-direction: column;
     height: 100vh;
 }
+#calendar-container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth; /* Opcional para animación suave */
+}
 .row.header {
     height: 250px !important;
     display: flex;

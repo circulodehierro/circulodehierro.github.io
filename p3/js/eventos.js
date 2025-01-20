@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const eventos = [
         { ano: 2025, mes: 1, dia: 10, duracion: '10, 11 y 12 de Enero', evento: 'Segundo Encuentro', lugar: 'Fundo el Porvenir', imagen: '../images/segundo_encuentro.png', detalle: 'Sector Quiriquina, Camino Calle Alegre KM 3,5' },
-        /*
+       
         { ano: 2025, mes: 1, dia: 10, duracion: '14, 15 y 16 de Febrero', evento: '9 Aniversario Mandinga', lugar: 'Camino las Molinas 1156, Chimbarongo', imagen: '../images/a_mandinga2025.png', detalle: 'Entrada General $20.000' },
-        { ano: 2025, mes: 1, dia: 10, duracion: '14, 15 y 16 de Febrero', evento: '9 Aniversario Mandinga', lugar: 'Camino las Molinas 1156, Chimbarongo', imagen: '../images/ruta_circulo.png', detalle: 'Entrada General $20.000' },
+         /*{ ano: 2025, mes: 1, dia: 10, duracion: '14, 15 y 16 de Febrero', evento: '9 Aniversario Mandinga', lugar: 'Camino las Molinas 1156, Chimbarongo', imagen: '../images/ruta_circulo.png', detalle: 'Entrada General $20.000' },
         { ano: 2025, mes: 1, dia: 10, duracion: '14, 15 y 16 de Febrero', evento: '9 Aniversario Mandinga', lugar: 'Camino las Molinas 1156, Chimbarongo', imagen: '../images/piratas_isla.png', detalle: 'Entrada General $20.000' },
         */
         { ano: 2025, mes: 1, dia: 11, duracion: '10, 11 y 12 de Enero', evento: 'Segundo Encuentro', lugar: 'Fundo el Porvenir', imagen: '../images/segundo_encuentro.png', detalle: 'Sector Quiriquina, Camino Calle Alegre KM 3,5' },
@@ -29,13 +29,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const diaDeCursado = 10; // Día de cursado
 
-    function createCalendars() {
+    function createCalendars_old() {
         const today = new Date();
         let currentMonth = today.getMonth();
         let currentYear = today.getFullYear();
         const currentDay = today.getDate();
 
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < 7; i++) {
             const table = document.createElement('table');
             table.classList.add('month-table');
 
@@ -146,6 +146,138 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
+
+    function createCalendars(startMonth = 0, startYear = 2025, totalMonths = 12) {
+        const today = new Date();
+        const currentDay = today.getDate();
+    
+        let currentDate = new Date(startYear, startMonth, 1); // Fecha inicial definida por los parámetros
+        const header = document.getElementById('calendar-container');
+        header.innerHTML = ''; // Limpia el contenedor antes de generar los calendarios
+    
+        for (let i = 0; i < totalMonths; i++) {
+            const table = document.createElement('table');
+            table.classList.add('month-table');
+    
+            const thead = document.createElement('thead');
+            const monthRow = document.createElement('tr');
+            const monthHeader = document.createElement('th');
+    
+            monthHeader.textContent = `${getMonthName(currentDate.getMonth())} ${currentDate.getFullYear()}`;
+            monthHeader.setAttribute('colspan', 7);
+            monthRow.appendChild(monthHeader);
+            thead.appendChild(monthRow);
+    
+            const daysRow = document.createElement('tr');
+            const days = ['Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab', 'Dom'];
+    
+            days.forEach(day => {
+                const th = document.createElement('th');
+                th.textContent = day;
+                daysRow.appendChild(th);
+            });
+    
+            thead.appendChild(daysRow);
+            table.appendChild(thead);
+    
+            const tbody = document.createElement('tbody');
+            const firstDay = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1).getDay();
+            const totalDays = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0).getDate();
+    
+            let dayCounter = 1;
+            let row = document.createElement('tr');
+    
+            // Primera fila del mes
+            for (let j = 0; j < 7; j++) {
+                if (j < (firstDay === 0 ? 6 : firstDay - 1)) {
+                    const td = document.createElement('td');
+                    row.appendChild(td);
+                } else if (dayCounter <= totalDays) {
+                    const td = document.createElement('td');
+                    td.textContent = dayCounter;
+    
+                    // Resaltar día actual
+                    if (dayCounter === currentDay && currentDate.getMonth() === today.getMonth() && currentDate.getFullYear() === today.getFullYear()) {
+                        td.classList.add('today');
+                        td.style.backgroundColor = 'rgba(0, 255, 0, 0.5)';
+                    }
+    
+                    // Validar eventos del día
+                    const eventosDelDia = eventos.filter(evento =>
+                        evento.ano === currentDate.getFullYear() &&
+                        evento.mes === currentDate.getMonth() + 1 &&
+                        evento.dia === dayCounter
+                    );
+    
+                    if (eventosDelDia.length > 1) {
+                        td.style.backgroundColor = 'rgba(139, 69, 19, 0.5)'; // Marrón
+                        td.style.cursor = 'pointer';
+                        td.addEventListener('click', () => showMultipleEventDetails(eventosDelDia));
+                    } else if (eventosDelDia.length === 1) {
+                        td.style.backgroundColor = 'rgba(0, 0, 255, 0.5)'; // Azul
+                        td.style.cursor = 'pointer';
+                        td.addEventListener('click', () => showEventDetails(eventosDelDia[0]));
+                    }
+    
+                    row.appendChild(td);
+                    dayCounter++;
+                }
+            }
+    
+            tbody.appendChild(row);
+    
+            // Filas restantes del mes
+            while (dayCounter <= totalDays) {
+                row = document.createElement('tr');
+                for (let j = 0; j < 7; j++) {
+                    if (dayCounter <= totalDays) {
+                        const td = document.createElement('td');
+                        td.textContent = dayCounter;
+    
+                        // Resaltar día actual
+                        if (dayCounter === currentDay && currentDate.getMonth() === today.getMonth() && currentDate.getFullYear() === today.getFullYear()) {
+                            td.classList.add('today');
+                            td.style.backgroundColor = 'rgba(0, 255, 0, 0.5)';
+                        }
+    
+                        // Validar eventos del día
+                        const eventosDelDia = eventos.filter(evento =>
+                            evento.ano === currentDate.getFullYear() &&
+                            evento.mes === currentDate.getMonth() + 1 &&
+                            evento.dia === dayCounter
+                        );
+    
+                        if (eventosDelDia.length > 1) {
+                            td.style.backgroundColor = 'rgba(139, 69, 19, 0.5)'; // Marrón
+                            td.style.cursor = 'pointer';
+                            td.addEventListener('click', () => showMultipleEventDetails(eventosDelDia));
+                        } else if (eventosDelDia.length === 1) {
+                            td.style.backgroundColor = 'rgba(0, 0, 255, 0.5)'; // Azul
+                            td.style.cursor = 'pointer';
+                            td.addEventListener('click', () => showEventDetails(eventosDelDia[0]));
+                        }
+    
+                        row.appendChild(td);
+                        dayCounter++;
+                    } else {
+                        const td = document.createElement('td');
+                        row.appendChild(td);
+                    }
+                }
+                tbody.appendChild(row);
+            }
+    
+            table.appendChild(tbody);
+            header.appendChild(table);
+    
+            // Avanzar al siguiente mes
+            currentDate.setMonth(currentDate.getMonth() + 1);
+        }
+    
+        // Forzar el scroll horizontal al inicio
+        header.scrollLeft = 0;
+    }
+    
 
     function showEventDetails(evento) {
         content.innerHTML = '';
