@@ -59,7 +59,7 @@ body.dark-mode .icon-item span {
 
 /* Contenedor del PDF */
 .paragraph {
-    width: 90%; /* Ocupa el 90% del ancho de la ventana */
+    width: 95%; /* Ocupa el 90% del ancho de la ventana */
     max-width: 1200px; /* Ancho máximo para pantallas grandes */
     height: 90vh; /* Ocupa el 90% de la altura de la ventana */
     overflow: auto; /* Agrega barra de desplazamiento si el contenido excede el tamaño */
