@@ -29,124 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const diaDeCursado = 10; // Día de cursado
 
-    function createCalendars_old() {
-        const today = new Date();
-        let currentMonth = today.getMonth();
-        let currentYear = today.getFullYear();
-        const currentDay = today.getDate();
-
-        for (let i = 0; i < 7; i++) {
-            const table = document.createElement('table');
-            table.classList.add('month-table');
-
-            const thead = document.createElement('thead');
-            const monthRow = document.createElement('tr');
-            const monthHeader = document.createElement('th');
-
-            monthHeader.textContent = `${getMonthName(currentMonth)} ${currentYear}`;
-            monthHeader.setAttribute('colspan', 7);
-            monthRow.appendChild(monthHeader);
-            thead.appendChild(monthRow);
-
-            const daysRow = document.createElement('tr');
-            const days = ['Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab', 'Dom'];
-
-            days.forEach(day => {
-                const th = document.createElement('th');
-                th.textContent = day;
-                daysRow.appendChild(th);
-            });
-
-            thead.appendChild(daysRow);
-            table.appendChild(thead);
-
-            const tbody = document.createElement('tbody');
-            const firstDay = new Date(currentYear, currentMonth, 1).getDay();
-            const totalDays = new Date(currentYear, currentMonth + 1, 0).getDate();
-
-            let dayCounter = 1;
-            let row = document.createElement('tr');
-
-            for (let j = 0; j < 7; j++) {
-                if (j < (firstDay === 0 ? 6 : firstDay - 1)) {
-                    const td = document.createElement('td');
-                    row.appendChild(td);
-                } else if (dayCounter <= totalDays) {
-                    const td = document.createElement('td');
-                    td.textContent = dayCounter;
-
-                    if (dayCounter === currentDay && currentMonth === today.getMonth() && currentYear === today.getFullYear()) {
-                        td.classList.add('today');
-                        td.style.backgroundColor = 'rgba(0, 255, 0, 0.5)'; // Verde con opacidad 50% para día de cursado
-                    }
-
-                    const eventosDelDia = eventos.filter(evento =>
-                        evento.ano === currentYear && evento.mes === currentMonth + 1 && evento.dia === dayCounter
-                    );
-
-                    if (eventosDelDia.length > 1) {
-                        td.style.backgroundColor = 'rgba(139, 69, 19, 0.5)'; // Marrón con opacidad 50%
-                        td.style.cursor = 'pointer';
-                        td.addEventListener('click', () => showMultipleEventDetails(eventosDelDia));
-                    } else if (eventosDelDia.length === 1) {
-                        td.style.backgroundColor = 'rgba(0, 0, 255, 0.5)';
-                        td.style.cursor = 'pointer';
-                        td.addEventListener('click', () => showEventDetails(eventosDelDia[0]));
-                    }
-
-                    row.appendChild(td);
-                    dayCounter++;
-                }
-            }
-
-            tbody.appendChild(row);
-
-            while (dayCounter <= totalDays) {
-                row = document.createElement('tr');
-                for (let j = 0; j < 7; j++) {
-                    if (dayCounter <= totalDays) {
-                        const td = document.createElement('td');
-                        td.textContent = dayCounter;
-
-                        if (dayCounter === currentDay && currentMonth === today.getMonth() && currentYear === today.getFullYear()) {
-                            td.style.backgroundColor = 'rgba(0, 255, 0, 0.5)'; // Verde con opacidad 50% para día de cursado
-                        }
-
-                        const eventosDelDia = eventos.filter(evento =>
-                            evento.ano === currentYear && evento.mes === currentMonth + 1 && evento.dia === dayCounter
-                        );
-
-                        if (eventosDelDia.length > 1) {
-                            td.style.backgroundColor = 'rgba(139, 69, 19, 0.5)';
-                            td.style.cursor = 'pointer';
-                            td.addEventListener('click', () => showMultipleEventDetails(eventosDelDia));
-                        } else if (eventosDelDia.length === 1) {
-                            td.style.backgroundColor = 'rgba(0, 0, 255, 0.5)';
-                            td.style.cursor = 'pointer';
-                            td.addEventListener('click', () => showEventDetails(eventosDelDia[0]));
-                        }
-
-                        row.appendChild(td);
-                        dayCounter++;
-                    } else {
-                        const td = document.createElement('td');
-                        row.appendChild(td);
-                    }
-                }
-                tbody.appendChild(row);
-            }
-
-            table.appendChild(tbody);
-            header.appendChild(table);
-
-            currentMonth++;
-            if (currentMonth > 11) {
-                currentMonth = 0;
-                currentYear++;
-            }
-        }
-    }
-
     function createCalendars(startMonth = 0, startYear = 2025, totalMonths = 12) {
         const today = new Date();
         const currentDay = today.getDate();
@@ -277,7 +159,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Forzar el scroll horizontal al inicio
         header.scrollLeft = 0;
     }
-
 
     function showEventDetails(evento) {
         content.innerHTML = '';
