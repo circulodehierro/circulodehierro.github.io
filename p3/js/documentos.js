@@ -8,14 +8,14 @@ window.onload = function () {
 
 document.addEventListener('DOMContentLoaded', function () {
     let scale = 1.0;  // Variable para manejar el nivel de zoom
-    const url = '../documentos/prueba_circulo.pdf';
-    //const url = '../documentos/solicitud_colores.doc';
     const paragraph = document.querySelector('.paragraph');  // El contenedor del PDF
     const canvasContainer = document.createElement('div');
     paragraph.appendChild(canvasContainer);
+    let new_url = '';
+    let nombre_documento = '';
 
     // Función para cargar y mostrar el PDF
-    function cargarPDF() {
+    function cargarPDF(url) {
         pdfjsLib.getDocument(url).promise.then(function (pdfDoc_) {
             const pdfDoc = pdfDoc_;
             const totalPages = pdfDoc.numPages;
@@ -50,9 +50,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Agregar evento al botón con ID "estatutosFull"
     const estatutosFullBtn = document.getElementById('estatutosFull');
+    const solcitudColoresBtn = document.getElementById('solcitudColores');
     if (estatutosFullBtn) {
         estatutosFullBtn.addEventListener('click', function () {
-            cargarPDF(); // Solo carga el PDF al hacer clic en el botón
+            new_url = '../documentos/prueba_circulo.pdf';
+            nombre_documento = 'estatutos_full.pdf';
+            cargarPDF(new_url); // Solo carga el PDF al hacer clic en el botón
+            // Cambiar display de las clases "control" y "paragraph"
+            const controlElements = document.querySelectorAll('.controls');
+            controlElements.forEach(element => {
+                element.style.display = 'block';
+            });
+            paragraph.style.display = 'block'; // Asegurarse de mostrar el contenedor del PDF
+        });
+    }
+    if (solcitudColoresBtn) {
+        solcitudColoresBtn.addEventListener('click', function () {
+            new_url = '../documentos/solicitud_colores.pdf';
+            nombre_documento = 'solicitud_colores.pdf';
+            cargarPDF(new_url); // Solo carga el PDF al hacer clic en el botón
             // Cambiar display de las clases "control" y "paragraph"
             const controlElements = document.querySelectorAll('.controls');
             controlElements.forEach(element => {
@@ -63,15 +79,16 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Función de descarga
-    document.querySelector('#downloadPDF').addEventListener('click', function () {
-        const link = document.createElement('a');
-        link.href = url;  // Ruta del PDF
-        link.download = 'documento.pdf';  // Nombre del archivo de descarga
-        link.click();  // Inicia la descarga
-    });
+    const downloadBtn = document.querySelector('#downloadPDF');
+    if (downloadBtn) {
+        downloadBtn.addEventListener('click', function () {
+            const link = document.createElement('a');
+            link.href = new_url;  // Usar la URL actual del PDF
+            link.download = nombre_documento || 'documento.pdf';  // Usar el nombre dinámico o uno por defecto
+            link.click();  // Inicia la descarga
+        });
+    }
 });
-
-// Resto del código sin cambios...
 
 function habilitar_div(permiso) {
     const divs = document.querySelectorAll('.icon-item');

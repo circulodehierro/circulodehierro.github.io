@@ -79,31 +79,13 @@ body.dark-mode .icon-item span {
 .controls {
     position: fixed;
     top: 190px;
-    /* padding-left: 42%; */
     right: 28%;
     z-index: 1000;
     display: flex;
     flex-direction: column;
 }
-/*
-.controls button {
-    margin: 5px;
-    padding: 10px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.controls button:hover {
-    background-color: #0056b3;
-}
-*/
 .controls img {
     margin: 5px;
-    /* margin-left: 770px; */
-    /* padding-left: 200%; */
-    /* padding: 50% 10% 2% 600%; */
     width: 26px;
     filter: invert(34%) sepia(73%) saturate(400%) hue-rotate(180deg) brightness(95%) contrast(90%);
     border: none;
@@ -113,6 +95,15 @@ body.dark-mode .icon-item span {
 .controls img:hover {
     filter: invert(64%) sepia(73%) saturate(400%) hue-rotate(180deg) brightness(95%) contrast(90%);
 }
+#estatutosFull img {
+    filter: invert(34%) sepia(73%) saturate(400%) hue-rotate(180deg) brightness(95%) contrast(90%);
+}
+#solcitudColores img {
+    filter: invert(64%) sepia(73%) saturate(400%) hue-rotate(180deg) brightness(95%) contrast(90%);
+}
+#protocoloReceso img {
+    filter: invert(4%) sepia(93%) saturate(400%) hue-rotate(180deg) brightness(95%) contrast(90%);
+}
 /* Ajuste responsivo para pantallas medianas (tabletas) */
 @media (max-width: 768px) {
     .paragraph {
@@ -121,6 +112,9 @@ body.dark-mode .icon-item span {
     }
     .controls {
         right: 5%;
+    }
+    .icon-item span {
+        font-size: 1.8vw; /* El tamaño del texto también es responsivo */
     }
 }
 
@@ -132,5 +126,8 @@ body.dark-mode .icon-item span {
     }
     .controls {
         right: 6%;
+    }
+    .icon-item span {
+        font-size: 2.2vw; /* El tamaño del texto también es responsivo */
     }
 }
