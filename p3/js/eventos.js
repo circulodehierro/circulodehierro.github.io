@@ -207,4 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     createCalendars();
+
+    function habilitar_div(permiso) {
+    }
 });

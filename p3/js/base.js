@@ -27,7 +27,18 @@ window.onload = function() {
     }
     var spanElement = document.querySelector('.navbar-right span');
     spanElement.textContent = '¡Bienvenido '+usuario.nombre+'!';
-    habilitar_div(permiso);
+
+    const url = window.location.href;
+    const lastSlashIndex = url.lastIndexOf('/'); // Encuentra el último "/"
+
+    // Extrae desde el último "/" hasta el final
+    const result = url.slice(lastSlashIndex + 1);
+
+    //console.log(result);
+    if (result != 'eventos.html') {
+        habilitar_div(permiso);
+    }
+    
 };
 
 // Función para alternar el modo oscuro
