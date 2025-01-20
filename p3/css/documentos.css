@@ -46,3 +46,6 @@ body {
     color: #333;
     white-space: nowrap; /* Evitar que el texto se divida en varias líneas */
 }
+body.dark-mode .icon-item span {
+    color: #fff;
+}
