@@ -162,13 +162,38 @@ body.dark-mode .icono {
     background-color: #ffffff;
 }
 
-.paragraph {
+/*.paragraph {
     max-width: 800px;
-}
+}*/
 
 p {
     margin: 10px 0;
 }
+
+.paragraph {
+    max-width: 1100px;
+    width: 90%;
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center;    /* Centrar verticalmente */
+    overflow: hidden;
+}
+
+.pdf-container {
+    width: 90%; /* Ancho adaptativo (90% del contenedor padre) */
+    max-width: 1200px; /* Ancho máximo */
+    height: auto; /* Ajusta el alto automáticamente */
+    aspect-ratio: 3 / 4; /* Relación de aspecto para mantener proporciones (900 x 1200) */
+    margin: auto; /* Centrado en el contenedor */
+    border: 1px solid #ccc; /* Opcional: borde para destacar el PDF */
+}
+
+.pdf-container embed {
+    width: 100%; /* Ajustar al ancho del contenedor */
+    height: 100%; /* Ajustar al alto del contenedor */
+    border: none;
+}
+
 
 /* Ajuste responsivo para pantallas medianas (tabletas) */
 @media (max-width: 768px) {
