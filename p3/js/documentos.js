@@ -7,52 +7,70 @@ window.onload = function () {
 };
 
 document.addEventListener('DOMContentLoaded', function () {
-    const botonEstatutosFull = document.querySelector('#estatutosFull');
-    if (botonEstatutosFull) {
-        botonEstatutosFull.addEventListener('click', cargarPDF);
-    } else {
-        console.error("No se encontró el botón 'Estatutos Full'");
-    }
+    let scale = 1.0;  // Variable para manejar el nivel de zoom
+    const url = '../documentos/prueba_circulo.pdf';
+    const paragraph = document.querySelector('.paragraph');  // El contenedor del PDF
+    const canvasContainer = document.createElement('div');
+    paragraph.appendChild(canvasContainer);
 
+    // Función para cargar y mostrar el PDF
     function cargarPDF() {
-        const url = '../documentos/prueba_circulo.pdf';
-        const paragraph = document.querySelector('.paragraph');
+        pdfjsLib.getDocument(url).promise.then(function (pdfDoc_) {
+            const pdfDoc = pdfDoc_;
+            const totalPages = pdfDoc.numPages;
 
-        if (paragraph) {
-            paragraph.innerHTML = '';
+            // Limpiar el contenido del contenedor antes de renderizar las páginas
+            canvasContainer.innerHTML = '';
 
-            pdfjsLib.getDocument(url).promise.then(function (pdfDoc_) {
-                const pdfDoc = pdfDoc_;
-                const totalPages = pdfDoc.numPages;
-                const canvasContainer = document.createElement('div');
-                paragraph.appendChild(canvasContainer);
+            for (let pageNum = 1; pageNum <= totalPages; pageNum++) {
+                const canvas = document.createElement('canvas');
+                canvasContainer.appendChild(canvas);
+                renderPage(pageNum, canvas);
+            }
 
-                for (let pageNum = 1; pageNum <= totalPages; pageNum++) {
-                    const canvas = document.createElement('canvas');
-                    canvasContainer.appendChild(canvas);
-                    renderPage(pageNum, canvas);
-                }
+            function renderPage(pageNum, canvas) {
+                pdfDoc.getPage(pageNum).then(function (page) {
+                    const context = canvas.getContext('2d');
+                    
+                    const viewport = page.getViewport({ scale: scale });  // Usar la escala actual
+                    canvas.height = viewport.height;
+                    canvas.width = viewport.width;
 
-                function renderPage(pageNum, canvas) {
-                    pdfDoc.getPage(pageNum).then(function (page) {
-                        const context = canvas.getContext('2d');
-                        const viewport = page.getViewport({ scale: 1.0 });
-                        canvas.height = viewport.height;
-                        canvas.width = viewport.width;
-
-                        page.render({
-                            canvasContext: context,
-                            viewport: viewport
-                        });
+                    page.render({
+                        canvasContext: context,
+                        viewport: viewport
                     });
-                }
-            }).catch(function (error) {
-                console.error('Error al cargar el PDF: ', error);
-            });
-        }
+                });
+            }
+        }).catch(function (error) {
+            console.error('Error al cargar el PDF: ', error);
+        });
     }
-});
 
+    /*
+    // Función de zoom
+    document.querySelector('#zoomIn').addEventListener('click', function () {
+        scale += 0.1;  // Incrementa el zoom
+        cargarPDF();   // Vuelve a cargar el PDF con el nuevo zoom
+    });
+
+    document.querySelector('#zoomOut').addEventListener('click', function () {
+        scale -= 0.1;  // Decrementa el zoom
+        cargarPDF();   // Vuelve a cargar el PDF con el nuevo zoom
+    });
+    */
+    // Función de descarga
+    document.querySelector('#downloadPDF').addEventListener('click', function () {
+        const link = document.createElement('a');
+        link.href = url;  // Ruta del PDF
+        link.download = 'documento.pdf';  // Nombre del archivo de descarga
+        link.click();  // Inicia la descarga
+    });
+
+    // Cargar el PDF al principio
+    cargarPDF();
+
+});
 
 
 function habilitar_div(permiso) {

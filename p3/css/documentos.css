@@ -75,7 +75,27 @@ body.dark-mode .icon-item span {
     height: auto; /* Mantiene la relación de aspecto de cada página */
     margin-bottom: 10px; /* Espacio entre páginas */
 }
+.controls {
+    position: fixed;
+    top: 185px;
+    /* right: 50%; */
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
 
+.controls button {
+    margin: 5px;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.controls button:hover {
+    background-color: #0056b3;
+}
 /* Ajuste responsivo para pantallas medianas (tabletas) */
 @media (max-width: 768px) {
     .paragraph {
