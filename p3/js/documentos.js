@@ -6,6 +6,55 @@ window.onload = function () {
     }
 };
 
+document.addEventListener('DOMContentLoaded', function () {
+    const botonEstatutosFull = document.querySelector('#estatutosFull');
+    if (botonEstatutosFull) {
+        botonEstatutosFull.addEventListener('click', cargarPDF);
+    } else {
+        console.error("No se encontró el botón 'Estatutos Full'");
+    }
+
+    function cargarPDF() {
+        const url = '../documentos/prueba_circulo.pdf';
+        const paragraph = document.querySelector('.paragraph');
+
+        if (paragraph) {
+            paragraph.innerHTML = '';
+
+            pdfjsLib.getDocument(url).promise.then(function (pdfDoc_) {
+                const pdfDoc = pdfDoc_;
+                const totalPages = pdfDoc.numPages;
+                const canvasContainer = document.createElement('div');
+                paragraph.appendChild(canvasContainer);
+
+                for (let pageNum = 1; pageNum <= totalPages; pageNum++) {
+                    const canvas = document.createElement('canvas');
+                    canvasContainer.appendChild(canvas);
+                    renderPage(pageNum, canvas);
+                }
+
+                function renderPage(pageNum, canvas) {
+                    pdfDoc.getPage(pageNum).then(function (page) {
+                        const context = canvas.getContext('2d');
+                        const viewport = page.getViewport({ scale: 1.0 });
+                        canvas.height = viewport.height;
+                        canvas.width = viewport.width;
+
+                        page.render({
+                            canvasContext: context,
+                            viewport: viewport
+                        });
+                    });
+                }
+            }).catch(function (error) {
+                console.error('Error al cargar el PDF: ', error);
+            });
+        }
+    }
+});
+
+
+
 function habilitar_div(permiso) {
     const divs = document.querySelectorAll('.icon-item');
     // Iterar sobre cada div
