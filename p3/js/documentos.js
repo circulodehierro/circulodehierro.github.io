@@ -9,6 +9,7 @@ window.onload = function () {
 document.addEventListener('DOMContentLoaded', function () {
     let scale = 1.0;  // Variable para manejar el nivel de zoom
     const url = '../documentos/prueba_circulo.pdf';
+    //const url = '../documentos/solicitud_colores.doc';
     const paragraph = document.querySelector('.paragraph');  // El contenedor del PDF
     const canvasContainer = document.createElement('div');
     paragraph.appendChild(canvasContainer);
@@ -47,18 +48,20 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    /*
-    // Función de zoom
-    document.querySelector('#zoomIn').addEventListener('click', function () {
-        scale += 0.1;  // Incrementa el zoom
-        cargarPDF();   // Vuelve a cargar el PDF con el nuevo zoom
-    });
+    // Agregar evento al botón con ID "estatutosFull"
+    const estatutosFullBtn = document.getElementById('estatutosFull');
+    if (estatutosFullBtn) {
+        estatutosFullBtn.addEventListener('click', function () {
+            cargarPDF(); // Solo carga el PDF al hacer clic en el botón
+            // Cambiar display de las clases "control" y "paragraph"
+            const controlElements = document.querySelectorAll('.controls');
+            controlElements.forEach(element => {
+                element.style.display = 'block';
+            });
+            paragraph.style.display = 'block'; // Asegurarse de mostrar el contenedor del PDF
+        });
+    }
 
-    document.querySelector('#zoomOut').addEventListener('click', function () {
-        scale -= 0.1;  // Decrementa el zoom
-        cargarPDF();   // Vuelve a cargar el PDF con el nuevo zoom
-    });
-    */
     // Función de descarga
     document.querySelector('#downloadPDF').addEventListener('click', function () {
         const link = document.createElement('a');
@@ -66,12 +69,9 @@ document.addEventListener('DOMContentLoaded', function () {
         link.download = 'documento.pdf';  // Nombre del archivo de descarga
         link.click();  // Inicia la descarga
     });
-
-    // Cargar el PDF al principio
-    cargarPDF();
-
 });
 
+// Resto del código sin cambios...
 
 function habilitar_div(permiso) {
     const divs = document.querySelectorAll('.icon-item');
