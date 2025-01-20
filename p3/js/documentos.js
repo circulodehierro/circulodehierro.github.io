@@ -14,10 +14,7 @@ function cerrarSesion() {
     window.location.href = '../index.html';
 } 
 
-window.onload = function () {
-    if (localStorage.getItem('dark-mode') === 'true') {
-        document.body.classList.add('dark-mode');
-    }
+document.addEventListener('DOMContentLoaded', function() {
     const usuario = JSON.parse(localStorage.getItem("usuario"));
     var spanElement = document.querySelector('.navbar-right span');
     spanElement.textContent = '¡Bienvenido ' + usuario.nombre + '!';
@@ -29,13 +26,13 @@ window.onload = function () {
     items.forEach(item => {
         item.addEventListener('click', function () {
             let key = this.textContent.trim();
-
+            let url = "";
             if (key === "Estatuto Full") {
-                paragraphDiv.innerHTML = `
-                    <div class="pdf-container">
-                        <embed src="../documentos/prueba_circulo.pdf" type="application/pdf" />
-                    </div>
-                `;
+                url = "../documentos/prueba_circulo.pdf";
+                // Limpiar el contenedor antes de cargar un nuevo PDF
+                paragraphDiv.innerHTML = ''; 
+                // Llamar a cargarPDF para renderizar el PDF en el contenedor
+                cargarPDF(url);
             } else {
                 paragraphDiv.innerHTML = parrafos[key] || '<p>Contenido no encontrado.</p>';
             }
@@ -44,7 +41,54 @@ window.onload = function () {
 
     const permiso = JSON.parse(localStorage.getItem("permiso"));
     habilitar_documentos(permiso);
-};
+});
+
+function cargarPDF(url) {
+    const container = document.getElementById('pdf-container');
+    if (!container) {
+        console.error('Contenedor no encontrado.');
+        return;
+    }
+
+    console.log('Cargando PDF desde:', url);
+
+    // Limpiar el contenedor antes de cargar el PDF
+    container.innerHTML = '';
+
+    pdfjsLib.getDocument(url).promise.then(function(pdf) {
+        const totalPages = pdf.numPages;
+        console.log('Número total de páginas:', totalPages);
+
+        // Renderizar la primera página primero
+        renderPage(pdf, 1);
+
+        // Función para renderizar una página específica
+        function renderPage(pdf, pageNum) {
+            pdf.getPage(pageNum).then(function(page) {
+                const canvas = document.createElement('canvas');
+                const context = canvas.getContext('2d');
+                const viewport = page.getViewport({ scale: 1 });
+
+                canvas.height = viewport.height;
+                canvas.width = viewport.width;
+
+                page.render({
+                    canvasContext: context,
+                    viewport: viewport
+                }).promise.then(function() {
+                    console.log('Página ' + pageNum + ' renderizada');
+                });
+
+                container.appendChild(canvas);
+            }).catch(function(error) {
+                console.error('Error al renderizar la página ' + pageNum, error);
+            });
+        }
+    }).catch(function(error) {
+        console.error('Error al cargar el PDF: ', error);
+    });
+}
+
 
 function habilitar_documentos(permiso) {
     const divs = document.querySelectorAll('.documento');
