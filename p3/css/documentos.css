@@ -46,6 +46,6 @@
 /* Ajuste responsivo para pantallas pequeñas (móviles) */
 @media (max-width: 480px) {
     .row.header {
-        width: 9%;
+        width: 95%;
     }
 }
