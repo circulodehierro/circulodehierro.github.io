@@ -59,7 +59,7 @@ body.dark-mode .icon-item span {
 
 /* Contenedor del PDF */
 .paragraph {
-    width: 98%; /* Ocupa el 90% del ancho de la ventana */
+    width: 100%; /* Ocupa el 90% del ancho de la ventana */
     max-width: 1200px; /* Ancho máximo para pantallas grandes */
     height: 90vh; /* Ocupa el 90% de la altura de la ventana */
     overflow: auto; /* Agrega barra de desplazamiento si el contenido excede el tamaño */
@@ -79,7 +79,7 @@ body.dark-mode .icon-item span {
 /* Ajuste responsivo para pantallas medianas (tabletas) */
 @media (max-width: 768px) {
     .paragraph {
-        width: 98%; /* Ocupa el 90% del ancho de la ventana */
+        width: 100%; /* Ocupa el 90% del ancho de la ventana */
         border: 1px solid blue;
     }
 }
@@ -87,7 +87,7 @@ body.dark-mode .icon-item span {
 /* Ajuste responsivo para pantallas pequeñas (móviles) */
 @media (max-width: 480px) {
     .paragraph {
-        width: 98%; /* Ocupa el 90% del ancho de la ventana */
+        width: 100%; /* Ocupa el 90% del ancho de la ventana */
         border: 1px solid green;
     }
 }
