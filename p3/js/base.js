@@ -25,8 +25,28 @@ window.onload = function() {
     if (usuario == null || permiso == null){
         cerrarSesion();
     }
-    var spanElement = document.querySelector('.navbar-right span');
-    spanElement.textContent = '¡Bienvenido '+usuario.nombre+'!';
+// Selecciona el contenedor principal
+var navbarRight = document.querySelector('.navbar-right');
+
+// Selecciona el elemento <span>
+var spanElement = document.querySelector('.navbar-right span');
+
+// Crea la etiqueta <img>
+var imgElement = document.createElement('img');
+
+// Configura la imagen
+imgElement.src = '../images/user1.jpeg'; // Asegúrate de que esta ruta sea correcta
+imgElement.style.width = '35px'; // Ancho de la imagen
+imgElement.style.height = '35px'; // Alto de la imagen
+imgElement.style.border = '2px solid red'; // Borde rojo
+imgElement.style.borderRadius = '50%'; // Imagen redondeada
+imgElement.style.marginRight = '10px'; // Espaciado a la derecha
+
+// Inserta la imagen antes del <span>
+navbarRight.insertBefore(imgElement, spanElement);
+
+// Modifica el contenido del <span>
+spanElement.textContent = '¡Bienvenido ' + usuario.nombre + '!';
 
     const url = window.location.href;
     const lastSlashIndex = url.lastIndexOf('/'); // Encuentra el último "/"
