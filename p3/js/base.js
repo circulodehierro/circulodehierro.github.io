@@ -35,7 +35,7 @@ window.onload = function() {
     const result = url.slice(lastSlashIndex + 1);
 
     //console.log(result);
-    if (result != 'eventos.html') {
+    if (result != 'eventos.html' && result != 'cuotas.html' && result != 'turnos.html' && result != 'fichas.html' && result != 'reuniones.html') {
         habilitar_div(permiso);
     }
     
