@@ -38,15 +38,54 @@ var imgElement = document.createElement('img');
 imgElement.src = '../images/user1.jpeg'; // Asegúrate de que esta ruta sea correcta
 imgElement.style.width = '35px'; // Ancho de la imagen
 imgElement.style.height = '35px'; // Alto de la imagen
-imgElement.style.border = '2px solid red'; // Borde rojo
+imgElement.style.border = '2px solid #b07b45'; // Borde rojo
 imgElement.style.borderRadius = '50%'; // Imagen redondeada
-imgElement.style.marginRight = '10px'; // Espaciado a la derecha
+imgElement.style.marginLeft = '10px'; // Espaciado a la izquierda
+imgElement.style.cursor = 'pointer'; // Cambio de cursor al pasar sobre la imagen
 
-// Inserta la imagen antes del <span>
-navbarRight.insertBefore(imgElement, spanElement);
+// Crea el menú de usuario (inicialmente oculto)
+var menuElement = document.createElement('div');
+menuElement.style.display = 'none'; // Ocultarlo inicialmente
+menuElement.style.position = 'absolute'; // Posición absoluta para que aparezca sobre otros elementos
+menuElement.style.backgroundColor = '#b07b45'; // Fondo naranjo
+menuElement.style.border = '1px solid #ccc'; // Borde gris
+menuElement.style.padding = '10px'; // Espaciado interno
+menuElement.style.boxShadow = '0 2px 5px rgba(0, 0, 0, 0.1)'; // Sombra para darle efecto de menú desplegable
+menuElement.style.borderRadius = '5px'; // Esquinas redondeadas
+menuElement.style.top = '60px';
+menuElement.style.right = '10px';
+menuElement.style.zIndex = '1000';
+
+// Añadir el botón de "Cerrar sesión" al menú
+var logoutButton = document.createElement('a');
+logoutButton.style.textDecoration = 'none'; // Quita el subrayado
+logoutButton.style.color = 'black';
+logoutButton.href = '#';
+logoutButton.textContent = 'Cerrar Sesión';
+logoutButton.setAttribute('onclick', 'cerrarSesion(); return false;');
+menuElement.appendChild(logoutButton);
+
+// Inserta la imagen después del mensaje de bienvenida
+navbarRight.insertBefore(imgElement, spanElement.nextSibling);
+
+// Inserta el menú al contenedor de la barra
+navbarRight.appendChild(menuElement);
 
 // Modifica el contenido del <span>
 spanElement.textContent = '¡Bienvenido ' + usuario.nombre + '!';
+
+// Añade el evento de clic a la imagen para mostrar/ocultar el menú con efecto slide
+imgElement.addEventListener('click', function () {
+    if (menuElement.style.display === 'none' || menuElement.style.display === '') {
+        menuElement.style.display = 'block'; // Cambia a bloque para que sea visible
+        menuElement.style.maxHeight = '200px'; // Establece la altura máxima cuando se despliega
+    } else {
+        menuElement.style.maxHeight = '0'; // Vuelve a 0 para ocultarlo
+        setTimeout(function () {
+            menuElement.style.display = 'none'; // Cambia a none después de la animación
+        }, 300); // Espera el tiempo de la animación (ajusta si es necesario)
+    }
+});
 
     const url = window.location.href;
     const lastSlashIndex = url.lastIndexOf('/'); // Encuentra el último "/"
