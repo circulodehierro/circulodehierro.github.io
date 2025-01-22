@@ -34,40 +34,7 @@ var spanElement = document.querySelector('.navbar-right span');
 // Crea la etiqueta <img>
 var imgElement = document.createElement('img');
 
-// Configura la imagen
-let foto_usuario = '';
-switch (usuario.nombre) {
-    case 'Robinson':
-        foto_usuario = '../images/lex_user.jpeg';
-        break;
-    case 'Pablo':
-        foto_usuario = '../images/pablo_user.jpeg';
-        break;
-    case 'Jota':
-        foto_usuario = '../images/jota_user.jpeg';
-        break;
-    case 'Ale':
-        foto_usuario = '../images/ale_user.jpeg';
-        break;
-    case 'Bracka':
-        foto_usuario = '../images/bracka_user.jpeg';
-        break;
-    case 'Chadu':
-        foto_usuario = '../images/chadu_user.jpeg';
-        break;
-    case 'Bracka':
-        foto_usuario = '../images/bracka_user.jpeg';
-        break;
-    case 'Raul':
-        foto_usuario = '../images/raul_user.jpeg';
-        break;
-    case 'Prospecto':
-        foto_usuario = '../images/user1.jpeg';
-        break;
-    default:
-  }
-  console.log(foto_usuario);
-imgElement.src = foto_usuario; // Asegúrate de que esta ruta sea correcta
+imgElement.src = usuario.foto_usuario; // Asegúrate de que esta ruta sea correcta
 imgElement.style.width = '40px'; // Ancho de la imagen
 imgElement.style.height = '40px'; // Alto de la imagen
 imgElement.style.border = '2px solid #b07b45'; // Borde rojo

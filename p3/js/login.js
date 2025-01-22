@@ -43,7 +43,8 @@ function login() {
             usuario = { 
                 nombre: "Pablo", 
                 email: "pablo@example.com", 
-                edad: 25
+                edad: 25,
+                foto_usuario: "../images/pablo_user.jpeg"
             };
             permiso = [1,2,5,6];
             localStorage.setItem("usuario", JSON.stringify(usuario));
@@ -54,7 +55,7 @@ function login() {
             spanPass.style.display = 'none';
             spanPass_bien.style.display = 'block';
             spanPass_bien.textContent = '¡Bienvenido Ale!';
-            usuario = { nombre: "Ale", email: "ale@example.com", edad: 28}; 
+            usuario = { nombre: "Ale", email: "ale@example.com", edad: 28, foto_usuario: "../images/ale_user.jpeg"}; 
             permiso = [1,3,5,7];
             localStorage.setItem("usuario", JSON.stringify(usuario));
             localStorage.setItem("permiso", JSON.stringify(permiso));
@@ -64,7 +65,7 @@ function login() {
             spanPass.style.display = 'none';
             spanPass_bien.style.display = 'block';
             spanPass_bien.textContent = '¡Bienvenido Jota!';
-            usuario = { nombre: "Jota", email: "jota@example.com", edad: 32};
+            usuario = { nombre: "Jota", email: "jota@example.com", edad: 32, foto_usuario: "../images/jota_user.jpeg"};
             permiso = [1,2,5,6];
             localStorage.setItem("usuario", JSON.stringify(usuario));
             localStorage.setItem("permiso", JSON.stringify(permiso));
@@ -77,7 +78,8 @@ function login() {
             usuario = { 
                 nombre: "Robinson", 
                 email: "yoyo@example.com", 
-                edad: 40
+                edad: 40,
+                foto_usuario: "../images/lex_user.jpeg"
             };
             permiso = [1,2,3,4,5,6,7,8];
             localStorage.setItem("usuario", JSON.stringify(usuario));
@@ -88,7 +90,7 @@ function login() {
             spanPass.style.display = 'none';
             spanPass_bien.style.display = 'block';
             spanPass_bien.textContent = '¡Bienvenido Bracka!';
-            usuario = { nombre: "Bracka", email: "bracka@example.com", edad: 35};
+            usuario = { nombre: "Bracka", email: "bracka@example.com", edad: 48, foto_usuario: "../images/bracka_user.jpeg"};
             permiso = [1,2,6];
             localStorage.setItem("usuario", JSON.stringify(usuario));
             localStorage.setItem("permiso", JSON.stringify(permiso));
@@ -98,7 +100,7 @@ function login() {
             spanPass.style.display = 'none';
             spanPass_bien.style.display = 'block';
             spanPass_bien.textContent = '¡Bienvenido Chadu!';
-            usuario = { nombre: "Chadu", email: "chadu@example.com", edad: 57};
+            usuario = { nombre: "Chadu", email: "chadu@example.com", edad: 57, foto_usuario: "../images/chadu_user.jpeg"};
             permiso = [1,2,6];
             localStorage.setItem("usuario", JSON.stringify(usuario));
             localStorage.setItem("permiso", JSON.stringify(permiso));
@@ -108,7 +110,7 @@ function login() {
             spanPass.style.display = 'none';
             spanPass_bien.style.display = 'block';
             spanPass_bien.textContent = '¡Bienvenido Raul!';
-            usuario = { nombre: "Chadu", email: "raul@example.com", edad: 57};
+            usuario = { nombre: "Chadu", email: "raul@example.com", edad: 55, foto_usuario: "../images/raul_user.jpeg"};
             permiso = [1,3];
             localStorage.setItem("usuario", JSON.stringify(usuario));
             localStorage.setItem("permiso", JSON.stringify(permiso));
@@ -118,7 +120,7 @@ function login() {
             spanPass.style.display = 'none';
             spanPass_bien.style.display = 'block';
             spanPass_bien.textContent = '¡Bienvenido Prospecto!';
-            usuario = { nombre: "Prospecto", email: "prospecto@example.com", edad: 22};
+            usuario = { nombre: "Prospecto", email: "prospecto@example.com", edad: 22, foto_usuario: "../images/user1.jpeg"};
             permiso = [1,4,5];
             localStorage.setItem("usuario", JSON.stringify(usuario));
             localStorage.setItem("permiso", JSON.stringify(permiso));

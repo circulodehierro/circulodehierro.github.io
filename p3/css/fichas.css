@@ -1,0 +1,35 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .row.header {
+    display: flex;
+    overflow-x: auto; /* Activa el scroll horizontal */
+    white-space: nowrap;
+    padding: 10px 0;
+    margin: 0;
+    gap: 10px;
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+    scroll-behavior: smooth; /* Opcional: para un desplazamiento suave */
+  }
+  
+  .row.header img {
+    flex-shrink: 0;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 30%;
+    border: 2px solid black;
+    margin: 15px;
+  }
+  
+  @media (max-width: 480px) {
+    .row.header img {
+      width: 40px; /* Reducir el tamaño de las imágenes en pantallas pequeñas */
+      height: 40px;
+      margin: 10px; /* Ajustar el margen para pantallas pequeñas */
+    }
+  }
+  
