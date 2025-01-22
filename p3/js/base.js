@@ -35,9 +35,41 @@ var spanElement = document.querySelector('.navbar-right span');
 var imgElement = document.createElement('img');
 
 // Configura la imagen
-imgElement.src = '../images/user1.jpeg'; // Asegúrate de que esta ruta sea correcta
-imgElement.style.width = '35px'; // Ancho de la imagen
-imgElement.style.height = '35px'; // Alto de la imagen
+let foto_usuario = '';
+switch (usuario.nombre) {
+    case 'Robinson':
+        foto_usuario = '../images/lex_user.jpeg';
+        break;
+    case 'Pablo':
+        foto_usuario = '../images/pablo_user.jpeg';
+        break;
+    case 'Jota':
+        foto_usuario = '../images/jota_user.jpeg';
+        break;
+    case 'Ale':
+        foto_usuario = '../images/ale_user.jpeg';
+        break;
+    case 'Bracka':
+        foto_usuario = '../images/bracka_user.jpeg';
+        break;
+    case 'Chadu':
+        foto_usuario = '../images/chadu_user.jpeg';
+        break;
+    case 'Bracka':
+        foto_usuario = '../images/bracka_user.jpeg';
+        break;
+    case 'Raul':
+        foto_usuario = '../images/raul_user.jpeg';
+        break;
+    case 'Prospecto':
+        foto_usuario = '../images/user1.jpeg';
+        break;
+    default:
+  }
+  console.log(foto_usuario);
+imgElement.src = foto_usuario; // Asegúrate de que esta ruta sea correcta
+imgElement.style.width = '40px'; // Ancho de la imagen
+imgElement.style.height = '40px'; // Alto de la imagen
 imgElement.style.border = '2px solid #b07b45'; // Borde rojo
 imgElement.style.borderRadius = '50%'; // Imagen redondeada
 imgElement.style.marginLeft = '10px'; // Espaciado a la izquierda
@@ -77,13 +109,9 @@ spanElement.textContent = '¡Bienvenido ' + usuario.nombre + '!';
 // Añade el evento de clic a la imagen para mostrar/ocultar el menú con efecto slide
 imgElement.addEventListener('click', function () {
     if (menuElement.style.display === 'none' || menuElement.style.display === '') {
-        menuElement.style.display = 'block'; // Cambia a bloque para que sea visible
-        menuElement.style.maxHeight = '200px'; // Establece la altura máxima cuando se despliega
+        menuElement.style.display = 'block'; // Mostrar el menú
     } else {
-        menuElement.style.maxHeight = '0'; // Vuelve a 0 para ocultarlo
-        setTimeout(function () {
-            menuElement.style.display = 'none'; // Cambia a none después de la animación
-        }, 300); // Espera el tiempo de la animación (ajusta si es necesario)
+        menuElement.style.display = 'none'; // Ocultar el menú
     }
 });
 

@@ -40,7 +40,6 @@ function login() {
             spanPass_bien.style.display = 'block';
             spanPass_bien.textContent = '¡Bienvenido Pablo!';
             // Guardar el usuario en localStorage
-            /**/
             usuario = { 
                 nombre: "Pablo", 
                 email: "pablo@example.com", 
@@ -49,7 +48,6 @@ function login() {
             permiso = [1,2,5,6];
             localStorage.setItem("usuario", JSON.stringify(usuario));
             localStorage.setItem("permiso", JSON.stringify(permiso));
-            
             window.location.href = 'pages/inicio.html';
         break;
         case 'al': // Ale
@@ -57,7 +55,7 @@ function login() {
             spanPass_bien.style.display = 'block';
             spanPass_bien.textContent = '¡Bienvenido Ale!';
             usuario = { nombre: "Ale", email: "ale@example.com", edad: 28}; 
-            permiso = [1,2,5,6];
+            permiso = [1,3,5,7];
             localStorage.setItem("usuario", JSON.stringify(usuario));
             localStorage.setItem("permiso", JSON.stringify(permiso));
             window.location.href = 'pages/inicio.html';
@@ -100,8 +98,18 @@ function login() {
             spanPass.style.display = 'none';
             spanPass_bien.style.display = 'block';
             spanPass_bien.textContent = '¡Bienvenido Chadu!';
-            usuario = { nombre: "Chadu", email: "chadu@example.com", edad: 27};
+            usuario = { nombre: "Chadu", email: "chadu@example.com", edad: 57};
             permiso = [1,2,6];
+            localStorage.setItem("usuario", JSON.stringify(usuario));
+            localStorage.setItem("permiso", JSON.stringify(permiso));
+            window.location.href = 'pages/inicio.html';
+        break;
+        case 'ra': // Raul
+            spanPass.style.display = 'none';
+            spanPass_bien.style.display = 'block';
+            spanPass_bien.textContent = '¡Bienvenido Raul!';
+            usuario = { nombre: "Chadu", email: "raul@example.com", edad: 57};
+            permiso = [1,3];
             localStorage.setItem("usuario", JSON.stringify(usuario));
             localStorage.setItem("permiso", JSON.stringify(permiso));
             window.location.href = 'pages/inicio.html';
@@ -111,7 +119,7 @@ function login() {
             spanPass_bien.style.display = 'block';
             spanPass_bien.textContent = '¡Bienvenido Prospecto!';
             usuario = { nombre: "Prospecto", email: "prospecto@example.com", edad: 22};
-            permiso = [1,3,4,5];
+            permiso = [1,4,5];
             localStorage.setItem("usuario", JSON.stringify(usuario));
             localStorage.setItem("permiso", JSON.stringify(permiso));
             window.location.href = 'pages/inicio.html';
