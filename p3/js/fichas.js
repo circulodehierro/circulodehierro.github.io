@@ -1,29 +1,37 @@
 import { fichas } from '../apis/fichas_api.js';
-//const usuario = JSON.parse(localStorage.getItem("usuario"));
-document.addEventListener('DOMContentLoaded', () => {
-    var header = document.querySelector('.header');
-    
-    // Agregar imágenes
-    for (let i = 0; i < fichas.length; i++) {
-        var foto_user = document.createElement('img');
-        foto_user.src = fichas[i].foto_usuario;
-        foto_user.style.width = '50px';
-        foto_user.style.height = '50px';
-        foto_user.style.borderRadius = '30%';
-        foto_user.style.border = '2px solid black';
-        foto_user.style.margin = '2px';
-        header.appendChild(foto_user);
+
+// Seleccionamos todos los elementos con la clase "icon-item"
+const iconItems = document.querySelectorAll('.icon-item');
+const fotoFicha = document.querySelector('.div2'); // Div donde se cargará la foto
+
+// Agregamos un evento de clic a cada elemento
+iconItems.forEach(item => {
+  item.addEventListener('click', () => {
+    // Obtenemos el atributo "id" del elemento clicado
+    const itemId = item.id;
+
+    // Buscamos la ficha correspondiente en el array
+    const fichaSeleccionada = fichas.find(ficha => ficha.idficha == itemId);
+
+    // Verificamos si encontramos una ficha
+    if (fichaSeleccionada) {
+      // Limpiamos el contenido actual de fotoFicha
+      fotoFicha.innerHTML = '';
+
+      // Creamos un elemento <img> para cargar la foto
+      const img = document.createElement('img');
+      img.src = fichaSeleccionada.foto_usuario; // Usamos la propiedad foto_usuario
+      img.alt = `Foto de ${fichaSeleccionada.nombre || 'usuario'}`; // Texto alternativo (opcional)
+      img.style.maxWidth = '100%'; // Aseguramos que la imagen sea responsiva
+
+      // Agregamos la imagen al div
+      fotoFicha.appendChild(img);
+    } else {
+      console.error(`No se encontró una ficha con el id ${itemId}`);
     }
-
-    // Asegurarnos de que el scroll comience desde el inicio
-    setTimeout(() => {
-        header.scrollLeft = 0;  // Desplazar al principio
-    }, 500);  // Usamos un pequeño retraso para permitir que el DOM se renderice correctamente
-
-    // Ajustar el scroll al principio cuando cambie el tamaño de la ventana
-    window.addEventListener('resize', () => {
-        setTimeout(() => {
-            header.scrollLeft = 0;  // Volver al principio
-        }, 500);  // Espera un poco para asegurarse de que el contenido se haya redibujado
-    });
+  });
 });
+
+
+
+

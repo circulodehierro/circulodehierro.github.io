@@ -1,35 +1,156 @@
-body, html {
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  .row.header {
+}
+.row.header {
     display: flex;
-    overflow-x: auto; /* Activa el scroll horizontal */
-    white-space: nowrap;
-    padding: 2px 0;
-    margin: 0;
-    gap: 0px;
-    width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
-    scroll-behavior: smooth; /* Opcional: para un desplazamiento suave */
-  }
-  
-  .row.header img {
-    flex-shrink: 0;
-    display: block;
-    width: 50px;
-    height: 50px;
+    justify-content: start;
+    align-items: center;
+    overflow-x: auto; /* Habilitar scroll horizontal */
+    /* padding: 5px; */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    min-width: 300px; /* Asegura que el contenedor tenga un tamaño mínimo */
+    /* border: 1px solid blue; */
+}
+
+.icon-container {
+    display: flex;
+    flex-wrap: nowrap; /* Para que los iconos no se dividan en varias filas */
+    gap: 20px; /* Espacio entre los iconos */
+    min-width: 100%; /* Para asegurarse de que ocupe el 100% del ancho disponible */
+    /* border: 1px solid red; */
+}
+
+.icon-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 0 10px;
+}
+
+.icon-item img {
+    width: 60px;
+    height: 60px;
     border-radius: 30%;
     border: 2px solid black;
+    margin: 2px;
+}
+
+.icon-item span {
+    font-size: 12px;
+    color: #333;
+    white-space: nowrap; /* Evitar que el texto se divida en varias líneas */
+}
+body.dark-mode .icon-item span {
+    color: #fff;
+}
+
+
+
+
+.row.content {
+    border: 1px solid green;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten si no caben en la misma fila */
+    gap: 10px; /* Espaciado entre los elementos */
+    /* padding: 0; */
   }
   
-  @media (max-width: 480px) {
-    .row.header img {
-      width: 40px !important; /* Reducir el tamaño de las imágenes en pantallas pequeñas */
-      height: 40px !important;
-      margin: 2px; /* Ajustar el margen para pantallas pequeñas */
-      gap: 5px;
+  .box {
+    border: 1px solid;
+    flex: 1 1 calc(50% - 10px); /* Ocupa el 50% del ancho del contenedor menos el espacio del gap */
+    /* padding: 0; */
+    box-sizing: border-box;
+  }
+  
+  /* Colores para diferenciar */
+  .box.red {
+    border-color: red;
+  }
+  
+  .box.blue {
+    border-color: blue;
+  }
+  
+  /* Opcional: Ajustar el diseño en pantallas pequeñas */
+  @media (max-width: 600px) {
+    .box {
+      flex: 1 1 100%; /* En pantallas pequeñas, los elementos ocupan todo el ancho */
+    }
+  }
+
+  
+
+  .grid-layout {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Cuatro columnas iguales */
+    grid-template-rows: repeat(4, auto); /* Número dinámico de filas */
+    gap: 5px; /* Espacio entre elementos */
+    padding: 10px;
+    background-color: lightblue;
+    border: 1px solid cyan;
+  }
+  
+  .div2 { grid-column: 1 / span 2; grid-row: 1 / span 4; background-color: olive; }
+  .div3 { grid-column: 3; grid-row: 1 / span 1; background-color: green;}
+  .div4 { grid-column: 4; grid-row: 1 / span 1; background-color: darkgreen; }
+  .div5 { grid-column: 3; grid-row: 2 / span 1; background-color: teal; }
+  .div6 { grid-column: 4; grid-row: 2 / span 1; background-color: lightseagreen; }
+  .div7 { grid-column: 3; grid-row: 3 / span 1; background-color: darkcyan; }
+  .div8 { grid-column: 4; grid-row: 3 / span 1; background-color: steelblue; }
+  .div9 { grid-column: 3; grid-row: 4 / span 1; background-color: navy; }
+  .div10 { grid-column: 4; grid-row: 4 / span 1; background-color: blue; }
+  .div11 { grid-column: 1 / span 4; grid-row: 5; background-color: purple;}
+  
+  .div2 img {
+    width: 410px; /* Ancho fijo */
+    height: 510px; /* Alto fijo */
+    object-fit: cover; /* Ajusta la imagen para que se recorte proporcionalmente si es necesario */
+  }
+  
+  @media (max-width: 600px) {
+    .grid-layout {
+      grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
+      grid-template-rows: auto; /* Filas dinámicas */
+      gap: 5px; /* Espacio uniforme entre los elementos */
+    }
+  
+    .div2 {
+      grid-column: 1 / span 2; /* Ocupa ambas columnas */
+      grid-row: 1; /* Primera fila */
+    }
+  
+    /* Divs 3 a 10 con el mismo ancho */
+    .div3, .div4, .div5, .div6, .div7, .div8, .div9, .div10 {
+      grid-column: span 1; /* Cada div ocupa una columna */
+      grid-row: auto; /* Se organiza automáticamente */
+    }
+  
+    /* Distribución en dos columnas */
+    .div3, .div5, .div7, .div9 {
+      grid-column: 1; /* Primera columna */
+    }
+  
+    .div4, .div6, .div8, .div10 {
+      grid-column: 2; /* Segunda columna */
+    }
+  
+    .div11 {
+      grid-column: 1 / span 2; /* Ocupa ambas columnas al final */
+      grid-row: auto; /* Se coloca al final */
+    }
+  
+    .div2 img {
+      width: 100%; /* Imagen ocupa todo el ancho */
+      height: 400px; /* Altura proporcional */
     }
   }
   
+  
+  
+

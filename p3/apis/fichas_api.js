@@ -1,5 +1,6 @@
 export const fichas = [
     { 
+        idficha: 1,
         nombre: "Pablo",
         apellido: "Fuentes", 
         email: "pablo@example.com", 
@@ -8,6 +9,7 @@ export const fichas = [
         foto_usuario: "../images/pablo_user.jpeg"
     },
     { 
+        idficha: 2,
         nombre: "Ale",
         apellido: "Vejar", 
         email: "ale@example.com", 
@@ -16,6 +18,7 @@ export const fichas = [
         foto_usuario: "../images/ale_user.jpeg"
     },
     { 
+        idficha: 3,
         nombre: "Jota",
         apellido: "Reyes", 
         email: "jota@example.com", 
@@ -24,6 +27,7 @@ export const fichas = [
         foto_usuario: "../images/jota_user.jpeg"
     },
     { 
+        idficha: 4,
         nombre: "Robinson",
         apellido: "Gonzalez", 
         email: "lex@example.com", 
@@ -32,6 +36,7 @@ export const fichas = [
         foto_usuario: "../images/lex_user.jpeg"
     },
     { 
+        idficha: 5,
         nombre: "Bracka",
         apellido: "-", 
         email: "bracka@example.com", 
@@ -40,6 +45,7 @@ export const fichas = [
         foto_usuario: "../images/bracka_user.jpeg"
     },
     { 
+        idficha: 6,
         nombre: "Chadu",
         apellido: "-", 
         email: "chadu@example.com", 
@@ -48,6 +54,7 @@ export const fichas = [
         foto_usuario: "../images/chadu_user.jpeg"
     },
     { 
+        idficha: 7,
         nombre: "Raul",
         apellido: "-", 
         email: "raul@example.com", 
@@ -56,6 +63,7 @@ export const fichas = [
         foto_usuario: "../images/raul_user.jpeg"
     },
     { 
+        idficha: 8,
         nombre: "Arturo",
         apellido: "-", 
         email: "arturo@example.com", 
@@ -64,6 +72,7 @@ export const fichas = [
         foto_usuario: "../images/arturo_user.jpeg"
     },
     { 
+        idficha: 9,
         nombre: "Troncoso",
         apellido: "-", 
         email: "troncoso@example.com", 
@@ -72,6 +81,7 @@ export const fichas = [
         foto_usuario: "../images/troncoso_user.jpeg"
     },
     { 
+        idficha: 10,
         nombre: "John",
         apellido: "-", 
         email: "arturo@example.com", 
