@@ -78,78 +78,59 @@ body.dark-mode .icon-item span {
   }
   
   /* Opcional: Ajustar el diseño en pantallas pequeñas */
-  @media (max-width: 600px) {
-    .box {
-      flex: 1 1 100%; /* En pantallas pequeñas, los elementos ocupan todo el ancho */
-    }
-  }
+  /* @media (max-width: 600px) { */
+    /* .box { */
+      /* flex: 1 1 100%; */
+    /* } */
+  /* } */
 
   
-
   .grid-layout {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Cuatro columnas iguales */
-    grid-template-rows: repeat(4, auto); /* Número dinámico de filas */
-    gap: 5px; /* Espacio entre elementos */
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    gap: 2px;
     padding: 10px;
-    background-color: lightblue;
-    border: 1px solid cyan;
+    border: 2px solid cyan;
+    max-width: 100vw;
+    box-sizing: border-box;
   }
-  
-  .div2 { grid-column: 1 / span 2; grid-row: 1 / span 4; background-color: olive; }
-  .div3 { grid-column: 3; grid-row: 1 / span 1; background-color: green;}
-  .div4 { grid-column: 4; grid-row: 1 / span 1; background-color: darkgreen; }
-  .div5 { grid-column: 3; grid-row: 2 / span 1; background-color: teal; }
-  .div6 { grid-column: 4; grid-row: 2 / span 1; background-color: lightseagreen; }
-  .div7 { grid-column: 3; grid-row: 3 / span 1; background-color: darkcyan; }
-  .div8 { grid-column: 4; grid-row: 3 / span 1; background-color: steelblue; }
-  .div9 { grid-column: 3; grid-row: 4 / span 1; background-color: navy; }
-  .div10 { grid-column: 4; grid-row: 4 / span 1; background-color: blue; }
-  .div11 { grid-column: 1 / span 4; grid-row: 5; background-color: purple;}
-  
-  .div2 img {
-    width: 410px; /* Ancho fijo */
-    height: 510px; /* Alto fijo */
-    object-fit: cover; /* Ajusta la imagen para que se recorte proporcionalmente si es necesario */
+
+  .div1 {
+    grid-column: span 5;
+    grid-row: span 5;
+    background-color: #815B3A; /* Marrón */
   }
-  
-  @media (max-width: 600px) {
-    .grid-layout {
-      grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
-      grid-template-rows: auto; /* Filas dinámicas */
-      gap: 5px; /* Espacio uniforme entre los elementos */
+
+  .div2 {
+    grid-column: span 5;
+    grid-row: span 5;
+    background-color: #556B2F; /* Verde oscuro */
+  }
+
+  .div3 {
+    grid-column: span 10;
+    grid-row: span 5;
+    background-color: red; /* Verde */
+  }
+
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
     }
-  
-    .div2 {
-      grid-column: 1 / span 2; /* Ocupa ambas columnas */
-      grid-row: 1; /* Primera fila */
-    }
-  
-    /* Divs 3 a 10 con el mismo ancho */
-    .div3, .div4, .div5, .div6, .div7, .div8, .div9, .div10 {
-      grid-column: span 1; /* Cada div ocupa una columna */
-      grid-row: auto; /* Se organiza automáticamente */
-    }
-  
-    /* Distribución en dos columnas */
-    .div3, .div5, .div7, .div9 {
-      grid-column: 1; /* Primera columna */
-    }
-  
-    .div4, .div6, .div8, .div10 {
-      grid-column: 2; /* Segunda columna */
-    }
-  
-    .div11 {
-      grid-column: 1 / span 2; /* Ocupa ambas columnas al final */
-      grid-row: auto; /* Se coloca al final */
-    }
-  
-    .div2 img {
-      width: 100%; /* Imagen ocupa todo el ancho */
-      height: 400px; /* Altura proporcional */
+
+    .div1,
+    .div2,
+    .div3,
+    .div4 {
+      grid-column: span 1;
     }
   }
+
+
+
+
   
   
   
