@@ -1,0 +1,32 @@
+.custom-list {
+    list-style: none;
+    padding-left: 0;
+    font-family: Arial, sans-serif;
+}
+
+.custom-list ul {
+    list-style: none;
+    margin-left: 20px;
+    padding-left: 15px;
+    border-left: 2px solid #ddd;
+}
+
+.custom-list li {
+    margin: 6px 0;
+    text-align: left;
+}
+
+/* SOLO cambia el texto del nivel actual */
+.custom-list li span {
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.custom-list li span:hover {
+    color: #007bff;
+}
+
+/* Negrita solo nivel principal */
+.custom-list > li > span {
+    font-weight: bold;
+}
