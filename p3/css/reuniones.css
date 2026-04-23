@@ -44,7 +44,7 @@
 .reunion {
     width: 100%; /* Ocupa el 90% del ancho de la ventana */
     max-width: 1200px; /* Ancho máximo para pantallas grandes */
-    height: 70vh; /* Ocupa el 90% de la altura de la ventana */
+    height: 60vh; /* Ocupa el 90% de la altura de la ventana */
     overflow: auto; /* Agrega barra de desplazamiento si el contenido excede el tamaño */
     padding: 10px; /* Agrega un pequeño padding para separar el contenido */
     background-color: #f5f5f5; /* Opcional, color de fondo */
