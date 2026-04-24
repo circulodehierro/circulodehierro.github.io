@@ -64,3 +64,12 @@
     height: auto; /* Mantiene la relación de aspecto de cada página */
     margin-bottom: 10px; /* Espacio entre páginas */
 }
+
+/* Ajuste responsivo para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+    .reunion {
+        width: 100%; /* Ocupa el 90% del ancho de la ventana */
+        height: 50vh; /* Ocupa el 90% de la altura de la ventana */
+        border: 1px solid green;
+    }
+}
