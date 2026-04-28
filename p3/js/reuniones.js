@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let scale = 3.0;  // Variable para manejar el nivel de zoom
     const paragraph = document.querySelector('.reunion');  // El contenedor del PDF
     const canvasContainer = document.createElement('div');
-    paragraph.appendChild(canvasContainer);
+    /*paragraph.appendChild(canvasContainer);*/
     let new_url = '';
     let nombre_documento = '';
 
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function() {
             console.error('Error al cargar el PDF: ', error);
         });
     }
-
+    /*
     document.querySelectorAll('.custom-list span').forEach(span => {
         span.addEventListener('click', function(e) {
             const url = this.dataset.pdf;
@@ -71,5 +71,5 @@ document.addEventListener("DOMContentLoaded", function() {
             paragraph.style.display = 'block';
         });
     });
-
+    */
 });
