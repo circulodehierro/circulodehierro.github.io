@@ -1,3 +1,4 @@
+/*
 .custom-list {
     list-style: none;
     padding-left: 0;
@@ -8,10 +9,36 @@
     list-style: none;
     margin-left: 20px;
     padding-left: 15px;
-    border-left: 2px solid #ddd;
+    border-left: 2px solid #a34e4e;
     display: none;
 }
+.custom-list ul ul ul li::marker {
+    content: "😘 ";
+}
+.custom-list ul ul ul {
+    list-style: none;
+}
 
+.custom-list ul ul ul ul {
+    list-style-type: circle;
+    list-style-position: outside;
+    padding-left: 20px;
+}
+*/
+.none {
+    list-style: none;
+    margin-left: 20px;
+    padding-left: 15px;
+    border-left: 2px solid #ba7941;
+    display: none;
+}
+.puntos {
+    list-style-type: decimal;
+}
+.circle {
+    list-style: circle;
+    display: none;
+}
 .custom-list li {
     margin: 6px 0;
     text-align: left;
@@ -50,8 +77,6 @@
     background-color: #f5f5f5; /* Opcional, color de fondo */
     box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
     border: 1px solid red;
-
-
     display: block;
     clear: both; /* 👈 clave si hay floats */
     margin-top: 15px;

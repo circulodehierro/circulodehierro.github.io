@@ -14,7 +14,7 @@ window.onload = function() {
     if (localStorage.getItem('dark-mode') === 'true') {
         document.body.classList.add('dark-mode');
     }
-    //console.log(permiso);
+    //console.log(documento);
 };
 
 let usuario = {};
@@ -27,7 +27,8 @@ let permiso = [];
 //6 Turnos
 //7 Cuotas
 //8 Otros
-    
+
+let documento = [];
   // Función de login
 function login() {
     const password = document.getElementById('pass').value;
@@ -46,9 +47,11 @@ function login() {
                 edad: 25,
                 foto_usuario: "../images/pablo_user.jpeg"
             };
-            permiso = [1,2,5,6];
+            permiso = [1,3,4];
+            documento = [1,4,6];
             localStorage.setItem("usuario", JSON.stringify(usuario));
             localStorage.setItem("permiso", JSON.stringify(permiso));
+            localStorage.setItem("documento", JSON.stringify(documento));
             window.location.href = 'pages/inicio.html';
         break;
         case 'al': // Ale
@@ -56,9 +59,11 @@ function login() {
             spanPass_bien.style.display = 'block';
             spanPass_bien.textContent = '¡Bienvenido Ale!';
             usuario = { nombre: "Ale", email: "ale@example.com", edad: 28, foto_usuario: "../images/ale_user.jpeg"}; 
-            permiso = [1,3,5,7];
+            permiso = [1,3,4];
+            documento = [1,4,6];
             localStorage.setItem("usuario", JSON.stringify(usuario));
             localStorage.setItem("permiso", JSON.stringify(permiso));
+            localStorage.setItem("documento", JSON.stringify(documento));
             window.location.href = 'pages/inicio.html';
         break;
         case 'jo': // Jota
@@ -66,9 +71,11 @@ function login() {
             spanPass_bien.style.display = 'block';
             spanPass_bien.textContent = '¡Bienvenido Jota!';
             usuario = { nombre: "Jota", email: "jota@example.com", edad: 32, foto_usuario: "../images/jota_user.jpeg"};
-            permiso = [1,2,5,6];
+            permiso = [1,3,4];
+            documento = [1,4,6];
             localStorage.setItem("usuario", JSON.stringify(usuario));
             localStorage.setItem("permiso", JSON.stringify(permiso));
+            localStorage.setItem("documento", JSON.stringify(documento));
             window.location.href = 'pages/inicio.html';
         break;
         case 'ro': // Robinson
@@ -82,8 +89,10 @@ function login() {
                 foto_usuario: "../images/lex_user.jpeg"
             };
             permiso = [1,2,3,4,5,6,7,8];
+            documento = [1,2,3,4,5,6];
             localStorage.setItem("usuario", JSON.stringify(usuario));
             localStorage.setItem("permiso", JSON.stringify(permiso));
+            localStorage.setItem("documento", JSON.stringify(documento));
             window.location.href = 'pages/inicio.html';
         break;
         case 'br': // Bracka
@@ -91,29 +100,59 @@ function login() {
             spanPass_bien.style.display = 'block';
             spanPass_bien.textContent = '¡Bienvenido Bracka!';
             usuario = { nombre: "Bracka", email: "bracka@example.com", edad: 48, foto_usuario: "../images/bracka_user.jpeg"};
-            permiso = [1,2,6];
+            permiso = [1,3,4];
+            documento = [1,4,6];
             localStorage.setItem("usuario", JSON.stringify(usuario));
             localStorage.setItem("permiso", JSON.stringify(permiso));
+            localStorage.setItem("documento", JSON.stringify(documento));
             window.location.href = 'pages/inicio.html';
         break;
-        case 'ch': // Chadu
+        case 'jn': // John
             spanPass.style.display = 'none';
             spanPass_bien.style.display = 'block';
-            spanPass_bien.textContent = '¡Bienvenido Chadu!';
-            usuario = { nombre: "Chadu", email: "chadu@example.com", edad: 57, foto_usuario: "../images/chadu_user.jpeg"};
-            permiso = [1,2,6];
+            spanPass_bien.textContent = '¡Bienvenido Vintage!';
+            usuario = { nombre: "John", email: "john@example.com", edad: 43, foto_usuario: "../images/john_user.jpeg"};
+            permiso = [1,3,4];
+            documento = [1,4];
             localStorage.setItem("usuario", JSON.stringify(usuario));
             localStorage.setItem("permiso", JSON.stringify(permiso));
+            localStorage.setItem("documento", JSON.stringify(documento));
             window.location.href = 'pages/inicio.html';
         break;
         case 'ra': // Raul
             spanPass.style.display = 'none';
             spanPass_bien.style.display = 'block';
             spanPass_bien.textContent = '¡Bienvenido Raul!';
-            usuario = { nombre: "Chadu", email: "raul@example.com", edad: 55, foto_usuario: "../images/raul_user.jpeg"};
-            permiso = [1,3];
+            usuario = { nombre: "Raul", email: "raul@example.com", edad: 55, foto_usuario: "../images/raul_user.jpeg"};
+            permiso = [1,3,4];
+            documento = [1,4,5,6];
             localStorage.setItem("usuario", JSON.stringify(usuario));
             localStorage.setItem("permiso", JSON.stringify(permiso));
+            localStorage.setItem("documento", JSON.stringify(documento));
+            window.location.href = 'pages/inicio.html';
+        break;
+        case 'ar': // Arturo
+            spanPass.style.display = 'none';
+            spanPass_bien.style.display = 'block';
+            spanPass_bien.textContent = '¡Bienvenido Custom!';
+            usuario = { nombre: "Arturo", email: "arturo@example.com", edad: 35, foto_usuario: "../images/user1.jpeg"};
+            permiso = [1,3,4];
+            documento = [1,4];
+            localStorage.setItem("usuario", JSON.stringify(usuario));
+            localStorage.setItem("permiso", JSON.stringify(permiso));
+            localStorage.setItem("documento", JSON.stringify(documento));
+            window.location.href = 'pages/inicio.html';
+        break;
+        case 'sa': // Satiro
+            spanPass.style.display = 'none';
+            spanPass_bien.style.display = 'block';
+            spanPass_bien.textContent = '¡Bienvenido Satiro!';
+            usuario = { nombre: "Marcelo", email: "satiro@example.com", edad: 34, foto_usuario: "../images/user1.jpeg"};
+            permiso = [1,3,4];
+            documento = [1,4];
+            localStorage.setItem("usuario", JSON.stringify(usuario));
+            localStorage.setItem("permiso", JSON.stringify(permiso));
+            localStorage.setItem("documento", JSON.stringify(documento));
             window.location.href = 'pages/inicio.html';
         break;
         case 'pr': // Prospecto
@@ -121,9 +160,11 @@ function login() {
             spanPass_bien.style.display = 'block';
             spanPass_bien.textContent = '¡Bienvenido Prospecto!';
             usuario = { nombre: "Prospecto", email: "prospecto@example.com", edad: 22, foto_usuario: "../images/user1.jpeg"};
-            permiso = [1,4,5];
+            permiso = [1,3,4];
+            documento = [2,3];
             localStorage.setItem("usuario", JSON.stringify(usuario));
             localStorage.setItem("permiso", JSON.stringify(permiso));
+            localStorage.setItem("documento", JSON.stringify(documento));
             window.location.href = 'pages/inicio.html';
         break;
         default:

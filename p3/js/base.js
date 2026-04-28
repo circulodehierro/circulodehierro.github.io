@@ -22,7 +22,8 @@ window.onload = function() {
     }
     const usuario = JSON.parse(localStorage.getItem("usuario"));
     const permiso = JSON.parse(localStorage.getItem("permiso"));
-    if (usuario == null || permiso == null){
+    const documento = JSON.parse(localStorage.getItem("documento"));
+    if (usuario == null || permiso == null || documento == null){
         cerrarSesion();
     }
 // Selecciona el contenedor principal
@@ -88,9 +89,13 @@ imgElement.addEventListener('click', function () {
     // Extrae desde el último "/" hasta el final
     const result = url.slice(lastSlashIndex + 1);
 
-    //console.log(result);
-    if (result != 'eventos.html' && result != 'cuotas.html' && result != 'turnos.html' && result != 'fichas.html' && result != 'reuniones.html') {
+    console.log(result);
+    if (result != 'eventos.html' && result != 'cuotas.html' && result != 'turnos.html' && result != 'fichas.html' && result != 'reuniones.html' && result != 'documentos.html') {
         habilitar_div(permiso);
+    }
+
+    if (result === 'documentos.html') {
+        habilitar_documento(documento);
     }
     
 };

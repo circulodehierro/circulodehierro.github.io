@@ -13,30 +13,24 @@ document.addEventListener('DOMContentLoaded', function () {
     paragraph.appendChild(canvasContainer);
     let new_url = '';
     let nombre_documento = '';
-
     // Función para cargar y mostrar el PDF
     function cargarPDF(url) {
         pdfjsLib.getDocument(url).promise.then(function (pdfDoc_) {
             const pdfDoc = pdfDoc_;
             const totalPages = pdfDoc.numPages;
-
             // Limpiar el contenido del contenedor antes de renderizar las páginas
             canvasContainer.innerHTML = '';
-
             for (let pageNum = 1; pageNum <= totalPages; pageNum++) {
                 const canvas = document.createElement('canvas');
                 canvasContainer.appendChild(canvas);
                 renderPage(pageNum, canvas);
             }
-
             function renderPage(pageNum, canvas) {
                 pdfDoc.getPage(pageNum).then(function (page) {
                     const context = canvas.getContext('2d');
-                    
                     const viewport = page.getViewport({ scale: scale });  // Usar la escala actual
                     canvas.height = viewport.height;
                     canvas.width = viewport.width;
-
                     page.render({
                         canvasContext: context,
                         viewport: viewport
@@ -104,14 +98,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-function habilitar_div(permiso) {
+function habilitar_documento(documento) {
+    console.log(documento);
     const divs = document.querySelectorAll('.icon-item');
     // Iterar sobre cada div
     divs.forEach(div => {
         // Obtener el valor del atributo data-value
         const value = parseInt(div.getAttribute('data-value'));
-        // Si el valor no está en el array permiso
-        if (!permiso.includes(value)) {
+        // Si el valor no está en el array documento
+        if (!documento.includes(value)) {
             // Establecer display: none para ocultar el div
             div.style.display = 'none';
             // Evitar el clic en el div oculto (opcional)
