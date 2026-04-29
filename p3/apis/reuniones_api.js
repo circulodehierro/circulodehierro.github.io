@@ -40,7 +40,7 @@ export const reuniones = [
             'Deudas al club, propuestas para saldar.',
             'Paso final de remodelacion libro de actas.',
             'Ver Comitiva de asistencia a moto feria que sera lidera por nuestro VP Bracka.',
-            'Finalizacione de programacion ruta talagante.'
+            'Finalizacion de programacion ruta talagante.'
         ], 
         respuestas: [
             'respuesta 1',
