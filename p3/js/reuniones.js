@@ -1,3 +1,4 @@
+import { reuniones } from '../apis/reuniones_api.js';
 document.addEventListener("DOMContentLoaded", function() {
     let scale = 3.0;  // Variable para manejar el nivel de zoom
     const paragraph = document.querySelector('.reunion');  // El contenedor del PDF
@@ -78,19 +79,34 @@ document.addEventListener("DOMContentLoaded", function() {
     // Abrir modal desde cualquier elemento con clase abrir_modal
     document.querySelectorAll(".abrir_modal").forEach(item => {
         item.addEventListener("click", function () {
-
-            const pdf = this.getAttribute("data-pdf");
-
-            // Aquí puedes cambiar contenido dinámico si quieres
-            document.querySelector("#miModal h2").textContent = "Reunión";
-            document.querySelector("#miModal h4").textContent = this.textContent;
-
-            document.querySelector("#miModal p").innerHTML = `
-                Documento asociado:<br>
-                <a href="${pdf}" target="_blank">Ver PDF</a>
-            `;
-
-            modal.style.display = "block";
+        const fecha = this.getAttribute("data-fecha"); // "25-4-2026"
+        const [dia, mes, ano] = fecha.split("-").map(Number);
+        // 🔍 Buscar coincidencia
+        const reunion = reuniones.find(r => 
+            r.dia === dia && 
+            r.mes === mes && 
+            r.ano === ano
+        );
+        const modal = document.getElementById("miModal");
+        if (reunion) {
+            // 🧠 Título
+            document.querySelector("#miModal h2").textContent = reunion.titulo;
+            document.querySelector("#miModal h4").textContent = "";
+            // 📋 Construir contenido dinámico
+            let contenido = "<strong>Puntos:</strong><ul class='puntos'>";
+            reunion.puntos.forEach((punto, i) => {
+                contenido += `<li>${punto}`;
+                if (reunion.respuestas[i]) {
+                    contenido += `<ul><li>${reunion.respuestas[i]}</li></ul>`;
+                }
+                contenido += `</li>`;
+            });
+            contenido += "</ul>";
+            document.querySelector("#miModal p").innerHTML = contenido;
+        } else {
+            document.querySelector("#miModal p").innerHTML = "No se encontró información.";
+        }
+        modal.style.display = "block";
         });
     });
 
