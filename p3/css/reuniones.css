@@ -105,13 +105,13 @@
 /* Caja del modal */
 .modal-contenido {
     background-color: #fff;
+    color: #000;
     margin: 10% auto;
     padding: 20px;
     width: 50%;
     border-radius: 8px;
     position: relative;
 }
-
 /* Botón cerrar (X) */
 .cerrar {
     position: absolute;
