@@ -61,9 +61,9 @@ document.addEventListener("DOMContentLoaded", function() {
     /*
     document.querySelectorAll('.custom-list span').forEach(span => {
         span.addEventListener('click', function(e) {
-            const url = this.dataset.pdf;
-                if (!url) return;
-                cargarPDF(url);
+            const url = this.dataset.pdf;            
+            if (!url) return;
+            cargarPDF(url);
             const controlElements = document.querySelectorAll('.controls');
             controlElements.forEach(element => {
                 element.style.display = 'block';
@@ -72,4 +72,39 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
     */
+
+    const modal = document.getElementById("miModal");
+
+    // Abrir modal desde cualquier elemento con clase abrir_modal
+    document.querySelectorAll(".abrir_modal").forEach(item => {
+        item.addEventListener("click", function () {
+
+            const pdf = this.getAttribute("data-pdf");
+
+            // Aquí puedes cambiar contenido dinámico si quieres
+            document.querySelector("#miModal h2").textContent = "Reunión";
+            document.querySelector("#miModal h4").textContent = this.textContent;
+
+            document.querySelector("#miModal p").innerHTML = `
+                Documento asociado:<br>
+                <a href="${pdf}" target="_blank">Ver PDF</a>
+            `;
+
+            modal.style.display = "block";
+        });
+    });
+
+    // Cerrar modal con la X
+    document.querySelector(".cerrar").addEventListener("click", function () {
+        modal.style.display = "none";
+    });
+
+    // Cerrar haciendo click fuera
+    window.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+
+
 });
