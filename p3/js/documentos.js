@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function habilitar_documento(documento) {
-    console.log(documento);
+    // console.log(documento);
     const divs = document.querySelectorAll('.icon-item');
     // Iterar sobre cada div
     divs.forEach(div => {

@@ -89,7 +89,7 @@ imgElement.addEventListener('click', function () {
     // Extrae desde el último "/" hasta el final
     const result = url.slice(lastSlashIndex + 1);
 
-    console.log(result);
+    // console.log(result);
     if (result != 'eventos.html' && result != 'cuotas.html' && result != 'turnos.html' && result != 'fichas.html' && result != 'reuniones.html' && result != 'documentos.html') {
         habilitar_div(permiso);
     }
