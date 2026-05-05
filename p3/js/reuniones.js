@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function() {
             document.querySelector("#miModal h2").textContent = reunion.titulo;
             document.querySelector("#miModal h4").textContent = "";
             // 📋 Construir contenido dinámico
-            let contenido = "<strong>Puntos:</strong><ul class='puntos'>";
+            let contenido = "<span><strong>Inicio: "+reunion.inicio+"</strong></span><span style='margin-left:30px;'><strong>Término: "+reunion.termino+"</strong></span><br><br><strong>Puntos:</strong><ul class='puntos'>";
             reunion.puntos.forEach((punto, i) => {
                 contenido += `<li>${punto}`;
                 if (reunion.respuestas[i]) {
