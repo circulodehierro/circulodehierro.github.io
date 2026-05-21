@@ -44,7 +44,7 @@ function login() {
             usuario = { 
                 nombre: "Pablo", 
                 email: "pablo@example.com", 
-                edad: 25,
+                edad: 44,
                 foto_usuario: "../images/pablo_user.jpeg"
             };
             permiso = [1,3,4];
@@ -85,7 +85,7 @@ function login() {
             usuario = { 
                 nombre: "Robinson", 
                 email: "yoyo@example.com", 
-                edad: 40,
+                edad: 43,
                 foto_usuario: "../images/lex_user.jpeg"
             };
             permiso = [1,2,3,4,5,6,7,8];
@@ -135,8 +135,8 @@ function login() {
             spanPass.style.display = 'none';
             spanPass_bien.style.display = 'block';
             spanPass_bien.textContent = '¡Bienvenido Custom!';
-            usuario = { nombre: "Arturo", email: "arturo@example.com", edad: 35, foto_usuario: "../images/user1.jpeg"};
-            permiso = [1,3,4];
+            usuario = { nombre: "Arturo", email: "arturo@example.com", edad: 35, foto_usuario: "../images/arturo_user.jpeg"};
+            permiso = [1,3,4,7];
             documento = [1,4];
             localStorage.setItem("usuario", JSON.stringify(usuario));
             localStorage.setItem("permiso", JSON.stringify(permiso));
@@ -147,7 +147,7 @@ function login() {
             spanPass.style.display = 'none';
             spanPass_bien.style.display = 'block';
             spanPass_bien.textContent = '¡Bienvenido Satiro!';
-            usuario = { nombre: "Marcelo", email: "satiro@example.com", edad: 34, foto_usuario: "../images/user1.jpeg"};
+            usuario = { nombre: "Marcelo", email: "satiro@example.com", edad: 34, foto_usuario: "../images/troncoso_user.jpeg"};
             permiso = [1,3,4];
             documento = [1,4];
             localStorage.setItem("usuario", JSON.stringify(usuario));

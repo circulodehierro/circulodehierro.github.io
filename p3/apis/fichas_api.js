@@ -35,7 +35,7 @@ export const fichas = [
         apellido: "Gonzalez", 
         alias: 'Lex',
         email: "lex@example.com", 
-        edad: 41,
+        edad: 43,
         cargo: "Tesorero",
         foto_usuario: "../images/lex_user.jpeg"
     },

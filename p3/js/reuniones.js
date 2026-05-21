@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function() {
             reunion.puntos.forEach((punto, i) => {
                 contenido += `<li>${punto}`;
                 if (reunion.respuestas[i]) {
-                    contenido += `<ul><li style='color: #80a346;'><strong>${reunion.respuestas[i]}</strong></li></ul>`;
+                    contenido += `<ul><li style='color: #ba7941;'><strong>${reunion.respuestas[i]}</strong></li></ul>`;
                 }
                 contenido += `</li>`;
             });
