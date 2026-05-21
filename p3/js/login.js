@@ -88,7 +88,7 @@ function login() {
                 edad: 43,
                 foto_usuario: "../images/lex_user.jpeg"
             };
-            permiso = [1,2,3,4,5,6,7,8];
+            permiso = [0,1,2,3,4,5,6,7,8];
             documento = [1,2,3,4,5,6];
             localStorage.setItem("usuario", JSON.stringify(usuario));
             localStorage.setItem("permiso", JSON.stringify(permiso));

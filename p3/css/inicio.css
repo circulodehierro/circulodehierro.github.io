@@ -35,6 +35,35 @@ body.dark-mode .logout-button {
     background-color: #f1f1f1;
 }
 
+.indicadores {
+    margin: 10px 20px 0 20px;
+}
+
+.pie-svg svg {
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+.slice {
+    transition: filter 0.2s, stroke 0.2s;
+    stroke: white;
+    stroke-width: 1;
+    cursor: pointer;
+}
+/* Hover: resalta la porción cambiando brillo y contorno */
+.slice:hover {
+    filter: brightness(1.1);
+    stroke: #333;
+    stroke-width: 2;
+}
+.label {
+    font-size: 12px;
+    font-family: sans-serif;
+    fill: white;
+    font-weight: bold;
+    text-shadow: 0 0 2px black;
+    pointer-events: none; /* para que no interfiera con el hover del path */  
+}
+
 body.dark-mode .featured {
     background-color: #333; /* Cambia el fondo de los divs en modo oscuro */
     color: #fff;
