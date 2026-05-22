@@ -44,68 +44,99 @@ function cuotas() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const svg = document.getElementById('miTorta');
-  if (!svg) return;
-  // Limpiar SVG (opcional)
-  while (svg.firstChild) svg.removeChild(svg.firstChild);
-  // Datos
-  const datos = [
-    { label: 'Caja', porcentaje: 85, color: '#4caf50' },
-    { label: 'Deuda', porcentaje: 15, color: '#f44336' }
-  ];
+    var spanCaja = document.querySelector('.caja');
+    var spanDeuda = document.querySelector('.deuda');
+    var spanTotal = document.querySelector('.total');
 
-  const radio = 45;
-  const centro = { x: 50, y: 50 };
-  let anguloInicio = -90; // empezar desde arriba (12 en punto)
+    var caja = 2710977;
+    var deuda = 1002038;
+    var total = caja + deuda;
 
-  // Añadir círculo central
-  const circulo = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-  circulo.setAttribute("cx", centro.x);
-  circulo.setAttribute("cy", centro.y);
-  circulo.setAttribute("r", "15");
-  circulo.setAttribute("fill", "white");
-  svg.appendChild(circulo);
+    spanCaja.textContent = ': $' + caja.toLocaleString('es-CL');
+    spanDeuda.textContent = ': $' + deuda.toLocaleString('es-CL');
+    spanTotal.textContent = ': $' + total.toLocaleString('es-CL');
 
-  datos.forEach(d => {
-    const anguloSector = (d.porcentaje / 100) * 360;
-    const anguloFin = anguloInicio + anguloSector;
+    const svg = document.getElementById('miTorta');
+    if (!svg) return;
+    // Limpiar SVG (opcional)
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+    // Calcular porcentajes reales (evitando división por cero)
+    var porcentajeCaja = total > 0 ? Math.round((caja / total) * 100) : 0;
+    var porcentajeDeuda = total > 0 ? Math.round((deuda / total) * 100) : 0;
 
-    // Dibujar sector
-    const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-    path.setAttribute("d", calcularPorcion(centro.x, centro.y, radio, anguloInicio, anguloFin));
-    path.setAttribute("fill", d.color);
-    path.setAttribute("class", "slice");
-    svg.appendChild(path);
+    var spanEstatus = document.querySelector('.estatus');
 
-    // Calcular ángulo medio (en radianes) para la etiqueta
-    const anguloMedioGrados = anguloInicio + anguloSector / 2;
-    const anguloMedioRad = (anguloMedioGrados * Math.PI) / 270;
-    const distanciaTexto = radio * 0.7;
-    const textoX = centro.x + Math.cos(anguloMedioRad) * distanciaTexto;
-    const textoY = centro.y + Math.sin(anguloMedioRad) * distanciaTexto;
+    if (spanEstatus) {
+        var porcentaje = porcentajeCaja; // Usa el porcentaje que ya calculaste
+        
+        if (porcentaje < 50) {
+            spanEstatus.textContent = 'Critico';
+            spanEstatus.style.color = 'red';      // Rojo
+        } else if (porcentaje >= 50 && porcentaje <= 74) {
+            spanEstatus.textContent = 'Estable';
+            spanEstatus.style.color = '#ffa91f';  // Naranja (el color original)
+        } else {  // porcentaje >= 75
+            spanEstatus.textContent = 'Bueno';
+            spanEstatus.style.color = 'green';    // Verde
+        }
+    }
 
-    const texto = document.createElementNS("http://www.w3.org/2000/svg", "text");
-    texto.setAttribute("x", textoX);
-    texto.setAttribute("y", textoY);
-    texto.setAttribute("text-anchor", "middle");
-    texto.setAttribute("dominant-baseline", "middle"); // centrado vertical
-    texto.setAttribute("class", "label");
-    texto.textContent = d.porcentaje+'%';
-    svg.appendChild(texto);
-    // Actualizar ángulo para el siguiente sector
-    anguloInicio = anguloFin;
-    console.log(`${d.label}: ángulo medio = ${anguloMedioGrados}°`);
-  });
+    // Construir array datos con los porcentajes calculados
+    const datos = [
+        { label: 'Caja', porcentaje: porcentajeCaja, color: '#4caf50' },
+        { label: 'Deuda', porcentaje: porcentajeDeuda, color: '#f44336' }
+    ];
+
+    const radio = 45;
+    const centro = { x: 50, y: 50 };
+    let anguloInicio = -90; // empezar desde arriba (12 en punto)
+
+    // Añadir círculo central
+    const circulo = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    circulo.setAttribute("cx", centro.x);
+    circulo.setAttribute("cy", centro.y);
+    circulo.setAttribute("r", "15");
+    circulo.setAttribute("fill", "white");
+    svg.appendChild(circulo);
+
+    datos.forEach(d => {
+        const anguloSector = (d.porcentaje / 100) * 360;
+        const anguloFin = anguloInicio + anguloSector;
+        // Dibujar sector
+        const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        path.setAttribute("d", calcularPorcion(centro.x, centro.y, radio, anguloInicio, anguloFin));
+        path.setAttribute("fill", d.color);
+        path.setAttribute("class", "slice");
+        svg.appendChild(path);
+        // Calcular ángulo medio (en radianes) para la etiqueta
+        const anguloMedioGrados = anguloInicio + anguloSector / 3;
+        const anguloMedioRad = (anguloMedioGrados * Math.PI) / 270;
+        const distanciaTexto = radio * 0.65;
+        const textoX = centro.x + Math.cos(anguloMedioRad) * distanciaTexto;
+        const textoY = centro.y + Math.sin(anguloMedioRad) * distanciaTexto;
+
+        const texto = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        texto.setAttribute("x", textoX);
+        texto.setAttribute("y", textoY);
+        texto.setAttribute("text-anchor", "middle");
+        texto.setAttribute("dominant-baseline", "middle"); // centrado vertical
+        texto.setAttribute("class", "label");
+        texto.textContent = d.porcentaje+'%';
+        svg.appendChild(texto);
+        // Actualizar ángulo para el siguiente sector
+        anguloInicio = anguloFin;
+        // console.log(`${d.label}: ángulo medio = ${anguloMedioGrados}°`);
+    });
 });
 
 // Función para generar el path (la misma que ya tenías)
 function calcularPorcion(centroX, centroY, radio, anguloInicio, anguloFin) {
-  const inicioRad = (anguloInicio - 90) * Math.PI / 180;
-  const finRad = (anguloFin - 90) * Math.PI / 180;
-  const x1 = centroX + radio * Math.cos(inicioRad);
-  const y1 = centroY + radio * Math.sin(inicioRad);
-  const x2 = centroX + radio * Math.cos(finRad);
-  const y2 = centroY + radio * Math.sin(finRad);
-  const largeArc = (anguloFin - anguloInicio) > 180 ? 1 : 0;
-  return `M ${centroX},${centroY} L ${x1},${y1} A ${radio},${radio} 0 ${largeArc},1 ${x2},${y2} Z`;
+    const inicioRad = (anguloInicio - 90) * Math.PI / 180;
+    const finRad = (anguloFin - 90) * Math.PI / 180;
+    const x1 = centroX + radio * Math.cos(inicioRad);
+    const y1 = centroY + radio * Math.sin(inicioRad);
+    const x2 = centroX + radio * Math.cos(finRad);
+    const y2 = centroY + radio * Math.sin(finRad);
+    const largeArc = (anguloFin - anguloInicio) > 180 ? 1 : 0;
+    return `M ${centroX},${centroY} L ${x1},${y1} A ${radio},${radio} 0 ${largeArc},1 ${x2},${y2} Z`;
 }
