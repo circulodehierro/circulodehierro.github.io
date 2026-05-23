@@ -28,7 +28,7 @@
 /* Contenedor de la tabla: ocupa el 90% del ancho del padre y maneja scroll */
 .tabla-container {
     max-height: 300px;
-    width: 80%;              /* ← Ancho del 90% */
+    width: 82%;              /* ← Ancho del 90% */
     margin: 0 auto;          /* ← Centrado horizontal (opcional) */
     overflow-y: auto;
     overflow-x: auto;        /* Scroll horizontal si la tabla es más ancha */
