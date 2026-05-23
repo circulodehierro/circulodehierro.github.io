@@ -76,6 +76,24 @@ body.dark-mode .dark-mode-toggle {
     background-color: #777; /* Cambia el color del botón en modo oscuro */
 }
 
+/* Modo oscuro para la cabecera de la tabla */
+body.dark-mode .tabla-cuotas th {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Modo oscuro para el resumen */
+body.dark-mode .resumen {
+    background-color: #2c2c2c;
+    color: #fff;
+}
+
+body.dark-mode .tabla-cuotas td {
+    background-color: #1e1e1e;
+    color: #ddd;
+    border-color: #444;
+}
+
 /* Estilos para el Navbar */
 .navbar {
     display: flex;

@@ -28,7 +28,7 @@
 /* Tabla de resultados (tus estilos existentes) */
 
 .tabla-container {
-    max-height: 500px;
+    max-height: 350px;
     overflow-y: auto;
     border: 1px solid #ddd;
     border-radius: 0.25rem;
@@ -59,4 +59,10 @@
     padding: 0.5rem;
     background-color: #e9ecef;
     border-radius: 0.25rem;
+}
+.tabla-deposito {
+    text-align: left;
+    border: 1px solid;
+    border-radius: 10px;
+    margin-top: 0;
 }

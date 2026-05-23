@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Crear contenedor con scroll
         const tablaContainer = document.createElement('div');
         tablaContainer.className = 'tabla-container';
-        tablaContainer.style.maxHeight = '500px';
+        tablaContainer.style.maxHeight = '350px';
         tablaContainer.style.overflowY = 'auto';
         const tabla = document.createElement('table');
         tabla.className = 'tabla-cuotas';
