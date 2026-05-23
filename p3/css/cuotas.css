@@ -25,44 +25,66 @@
     cursor: pointer;
 }
 
-/* Tabla de resultados (tus estilos existentes) */
-
+/* Contenedor de la tabla: ocupa el 90% del ancho del padre y maneja scroll */
 .tabla-container {
     max-height: 350px;
+    width: 80%;              /* ← Ancho del 90% */
+    margin: 0 auto;          /* ← Centrado horizontal (opcional) */
     overflow-y: auto;
+    overflow-x: auto;        /* Scroll horizontal si la tabla es más ancha */
     border: 1px solid #ddd;
     border-radius: 0.25rem;
 }
+
+/* La tabla ocupa todo el ancho del contenedor y no se encoge */
 .tabla-cuotas {
     font-size: 0.7rem;
-    width: 100%;
+    width: 100%;             /* ← Ocupa todo el ancho del contenedor */
     border-collapse: collapse;
 }
+
+/* El resto de tus estilos se mantienen */
 .tabla-cuotas thead th {
     position: sticky;
     top: 0;
     background-color: #f2f2f2;
     z-index: 1;
 }
+
 .tabla-cuotas th,
 .tabla-cuotas td {
+    white-space: nowrap;     /* Evita saltos de línea */
     border: 1px solid #ddd;
     padding: 0.5rem;
     text-align: left;
 }
+
 .tabla-cuotas th {
     background-color: #f2f2f2;
 }
+
 .resumen {
-    margin-top: 1rem;
+    width: 80%;              /* Opcional: también el resumen al 90% */
+    margin: 1rem auto 0 auto;
     font-weight: bold;
     padding: 0.5rem;
     background-color: #e9ecef;
     border-radius: 0.25rem;
 }
+
+.row.content-deposito {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: -1rem;
+    background-color: #ffffff;
+}
 .tabla-deposito {
+    padding: 5px;
     text-align: left;
     border: 1px solid;
     border-radius: 10px;
-    margin-top: 0;
+    margin-top: 5px;
 }

@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Ahora cuotasObj es { "Robinson": {...}, "Arturo": {...} }
     const datosUsuario = cuotasObj[usuarioActual];
     if (!datosUsuario) {
-        console.error(`No hay datos para el usuario ${usuarioActual}`);
+        //console.error(`No hay datos para el usuario ${usuarioActual}`);
         document.querySelector('.paragraph').innerHTML = `<p>El usuario ${usuarioActual} no tiene cuotas registradas.</p>`;
         return;
     }
@@ -123,12 +123,14 @@ document.addEventListener("DOMContentLoaded", function() {
         tablaContainer.className = 'tabla-container';
         tablaContainer.style.maxHeight = '350px';
         tablaContainer.style.overflowY = 'auto';
+        tablaContainer.style.overflowX = 'auto';
         const tabla = document.createElement('table');
         tabla.className = 'tabla-cuotas';
+        tabla.style.minWidth = '100%';
         tabla.innerHTML = `
             <thead>
                 <tr>
-                    <th>Deuda</th>
+                    <th>Item</th>
                     <th>Monto</th>
                     <th>Mes</th>
                     <th>Año</th>
@@ -140,7 +142,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 ${filtradas.map(c => `
                     <tr>
                         <td>${c.deuda}</td>
-                        <td>$${c.monto.toLocaleString()}</td>
+                        <td>$${c.monto.toLocaleString('es-CL')}</td>
                         <td>${nombresMeses[c.mes - 1] || c.mes}</td>
                         <td>${c.ano}</td>
                         <td>${c.estado}</td>

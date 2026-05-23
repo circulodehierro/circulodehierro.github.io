@@ -59,6 +59,11 @@ body.dark-mode .content  {
     color: #fff;
 }
 
+body.dark-mode .content-deposito  {
+    background-color: #121212; /* Cambia el fondo de los divs en modo oscuro */
+    color: #fff;
+}
+
 body.dark-mode .header:hover {
     box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2); /* Resalta con una sombra más grande */
 }
