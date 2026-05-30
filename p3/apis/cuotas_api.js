@@ -375,8 +375,8 @@ export const cuotas = [
                         "deuda": "Cuota", 
                         "monto": 10000,
                         "detalle":'',
-                        "estado":'Pendiente',
-                        "fecha_pago":''
+                        "estado":'Pagado',
+                        "fecha_pago":'29-05-2026'
                     },
                     { 
                         "cargo": "Prospecto", 
@@ -394,8 +394,8 @@ export const cuotas = [
                         "deuda": "Cuota", 
                         "monto": 10000,
                         "detalle":'',
-                        "estado":'Pendiente',
-                        "fecha_pago":''
+                        "estado":'Pagado',
+                        "fecha_pago":'29-05-2026'
                     },
                     { 
                         "cargo": "Parchado", 
@@ -410,8 +410,8 @@ export const cuotas = [
                         "deuda": "Parche Emblema", 
                         "monto": 32417,
                         "detalle":'',
-                        "estado":'Pendiente',
-                        "fecha_pago":''
+                        "estado":'Pagado',
+                        "fecha_pago":'29-05-2026'
                     }
                 ],
                 "3": 
@@ -421,16 +421,16 @@ export const cuotas = [
                         "deuda": "Cuota", 
                         "monto": 10000,
                         "detalle":'',
-                        "estado":'Pendiente',
-                        "fecha_pago":''
+                        "estado":'Pagado',
+                        "fecha_pago":'29-05-2026'
                     },
                     { 
                         "cargo": "Prospecto", 
                         "deuda": "Segunda Junta Linaje", 
                         "monto": 28641,
                         "detalle":'',
-                        "estado":'Pendiente',
-                        "fecha_pago":''
+                        "estado":'Pagado',
+                        "fecha_pago":'29-05-2026'
                     }
                 ],
                 "4": 
@@ -440,8 +440,8 @@ export const cuotas = [
                         "deuda": "Cuota", 
                         "monto": 10000,
                         "detalle":'',
-                        "estado":'Pendiente',
-                        "fecha_pago":''
+                        "estado":'Pagado',
+                        "fecha_pago":'29-05-2026'
                     }
                 ],
                 "5": 
@@ -451,8 +451,19 @@ export const cuotas = [
                         "deuda": "Cuota", 
                         "monto": 10000,
                         "detalle":'',
-                        "estado":'Pendiente',
-                        "fecha_pago":''
+                        "estado":'Pagado',
+                        "fecha_pago":'29-05-2026'
+                    },
+                ],
+                "6": 
+                [
+                    { 
+                        "cargo": "Prospecto", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'29-05-2026'
                     },
                 ]
             }

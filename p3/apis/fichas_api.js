@@ -6,7 +6,7 @@ export const fichas = [
         alias: 'Tio Palo',
         email: "pablo@example.com", 
         edad: 42,
-        cargo: "Presidente",
+        cargo: "Parchado",
         foto_usuario: "../images/pablo_user.jpeg"
     },
     { 
@@ -26,7 +26,7 @@ export const fichas = [
         alias: 'Jota',
         email: "jota@example.com", 
         edad: 37,
-        cargo: "Vice Presidente",
+        cargo: "Parchado",
         foto_usuario: "../images/jota_user.jpeg"
     },
     { 
@@ -46,7 +46,7 @@ export const fichas = [
         alias: 'Bracka',
         email: "bracka@example.com", 
         edad: 49,
-        cargo: "Capitan de Ruta",
+        cargo: "Vice Presidente",
         foto_usuario: "../images/bracka_user.jpeg"
     },
     { 
@@ -66,7 +66,7 @@ export const fichas = [
         alias: 'Raul',
         email: "raul@example.com", 
         edad: 52,
-        cargo: "Parchado",
+        cargo: "Presidente",
         foto_usuario: "../images/raul_user.jpeg"
     },
     { 
@@ -76,7 +76,7 @@ export const fichas = [
         alias: 'Arturo',
         email: "arturo@example.com", 
         edad: 38,
-        cargo: "Prospecto",
+        cargo: "Secretario",
         foto_usuario: "../images/arturo_user.jpeg"
     },
     { 
@@ -86,7 +86,7 @@ export const fichas = [
         alias: 'Satiro',
         email: "troncoso@example.com", 
         edad: 39,
-        cargo: "Prospecto",
+        cargo: "Capitan de Ruta",
         foto_usuario: "../images/troncoso_user.jpeg"
     },
     { 
@@ -96,7 +96,7 @@ export const fichas = [
         alias: 'John',
         email: "arturo@example.com", 
         edad: 44,
-        cargo: "Prospecto",
+        cargo: "Parchado",
         foto_usuario: "../images/john_user.jpeg"
     }
 ];
