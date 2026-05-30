@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
         console.error("Error parseando usuario", e);
         return;
     }
-    //console.log(usuarioActual);
+    console.log(usuarioActual);
     // Extraer el objeto de usuarios del array (suponiendo que es el primer elemento)
     // Si tu array pudiera tener más elementos, habría que fusionarlos, pero parece que solo tiene uno.
     const cuotasObj = cuotas[0]; // <<< --- CORRECCIÓN CLAVE
@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", function() {
             </thead>
             <tbody>
                 ${filtradas.map(c => `
-                    <tr>
+                    <tr style="${c.estado === 'Pagado' ? 'color: green;' : ''}">
                         <td>${c.deuda}</td>
                         <td>$${c.monto.toLocaleString('es-CL')}</td>
                         <td>${nombresMeses[c.mes - 1] || c.mes}</td>

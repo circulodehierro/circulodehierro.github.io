@@ -103,7 +103,75 @@ export const cuotas = [
         {
             "2026": 
             {
+                 "1": 
+                [
+                    { 
+                        "cargo": "Secretario", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'17-02-2026'
+                    },
+                    { 
+                        "cargo": "Secretario", 
+                        "deuda": "Preventa Conti", 
+                        "monto": 30000,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'17-02-2026'
+                    },
+                    { 
+                        "cargo": "Secretario", 
+                        "deuda": "Parche Cargo", 
+                        "monto": 4000,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'17-02-2026'
+                    }
+                ],
+                "2": 
+                [
+                    { 
+                        "cargo": "Secretario", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'17-02-2026'
+                    },
+                    { 
+                        "cargo": "Secretario", 
+                        "deuda": "Compras Conti", 
+                        "monto": 8214,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'17-02-2026'
+                    }
+                ],
+                "3": 
+                [
+                    { 
+                        "cargo": "Secretario", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'08-04-2026'
+                    },
+                ],
                 "4": 
+                [
+                    { 
+                        "cargo": "Secretario", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'08-04-2026'
+                    }
+                ],
+                "5": 
                 [
                     { 
                         "cargo": "Secretario", 
@@ -112,7 +180,122 @@ export const cuotas = [
                         "detalle":'',
                         "estado":'Pendiente',
                         "fecha_pago":''
+                    },
+                ],
+                "6": 
+                [
+                    { 
+                        "cargo": "Secretario", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pendiente',
+                        "fecha_pago":''
+                    },
+                ]
+            }
+        },
+        "Satiro":
+        {
+            "2026": 
+            {
+                 "1": 
+                [
+                    { 
+                        "cargo": "Capitan de Ruta", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'21-02-2026'
+                    },
+                    { 
+                        "cargo": "Capitan de Ruta", 
+                        "deuda": "Preventa Conti", 
+                        "monto": 30000,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'21-02-2026'
+                    },
+                    { 
+                        "cargo": "Capitan de Ruta", 
+                        "deuda": "Parche Cargo", 
+                        "monto": 4000,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'16-02-2026'
                     }
+                ],
+                "2": 
+                [
+                    { 
+                        "cargo": "Capitan de Ruta", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'21-02-2026'
+                    },
+                    { 
+                        "cargo": "Capitan de Ruta", 
+                        "deuda": "Compras Conti", 
+                        "monto": 6214,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'21-02-2026'
+                    }
+                ],
+                "3": 
+                [
+                    { 
+                        "cargo": "Capitan de Ruta", 
+                        "deuda": "Cuota", 
+                        "monto": 4000,
+                        "detalle":'',
+                        "estado":'Pendiente',
+                        "fecha_pago":''
+                    },
+                    { 
+                        "cargo": "Capitan de Ruta", 
+                        "deuda": "Segunda Junta Linaje", 
+                        "monto": 15141,
+                        "detalle":'',
+                        "estado":'Pendiente',
+                        "fecha_pago":''
+                    }
+                ],
+                "4": 
+                [
+                    { 
+                        "cargo": "Capitan de Ruta", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pendiente',
+                        "fecha_pago":''
+                    }
+                ],
+                "5": 
+                [
+                    { 
+                        "cargo": "Capitan de Ruta", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pendiente',
+                        "fecha_pago":''
+                    },
+                ],
+                "6": 
+                [
+                    { 
+                        "cargo": "Secretario", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pendiente',
+                        "fecha_pago":''
+                    },
                 ]
             }
         },

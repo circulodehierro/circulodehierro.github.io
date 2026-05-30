@@ -147,7 +147,7 @@ function login() {
             spanPass.style.display = 'none';
             spanPass_bien.style.display = 'block';
             spanPass_bien.textContent = '¡Bienvenido Satiro!';
-            usuario = { nombre: "Marcelo", email: "satiro@example.com", edad: 34, foto_usuario: "../images/troncoso_user.jpeg"};
+            usuario = { nombre: "Satiro", email: "satiro@example.com", edad: 34, foto_usuario: "../images/troncoso_user.jpeg"};
             permiso = [1,3,4,7];
             documento = [1,4];
             localStorage.setItem("usuario", JSON.stringify(usuario));
