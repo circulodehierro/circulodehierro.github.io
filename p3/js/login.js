@@ -29,6 +29,7 @@ let permiso = [];
 //8 Otros
 
 let documento = [];
+//let deuda = 700000;
   // Función de login
 function login() {
     const password = document.getElementById('pass').value;
@@ -78,21 +79,25 @@ function login() {
             localStorage.setItem("documento", JSON.stringify(documento));
             window.location.href = 'pages/inicio.html';
         break;
-        case 'ro': // Robinson
+        case 'ro':
+        case '154950257': // Robinson
             spanPass.style.display = 'none';
             spanPass_bien.style.display = 'block';
             spanPass_bien.textContent = '¡Bienvenido Robinson!';
+            //var cal = ((deuda * 98248) / 100);
             usuario = { 
                 nombre: "Robinson", 
                 email: "yoyo@example.com", 
                 edad: 43,
-                foto_usuario: "../images/lex_user.jpeg"
+                foto_usuario: "../images/lex_user.jpeg",
+                //porcentaje: cal
             };
             permiso = [0,1,2,3,4,5,6,7,8];
             documento = [1,2,3,4,5,6];
             localStorage.setItem("usuario", JSON.stringify(usuario));
             localStorage.setItem("permiso", JSON.stringify(permiso));
             localStorage.setItem("documento", JSON.stringify(documento));
+            //localStorage.setItem("deuda", JSON.stringify(deuda));
             window.location.href = 'pages/inicio.html';
         break;
         case 'br': // Bracka

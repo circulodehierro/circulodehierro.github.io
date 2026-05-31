@@ -1,5 +1,197 @@
 export const cuotas = [
     {
+        "Bracka":
+        {
+            "2026": 
+            {
+                 "1": 
+                [
+                    { 
+                        "cargo": "Vice Presidente", 
+                        "deuda": "Cuota", 
+                        "monto": 4000,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'06-01-2026'
+                    }
+                ],
+                "2": 
+                [
+                    { 
+                        "cargo": "Vice Presidente", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'07-04-2026'
+                    },
+                    { 
+                        "cargo": "Vice Presidente", 
+                        "deuda": "Compras Conti", 
+                        "monto": 4107,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'07-04-2026'
+                    }
+                ],
+                "3": 
+                [
+                    { 
+                        "cargo": "Vice Presidente", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'07-04-2026'
+                    },
+                    { 
+                        "cargo": "Vice Presidente", 
+                        "deuda": "Segunda Junta Linaje", 
+                        "monto": 37641,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'07-04-2026'
+                    }
+                ],
+                "4": 
+                [
+                    { 
+                        "cargo": "Vice Presidente", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'07-04-2026'
+                    }
+                ],
+                "5": 
+                [
+                    { 
+                        "cargo": "Vice Presidente", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pendiente',
+                        "fecha_pago":''
+                    },
+                    { 
+                        "cargo": "Vice Presidente", 
+                        "deuda": "Consumo Club", 
+                        "monto": 4500,
+                        "detalle":'',
+                        "estado":'Pendiente',
+                        "fecha_pago":''
+                    },
+                ],
+                "6": 
+                [
+                    { 
+                        "cargo": "Vice Presidente", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pendiente',
+                        "fecha_pago":''
+                    },
+                ]
+            }
+        },
+        "Jota":
+        {
+            "2026": 
+            {
+                 "1": 
+                [
+                    { 
+                        "cargo": "Sin Cargo", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'06-02-2026'
+                    },
+                    { 
+                        "cargo": "Preventa Conti", 
+                        "deuda": "Cuota", 
+                        "monto": 30000,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'25-04-2026'
+                    }
+                ],
+                "2": 
+                [
+                    { 
+                        "cargo": "Sin Cargo", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'06-02-2026'
+                    },
+                    { 
+                        "cargo": "Sin Cargo", 
+                        "deuda": "Compras Conti", 
+                        "monto": 354,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'25-04-2026'
+                    }
+                ],
+                "3": 
+                [
+                    { 
+                        "cargo": "Sin Cargo", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'25-04-2026'
+                    },
+                    { 
+                        "cargo": "Sin Cargo", 
+                        "deuda": "Segunda Junta Linaje", 
+                        "monto": 28641,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'25-04-2026'
+                    }
+                ],
+                "4": 
+                [
+                    { 
+                        "cargo": "Sin Cargo", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'25-04-2026'
+                    }
+                ],
+                "5": 
+                [
+                    { 
+                        "cargo": "Sin Cargo", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pendiente',
+                        "fecha_pago":''
+                    },
+                ],
+                "6": 
+                [
+                    { 
+                        "cargo": "Sin Cargo", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pendiente',
+                        "fecha_pago":''
+                    },
+                ]
+            }
+        },
         "Robinson": 
         {
             "2025": 
@@ -87,6 +279,17 @@ export const cuotas = [
                     }
                 ],
                 "5": 
+                [
+                    { 
+                        "cargo": "Tesorero", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pendiente',
+                        "fecha_pago":''
+                    },
+                ],
+                "6": 
                 [
                     { 
                         "cargo": "Tesorero", 
@@ -289,7 +492,7 @@ export const cuotas = [
                 "6": 
                 [
                     { 
-                        "cargo": "Secretario", 
+                        "cargo": "Capitan de Ruta", 
                         "deuda": "Cuota", 
                         "monto": 10000,
                         "detalle":'',

@@ -1,13 +1,15 @@
 import { cuotas } from '../apis/cuotas_api.js';
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Obtener usuario desde localStorage
+    // Obtener usuario y deuda desde localStorage
     const data = localStorage.getItem("usuario");
+    const deudaRaw = localStorage.getItem("deuda");   // ← variable deuda (100%)
     if (!data) {
         console.error("No hay usuario en localStorage");
         document.querySelector('.paragraph').innerHTML = '<p>Error: No se encontró usuario.</p>';
         return;
     }
+
     let usuarioActual;
     try {
         const user = JSON.parse(data);
@@ -16,22 +18,27 @@ document.addEventListener("DOMContentLoaded", function() {
         console.error("Error parseando usuario", e);
         return;
     }
-    console.log(usuarioActual);
-    // Extraer el objeto de usuarios del array (suponiendo que es el primer elemento)
-    // Si tu array pudiera tener más elementos, habría que fusionarlos, pero parece que solo tiene uno.
-    const cuotasObj = cuotas[0]; // <<< --- CORRECCIÓN CLAVE
+
+    // Validar y parsear la deuda
+    let deudaNum = parseFloat(deudaRaw);
+    if (isNaN(deudaNum)) {
+        console.warn("La deuda no es un número válido, se usará 0 para evitar errores.");
+        deudaNum = 0;
+    }
+
+    const cuotasObj = cuotas[0];
     if (!cuotasObj || typeof cuotasObj !== 'object') {
         console.error("La estructura de cuotas no es la esperada");
         document.querySelector('.paragraph').innerHTML = '<p>Error en la estructura de datos.</p>';
         return;
     }
-    // Ahora cuotasObj es { "Robinson": {...}, "Arturo": {...} }
+
     const datosUsuario = cuotasObj[usuarioActual];
     if (!datosUsuario) {
-        //console.error(`No hay datos para el usuario ${usuarioActual}`);
         document.querySelector('.paragraph').innerHTML = `<p>El usuario ${usuarioActual} no tiene cuotas registradas.</p>`;
         return;
     }
+
     // Aplanar la estructura jerárquica a un array de cuotas con año y mes
     let todasCuotas = [];
     for (const anoStr of Object.keys(datosUsuario)) {
@@ -50,32 +57,58 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         }
     }
-    
+
     if (todasCuotas.length === 0) {
         document.querySelector('.paragraph').innerHTML = `<p>El usuario ${usuarioActual} no tiene cuotas registradas.</p>`;
         return;
     }
-    
+
+    // ========== NUEVA LÓGICA: calcular estado global del usuario ==========
+    const totalPendientes = todasCuotas
+        .filter(c => c.estado === 'Pendiente')
+        .reduce((sum, c) => sum + c.monto, 0);
+
+    let estadoGlobal = '';
+    let estadoColor = '';
+    //console.log(deudaNum);
+    if (deudaNum === 0) {
+        estadoGlobal = 'El Club no presenta deudas';
+        estadoColor = 'gray';
+    } else {
+        const porcentaje = (totalPendientes / deudaNum) * 100;
+        const porcentajeRedondeado = Math.round(porcentaje);
+        if (porcentaje == 0) {
+            estadoGlobal = `Estado Excelente, deuda del ${porcentajeRedondeado}%`;
+            estadoColor = 'green';
+        }
+        else if (porcentaje > 15) {
+            estadoGlobal = `Estado Critico, deuda del ${porcentajeRedondeado}%`;
+            estadoColor = 'red';
+        } else {
+            estadoGlobal = `Estado Moroso, deuda del ${porcentajeRedondeado}%`;
+            estadoColor = 'orange';
+        }
+    }
+    // ======================================================================
+
     // Extraer valores únicos para los filtros
     const años = [...new Set(todasCuotas.map(c => c.ano))].sort((a,b) => a-b);
     const meses = [...new Set(todasCuotas.map(c => c.mes))].sort((a,b) => a-b);
     const estados = [...new Set(todasCuotas.map(c => c.estado))];
-    
-    //console.log("Años:", años, "Meses:", meses, "Estados:", estados);
-    
-    // Crear selects
+
+    // Crear selects (sin cambios)
     function crearSelect(nombre, valores, placeholder) {
         const select = document.createElement('select');
         select.name = nombre;
         select.id = `filtro-${nombre}`;
         select.className = 'filtro-select';
-        
+
         const optionTodo = document.createElement('option');
         optionTodo.value = 'todo';
         optionTodo.textContent = placeholder || 'Todo';
         optionTodo.selected = true;
         select.appendChild(optionTodo);
-        
+
         valores.forEach(valor => {
             const option = document.createElement('option');
             option.value = valor;
@@ -89,12 +122,11 @@ document.addEventListener("DOMContentLoaded", function() {
         });
         return select;
     }
-    
+
     const selectAnio = crearSelect('ano', años, 'Año');
     const selectMes = crearSelect('mes', meses, 'Mes');
     const selectEstado = crearSelect('estado', estados, 'Estado');
-    
-    // Insertar selects en .item-list
+
     const listaContainer = document.querySelector('.item-list');
     if (listaContainer) {
         listaContainer.innerHTML = '';
@@ -109,21 +141,24 @@ document.addEventListener("DOMContentLoaded", function() {
     } else {
         console.error("No se encontró el elemento .item-list");
     }
-    
+
     const resultadosDiv = document.querySelector('.paragraph');
     const nombresMeses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+
     function mostrarCuotas(filtradas) {
         if (!resultadosDiv) return;
         if (filtradas.length === 0) {
             resultadosDiv.innerHTML = '<p>No hay cuotas que coincidan con los filtros.</p>';
             return;
         }
-        // Crear contenedor con scroll
+
+        // Contenedor con scroll
         const tablaContainer = document.createElement('div');
         tablaContainer.className = 'tabla-container';
         tablaContainer.style.maxHeight = '300px';
         tablaContainer.style.overflowY = 'auto';
         tablaContainer.style.overflowX = 'auto';
+
         const tabla = document.createElement('table');
         tabla.className = 'tabla-cuotas';
         tabla.style.minWidth = '100%';
@@ -151,18 +186,31 @@ document.addEventListener("DOMContentLoaded", function() {
                 `).join('')}
             </tbody>
         `;
-        
         tablaContainer.appendChild(tabla);
-        resultadosDiv.innerHTML = '';
-        resultadosDiv.appendChild(tablaContainer);
-        
-        const total = filtradas.reduce((sum, c) => sum + c.monto, 0);
+
+        const totalFiltrado = filtradas.reduce((sum, c) => sum + c.monto, 0);
         const resumen = document.createElement('p');
         resumen.className = 'resumen';
-        resumen.textContent = `Total items: ${filtradas.length} | Monto total: $${total.toLocaleString('es-CL')}`;
+        resumen.textContent = `Total items: ${filtradas.length} | Monto total: $${totalFiltrado.toLocaleString('es-CL')}`;
+
+        // Limpiar y agregar los elementos
+        resultadosDiv.innerHTML = '';
+        resultadosDiv.appendChild(tablaContainer);
         resultadosDiv.appendChild(resumen);
+
+        // ========== MOSTRAR ESTADO GLOBAL DEL USUARIO ==========
+        if (estadoGlobal) {
+            const estadoParrafo = document.createElement('p');
+            estadoParrafo.className = 'estado-usuario';
+            estadoParrafo.style.color = estadoColor;
+            estadoParrafo.style.fontWeight = 'bold';
+            estadoParrafo.style.marginTop = '0.5rem';
+            estadoParrafo.textContent = `${estadoGlobal}`;
+            resultadosDiv.appendChild(estadoParrafo);
+        }
+        // ======================================================
     }
-    
+
     function aplicarFiltros() {
         const año = selectAnio.value;
         const mes = selectMes.value;
@@ -175,11 +223,11 @@ document.addEventListener("DOMContentLoaded", function() {
         });
         mostrarCuotas(filtradas);
     }
-    
+
     selectAnio.addEventListener('change', aplicarFiltros);
     selectMes.addEventListener('change', aplicarFiltros);
     selectEstado.addEventListener('change', aplicarFiltros);
-    
+
     // Mostrar todas al inicio
     mostrarCuotas(todasCuotas);
 });
