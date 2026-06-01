@@ -203,8 +203,8 @@ export const cuotas = [
                         "deuda": "Consumo Aniversario", 
                         "monto": 7000,
                         "detalle":'',
-                        "estado":'Pendiente',
-                        "fecha_pago":''
+                        "estado":'Pagado',
+                        "fecha_pago":'01-06-2026'
                     },
                 ]
             },
@@ -217,8 +217,8 @@ export const cuotas = [
                         "deuda": "Preventa Conti", 
                         "monto": 15000,
                         "detalle":'',
-                        "estado":'Pendiente',
-                        "fecha_pago":''
+                        "estado":'Pagado',
+                        "fecha_pago":'01-06-2026'
                     },
                     { 
                         "cargo": "Tesorero", 
@@ -236,8 +236,8 @@ export const cuotas = [
                         "deuda": "Compras Constitucion", 
                         "monto": 4107,
                         "detalle":'',
-                        "estado":'Pendiente',
-                        "fecha_pago":''
+                        "estado":'Pagado',
+                        "fecha_pago":'01-06-2026'
                     },
                     { 
                         "cargo": "Tesorero", 
@@ -255,8 +255,8 @@ export const cuotas = [
                         "deuda": "Segunda Junta Linaje", 
                         "monto": 12141,
                         "detalle":'',
-                        "estado":'Pendiente',
-                        "fecha_pago":''
+                        "estado":'Pagado',
+                        "fecha_pago":'01-06-2026'
                     },
                     { 
                         "cargo": "Tesorero", 
