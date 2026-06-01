@@ -12,7 +12,6 @@ body.dark-mode {
     background-color: #121212;
     color: #fff;
 }
-
 .navbar {
     background-color: #333;
     color: white;
@@ -98,7 +97,12 @@ body.dark-mode .tabla-cuotas td {
     color: #ddd;
     border-color: #444;
 }
-
+.green-pagado {
+    color: green;
+}
+body.dark-mode .tabla-cuotas tr.green-pagado td{
+    color: #2ecc71;
+}
 /* Estilos para el Navbar */
 .navbar {
     display: flex;

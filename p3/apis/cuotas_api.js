@@ -944,6 +944,34 @@ export const cuotas = [
         },
         "Pablo":
         {
+            "2023": 
+            {
+                "12": 
+                [
+                    { 
+                        "cargo": "Sin Cargo", 
+                        "deuda": "Cambio Status Club", 
+                        "monto": 95943,
+                        "detalle":'',
+                        "estado":'Pendiente',
+                        "fecha_pago":''
+                    }
+                ],
+            },
+            "2024": 
+            {
+                "12": 
+                [
+                    { 
+                        "cargo": "Sin Cargo", 
+                        "deuda": "Prestamo Emergencia", 
+                        "monto": 130000,
+                        "detalle":'',
+                        "estado":'Pendiente',
+                        "fecha_pago":''
+                    }
+                ],
+            },
             "2025": 
             {
                  "4": 

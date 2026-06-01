@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", function() {
             </thead>
             <tbody>
                 ${filtradas.map(c => `
-                    <tr style="${c.estado === 'Pagado' ? 'color: green;' : ''}">
+                    <tr class="${c.estado === 'Pagado' ? 'green-pagado' : ''}">
                         <td>${c.deuda}</td>
                         <td>$${c.monto.toLocaleString('es-CL')}</td>
                         <td>${nombresMeses[c.mes - 1] || c.mes}</td>
