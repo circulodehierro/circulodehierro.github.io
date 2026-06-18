@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const estatutosFullBtn = document.getElementById('estatutosFull');
     const solcitudColoresBtn = document.getElementById('solcitudColores');
     const compromiso_pagoBtn = document.getElementById('compromiso_pago');
+    const aviso_deudaBtn = document.getElementById('aviso_deuda');
     if (estatutosFullBtn) {
         estatutosFullBtn.addEventListener('click', function () {
             new_url = '../documentos/prueba_circulo.pdf';
@@ -76,6 +77,19 @@ document.addEventListener('DOMContentLoaded', function () {
         compromiso_pagoBtn.addEventListener('click', function () {
             new_url = '../documentos/compromiso_pago_cdh.pdf';
             nombre_documento = 'compromiso_pago_cdh.pdf';
+            cargarPDF(new_url); // Solo carga el PDF al hacer clic en el botón
+            // Cambiar display de las clases "control" y "paragraph"
+            const controlElements = document.querySelectorAll('.controls');
+            controlElements.forEach(element => {
+                element.style.display = 'block';
+            });
+            paragraph.style.display = 'block'; // Asegurarse de mostrar el contenedor del PDF
+        });
+    }
+    if (aviso_deudaBtn) {
+        aviso_deudaBtn.addEventListener('click', function () {
+            new_url = '../documentos/aviso_de_deuda.pdf';
+            nombre_documento = 'aviso_de_deuda.pdf';
             cargarPDF(new_url); // Solo carga el PDF al hacer clic en el botón
             // Cambiar display de las clases "control" y "paragraph"
             const controlElements = document.querySelectorAll('.controls');

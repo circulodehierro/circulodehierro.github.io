@@ -93,7 +93,7 @@ function login() {
                 //porcentaje: cal
             };
             permiso = [0,1,2,3,4,5,6,7,8];
-            documento = [1,2,3,4,5,6];
+            documento = [1,2,3,4,5,6,7];
             localStorage.setItem("usuario", JSON.stringify(usuario));
             localStorage.setItem("permiso", JSON.stringify(permiso));
             localStorage.setItem("documento", JSON.stringify(documento));

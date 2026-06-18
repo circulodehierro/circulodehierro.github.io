@@ -1101,6 +1101,108 @@ export const cuotas = [
                     },
                 ]
             }
+        },
+        "Ale":
+        {
+            "2023": 
+            {
+                "12": 
+                [
+                    { 
+                        "cargo": "Sargento en Armas", 
+                        "deuda": "Cambio Status Club", 
+                        "monto": 99034,
+                        "detalle":'',
+                        "estado":'Pendiente',
+                        "fecha_pago":''
+                    }
+                ],
+            },
+            "2026": 
+            {
+                 "1": 
+                [
+                    { 
+                        "cargo": "Sargento en Armas", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pendiente',
+                        "fecha_pago":''
+                    },
+                    { 
+                        "cargo": "Sargento en Armas", 
+                        "deuda": "Preventa Conti", 
+                        "monto": 30000,
+                        "detalle":'',
+                        "estado":'Pendiente',
+                        "fecha_pago":''
+                    }
+                ],
+                "2": 
+                [
+                    { 
+                        "cargo": "Sargento en Armas", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pendiente',
+                        "fecha_pago":''
+                    },
+                ],
+                "3": 
+                [
+                    { 
+                        "cargo": "Sargento en Armas", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pendiente',
+                        "fecha_pago":''
+                    },
+                    { 
+                        "cargo": "Sargento en Armas", 
+                        "deuda": "Segunda Junta Linaje", 
+                        "monto": 7641,
+                        "detalle":'',
+                        "estado":'Pendiente',
+                        "fecha_pago":''
+                    }
+                ],
+                "4": 
+                [
+                    { 
+                        "cargo": "Sargento en Armas", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pendiente',
+                        "fecha_pago":''
+                    }
+                ],
+                "5": 
+                [
+                    { 
+                        "cargo": "Sargento en Armas", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pendiente',
+                        "fecha_pago":''
+                    },
+                ],
+                "6": 
+                [
+                    { 
+                        "cargo": "Sargento en Armas", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pendiente',
+                        "fecha_pago":''
+                    },
+                ]
+            }
         }
     }
 ];
