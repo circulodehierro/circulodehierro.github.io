@@ -24,55 +24,75 @@
     </nav>
     <!--INDICADORES-->
     <div class="featured indicadores" id="indicadores" data-value="0">
-        <span>Indicadores</span>
         <div class="row">
-            <table class="tabla_indicadores">
-                <tbody>
-                    <tr>
-                        <td rowspan="2">
-                            <div class="pie-svg">
-                                <svg viewBox="0 0 100 100" width="100" height="100" id="miTorta">
-                                    <circle cx="50" cy="50" r="15" fill="white" />
-                                </svg>
-                            </div>
-                        </td>
-                        <td colspan="3" style="text-align: left;">
-                            <span>Estado del Club</span><br>
-                            <span class="estatus" style="color: #ffa91f;font-size: 12px;font-weight: bold;"></span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="width: 10%; text-align: left;">
-                            <div class="verticales">
-                                <span class="circulo-verde"></span>
-                                <span class="circulo-rojo"></span>
-                                <span class="circulo-cafe"></span>
-                            </div>
-                        </td>
-                        <td style="text-align: left; width: 20%;">
-                            <div class="verticales">
-                                <span>En Caja</span>
-                                <span>Deuda</span>
-                                <span class="verticales-text">Total</span>
-                            </div>
-                        </td>
-                        <td style="text-align: left; font-weight: bold;">
-                            <div class="verticales">
-                                <span class="caja"></span>
-                                <span class="deuda"></span>
-                                <span class="total"></span>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="4">
-                            Datos actualizados al: Lunes 01 de Junio del 2026
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <!-- Navegación de pestañas -->
+            <ul class="tabs-nav">
+                <li class="tab-link active" data-tab="tab1">Estado</li>
+                <li class="tab-link" data-tab="tab2">Pestaña 2</li>
+                <li class="tab-link" data-tab="tab3">Pestaña 3</li>
+            </ul>
+            <!-- Contenido de las pestañas -->
+            <div class="tabs-content">
+                <!-- Pestaña 1: la tabla original -->
+                <div id="tab1" class="tab-pane active">
+                    <table class="tabla_indicadores">
+                        <tbody>
+                            <tr>
+                                <td rowspan="2">
+                                    <div class="pie-svg">
+                                        <svg viewBox="0 0 100 100" width="100" height="100" id="miTorta">
+                                            <circle cx="50" cy="50" r="15" fill="white" />
+                                        </svg>
+                                    </div>
+                                </td>
+                                <td colspan="3" style="text-align: left;">
+                                    <span>Estado del Club</span><br>
+                                    <span class="estatus">Activo</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 10%; text-align: left;">
+                                    <div class="verticales">
+                                        <span class="circulo-verde"></span>
+                                        <span class="circulo-rojo"></span>
+                                        <span class="circulo-cafe"></span>
+                                    </div>
+                                </td>
+                                <td style="text-align: left; width: 20%;">
+                                    <div class="verticales">
+                                        <span>En Caja</span>
+                                        <span>Deuda</span>
+                                        <span class="verticales-text">Total</span>
+                                    </div>
+                                </td>
+                                <td style="text-align: left; font-weight: bold;">
+                                    <div class="verticales">
+                                        <span class="caja">$1,200,000</span>
+                                        <span class="deuda">$500,000</span>
+                                        <span class="total">$700,000</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">
+                                    Datos actualizados al: Lunes 18 de Junio del 2026
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Pestaña 2: solo un label -->
+                <div id="tab2" class="tab-pane">
+                    <label>Contenido Uno</label>
+                </div>
+
+                <!-- Pestaña 3: solo un label -->
+                <div id="tab3" class="tab-pane">
+                    <label>Contenido Dos</label>
+                </div>
+            </div>
         </div>
-        
     </div>
     <div class="gallery">
         <!--DOCUMENTOS-->

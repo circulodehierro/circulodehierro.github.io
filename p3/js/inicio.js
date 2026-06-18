@@ -48,8 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
     var spanDeuda = document.querySelector('.deuda');
     var spanTotal = document.querySelector('.total');
 
-    var caja = 2911154;
-    var deuda = 902232;
+    var caja = 2926428;
+    var deuda = 892232;
     localStorage.setItem("deuda", JSON.stringify(deuda));
     var total = caja + deuda;
 
@@ -128,6 +128,37 @@ document.addEventListener('DOMContentLoaded', () => {
         anguloInicio = anguloFin;
         // console.log(`${d.label}: ángulo medio = ${anguloMedioGrados}°`);
     });
+
+    (function() {
+            // Seleccionar todos los enlaces de pestañas y paneles
+            const tabLinks = document.querySelectorAll('.tab-link');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+
+            // Función para activar una pestaña
+            function activateTab(tabId) {
+                // Quitar clase 'active' de todos los enlaces y paneles
+                tabLinks.forEach(link => link.classList.remove('active'));
+                tabPanes.forEach(pane => pane.classList.remove('active'));
+
+                // Agregar clase 'active' al enlace y panel correspondiente
+                const activeLink = document.querySelector(`.tab-link[data-tab="${tabId}"]`);
+                const activePane = document.getElementById(tabId);
+                if (activeLink) activeLink.classList.add('active');
+                if (activePane) activePane.classList.add('active');
+            }
+
+            // Asignar evento click a cada enlace
+            tabLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const tabId = this.getAttribute('data-tab');
+                    activateTab(tabId);
+                });
+            });
+
+            // (Opcional) Si quieres que la primera pestaña esté activa por defecto,
+            // ya lo está gracias a las clases 'active' en el HTML.
+        })();
+
 });
 
 // Función para generar el path (la misma que ya tenías)
