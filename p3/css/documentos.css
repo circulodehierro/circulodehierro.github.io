@@ -10,8 +10,8 @@ body {
     align-items: center;
     overflow-x: auto; /* Habilitar scroll horizontal */
     /* padding: 5px; */
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 6px;
+    padding-bottom: 10px;
     width: 100%;
     min-width: 300px; /* Asegura que el contenedor tenga un tamaño mínimo */
     /* border: 1px solid blue; */
@@ -20,7 +20,7 @@ body {
 .icon-container {
     display: flex;
     flex-wrap: nowrap; /* Para que los iconos no se dividan en varias filas */
-    gap: 20px; /* Espacio entre los iconos */
+    gap: 5px; /* Espacio entre los iconos */
     min-width: 100%; /* Para asegurarse de que ocupe el 100% del ancho disponible */
     /* border: 1px solid red; */
 }
@@ -30,11 +30,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 0 0 10px;
+    padding: 0 6px 0 6px;
 }
 
 .icon-item img {
-    width: 10vw; /* Responsivo: el tamaño de los iconos será un 10% del ancho de la ventana */
+    width: 12vw; /* Responsivo: el tamaño de los iconos será un 10% del ancho de la ventana */
     height: auto; /* Mantiene la proporción original del icono */
     margin-bottom: 5px;
     max-width: 50px; /* Limita el tamaño máximo de los iconos */
@@ -64,7 +64,7 @@ body.dark-mode .icon-item span {
     height: 60vh; /* Ocupa el 90% de la altura de la ventana */
     overflow: auto; /* Agrega barra de desplazamiento si el contenido excede el tamaño */
     padding: 10px; /* Agrega un pequeño padding para separar el contenido */
-    background-color: #f5f5f5; /* Opcional, color de fondo */
+    background-color: #f0f0f0; /* Opcional, color de fondo */
     box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
     border: 1px solid red;
 }
@@ -95,15 +95,23 @@ body.dark-mode .icon-item span {
 .controls img:hover {
     filter: invert(64%) sepia(73%) saturate(400%) hue-rotate(180deg) brightness(95%) contrast(90%);
 }
+/*
 #estatutosFull img {
-    filter: invert(34%) sepia(73%) saturate(400%) hue-rotate(180deg) brightness(95%) contrast(90%);
+    filter: invert(34%) sepia(73%) saturate(400%) hue-rotate(0deg) brightness(95%) contrast(90%);
 }
-#solcitudColores img {
-    filter: invert(64%) sepia(73%) saturate(400%) hue-rotate(180deg) brightness(95%) contrast(90%);
+#solicitudColores img {
+    filter: invert(64%) sepia(73%) saturate(400%) hue-rotate(72deg) brightness(95%) contrast(90%);
 }
-#protocoloReceso img {
-    filter: invert(4%) sepia(93%) saturate(400%) hue-rotate(180deg) brightness(95%) contrast(90%);
+#solicitudReceso img {
+    filter: invert(4%) sepia(93%) saturate(400%) hue-rotate(144deg) brightness(95%) contrast(90%);
 }
+#compromiso_pago img {
+    filter: invert(84%) sepia(23%) saturate(400%) hue-rotate(216deg) brightness(95%) contrast(90%);
+}
+#aviso_deuda img {
+    filter: invert(44%) sepia(43%) saturate(400%) hue-rotate(288deg) brightness(95%) contrast(90%);
+}
+    */
 /* Ajuste responsivo para pantallas medianas (tabletas) */
 @media (max-width: 768px) {
     .paragraph {

@@ -7,6 +7,17 @@ window.onload = function () {
 };
 
 document.addEventListener('DOMContentLoaded', function () {
+
+    const imagenes = document.querySelectorAll('.imagen-colorizable');
+    const total = imagenes.length;
+
+    imagenes.forEach((img, index) => {
+        // Ángulo = (index / total) * 360
+        const hue = (index / total) * 360;
+        img.style.filter = `hue-rotate(${hue}deg) saturate(400%) brightness(95%) contrast(90%)`;
+    });
+
+
     let scale = 1.0;  // Variable para manejar el nivel de zoom
     const paragraph = document.querySelector('.paragraph');  // El contenedor del PDF
     const canvasContainer = document.createElement('div');
@@ -44,7 +55,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Agregar evento al botón con ID "estatutosFull"
     const estatutosFullBtn = document.getElementById('estatutosFull');
-    const solcitudColoresBtn = document.getElementById('solcitudColores');
+    const solicitudColoresBtn = document.getElementById('solicitudColores');
+    const solicitudRecesoBtn = document.getElementById('solicitudReceso');
     const compromiso_pagoBtn = document.getElementById('compromiso_pago');
     const aviso_deudaBtn = document.getElementById('aviso_deuda');
     if (estatutosFullBtn) {
@@ -60,10 +72,23 @@ document.addEventListener('DOMContentLoaded', function () {
             paragraph.style.display = 'block'; // Asegurarse de mostrar el contenedor del PDF
         });
     }
-    if (solcitudColoresBtn) {
-        solcitudColoresBtn.addEventListener('click', function () {
+    if (solicitudColoresBtn) {
+        solicitudColoresBtn.addEventListener('click', function () {
             new_url = '../documentos/solicitud_colores.pdf';
             nombre_documento = 'solicitud_colores.pdf';
+            cargarPDF(new_url); // Solo carga el PDF al hacer clic en el botón
+            // Cambiar display de las clases "control" y "paragraph"
+            const controlElements = document.querySelectorAll('.controls');
+            controlElements.forEach(element => {
+                element.style.display = 'block';
+            });
+            paragraph.style.display = 'block'; // Asegurarse de mostrar el contenedor del PDF
+        });
+    }
+    if (solicitudRecesoBtn) {
+        solicitudRecesoBtn.addEventListener('click', function () {
+            new_url = '../documentos/solicitud_receso.pdf';
+            nombre_documento = 'solicitud_receso.pdf';
             cargarPDF(new_url); // Solo carga el PDF al hacer clic en el botón
             // Cambiar display de las clases "control" y "paragraph"
             const controlElements = document.querySelectorAll('.controls');

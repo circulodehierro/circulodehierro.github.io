@@ -29,8 +29,13 @@ let permiso = [];
 //8 Otros
 
 let documento = [];
-//let deuda = 700000;
-  // Función de login
+//1 Estatutos Full
+//2 Solicitud de Colores
+//3 Estatutos Prospectos
+//4 Solicitud de Receso
+//5 Protocolo Expulsion
+//6 Compromiso de Pago
+//7 Aviso de Deuda
 function login() {
     const password = document.getElementById('pass').value;
     const spanPass = document.getElementById('span_pass');
