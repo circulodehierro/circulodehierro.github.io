@@ -327,6 +327,87 @@ body.dark-mode .tab-pane label {
     color: #ddd;
 }
 
+/* Tabla moderna */
+.table-modern-wrapper {
+    overflow-x: auto;
+    padding: 2px 0;
+}
+
+.table-modern {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 8px;
+    font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+    font-size: 12px;
+}
+
+.table-modern thead th {
+    background: #f8f9fc;
+    color: #2d3748;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-size: 12px;
+    padding: 10px 8px;
+    text-align: left;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.table-modern tbody tr {
+    background: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+.table-modern tbody tr:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transform: translateY(-1px);
+}
+
+.table-modern tbody td {
+    text-align: left;
+    padding: 10px 8px;
+    border-bottom: 1px solid #edf2f7;
+    color: #2d3748;
+}
+
+.table-modern tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.table-modern .badge {
+    font-size: 12px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.table-modern .price {
+    font-weight: 600;
+    color: #2b6cb0;
+    text-align: right;
+}
+
+/* Modo oscuro (si lo usas) */
+body.dark-mode .table-modern thead th {
+    background: #2d3748;
+    color: #e2e8f0;
+    border-bottom-color: #4a5568;
+}
+
+body.dark-mode .table-modern tbody tr {
+    background: #2d3748;
+}
+
+body.dark-mode .table-modern tbody td {
+    color: #e2e8f0;
+    border-bottom-color: #4a5568;
+}
+
+body.dark-mode .table-modern .price {
+    color: #63b3ed;
+}
+
 
 /* Ajuste responsivo para pantallas medianas (tabletas) */
 @media (max-width: 768px) {

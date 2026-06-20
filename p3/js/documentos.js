@@ -136,51 +136,51 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-const shareBtn = document.getElementById('shareWhatsApp');
-if (shareBtn) {
-    shareBtn.addEventListener('click', async function () {
-        try {
-            // 1. Obtener el Blob del PDF
-            let blob = window.pdfBlob; // si ya lo tienes guardado en una variable global
-            if (!blob && typeof new_url !== 'undefined') {
-                // Si no está en memoria, descargarlo desde la URL
-                const response = await fetch(new_url);
-                blob = await response.blob();
-            }
-            if (!blob) {
-                throw new Error('No se pudo obtener el archivo');
-            }
+    const shareBtn = document.getElementById('shareWhatsApp');
+    if (shareBtn) {
+        shareBtn.addEventListener('click', async function () {
+            try {
+                // 1. Obtener el Blob del PDF
+                let blob = window.pdfBlob; // si ya lo tienes guardado en una variable global
+                if (!blob && typeof new_url !== 'undefined') {
+                    // Si no está en memoria, descargarlo desde la URL
+                    const response = await fetch(new_url);
+                    blob = await response.blob();
+                }
+                if (!blob) {
+                    throw new Error('No se pudo obtener el archivo');
+                }
 
-            const nombreArchivo = nombre_documento || 'documento.pdf';
+                const nombreArchivo = nombre_documento || 'documento.pdf';
 
-            // 2. Verificar si el navegador soporta compartir archivos
-            const archivo = new File([blob], nombreArchivo, { type: 'application/pdf' });
-            if (navigator.canShare && navigator.canShare({ files: [archivo] })) {
-                // 3. Compartir directamente (móviles y algunos escritorios)
-                await navigator.share({
-                    files: [archivo],
-                    title: nombreArchivo,
-                });
-                console.log('Archivo compartido exitosamente');
-            } else {
-                // 4. Fallback: abrir WhatsApp Web con mensaje y enlace
-                const url = new_url || window.location.href;
-                const mensaje = `📄 *${nombreArchivo}*\n\nDescárgalo aquí: ${url}`;
-                window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(mensaje)}`, '_blank');
+                // 2. Verificar si el navegador soporta compartir archivos
+                const archivo = new File([blob], nombreArchivo, { type: 'application/pdf' });
+                if (navigator.canShare && navigator.canShare({ files: [archivo] })) {
+                    // 3. Compartir directamente (móviles y algunos escritorios)
+                    await navigator.share({
+                        files: [archivo],
+                        title: nombreArchivo,
+                    });
+                    console.log('Archivo compartido exitosamente');
+                } else {
+                    // 4. Fallback: abrir WhatsApp Web con mensaje y enlace
+                    const url = new_url || window.location.href;
+                    const mensaje = `📄 *${nombreArchivo}*\n\nDescárgalo aquí: ${url}`;
+                    window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(mensaje)}`, '_blank');
+                }
+            } catch (error) {
+                console.error('Error al compartir:', error);
+                // Si el usuario cancela o hay error, no hacemos nada o mostramos un mensaje
+                // alert('No se pudo compartir el archivo. Puedes descargarlo y enviarlo manualmente.');
             }
-        } catch (error) {
-            console.error('Error al compartir:', error);
-            // Si el usuario cancela o hay error, no hacemos nada o mostramos un mensaje
-            // alert('No se pudo compartir el archivo. Puedes descargarlo y enviarlo manualmente.');
-        }
-    });
-}
+        });
+    }
 
-// Función auxiliar para abrir WhatsApp
-function abrirWhatsApp(mensaje) {
-    const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(mensaje)}`;
-    window.open(whatsappUrl, '_blank');
-}
+    // Función auxiliar para abrir WhatsApp
+    function abrirWhatsApp(mensaje) {
+        const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(mensaje)}`;
+        window.open(whatsappUrl, '_blank');
+    }
 
 });
 
