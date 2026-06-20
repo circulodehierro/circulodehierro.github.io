@@ -135,6 +135,40 @@ document.addEventListener('DOMContentLoaded', function () {
             link.click();  // Inicia la descarga
         });
     }
+
+    // --- Compartir por WhatsApp ---
+const shareBtn = document.querySelector('#shareWhatsApp');
+if (shareBtn) {
+    shareBtn.addEventListener('click', function () {
+        // Asegúrate de que 'new_url' y 'nombre_documento' estén definidos (igual que en la descarga)
+        const url = new_url || window.location.href; // fallback a la página actual
+        const nombre = nombre_documento || 'documento.pdf';
+        const mensaje = `📄 *${nombre}*\n\nPuedes verlo aquí: ${url}`;
+
+        // 1. Si el navegador soporta Web Share API (móviles), usarlo primero
+        if (navigator.share) {
+            navigator.share({
+                title: nombre,
+                text: `Mira este documento: ${nombre}`,
+                url: url
+            }).catch(err => {
+                console.log('Error al compartir:', err);
+                // Si falla, usar el método tradicional de WhatsApp
+                abrirWhatsApp(mensaje);
+            });
+        } else {
+            // 2. Fallback: abrir WhatsApp Web con el mensaje
+            abrirWhatsApp(mensaje);
+        }
+    });
+}
+
+// Función auxiliar para abrir WhatsApp
+function abrirWhatsApp(mensaje) {
+    const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(mensaje)}`;
+    window.open(whatsappUrl, '_blank');
+}
+
 });
 
 function habilitar_documento(documento) {
