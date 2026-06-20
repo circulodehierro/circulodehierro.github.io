@@ -136,29 +136,42 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // --- Compartir por WhatsApp ---
-const shareBtn = document.querySelector('#shareWhatsApp');
+const shareBtn = document.getElementById('shareWhatsApp');
 if (shareBtn) {
-    shareBtn.addEventListener('click', function () {
-        // Asegúrate de que 'new_url' y 'nombre_documento' estén definidos (igual que en la descarga)
-        const url = new_url || window.location.href; // fallback a la página actual
-        const nombre = nombre_documento || 'documento.pdf';
-        const mensaje = `📄 *${nombre}*\n\nPuedes verlo aquí: ${url}`;
+    shareBtn.addEventListener('click', async function () {
+        try {
+            // 1. Obtener el Blob del PDF
+            let blob = window.pdfBlob; // si ya lo tienes guardado en una variable global
+            if (!blob && typeof new_url !== 'undefined') {
+                // Si no está en memoria, descargarlo desde la URL
+                const response = await fetch(new_url);
+                blob = await response.blob();
+            }
+            if (!blob) {
+                throw new Error('No se pudo obtener el archivo');
+            }
 
-        // 1. Si el navegador soporta Web Share API (móviles), usarlo primero
-        if (navigator.share) {
-            navigator.share({
-                title: nombre,
-                text: `Mira este documento: ${nombre}`,
-                url: url
-            }).catch(err => {
-                console.log('Error al compartir:', err);
-                // Si falla, usar el método tradicional de WhatsApp
-                abrirWhatsApp(mensaje);
-            });
-        } else {
-            // 2. Fallback: abrir WhatsApp Web con el mensaje
-            abrirWhatsApp(mensaje);
+            const nombreArchivo = nombre_documento || 'documento.pdf';
+
+            // 2. Verificar si el navegador soporta compartir archivos
+            const archivo = new File([blob], nombreArchivo, { type: 'application/pdf' });
+            if (navigator.canShare && navigator.canShare({ files: [archivo] })) {
+                // 3. Compartir directamente (móviles y algunos escritorios)
+                await navigator.share({
+                    files: [archivo],
+                    title: nombreArchivo,
+                });
+                console.log('Archivo compartido exitosamente');
+            } else {
+                // 4. Fallback: abrir WhatsApp Web con mensaje y enlace
+                const url = new_url || window.location.href;
+                const mensaje = `📄 *${nombreArchivo}*\n\nDescárgalo aquí: ${url}`;
+                window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(mensaje)}`, '_blank');
+            }
+        } catch (error) {
+            console.error('Error al compartir:', error);
+            // Si el usuario cancela o hay error, no hacemos nada o mostramos un mensaje
+            // alert('No se pudo compartir el archivo. Puedes descargarlo y enviarlo manualmente.');
         }
     });
 }

@@ -96,8 +96,11 @@ body.dark-mode .icon-item span {
     filter: invert(64%) sepia(73%) saturate(400%) hue-rotate(180deg) brightness(95%) contrast(90%);
 }
 #shareWhatsApp {
-    width: 24px;
-    height: 24px;
+    position: absolute;
+    top: 26px;
+    right: -3px;
+    width: 34px;
+    height: 34px;
     cursor: pointer;
     opacity: 0.8;
     transition: opacity 0.2s;
