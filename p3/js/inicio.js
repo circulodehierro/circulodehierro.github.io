@@ -48,8 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
     var spanDeuda = document.querySelector('.deuda');
     var spanTotal = document.querySelector('.total');
 
-    var caja = 2926428;
-    var deuda = 892232;
+    var caja = 2901540;
+    var deuda = 1120032;
     localStorage.setItem("deuda", JSON.stringify(deuda));
     var total = caja + deuda;
 

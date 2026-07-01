@@ -803,7 +803,7 @@ export const cuotas = [
                 "3": 
                 [
                     { 
-                        "cargo": "Prospecto", 
+                        "cargo": "Parchado", 
                         "deuda": "Cuota", 
                         "monto": 10000,
                         "detalle":'',
@@ -811,7 +811,7 @@ export const cuotas = [
                         "fecha_pago":'29-05-2026'
                     },
                     { 
-                        "cargo": "Prospecto", 
+                        "cargo": "Parchado", 
                         "deuda": "Segunda Junta Linaje", 
                         "monto": 28641,
                         "detalle":'',
@@ -822,7 +822,7 @@ export const cuotas = [
                 "4": 
                 [
                     { 
-                        "cargo": "Prospecto", 
+                        "cargo": "Parchado", 
                         "deuda": "Cuota", 
                         "monto": 10000,
                         "detalle":'',
@@ -833,7 +833,7 @@ export const cuotas = [
                 "5": 
                 [
                     { 
-                        "cargo": "Prospecto", 
+                        "cargo": "Parchado", 
                         "deuda": "Cuota", 
                         "monto": 10000,
                         "detalle":'',
@@ -844,12 +844,31 @@ export const cuotas = [
                 "6": 
                 [
                     { 
-                        "cargo": "Prospecto", 
+                        "cargo": "Parchado", 
                         "deuda": "Cuota", 
                         "monto": 10000,
                         "detalle":'',
                         "estado":'Pagado',
                         "fecha_pago":'29-05-2026'
+                    },
+                    { 
+                        "cargo": "Parchado", 
+                        "deuda": "Consumo y cuota junta Pant. y Cabe.", 
+                        "monto": 22000,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'29-06-2026'
+                    },
+                ],
+                "7": 
+                [
+                    { 
+                        "cargo": "Parchado", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'29-06-2026'
                     },
                 ]
             }
