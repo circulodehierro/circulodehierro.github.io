@@ -409,6 +409,43 @@ body.dark-mode .table-modern .price {
 }
 
 
+/* Contenedor de la tabla: define la altura máxima y activa el scroll vertical */
+.table-modern-wrapper {
+  max-height: 150px;          /* Altura máxima total */
+  overflow-y: auto;           /* Scroll vertical solo cuando sea necesario */
+  display: block;             /* Para que el overflow funcione correctamente */
+  border: 1px solid #ddd;     /* Opcional: borde para visualizar el área */
+}
+
+/* La tabla ocupa todo el ancho y mantiene su estructura */
+.table-modern {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+}
+
+/* Cabecera fija: se pega al borde superior del contenedor al hacer scroll */
+.table-modern thead {
+  position: sticky;
+  top: 0;
+  z-index: 10;                /* Asegura que quede por encima del cuerpo */
+}
+
+/* Fondo de las celdas de cabecera para que tapen el contenido al desplazarse */
+.table-modern thead th {
+  background-color: #f2f2f2;  /* Color de fondo (ajústalo al diseño) */
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 2px solid #ccc;
+  white-space: nowrap;        /* Evita que el texto se rompa */
+}
+
+/* Opcional: estilos para las celdas del cuerpo */
+.table-modern tbody td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #eee;
+}
+
 /* Ajuste responsivo para pantallas medianas (tabletas) */
 @media (max-width: 768px) {
     .gallery {

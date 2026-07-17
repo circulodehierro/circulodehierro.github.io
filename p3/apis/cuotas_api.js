@@ -299,6 +299,25 @@ export const cuotas = [
                         "estado":'Pendiente',
                         "fecha_pago":''
                     },
+                    { 
+                        "cargo": "Tesorero", 
+                        "deuda": "Consumo Junta Pant. y Cabe.", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pendiente',
+                        "fecha_pago":''
+                    },
+                ],
+                "7": 
+                [
+                    { 
+                        "cargo": "Tesorero", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pendiente',
+                        "fecha_pago":''
+                    },
                 ]
             }
         },
