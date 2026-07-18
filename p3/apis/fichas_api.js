@@ -1,102 +1,170 @@
 export const fichas = [
     { 
         idficha: 1,
+        estado: 1,
         nombre: "Juan Pablo",
         apellido: "Fuentes", 
         alias: 'Tio Palo',
         email: "pablo@example.com", 
         edad: 42,
-        cargo: "Parchado",
-        foto_usuario: "../images/pablo_user.jpeg"
+        cargo: "Sin Cargo",
+        foto_usuario: "../images/pablo_user.jpeg",
+        calidad: "Parchado"
     },
     { 
         idficha: 2,
+        estado: 1,
         nombre: "Alejandro",
         apellido: "Vejar", 
         alias: 'Ale',
         email: "ale@example.com", 
         edad: 38,
         cargo: "Sargento en Armas",
-        foto_usuario: "../images/ale_user.jpeg"
+        foto_usuario: "../images/ale_user.jpeg",
+        calidad: "Parchado"
     },
     { 
         idficha: 3,
+        estado: 1,
         nombre: "Juan Jose",
         apellido: "Reyes", 
         alias: 'Jota',
         email: "jota@example.com", 
         edad: 37,
-        cargo: "Parchado",
-        foto_usuario: "../images/jota_user.jpeg"
+        cargo: "Sin Cargo",
+        foto_usuario: "../images/jota_user.jpeg",
+        calidad: "Parchado"
     },
     { 
         idficha: 4,
+        estado: 1,
         nombre: "Robinson",
         apellido: "Gonzalez", 
         alias: 'Lex',
         email: "lex@example.com", 
         edad: 43,
         cargo: "Tesorero",
-        foto_usuario: "../images/lex_user.jpeg"
+        foto_usuario: "../images/lex_user.jpeg",
+        calidad: "Parchado"
     },
     { 
         idficha: 5,
+        estado: 1,
         nombre: "Marcelo",
         apellido: "Brackamonte", 
         alias: 'Bracka',
         email: "bracka@example.com", 
         edad: 49,
         cargo: "Vice Presidente",
-        foto_usuario: "../images/bracka_user.jpeg"
+        foto_usuario: "../images/bracka_user.jpeg",
+        calidad: "Parchado"
     },
     { 
         idficha: 6,
+        estado: 0,
         nombre: "Hugo",
         apellido: "-", 
         alias: 'Chadu',
         email: "chadu@example.com", 
         edad: 56,
-        cargo: "Parchado",
-        foto_usuario: "../images/chadu_user.jpeg"
+        cargo: "Sin Cargo",
+        foto_usuario: "../images/chadu_user.jpeg",
+        calidad: "Parchado"
     },
     { 
         idficha: 7,
+        estado: 1,
         nombre: "Raul",
         apellido: "-", 
         alias: 'Raul',
         email: "raul@example.com", 
         edad: 52,
         cargo: "Presidente",
-        foto_usuario: "../images/raul_user.jpeg"
+        foto_usuario: "../images/raul_user.jpeg",
+        calidad: "Parchado"
     },
     { 
         idficha: 8,
+        estado: 1,
         nombre: "Arturo",
         apellido: "-", 
         alias: 'Arturo',
         email: "arturo@example.com", 
         edad: 38,
         cargo: "Secretario",
-        foto_usuario: "../images/arturo_user.jpeg"
+        foto_usuario: "../images/arturo_user.jpeg",
+        calidad: "Parchado"
     },
     { 
         idficha: 9,
+        estado: 1,
         nombre: "Troncoso",
         apellido: "-", 
         alias: 'Satiro',
         email: "troncoso@example.com", 
         edad: 39,
         cargo: "Capitan de Ruta",
-        foto_usuario: "../images/troncoso_user.jpeg"
+        foto_usuario: "../images/troncoso_user.jpeg",
+        calidad: "Parchado"
     },
     { 
         idficha: 10,
+        estado: 1,
         nombre: "John",
         apellido: "-", 
         alias: 'John',
         email: "arturo@example.com", 
         edad: 44,
-        cargo: "Parchado",
-        foto_usuario: "../images/john_user.jpeg"
+        cargo: "Sin Cargo",
+        foto_usuario: "../images/john_user.jpeg",
+        calidad: "Parchado"
+    },
+    { 
+        idficha: 11,
+        estado: 1,
+        nombre: "Gerardo",
+        apellido: "-", 
+        alias: 'Gera',
+        email: "gera@example.com", 
+        edad: 34,
+        cargo: "Sin Cargo",
+        foto_usuario: "../images/user1.jpeg",
+        calidad: "Prospecto"
+    },
+    { 
+        idficha: 12,
+        estado: 1,
+        nombre: "Francisco",
+        apellido: "-", 
+        alias: 'Frank',
+        email: "frank@example.com", 
+        edad: 31,
+        cargo: "Sin Cargo",
+        foto_usuario: "../images/user1.jpeg",
+        calidad: "Prospecto"
+    },
+    { 
+        idficha: 13,
+        estado: 1,
+        nombre: "Petro",
+        apellido: "-", 
+        alias: 'Petro',
+        email: "petro@example.com", 
+        edad: 46,
+        cargo: "Sin Cargo",
+        foto_usuario: "../images/user1.jpeg",
+        calidad: "Prospecto"
+    },
+    { 
+        idficha: 14,
+        estado: 1,
+        nombre: "Francisco",
+        apellido: "-", 
+        alias: 'Pancho',
+        email: "pancho@example.com", 
+        edad: 29,
+        cargo: "Sin Cargo",
+        foto_usuario: "../images/user1.jpeg",
+        calidad: "Prospecto"
     }
 ];
