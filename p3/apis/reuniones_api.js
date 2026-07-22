@@ -59,4 +59,36 @@ export const reuniones = [
             'Se estipula que solo se mandaran a hacer stickers genericos y se establecera un monto anual para dichos stickers. Se debe cotizar por emblemas magneticos para vehiculos de apoyo. Se creara un documento de compromiso de pago y un segundo documento para las sanciones.'
         ]
     },
+    { 
+        ano: 2026, 
+        mes: 5, 
+        dia: 27, 
+        titulo: 'Reunion del Miercoles 27', 
+        inicio: '12:25 PM', 
+        termino: '13:25 PM', 
+        puntos: [
+            'Consolidación Deudas.',
+            'Estatutos y Anexos.',
+            'Comisiones para el Aniversario.',
+            'Presentación de Stand.',
+            'Calendario de Turnos.',
+            'Chat de Solo Rutas.',
+            'Informativo de Finanzas.',
+            'Catastro de Copete del Club.',
+            'Conversación Presidente con Phortos.',
+            'Interés de Hisashi y Akiles de Entrar al Club.',
+        ], 
+        respuestas: [
+            'Se habló sobre Chadu y está pagando su deuda, a la fecha solo debe $42.000.',
+            'Custom y Jota deben ver las modificaciones de los estatutos y hacer un estatuto base para prospectos.',
+            'Las comisiones definidas son las siguientes: Stand-Custom, Música-Bracka, Alcohol-Custom, Compras-Lex, falta definir ciertos parametros.',
+            'Se define 7 cupos para Barba y Cueros, Custom vera ese tema.',
+            'El Capitan de Ruta vera si coinciden los turnos con las actividades programadas.',
+            'Se define ir avisando las rutas con 2 semanas de anticipación y maxímo un mes de anticipación para organizarce bien.',
+            'Lex comenta las deudas pendientes y se da a conocer documentos que se trabajaran para regularizar los pagos de dichas deudas.',
+            'Lex realiza catastro del copete.',
+            'Nuestro presidente "Irlandes" nos informa que Phortos manifiesta el interés de participar mas en actividades que nosotros asistimos, solicita en lo posible que le avisemos.',
+            'Se pregunta a los asistentes full parche (Irlandés, Bracka, Ale, Custom, Lex, Tio Palo) si están de acuerdo que los muchachos pidan colores y se vota que si. Se consultará con Phortos si tienen algun inconveniente.',
+        ]
+    },
 ];
