@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     /*paragraph.appendChild(canvasContainer);*/
     let new_url = '';
     let nombre_documento = '';
-
+    console.log(reuniones);
     const items = document.querySelectorAll(".custom-list li > span");
     items.forEach(span => {
         span.addEventListener("click", function(e) {
