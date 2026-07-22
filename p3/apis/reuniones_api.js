@@ -97,7 +97,7 @@ export const reuniones = [
         dia: 21, 
         titulo: 'Reunion del Martes 21', 
         inicio: '21:40 PM', 
-        termino: '23:03 PM', 
+        termino: '23:47 PM', 
         puntos: [
             'Programación Aniversario.',
         ], 
