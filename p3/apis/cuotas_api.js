@@ -4,7 +4,7 @@ export const cuotas = [
         {
             "2026": 
             {
-                 "1": 
+                "1": 
                 [
                     { 
                         "cargo": "Vice Presidente", 
@@ -71,22 +71,63 @@ export const cuotas = [
                         "deuda": "Cuota", 
                         "monto": 10000,
                         "detalle":'',
-                        "estado":'Pendiente',
-                        "fecha_pago":''
+                        "estado":'Pagado',
+                        "fecha_pago":'06-08-2026'
                     },
                     { 
                         "cargo": "Vice Presidente", 
                         "deuda": "Consumo Club", 
                         "monto": 4500,
                         "detalle":'',
-                        "estado":'Pendiente',
-                        "fecha_pago":''
+                        "estado":'Pagado',
+                        "fecha_pago":'06-08-2026'
                     },
                 ],
                 "6": 
                 [
                     { 
                         "cargo": "Vice Presidente", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'06-08-2026'
+                    },
+                    { 
+                        "cargo": "Vice Presidente", 
+                        "deuda": "Consumo y Cuota Junta Pant. y Cabe.", 
+                        "monto": 10800,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'06-08-2026'
+                    }
+                ],
+                "7": 
+                [
+                    { 
+                        "cargo": "Vice Presidente", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'06-08-2026'
+                    },
+                ],
+                "8": 
+                [
+                    { 
+                        "cargo": "Vice Presidente", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'06-08-2026'
+                    },
+                ],
+                "9": 
+                [
+                    { 
+                        "cargo": "Capitan de Ruta", 
                         "deuda": "Cuota", 
                         "monto": 10000,
                         "detalle":'',
@@ -175,14 +216,55 @@ export const cuotas = [
                         "deuda": "Cuota", 
                         "monto": 10000,
                         "detalle":'',
-                        "estado":'Pendiente',
-                        "fecha_pago":''
+                        "estado":'Pagado',
+                        "fecha_pago":'03-08-2026'
                     },
                 ],
                 "6": 
                 [
                     { 
                         "cargo": "Sin Cargo", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'03-08-2026'
+                    },
+                    { 
+                        "cargo": "Sin Cargo", 
+                        "deuda": "Consumo y Cuota Junta Pant. y Cabe.", 
+                        "monto": 17500,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'03-08-2026'
+                    }
+                ],
+                "7": 
+                [
+                    { 
+                        "cargo": "Sin Cargo", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'03-08-2026'
+                    },
+                ],
+                "8": 
+                [
+                    { 
+                        "cargo": "Sin Cargo", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'03-08-2026'
+                    },
+                ],
+                "9": 
+                [
+                    { 
+                        "cargo": "Presidente", 
                         "deuda": "Cuota", 
                         "monto": 10000,
                         "detalle":'',
@@ -225,8 +307,8 @@ export const cuotas = [
                         "deuda": "Cuota", 
                         "monto": 10000,
                         "detalle":'',
-                        "estado":'Pendiente',
-                        "fecha_pago":'' 
+                        "estado":'Pagado',
+                        "fecha_pago":'03-08-2026' 
                     }
                 ],
                 "2": 
@@ -244,8 +326,8 @@ export const cuotas = [
                         "deuda": "Cuota", 
                         "monto": 10000,
                         "detalle":'',
-                        "estado":'Pendiente',
-                        "fecha_pago":''
+                        "estado":'Pagado',
+                        "fecha_pago":'03-08-2026'
                     }
                 ],
                 "3": 
@@ -263,8 +345,8 @@ export const cuotas = [
                         "deuda": "Cuota", 
                         "monto": 10000,
                         "detalle":'',
-                        "estado":'Pendiente',
-                        "fecha_pago":''
+                        "estado":'Pagado',
+                        "fecha_pago":'03-08-2026'
                     }
                 ],
                 "4": 
@@ -318,6 +400,28 @@ export const cuotas = [
                         "estado":'Pendiente',
                         "fecha_pago":''
                     },
+                ],
+                "8": 
+                [
+                    { 
+                        "cargo": "Tesorero", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pendiente',
+                        "fecha_pago":''
+                    }
+                ],
+                "9": 
+                [
+                    { 
+                        "cargo": "Tesorero", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pendiente',
+                        "fecha_pago":''
+                    }
                 ]
             }
         },
@@ -325,7 +429,7 @@ export const cuotas = [
         {
             "2026": 
             {
-                 "1": 
+                "1": 
                 [
                     { 
                         "cargo": "Secretario", 
@@ -400,14 +504,47 @@ export const cuotas = [
                         "deuda": "Cuota", 
                         "monto": 10000,
                         "detalle":'',
-                        "estado":'Pendiente',
-                        "fecha_pago":''
+                        "estado":'Pagado',
+                        "fecha_pago":'19-08-2026'
                     },
                 ],
                 "6": 
                 [
                     { 
                         "cargo": "Secretario", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'19-08-2026'
+                    },
+                ],
+                "7": 
+                [
+                    { 
+                        "cargo": "Secretario", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'19-08-2026'
+                    },
+                ],
+                "8": 
+                [
+                    { 
+                        "cargo": "Secretario", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'19-08-2026'
+                    },
+                ],
+                "9": 
+                [
+                    { 
+                        "cargo": "Sargento en Armas", 
                         "deuda": "Cuota", 
                         "monto": 10000,
                         "detalle":'',
@@ -421,7 +558,7 @@ export const cuotas = [
         {
             "2026": 
             {
-                 "1": 
+                "1": 
                 [
                     { 
                         "cargo": "Capitan de Ruta", 
@@ -493,8 +630,8 @@ export const cuotas = [
                         "deuda": "Cuota", 
                         "monto": 10000,
                         "detalle":'',
-                        "estado":'Pendiente',
-                        "fecha_pago":''
+                        "estado":'Pagado',
+                        "fecha_pago":'03-08-2026'
                     }
                 ],
                 "5": 
@@ -504,14 +641,55 @@ export const cuotas = [
                         "deuda": "Cuota", 
                         "monto": 10000,
                         "detalle":'',
-                        "estado":'Pendiente',
-                        "fecha_pago":''
+                        "estado":'Pagado',
+                        "fecha_pago":'03-08-2026'
                     },
                 ],
                 "6": 
                 [
                     { 
                         "cargo": "Capitan de Ruta", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'03-08-2026'
+                    },
+                    { 
+                        "cargo": "Capitan de Ruta", 
+                        "deuda": "Consumo y Cuota Junta Pant. y Cabe.", 
+                        "monto": 13000,
+                        "detalle":'',
+                        "estado":'Pendiente',
+                        "fecha_pago":''
+                    }
+                ],
+                "7": 
+                [
+                    { 
+                        "cargo": "Capitan de Ruta", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'03-08-2026'
+                    },
+                ],
+                "8": 
+                [
+                    { 
+                        "cargo": "Capitan de Ruta", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'03-08-2026'
+                    },
+                ],
+                "9": 
+                [
+                    { 
+                        "cargo": "Sin Cargo", 
                         "deuda": "Cuota", 
                         "monto": 10000,
                         "detalle":'',
@@ -889,6 +1067,28 @@ export const cuotas = [
                         "estado":'Pagado',
                         "fecha_pago":'29-06-2026'
                     },
+                ],
+                "8": 
+                [
+                    { 
+                        "cargo": "Parchado", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'03-08-2026'
+                    },
+                ],
+                "9": 
+                [
+                    { 
+                        "cargo": "Parchado", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pagado',
+                        "fecha_pago":'01-09-2026'
+                    },
                 ]
             }
         },
@@ -977,6 +1177,47 @@ export const cuotas = [
                         "estado":'Pendiente',
                         "fecha_pago":''
                     },
+                    { 
+                        "cargo": "Presidente", 
+                        "deuda": "Consumo y Cuota Junta Pant. y Cabe.", 
+                        "monto": 4000,
+                        "detalle":'',
+                        "estado":'Pendiente',
+                        "fecha_pago":''
+                    }
+                ],
+                "7": 
+                [
+                    { 
+                        "cargo": "Presidente", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pendiente',
+                        "fecha_pago":''
+                    }
+                ],
+                "8": 
+                [
+                    { 
+                        "cargo": "Presidente", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pendiente',
+                        "fecha_pago":''
+                    }
+                ],
+                "9": 
+                [
+                    { 
+                        "cargo": "Vice Presidente", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pendiente',
+                        "fecha_pago":''
+                    }
                 ]
             }
         },
@@ -1137,6 +1378,39 @@ export const cuotas = [
                         "estado":'Pendiente',
                         "fecha_pago":''
                     },
+                ],
+                "7": 
+                [
+                    { 
+                        "cargo": "Sin Cargo", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pendiente',
+                        "fecha_pago":''
+                    },
+                ],
+                "8": 
+                [
+                    { 
+                        "cargo": "Sin Cargo", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pendiente',
+                        "fecha_pago":''
+                    },
+                ],
+                "9": 
+                [
+                    { 
+                        "cargo": "Sin Cargo", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pendiente',
+                        "fecha_pago":''
+                    },
                 ]
             }
         },
@@ -1233,6 +1507,47 @@ export const cuotas = [
                 [
                     { 
                         "cargo": "Sargento en Armas", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pendiente',
+                        "fecha_pago":''
+                    },
+                    { 
+                        "cargo": "Sargento en Armas", 
+                        "deuda": "Consumo y Cuota Junta Pant. y Cabe.", 
+                        "monto": 4000,
+                        "detalle":'',
+                        "estado":'Pendiente',
+                        "fecha_pago":''
+                    }
+                ],
+                "7": 
+                [
+                    { 
+                        "cargo": "Sargento en Armas", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pendiente',
+                        "fecha_pago":''
+                    },
+                ],
+                "8": 
+                [
+                    { 
+                        "cargo": "Sargento en Armas", 
+                        "deuda": "Cuota", 
+                        "monto": 10000,
+                        "detalle":'',
+                        "estado":'Pendiente',
+                        "fecha_pago":''
+                    },
+                ],
+                "9": 
+                [
+                    { 
+                        "cargo": "Sin Cargo", 
                         "deuda": "Cuota", 
                         "monto": 10000,
                         "detalle":'',
