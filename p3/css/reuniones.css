@@ -172,6 +172,7 @@
 /* ============ CONTENEDOR ============ */
 .modal-contenido {
   position: relative;
+  top: -180px;
   background: #fff;
   width: 100%;
   max-width: 480px;
