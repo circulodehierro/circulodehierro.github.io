@@ -123,4 +123,132 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
 
+    // modal-citar.js
+    const STORAGE_KEY = "citaciones";
+
+    // 🔹 Cargar array existente desde localStorage (o vacío)
+    let citaciones = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+
+    // 🔹 Elementos del DOM
+    const modal_citar        = document.getElementById("Modal_citar");
+    const inputNombre  = document.getElementById("nombre");
+    const errorNombre  = document.getElementById("errorNombre");
+    const btnGuardar   = document.getElementById("btnGuardar");
+    const toast        = document.getElementById("toast");
+
+    /* ============================
+       ABRIR / CERRAR MODAL
+    ============================ */
+    function abrirModal() {
+      modal_citar.classList.add("activo");
+      inputNombre.value = "";
+      errorNombre.textContent = "";
+      inputNombre.classList.remove("error");
+      setTimeout(() => inputNombre.focus(), 100);
+    }
+
+    function cerrarModal() {
+      modal_citar.classList.remove("activo");
+    }
+
+    // Cualquier elemento con [data-cerrar] cierra el modal
+    modal_citar.querySelectorAll("[data-cerrar]").forEach(el => {
+      el.addEventListener("click", cerrarModal);
+    });
+
+    // Tecla ESC
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && modal.classList.contains("activo")) cerrarModal();
+    });
+
+    /* ============================
+       TOAST
+    ============================ */
+    function mostrarToast(msg) {
+      toast.textContent = msg;
+      toast.classList.add("show");
+      clearTimeout(toast._t);
+      toast._t = setTimeout(() => toast.classList.remove("show"), 2500);
+    }
+
+    /* ============================
+       GUARDAR
+    ============================ */
+    btnGuardar.addEventListener("click", guardarCitacion);
+
+    inputNombre.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") guardarCitacion();
+    });
+
+    function guardarCitacion() {
+      const valor = inputNombre.value.trim();
+
+      // Validación
+      if (!valor) {
+        inputNombre.classList.add("error");
+        errorNombre.textContent = "El nombre es obligatorio.";
+        inputNombre.focus();
+        return;
+      }
+      inputNombre.classList.remove("error");
+      errorNombre.textContent = "";
+
+      // 🔹 Estructura de objeto (puedes cambiar a string simple si quieres)
+      const nueva = {
+        id: Date.now(),
+        nombre: valor,
+        fecha: new Date().toISOString()
+      };
+
+      citaciones.push(nueva);
+
+      // Persistencia local
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(citaciones, null, 2));
+
+      // Regenerar archivo citaciones_api.js descargable
+      generarArchivoCitaciones(citaciones);
+
+      mostrarToast(`✔ "${valor}" guardado correctamente`);
+      cerrarModal();
+    }
+
+    /* ============================
+       GENERAR / DESCARGAR citaciones_api.js
+    ============================ */
+    function generarArchivoCitaciones(data) {
+      const contenido =
+    `// citaciones_api.js
+    // Archivo generado automáticamente - ${new Date().toISOString()}
+
+    const citaciones = ${JSON.stringify(data, null, 2)};
+
+    export default citaciones;
+
+    if (typeof module !== "undefined" && module.exports) {
+      module.exports = citaciones;
+    }
+    if (typeof window !== "undefined") {
+      window.citaciones = citaciones;
+    }
+    `;
+
+      const blob = new Blob([contenido], { type: "application/javascript;charset=utf-8" });
+      const url  = URL.createObjectURL(blob);
+      const a    = document.createElement("a");
+      a.href = url;
+      a.download = "citaciones_api.js";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+    const btnCitar = document.getElementById("citar");
+
+        if (btnCitar) {
+          btnCitar.addEventListener("click", (e) => {
+            e.preventDefault();
+            abrirModal();
+          });
+        }
+    // modal-citar.js
 });

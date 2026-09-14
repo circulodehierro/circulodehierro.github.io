@@ -29,7 +29,7 @@
     <!-- Container -->
     <div class="container">
         <!-- Primera fila -->
-        <div class="row header">
+        <div class="row header" id="citar">
             REUNIONES
         </div>
         <!-- Segunda fila -->
@@ -93,6 +93,36 @@
                     <p></p>
                 </div>
             </div>
+            <!-- Modal Citar -->
+            <div id="Modal_citar" class="modal" role="dialog" aria-modal="true" aria-labelledby="tituloModal">
+              <div class="modal-overlay" data-cerrar></div>
+              <div class="modal-contenido">
+                <header class="modal-header">
+                  <h3 id="tituloModal">Agregar Citación</h3>
+                  <button type="button" class="cerrar" data-cerrar aria-label="Cerrar">&times;</button>
+                </header>
+                <div class="modal-body">
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    class="form-control"
+                    placeholder="Escribe el nombre..."
+                    autocomplete="off"
+                    required
+                  />
+                  <small class="form-error" id="errorNombre"></small>
+                </div>
+                <footer class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-cerrar>Cancelar</button>
+                  <button type="button" class="btn btn-primary" id="btnGuardar">Guardar</button>
+                </footer>
+              </div>
+            </div>
+            <!-- Toast de confirmación -->
+            <div id="toast" class="toast" role="status" aria-live="polite"></div>
+            <!-- Modal Citar -->
         </div>
     </div>
 </body>
